@@ -1,8 +1,9 @@
 package common
 
 import (
-	"github.com/gin-gonic/gin"
 	"testing"
+
+	"github.com/gin-gonic/gin"
 )
 
 type WorkflowHandler interface {

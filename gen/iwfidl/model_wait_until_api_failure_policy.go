@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // WaitUntilApiFailurePolicy the model 'WaitUntilApiFailurePolicy'
 type WaitUntilApiFailurePolicy string
 
@@ -31,46 +26,24 @@ var AllowedWaitUntilApiFailurePolicyEnumValues = []WaitUntilApiFailurePolicy{
 }
 
 func (v *WaitUntilApiFailurePolicy) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := WaitUntilApiFailurePolicy(value)
-	for _, existing := range AllowedWaitUntilApiFailurePolicyEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid WaitUntilApiFailurePolicy", value)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWaitUntilApiFailurePolicyFromValue returns a pointer to a valid WaitUntilApiFailurePolicy
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewWaitUntilApiFailurePolicyFromValue(v string) (*WaitUntilApiFailurePolicy, error) {
-	ev := WaitUntilApiFailurePolicy(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for WaitUntilApiFailurePolicy: valid values are %v", v, AllowedWaitUntilApiFailurePolicyEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v WaitUntilApiFailurePolicy) IsValid() bool {
-	for _, existing := range AllowedWaitUntilApiFailurePolicyEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v WaitUntilApiFailurePolicy) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to WaitUntilApiFailurePolicy value
 func (v WaitUntilApiFailurePolicy) Ptr() *WaitUntilApiFailurePolicy {
-	return &v
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type NullableWaitUntilApiFailurePolicy struct {
@@ -79,32 +52,30 @@ type NullableWaitUntilApiFailurePolicy struct {
 }
 
 func (v NullableWaitUntilApiFailurePolicy) Get() *WaitUntilApiFailurePolicy {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWaitUntilApiFailurePolicy) Set(val *WaitUntilApiFailurePolicy) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWaitUntilApiFailurePolicy) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWaitUntilApiFailurePolicy) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWaitUntilApiFailurePolicy) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWaitUntilApiFailurePolicy) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWaitUntilApiFailurePolicy(val *WaitUntilApiFailurePolicy) *NullableWaitUntilApiFailurePolicy {
-	return &NullableWaitUntilApiFailurePolicy{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWaitUntilApiFailurePolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWaitUntilApiFailurePolicy) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

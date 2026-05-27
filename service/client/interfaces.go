@@ -2,8 +2,9 @@ package uclient
 
 import (
 	"context"
-	"github.com/indeedeng/iwf/service"
 	"time"
+
+	"github.com/indeedeng/iwf/service"
 
 	"github.com/indeedeng/iwf/gen/iwfidl"
 )

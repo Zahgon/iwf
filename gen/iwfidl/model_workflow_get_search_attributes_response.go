@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowGetSearchAttributesResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowGetSearchAttributesResponse{}
 
@@ -27,64 +23,51 @@ type WorkflowGetSearchAttributesResponse struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowGetSearchAttributesResponse() *WorkflowGetSearchAttributesResponse {
-	this := WorkflowGetSearchAttributesResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowGetSearchAttributesResponseWithDefaults instantiates a new WorkflowGetSearchAttributesResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowGetSearchAttributesResponseWithDefaults() *WorkflowGetSearchAttributesResponse {
-	this := WorkflowGetSearchAttributesResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
 func (o *WorkflowGetSearchAttributesResponse) GetSearchAttributes() []SearchAttribute {
-	if o == nil || IsNil(o.SearchAttributes) {
-		var ret []SearchAttribute
-		return ret
-	}
-	return o.SearchAttributes
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSearchAttributesOk returns a tuple with the SearchAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetSearchAttributesResponse) GetSearchAttributesOk() ([]SearchAttribute, bool) {
-	if o == nil || IsNil(o.SearchAttributes) {
-		return nil, false
-	}
-	return o.SearchAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSearchAttributes returns a boolean if a field has been set.
 func (o *WorkflowGetSearchAttributesResponse) HasSearchAttributes() bool {
-	if o != nil && !IsNil(o.SearchAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetSearchAttributes gets a reference to the given []SearchAttribute and assigns it to the SearchAttributes field.
 func (o *WorkflowGetSearchAttributesResponse) SetSearchAttributes(v []SearchAttribute) {
-	o.SearchAttributes = v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowGetSearchAttributesResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowGetSearchAttributesResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.SearchAttributes) {
-		toSerialize["searchAttributes"] = o.SearchAttributes
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowGetSearchAttributesResponse struct {
@@ -93,32 +76,33 @@ type NullableWorkflowGetSearchAttributesResponse struct {
 }
 
 func (v NullableWorkflowGetSearchAttributesResponse) Get() *WorkflowGetSearchAttributesResponse {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowGetSearchAttributesResponse) Set(val *WorkflowGetSearchAttributesResponse) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
 func (v NullableWorkflowGetSearchAttributesResponse) IsSet() bool {
-	return v.isSet
+	_ = "STUB: not implemented"
+	return false
 }
 
-func (v *NullableWorkflowGetSearchAttributesResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowGetSearchAttributesResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowGetSearchAttributesResponse(val *WorkflowGetSearchAttributesResponse) *NullableWorkflowGetSearchAttributesResponse {
-	return &NullableWorkflowGetSearchAttributesResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowGetSearchAttributesResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowGetSearchAttributesResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

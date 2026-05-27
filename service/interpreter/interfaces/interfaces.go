@@ -26,18 +26,13 @@ type ActivityInfo struct {
 var activityProviderRegistry = make(map[service.BackendType]ActivityProvider)
 
 func RegisterActivityProvider(backendType service.BackendType, provider ActivityProvider) {
-	if _, ok := activityProviderRegistry[backendType]; ok {
-		panic("backend type " + backendType + " has been registered")
-	}
-	activityProviderRegistry[backendType] = provider
+	_ = "STUB: not implemented"
+	return
 }
 
 func GetActivityProviderByType(backendType service.BackendType) ActivityProvider {
-	provider := activityProviderRegistry[backendType]
-	if provider == nil {
-		panic("not supported yet: " + backendType)
-	}
-	return provider
+	_ = "STUB: not implemented"
+	return *new(ActivityProvider)
 }
 
 type UnifiedLogger interface {
@@ -76,14 +71,11 @@ type contextHolder struct {
 	ctx interface{}
 }
 
-func (c *contextHolder) GetContext() interface{} {
-	return c.ctx
-}
+func (c *contextHolder) GetContext() interface{} { _ = "STUB: not implemented"; return nil }
 
 func NewUnifiedContext(ctx interface{}) UnifiedContext {
-	return &contextHolder{
-		ctx: ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(UnifiedContext)
 }
 
 type TimerProcessor interface {

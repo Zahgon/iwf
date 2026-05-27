@@ -19,45 +19,21 @@ type ContinueAsNewCounter struct {
 func NewContinueAsCounter(
 	configer *config.WorkflowConfiger, rootCtx interfaces.UnifiedContext, provider interfaces.WorkflowProvider,
 ) *ContinueAsNewCounter {
-	return &ContinueAsNewCounter{
-		configer: configer,
-
-		rootCtx:  rootCtx,
-		provider: provider,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (c *ContinueAsNewCounter) IncExecutedStateExecution(skipStart bool) {
-	if skipStart {
-		c.executedStateApis++
-	} else {
-		c.executedStateApis += 2
-	}
-}
-func (c *ContinueAsNewCounter) IncSignalsReceived() {
-	c.signalsReceived++
+	_ = "STUB: not implemented"
+	return
 }
 
-func (c *ContinueAsNewCounter) IncSyncUpdateReceived() {
-	c.syncUpdateReceived++
-}
+func (c *ContinueAsNewCounter) IncSignalsReceived() { _ = "STUB: not implemented"; return }
 
-func (c *ContinueAsNewCounter) IsThresholdMet() bool {
-	if c.triggeredByAPI {
-		return true
-	}
+func (c *ContinueAsNewCounter) IncSyncUpdateReceived() { _ = "STUB: not implemented"; return }
 
-	// Note: when threshold == 0, it means unlimited
+func (c *ContinueAsNewCounter) IsThresholdMet() bool { _ = "STUB: not implemented"; return false }
 
-	config := c.configer.Get()
-	if config.GetContinueAsNewThreshold() == 0 {
-		return false
-	}
-	totalOperations := c.signalsReceived + c.executedStateApis + c.syncUpdateReceived
+// Note: when threshold == 0, it means unlimited
 
-	return totalOperations >= config.GetContinueAsNewThreshold()
-}
-
-func (c *ContinueAsNewCounter) TriggerByAPI() {
-	c.triggeredByAPI = true
-}
+func (c *ContinueAsNewCounter) TriggerByAPI() { _ = "STUB: not implemented"; return }

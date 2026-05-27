@@ -12,41 +12,30 @@ type StateRequest struct {
 }
 
 func NewStateStartRequest(movement iwfidl.StateMovement) StateRequest {
-	return StateRequest{
-		stateStartRequest: movement,
-	}
+	_ = "STUB: not implemented"
+	return *new(StateRequest)
 }
 
 func NewStateResumeRequest(resumeRequest service.StateExecutionResumeInfo) StateRequest {
-	return StateRequest{
-		stateResumeRequest: resumeRequest,
-		isResumeRequest:    true,
-	}
+	_ = "STUB: not implemented"
+	return *new(StateRequest)
 }
 
 func (sq StateRequest) GetStateStartRequest() iwfidl.StateMovement {
-	return sq.stateStartRequest
+	_ = "STUB: not implemented"
+	return *new(iwfidl.StateMovement)
 }
 
 func (sq StateRequest) GetStateResumeRequest() service.StateExecutionResumeInfo {
-	return sq.stateResumeRequest
+	_ = "STUB: not implemented"
+	return *new(service.StateExecutionResumeInfo)
 }
 
-func (sq StateRequest) IsResumeRequest() bool {
-	return sq.isResumeRequest
-}
+func (sq StateRequest) IsResumeRequest() bool { _ = "STUB: not implemented"; return false }
 
 func (sq StateRequest) GetStateMovement() iwfidl.StateMovement {
-	if sq.isResumeRequest {
-		return sq.stateResumeRequest.State
-	} else {
-		return sq.stateStartRequest
-	}
+	_ = "STUB: not implemented"
+	return *new(iwfidl.StateMovement)
 }
 
-func (sq StateRequest) GetStateId() string {
-	if sq.IsResumeRequest() {
-		return sq.stateResumeRequest.State.StateId
-	}
-	return sq.stateStartRequest.StateId
-}
+func (sq StateRequest) GetStateId() string { _ = "STUB: not implemented"; return "" }

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowWorkerRpcRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowWorkerRpcRequest{}
 
@@ -34,282 +30,205 @@ type WorkflowWorkerRpcRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowWorkerRpcRequest(context Context, workflowType string, rpcName string) *WorkflowWorkerRpcRequest {
-	this := WorkflowWorkerRpcRequest{}
-	this.Context = context
-	this.WorkflowType = workflowType
-	this.RpcName = rpcName
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowWorkerRpcRequestWithDefaults instantiates a new WorkflowWorkerRpcRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowWorkerRpcRequestWithDefaults() *WorkflowWorkerRpcRequest {
-	this := WorkflowWorkerRpcRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetContext returns the Context field value
 func (o *WorkflowWorkerRpcRequest) GetContext() Context {
-	if o == nil {
-		var ret Context
-		return ret
-	}
-
-	return o.Context
+	_ = "STUB: not implemented"
+	return *new(Context)
 }
 
 // GetContextOk returns a tuple with the Context field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcRequest) GetContextOk() (*Context, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Context, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetContext sets field value
 func (o *WorkflowWorkerRpcRequest) SetContext(v Context) {
-	o.Context = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowType returns the WorkflowType field value
+	return
 }
 
-// GetWorkflowType returns the WorkflowType field value
-func (o *WorkflowWorkerRpcRequest) GetWorkflowType() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowType
-}
+func (o *WorkflowWorkerRpcRequest) GetWorkflowType() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowTypeOk returns a tuple with the WorkflowType field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcRequest) GetWorkflowTypeOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowType sets field value
 func (o *WorkflowWorkerRpcRequest) SetWorkflowType(v string) {
-	o.WorkflowType = v
+	_ = "STUB: not implemented"
+
+	// GetRpcName returns the RpcName field value
+	return
 }
 
-// GetRpcName returns the RpcName field value
-func (o *WorkflowWorkerRpcRequest) GetRpcName() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.RpcName
-}
+func (o *WorkflowWorkerRpcRequest) GetRpcName() string { _ = "STUB: not implemented"; return "" }
 
 // GetRpcNameOk returns a tuple with the RpcName field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcRequest) GetRpcNameOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.RpcName, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetRpcName sets field value
 func (o *WorkflowWorkerRpcRequest) SetRpcName(v string) {
-	o.RpcName = v
+	_ = "STUB: not implemented"
+
+	// GetInput returns the Input field value if set, zero value otherwise.
+	return
 }
 
-// GetInput returns the Input field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcRequest) GetInput() EncodedObject {
-	if o == nil || IsNil(o.Input) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.Input
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetInputOk returns a tuple with the Input field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcRequest) GetInputOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.Input) {
-		return nil, false
-	}
-	return o.Input, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasInput returns a boolean if a field has been set.
-func (o *WorkflowWorkerRpcRequest) HasInput() bool {
-	if o != nil && !IsNil(o.Input) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowWorkerRpcRequest) HasInput() bool { _ = "STUB: not implemented"; return false }
 
 // SetInput gets a reference to the given EncodedObject and assigns it to the Input field.
 func (o *WorkflowWorkerRpcRequest) SetInput(v EncodedObject) {
-	o.Input = &v
+	_ = "STUB: not implemented"
+
+	// GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
+	return
 }
 
-// GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcRequest) GetSearchAttributes() []SearchAttribute {
-	if o == nil || IsNil(o.SearchAttributes) {
-		var ret []SearchAttribute
-		return ret
-	}
-	return o.SearchAttributes
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSearchAttributesOk returns a tuple with the SearchAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcRequest) GetSearchAttributesOk() ([]SearchAttribute, bool) {
-	if o == nil || IsNil(o.SearchAttributes) {
-		return nil, false
-	}
-	return o.SearchAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSearchAttributes returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcRequest) HasSearchAttributes() bool {
-	if o != nil && !IsNil(o.SearchAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetSearchAttributes gets a reference to the given []SearchAttribute and assigns it to the SearchAttributes field.
 func (o *WorkflowWorkerRpcRequest) SetSearchAttributes(v []SearchAttribute) {
-	o.SearchAttributes = v
+	_ = "STUB: not implemented"
+	return
+
+	// GetDataAttributes returns the DataAttributes field value if set, zero value otherwise.
 }
 
-// GetDataAttributes returns the DataAttributes field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcRequest) GetDataAttributes() []KeyValue {
-	if o == nil || IsNil(o.DataAttributes) {
-		var ret []KeyValue
-		return ret
-	}
-	return o.DataAttributes
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetDataAttributesOk returns a tuple with the DataAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcRequest) GetDataAttributesOk() ([]KeyValue, bool) {
-	if o == nil || IsNil(o.DataAttributes) {
-		return nil, false
-	}
-	return o.DataAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDataAttributes returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcRequest) HasDataAttributes() bool {
-	if o != nil && !IsNil(o.DataAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetDataAttributes gets a reference to the given []KeyValue and assigns it to the DataAttributes field.
 func (o *WorkflowWorkerRpcRequest) SetDataAttributes(v []KeyValue) {
-	o.DataAttributes = v
+	_ = "STUB: not implemented"
+	return
+
+	// GetSignalChannelInfos returns the SignalChannelInfos field value if set, zero value otherwise.
 }
 
-// GetSignalChannelInfos returns the SignalChannelInfos field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcRequest) GetSignalChannelInfos() map[string]ChannelInfo {
-	if o == nil || IsNil(o.SignalChannelInfos) {
-		var ret map[string]ChannelInfo
-		return ret
-	}
-	return *o.SignalChannelInfos
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSignalChannelInfosOk returns a tuple with the SignalChannelInfos field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcRequest) GetSignalChannelInfosOk() (*map[string]ChannelInfo, bool) {
-	if o == nil || IsNil(o.SignalChannelInfos) {
-		return nil, false
-	}
-	return o.SignalChannelInfos, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSignalChannelInfos returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcRequest) HasSignalChannelInfos() bool {
-	if o != nil && !IsNil(o.SignalChannelInfos) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetSignalChannelInfos gets a reference to the given map[string]ChannelInfo and assigns it to the SignalChannelInfos field.
 func (o *WorkflowWorkerRpcRequest) SetSignalChannelInfos(v map[string]ChannelInfo) {
-	o.SignalChannelInfos = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetInternalChannelInfos returns the InternalChannelInfos field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcRequest) GetInternalChannelInfos() map[string]ChannelInfo {
-	if o == nil || IsNil(o.InternalChannelInfos) {
-		var ret map[string]ChannelInfo
-		return ret
-	}
-	return *o.InternalChannelInfos
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetInternalChannelInfosOk returns a tuple with the InternalChannelInfos field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcRequest) GetInternalChannelInfosOk() (*map[string]ChannelInfo, bool) {
-	if o == nil || IsNil(o.InternalChannelInfos) {
-		return nil, false
-	}
-	return o.InternalChannelInfos, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasInternalChannelInfos returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcRequest) HasInternalChannelInfos() bool {
-	if o != nil && !IsNil(o.InternalChannelInfos) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetInternalChannelInfos gets a reference to the given map[string]ChannelInfo and assigns it to the InternalChannelInfos field.
 func (o *WorkflowWorkerRpcRequest) SetInternalChannelInfos(v map[string]ChannelInfo) {
-	o.InternalChannelInfos = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowWorkerRpcRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowWorkerRpcRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["context"] = o.Context
-	toSerialize["workflowType"] = o.WorkflowType
-	toSerialize["rpcName"] = o.RpcName
-	if !IsNil(o.Input) {
-		toSerialize["input"] = o.Input
-	}
-	if !IsNil(o.SearchAttributes) {
-		toSerialize["searchAttributes"] = o.SearchAttributes
-	}
-	if !IsNil(o.DataAttributes) {
-		toSerialize["dataAttributes"] = o.DataAttributes
-	}
-	if !IsNil(o.SignalChannelInfos) {
-		toSerialize["signalChannelInfos"] = o.SignalChannelInfos
-	}
-	if !IsNil(o.InternalChannelInfos) {
-		toSerialize["internalChannelInfos"] = o.InternalChannelInfos
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowWorkerRpcRequest struct {
@@ -318,32 +237,30 @@ type NullableWorkflowWorkerRpcRequest struct {
 }
 
 func (v NullableWorkflowWorkerRpcRequest) Get() *WorkflowWorkerRpcRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowWorkerRpcRequest) Set(val *WorkflowWorkerRpcRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowWorkerRpcRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowWorkerRpcRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowWorkerRpcRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowWorkerRpcRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowWorkerRpcRequest(val *WorkflowWorkerRpcRequest) *NullableWorkflowWorkerRpcRequest {
-	return &NullableWorkflowWorkerRpcRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowWorkerRpcRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowWorkerRpcRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

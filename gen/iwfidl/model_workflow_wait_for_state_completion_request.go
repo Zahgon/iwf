@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowWaitForStateCompletionRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowWaitForStateCompletionRequest{}
 
@@ -31,195 +27,149 @@ type WorkflowWaitForStateCompletionRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowWaitForStateCompletionRequest(workflowId string) *WorkflowWaitForStateCompletionRequest {
-	this := WorkflowWaitForStateCompletionRequest{}
-	this.WorkflowId = workflowId
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowWaitForStateCompletionRequestWithDefaults instantiates a new WorkflowWaitForStateCompletionRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowWaitForStateCompletionRequestWithDefaults() *WorkflowWaitForStateCompletionRequest {
-	this := WorkflowWaitForStateCompletionRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
 func (o *WorkflowWaitForStateCompletionRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowWaitForStateCompletionRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowWaitForStateCompletionRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetStateExecutionId returns the StateExecutionId field value if set, zero value otherwise.
+	return
 }
 
-// GetStateExecutionId returns the StateExecutionId field value if set, zero value otherwise.
 func (o *WorkflowWaitForStateCompletionRequest) GetStateExecutionId() string {
-	if o == nil || IsNil(o.StateExecutionId) {
-		var ret string
-		return ret
-	}
-	return *o.StateExecutionId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetStateExecutionIdOk returns a tuple with the StateExecutionId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWaitForStateCompletionRequest) GetStateExecutionIdOk() (*string, bool) {
-	if o == nil || IsNil(o.StateExecutionId) {
-		return nil, false
-	}
-	return o.StateExecutionId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateExecutionId returns a boolean if a field has been set.
 func (o *WorkflowWaitForStateCompletionRequest) HasStateExecutionId() bool {
-	if o != nil && !IsNil(o.StateExecutionId) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetStateExecutionId gets a reference to the given string and assigns it to the StateExecutionId field.
 func (o *WorkflowWaitForStateCompletionRequest) SetStateExecutionId(v string) {
-	o.StateExecutionId = &v
+	_ = "STUB: not implemented"
+	return
+
+	// GetStateId returns the StateId field value if set, zero value otherwise.
 }
 
-// GetStateId returns the StateId field value if set, zero value otherwise.
 func (o *WorkflowWaitForStateCompletionRequest) GetStateId() string {
-	if o == nil || IsNil(o.StateId) {
-		var ret string
-		return ret
-	}
-	return *o.StateId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetStateIdOk returns a tuple with the StateId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWaitForStateCompletionRequest) GetStateIdOk() (*string, bool) {
-	if o == nil || IsNil(o.StateId) {
-		return nil, false
-	}
-	return o.StateId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateId returns a boolean if a field has been set.
 func (o *WorkflowWaitForStateCompletionRequest) HasStateId() bool {
-	if o != nil && !IsNil(o.StateId) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetStateId gets a reference to the given string and assigns it to the StateId field.
 func (o *WorkflowWaitForStateCompletionRequest) SetStateId(v string) {
-	o.StateId = &v
+	_ = "STUB: not implemented"
+
+	// GetWaitForKey returns the WaitForKey field value if set, zero value otherwise.
+	return
 }
 
-// GetWaitForKey returns the WaitForKey field value if set, zero value otherwise.
 func (o *WorkflowWaitForStateCompletionRequest) GetWaitForKey() string {
-	if o == nil || IsNil(o.WaitForKey) {
-		var ret string
-		return ret
-	}
-	return *o.WaitForKey
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWaitForKeyOk returns a tuple with the WaitForKey field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWaitForStateCompletionRequest) GetWaitForKeyOk() (*string, bool) {
-	if o == nil || IsNil(o.WaitForKey) {
-		return nil, false
-	}
-	return o.WaitForKey, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitForKey returns a boolean if a field has been set.
 func (o *WorkflowWaitForStateCompletionRequest) HasWaitForKey() bool {
-	if o != nil && !IsNil(o.WaitForKey) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitForKey gets a reference to the given string and assigns it to the WaitForKey field.
 func (o *WorkflowWaitForStateCompletionRequest) SetWaitForKey(v string) {
-	o.WaitForKey = &v
+	_ = "STUB: not implemented"
+
+	// GetWaitTimeSeconds returns the WaitTimeSeconds field value if set, zero value otherwise.
+	return
 }
 
-// GetWaitTimeSeconds returns the WaitTimeSeconds field value if set, zero value otherwise.
 func (o *WorkflowWaitForStateCompletionRequest) GetWaitTimeSeconds() int32 {
-	if o == nil || IsNil(o.WaitTimeSeconds) {
-		var ret int32
-		return ret
-	}
-	return *o.WaitTimeSeconds
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetWaitTimeSecondsOk returns a tuple with the WaitTimeSeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWaitForStateCompletionRequest) GetWaitTimeSecondsOk() (*int32, bool) {
-	if o == nil || IsNil(o.WaitTimeSeconds) {
-		return nil, false
-	}
-	return o.WaitTimeSeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitTimeSeconds returns a boolean if a field has been set.
 func (o *WorkflowWaitForStateCompletionRequest) HasWaitTimeSeconds() bool {
-	if o != nil && !IsNil(o.WaitTimeSeconds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitTimeSeconds gets a reference to the given int32 and assigns it to the WaitTimeSeconds field.
 func (o *WorkflowWaitForStateCompletionRequest) SetWaitTimeSeconds(v int32) {
-	o.WaitTimeSeconds = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowWaitForStateCompletionRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowWaitForStateCompletionRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	if !IsNil(o.StateExecutionId) {
-		toSerialize["stateExecutionId"] = o.StateExecutionId
-	}
-	if !IsNil(o.StateId) {
-		toSerialize["stateId"] = o.StateId
-	}
-	if !IsNil(o.WaitForKey) {
-		toSerialize["waitForKey"] = o.WaitForKey
-	}
-	if !IsNil(o.WaitTimeSeconds) {
-		toSerialize["waitTimeSeconds"] = o.WaitTimeSeconds
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowWaitForStateCompletionRequest struct {
@@ -228,32 +178,33 @@ type NullableWorkflowWaitForStateCompletionRequest struct {
 }
 
 func (v NullableWorkflowWaitForStateCompletionRequest) Get() *WorkflowWaitForStateCompletionRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowWaitForStateCompletionRequest) Set(val *WorkflowWaitForStateCompletionRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
 func (v NullableWorkflowWaitForStateCompletionRequest) IsSet() bool {
-	return v.isSet
+	_ = "STUB: not implemented"
+	return false
 }
 
-func (v *NullableWorkflowWaitForStateCompletionRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowWaitForStateCompletionRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowWaitForStateCompletionRequest(val *WorkflowWaitForStateCompletionRequest) *NullableWorkflowWaitForStateCompletionRequest {
-	return &NullableWorkflowWaitForStateCompletionRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowWaitForStateCompletionRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowWaitForStateCompletionRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

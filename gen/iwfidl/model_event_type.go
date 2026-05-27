@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // EventType the model 'EventType'
 type EventType string
 
@@ -54,81 +49,39 @@ var AllowedEventTypeEnumValues = []EventType{
 	"RPC_EXECUTION_EVENT",
 }
 
-func (v *EventType) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := EventType(value)
-	for _, existing := range AllowedEventTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid EventType", value)
-}
+func (v *EventType) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }
 
 // NewEventTypeFromValue returns a pointer to a valid EventType
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewEventTypeFromValue(v string) (*EventType, error) {
-	ev := EventType(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for EventType: valid values are %v", v, AllowedEventTypeEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v EventType) IsValid() bool {
-	for _, existing := range AllowedEventTypeEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v EventType) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to EventType value
-func (v EventType) Ptr() *EventType {
-	return &v
-}
+func (v EventType) Ptr() *EventType { _ = "STUB: not implemented"; return nil }
 
 type NullableEventType struct {
 	value *EventType
 	isSet bool
 }
 
-func (v NullableEventType) Get() *EventType {
-	return v.value
-}
+func (v NullableEventType) Get() *EventType { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableEventType) Set(val *EventType) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableEventType) Set(val *EventType) { _ = "STUB: not implemented"; return }
 
-func (v NullableEventType) IsSet() bool {
-	return v.isSet
-}
+func (v NullableEventType) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableEventType) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableEventType) Unset() { _ = "STUB: not implemented"; return }
 
-func NewNullableEventType(val *EventType) *NullableEventType {
-	return &NullableEventType{value: val, isSet: true}
-}
+func NewNullableEventType(val *EventType) *NullableEventType { _ = "STUB: not implemented"; return nil }
 
 func (v NullableEventType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (v *NullableEventType) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
-}
+func (v *NullableEventType) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }

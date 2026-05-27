@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowDumpResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowDumpResponse{}
 
@@ -29,107 +25,73 @@ type WorkflowDumpResponse struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowDumpResponse(checksum string, totalPages int32, jsonData string) *WorkflowDumpResponse {
-	this := WorkflowDumpResponse{}
-	this.Checksum = checksum
-	this.TotalPages = totalPages
-	this.JsonData = jsonData
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowDumpResponseWithDefaults instantiates a new WorkflowDumpResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowDumpResponseWithDefaults() *WorkflowDumpResponse {
-	this := WorkflowDumpResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetChecksum returns the Checksum field value
-func (o *WorkflowDumpResponse) GetChecksum() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.Checksum
-}
+func (o *WorkflowDumpResponse) GetChecksum() string { _ = "STUB: not implemented"; return "" }
 
 // GetChecksumOk returns a tuple with the Checksum field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowDumpResponse) GetChecksumOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Checksum, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetChecksum sets field value
 func (o *WorkflowDumpResponse) SetChecksum(v string) {
-	o.Checksum = v
+	_ = "STUB: not implemented"
+
+	// GetTotalPages returns the TotalPages field value
+	return
 }
 
-// GetTotalPages returns the TotalPages field value
-func (o *WorkflowDumpResponse) GetTotalPages() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.TotalPages
-}
+func (o *WorkflowDumpResponse) GetTotalPages() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetTotalPagesOk returns a tuple with the TotalPages field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowDumpResponse) GetTotalPagesOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.TotalPages, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetTotalPages sets field value
 func (o *WorkflowDumpResponse) SetTotalPages(v int32) {
-	o.TotalPages = v
+	_ = "STUB: not implemented"
+
+	// GetJsonData returns the JsonData field value
+	return
 }
 
-// GetJsonData returns the JsonData field value
-func (o *WorkflowDumpResponse) GetJsonData() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.JsonData
-}
+func (o *WorkflowDumpResponse) GetJsonData() string { _ = "STUB: not implemented"; return "" }
 
 // GetJsonDataOk returns a tuple with the JsonData field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowDumpResponse) GetJsonDataOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.JsonData, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetJsonData sets field value
-func (o *WorkflowDumpResponse) SetJsonData(v string) {
-	o.JsonData = v
-}
+func (o *WorkflowDumpResponse) SetJsonData(v string) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowDumpResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowDumpResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["checksum"] = o.Checksum
-	toSerialize["totalPages"] = o.TotalPages
-	toSerialize["jsonData"] = o.JsonData
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowDumpResponse struct {
@@ -138,32 +100,30 @@ type NullableWorkflowDumpResponse struct {
 }
 
 func (v NullableWorkflowDumpResponse) Get() *WorkflowDumpResponse {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowDumpResponse) Set(val *WorkflowDumpResponse) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowDumpResponse) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowDumpResponse) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowDumpResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowDumpResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowDumpResponse(val *WorkflowDumpResponse) *NullableWorkflowDumpResponse {
-	return &NullableWorkflowDumpResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowDumpResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowDumpResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

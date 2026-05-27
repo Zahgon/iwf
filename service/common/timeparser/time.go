@@ -1,9 +1,6 @@
 package timeparser
 
 import (
-	"fmt"
-	"regexp"
-	"strconv"
 	"time"
 )
 
@@ -15,32 +12,13 @@ const (
 	defaultDateTimeRangeNum     = "^[1-9][0-9]*"                                          // eg. 1, 20, 300 etc.
 )
 
-func ParseTime(timeStr string) (int64, error) {
-	defaultValue := int64(0)
-	if len(timeStr) == 0 {
-		return defaultValue, nil
-	}
+func ParseTime(timeStr string) (int64, error) { _ = "STUB: not implemented"; return 0, nil }
 
-	// try to parse
-	parsedTime, err := time.Parse(DateTimeFormat, timeStr)
-	if err == nil {
-		return parsedTime.UnixNano(), nil
-	}
+// try to parse
 
-	// treat as raw time
-	resultValue, err := strconv.ParseInt(timeStr, 10, 64)
-	if err == nil {
-		return resultValue, nil
-	}
+// treat as raw time
 
-	// treat as time range format
-	parsedTime, err = parseTimeRange(timeStr)
-	if err != nil {
-		return 0, fmt.Errorf("cannot parse time '%s', use UTC format %v, "+
-			"time range or raw UnixNano directly. See help for more details: %v", DateTimeFormat, timeStr, err)
-	}
-	return parsedTime.UnixNano(), nil
-}
+// treat as time range format
 
 // parseTimeRange parses a given time duration string (in format X<time-duration>) and
 // returns parsed timestamp given that duration in the past from current time.
@@ -62,40 +40,13 @@ func ParseTime(timeStr string) (int64, error) {
 // 0 < X < 1e6. Also, the maximum time in the past can be 1 January 1970 00:00:00 UTC (epoch time),
 // so giving "1000y" will result in epoch time.
 func parseTimeRange(timeRange string) (time.Time, error) {
-	match, err := regexp.MatchString(defaultDateTimeRangeShortRE, timeRange)
-	if !match { // fallback on to check if it's of longer notation
-		_, err = regexp.MatchString(defaultDateTimeRangeLongRE, timeRange)
-	}
-	if err != nil {
-		return time.Time{}, err
-	}
-
-	re, _ := regexp.Compile(defaultDateTimeRangeNum)
-	idx := re.FindStringSubmatchIndex(timeRange)
-	if idx == nil {
-		return time.Time{}, fmt.Errorf("cannot parse timeRange %s", timeRange)
-	}
-
-	num, err := strconv.Atoi(timeRange[idx[0]:idx[1]])
-	if err != nil {
-		return time.Time{}, fmt.Errorf("cannot parse timeRange %s", timeRange)
-	}
-	if num >= 1e6 {
-		return time.Time{}, fmt.Errorf("invalid time-duation multiplier %d, allowed range is 0 < multiplier < 1000000", num)
-	}
-
-	dur, err := parseTimeDuration(timeRange[idx[1]:])
-	if err != nil {
-		return time.Time{}, fmt.Errorf("cannot parse timeRange %s", timeRange)
-	}
-
-	res := time.Now().Add(time.Duration(-num) * dur) // using server's local timezone
-	epochTime := time.Unix(0, 0)
-	if res.Before(epochTime) {
-		res = epochTime
-	}
-	return res, nil
+	_ = "STUB: not implemented"
+	return *new(time.Time), nil
 }
+
+// fallback on to check if it's of longer notation
+
+// using server's local timezone
 
 const (
 	// time ranges
@@ -117,23 +68,6 @@ const (
 // - year/y
 // NOTE: the input "duration" is case-sensitive
 func parseTimeDuration(duration string) (dur time.Duration, err error) {
-	switch duration {
-	case "s", "second":
-		dur = time.Second
-	case "m", "minute":
-		dur = time.Minute
-	case "h", "hour":
-		dur = time.Hour
-	case "d", "day":
-		dur = day
-	case "w", "week":
-		dur = week
-	case "M", "month":
-		dur = month
-	case "y", "year":
-		dur = year
-	default:
-		err = fmt.Errorf("unknown time duration %s", duration)
-	}
-	return
+	_ = "STUB: not implemented"
+	return *new(time.Duration), nil
 }

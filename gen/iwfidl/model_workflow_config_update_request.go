@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowConfigUpdateRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowConfigUpdateRequest{}
 
@@ -29,116 +25,84 @@ type WorkflowConfigUpdateRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowConfigUpdateRequest(workflowId string, workflowConfig WorkflowConfig) *WorkflowConfigUpdateRequest {
-	this := WorkflowConfigUpdateRequest{}
-	this.WorkflowId = workflowId
-	this.WorkflowConfig = workflowConfig
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowConfigUpdateRequestWithDefaults instantiates a new WorkflowConfigUpdateRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowConfigUpdateRequestWithDefaults() *WorkflowConfigUpdateRequest {
-	this := WorkflowConfigUpdateRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
-func (o *WorkflowConfigUpdateRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
-}
+func (o *WorkflowConfigUpdateRequest) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowConfigUpdateRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowConfigUpdateRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
 func (o *WorkflowConfigUpdateRequest) GetWorkflowRunId() string {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		var ret string
-		return ret
-	}
-	return *o.WorkflowRunId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowConfigUpdateRequest) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		return nil, false
-	}
-	return o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowRunId returns a boolean if a field has been set.
 func (o *WorkflowConfigUpdateRequest) HasWorkflowRunId() bool {
-	if o != nil && !IsNil(o.WorkflowRunId) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowRunId gets a reference to the given string and assigns it to the WorkflowRunId field.
-func (o *WorkflowConfigUpdateRequest) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = &v
-}
+func (o *WorkflowConfigUpdateRequest) SetWorkflowRunId(v string) { _ = "STUB: not implemented"; return }
 
 // GetWorkflowConfig returns the WorkflowConfig field value
 func (o *WorkflowConfigUpdateRequest) GetWorkflowConfig() WorkflowConfig {
-	if o == nil {
-		var ret WorkflowConfig
-		return ret
-	}
-
-	return o.WorkflowConfig
+	_ = "STUB: not implemented"
+	return *new(WorkflowConfig)
 }
 
 // GetWorkflowConfigOk returns a tuple with the WorkflowConfig field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowConfigUpdateRequest) GetWorkflowConfigOk() (*WorkflowConfig, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowConfig, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowConfig sets field value
 func (o *WorkflowConfigUpdateRequest) SetWorkflowConfig(v WorkflowConfig) {
-	o.WorkflowConfig = v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowConfigUpdateRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowConfigUpdateRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	if !IsNil(o.WorkflowRunId) {
-		toSerialize["workflowRunId"] = o.WorkflowRunId
-	}
-	toSerialize["workflowConfig"] = o.WorkflowConfig
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowConfigUpdateRequest struct {
@@ -147,32 +111,30 @@ type NullableWorkflowConfigUpdateRequest struct {
 }
 
 func (v NullableWorkflowConfigUpdateRequest) Get() *WorkflowConfigUpdateRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowConfigUpdateRequest) Set(val *WorkflowConfigUpdateRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowConfigUpdateRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowConfigUpdateRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowConfigUpdateRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowConfigUpdateRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowConfigUpdateRequest(val *WorkflowConfigUpdateRequest) *NullableWorkflowConfigUpdateRequest {
-	return &NullableWorkflowConfigUpdateRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowConfigUpdateRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowConfigUpdateRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the PersistenceLoadingPolicy type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &PersistenceLoadingPolicy{}
 
@@ -30,205 +26,141 @@ type PersistenceLoadingPolicy struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewPersistenceLoadingPolicy() *PersistenceLoadingPolicy {
-	this := PersistenceLoadingPolicy{}
-	return &this
-}
+func NewPersistenceLoadingPolicy() *PersistenceLoadingPolicy { _ = "STUB: not implemented"; return nil }
 
 // NewPersistenceLoadingPolicyWithDefaults instantiates a new PersistenceLoadingPolicy object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPersistenceLoadingPolicyWithDefaults() *PersistenceLoadingPolicy {
-	this := PersistenceLoadingPolicy{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetPersistenceLoadingType returns the PersistenceLoadingType field value if set, zero value otherwise.
 func (o *PersistenceLoadingPolicy) GetPersistenceLoadingType() PersistenceLoadingType {
-	if o == nil || IsNil(o.PersistenceLoadingType) {
-		var ret PersistenceLoadingType
-		return ret
-	}
-	return *o.PersistenceLoadingType
+	_ = "STUB: not implemented"
+	return *new(PersistenceLoadingType)
 }
 
 // GetPersistenceLoadingTypeOk returns a tuple with the PersistenceLoadingType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PersistenceLoadingPolicy) GetPersistenceLoadingTypeOk() (*PersistenceLoadingType, bool) {
-	if o == nil || IsNil(o.PersistenceLoadingType) {
-		return nil, false
-	}
-	return o.PersistenceLoadingType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasPersistenceLoadingType returns a boolean if a field has been set.
 func (o *PersistenceLoadingPolicy) HasPersistenceLoadingType() bool {
-	if o != nil && !IsNil(o.PersistenceLoadingType) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetPersistenceLoadingType gets a reference to the given PersistenceLoadingType and assigns it to the PersistenceLoadingType field.
 func (o *PersistenceLoadingPolicy) SetPersistenceLoadingType(v PersistenceLoadingType) {
-	o.PersistenceLoadingType = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetPartialLoadingKeys returns the PartialLoadingKeys field value if set, zero value otherwise.
 func (o *PersistenceLoadingPolicy) GetPartialLoadingKeys() []string {
-	if o == nil || IsNil(o.PartialLoadingKeys) {
-		var ret []string
-		return ret
-	}
-	return o.PartialLoadingKeys
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetPartialLoadingKeysOk returns a tuple with the PartialLoadingKeys field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PersistenceLoadingPolicy) GetPartialLoadingKeysOk() ([]string, bool) {
-	if o == nil || IsNil(o.PartialLoadingKeys) {
-		return nil, false
-	}
-	return o.PartialLoadingKeys, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasPartialLoadingKeys returns a boolean if a field has been set.
 func (o *PersistenceLoadingPolicy) HasPartialLoadingKeys() bool {
-	if o != nil && !IsNil(o.PartialLoadingKeys) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetPartialLoadingKeys gets a reference to the given []string and assigns it to the PartialLoadingKeys field.
 func (o *PersistenceLoadingPolicy) SetPartialLoadingKeys(v []string) {
-	o.PartialLoadingKeys = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetLockingKeys returns the LockingKeys field value if set, zero value otherwise.
-func (o *PersistenceLoadingPolicy) GetLockingKeys() []string {
-	if o == nil || IsNil(o.LockingKeys) {
-		var ret []string
-		return ret
-	}
-	return o.LockingKeys
-}
+func (o *PersistenceLoadingPolicy) GetLockingKeys() []string { _ = "STUB: not implemented"; return nil }
 
 // GetLockingKeysOk returns a tuple with the LockingKeys field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PersistenceLoadingPolicy) GetLockingKeysOk() ([]string, bool) {
-	if o == nil || IsNil(o.LockingKeys) {
-		return nil, false
-	}
-	return o.LockingKeys, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasLockingKeys returns a boolean if a field has been set.
-func (o *PersistenceLoadingPolicy) HasLockingKeys() bool {
-	if o != nil && !IsNil(o.LockingKeys) {
-		return true
-	}
-
-	return false
-}
+func (o *PersistenceLoadingPolicy) HasLockingKeys() bool { _ = "STUB: not implemented"; return false }
 
 // SetLockingKeys gets a reference to the given []string and assigns it to the LockingKeys field.
 func (o *PersistenceLoadingPolicy) SetLockingKeys(v []string) {
-	o.LockingKeys = v
+	_ = "STUB: not implemented"
+
+	// GetUseKeyAsPrefix returns the UseKeyAsPrefix field value if set, zero value otherwise.
+	return
 }
 
-// GetUseKeyAsPrefix returns the UseKeyAsPrefix field value if set, zero value otherwise.
 func (o *PersistenceLoadingPolicy) GetUseKeyAsPrefix() bool {
-	if o == nil || IsNil(o.UseKeyAsPrefix) {
-		var ret bool
-		return ret
-	}
-	return *o.UseKeyAsPrefix
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetUseKeyAsPrefixOk returns a tuple with the UseKeyAsPrefix field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PersistenceLoadingPolicy) GetUseKeyAsPrefixOk() (*bool, bool) {
-	if o == nil || IsNil(o.UseKeyAsPrefix) {
-		return nil, false
-	}
-	return o.UseKeyAsPrefix, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasUseKeyAsPrefix returns a boolean if a field has been set.
 func (o *PersistenceLoadingPolicy) HasUseKeyAsPrefix() bool {
-	if o != nil && !IsNil(o.UseKeyAsPrefix) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetUseKeyAsPrefix gets a reference to the given bool and assigns it to the UseKeyAsPrefix field.
-func (o *PersistenceLoadingPolicy) SetUseKeyAsPrefix(v bool) {
-	o.UseKeyAsPrefix = &v
-}
+func (o *PersistenceLoadingPolicy) SetUseKeyAsPrefix(v bool) { _ = "STUB: not implemented"; return }
 
 // GetLazyLoadingLargeDataAttributes returns the LazyLoadingLargeDataAttributes field value if set, zero value otherwise.
 func (o *PersistenceLoadingPolicy) GetLazyLoadingLargeDataAttributes() bool {
-	if o == nil || IsNil(o.LazyLoadingLargeDataAttributes) {
-		var ret bool
-		return ret
-	}
-	return *o.LazyLoadingLargeDataAttributes
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetLazyLoadingLargeDataAttributesOk returns a tuple with the LazyLoadingLargeDataAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PersistenceLoadingPolicy) GetLazyLoadingLargeDataAttributesOk() (*bool, bool) {
-	if o == nil || IsNil(o.LazyLoadingLargeDataAttributes) {
-		return nil, false
-	}
-	return o.LazyLoadingLargeDataAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasLazyLoadingLargeDataAttributes returns a boolean if a field has been set.
 func (o *PersistenceLoadingPolicy) HasLazyLoadingLargeDataAttributes() bool {
-	if o != nil && !IsNil(o.LazyLoadingLargeDataAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetLazyLoadingLargeDataAttributes gets a reference to the given bool and assigns it to the LazyLoadingLargeDataAttributes field.
 func (o *PersistenceLoadingPolicy) SetLazyLoadingLargeDataAttributes(v bool) {
-	o.LazyLoadingLargeDataAttributes = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o PersistenceLoadingPolicy) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o PersistenceLoadingPolicy) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.PersistenceLoadingType) {
-		toSerialize["persistenceLoadingType"] = o.PersistenceLoadingType
-	}
-	if !IsNil(o.PartialLoadingKeys) {
-		toSerialize["partialLoadingKeys"] = o.PartialLoadingKeys
-	}
-	if !IsNil(o.LockingKeys) {
-		toSerialize["lockingKeys"] = o.LockingKeys
-	}
-	if !IsNil(o.UseKeyAsPrefix) {
-		toSerialize["useKeyAsPrefix"] = o.UseKeyAsPrefix
-	}
-	if !IsNil(o.LazyLoadingLargeDataAttributes) {
-		toSerialize["lazyLoadingLargeDataAttributes"] = o.LazyLoadingLargeDataAttributes
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullablePersistenceLoadingPolicy struct {
@@ -237,32 +169,30 @@ type NullablePersistenceLoadingPolicy struct {
 }
 
 func (v NullablePersistenceLoadingPolicy) Get() *PersistenceLoadingPolicy {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullablePersistenceLoadingPolicy) Set(val *PersistenceLoadingPolicy) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullablePersistenceLoadingPolicy) IsSet() bool {
-	return v.isSet
-}
+func (v NullablePersistenceLoadingPolicy) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullablePersistenceLoadingPolicy) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullablePersistenceLoadingPolicy) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullablePersistenceLoadingPolicy(val *PersistenceLoadingPolicy) *NullablePersistenceLoadingPolicy {
-	return &NullablePersistenceLoadingPolicy{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullablePersistenceLoadingPolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullablePersistenceLoadingPolicy) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

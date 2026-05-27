@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowSearchResponseEntry type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowSearchResponseEntry{}
 
@@ -28,81 +24,59 @@ type WorkflowSearchResponseEntry struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowSearchResponseEntry(workflowId string, workflowRunId string) *WorkflowSearchResponseEntry {
-	this := WorkflowSearchResponseEntry{}
-	this.WorkflowId = workflowId
-	this.WorkflowRunId = workflowRunId
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowSearchResponseEntryWithDefaults instantiates a new WorkflowSearchResponseEntry object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowSearchResponseEntryWithDefaults() *WorkflowSearchResponseEntry {
-	this := WorkflowSearchResponseEntry{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
-func (o *WorkflowSearchResponseEntry) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
-}
+func (o *WorkflowSearchResponseEntry) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowSearchResponseEntry) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowSearchResponseEntry) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value
 func (o *WorkflowSearchResponseEntry) GetWorkflowRunId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowRunId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowSearchResponseEntry) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowRunId sets field value
-func (o *WorkflowSearchResponseEntry) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = v
-}
+func (o *WorkflowSearchResponseEntry) SetWorkflowRunId(v string) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowSearchResponseEntry) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowSearchResponseEntry) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	toSerialize["workflowRunId"] = o.WorkflowRunId
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowSearchResponseEntry struct {
@@ -111,32 +85,30 @@ type NullableWorkflowSearchResponseEntry struct {
 }
 
 func (v NullableWorkflowSearchResponseEntry) Get() *WorkflowSearchResponseEntry {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowSearchResponseEntry) Set(val *WorkflowSearchResponseEntry) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowSearchResponseEntry) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowSearchResponseEntry) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowSearchResponseEntry) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowSearchResponseEntry) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowSearchResponseEntry(val *WorkflowSearchResponseEntry) *NullableWorkflowSearchResponseEntry {
-	return &NullableWorkflowSearchResponseEntry{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowSearchResponseEntry) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowSearchResponseEntry) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

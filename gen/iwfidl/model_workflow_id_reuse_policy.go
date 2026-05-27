@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // WorkflowIDReusePolicy the model 'WorkflowIDReusePolicy'
 type WorkflowIDReusePolicy string
 
@@ -35,47 +30,22 @@ var AllowedWorkflowIDReusePolicyEnumValues = []WorkflowIDReusePolicy{
 }
 
 func (v *WorkflowIDReusePolicy) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := WorkflowIDReusePolicy(value)
-	for _, existing := range AllowedWorkflowIDReusePolicyEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid WorkflowIDReusePolicy", value)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowIDReusePolicyFromValue returns a pointer to a valid WorkflowIDReusePolicy
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewWorkflowIDReusePolicyFromValue(v string) (*WorkflowIDReusePolicy, error) {
-	ev := WorkflowIDReusePolicy(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for WorkflowIDReusePolicy: valid values are %v", v, AllowedWorkflowIDReusePolicyEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v WorkflowIDReusePolicy) IsValid() bool {
-	for _, existing := range AllowedWorkflowIDReusePolicyEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v WorkflowIDReusePolicy) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to WorkflowIDReusePolicy value
-func (v WorkflowIDReusePolicy) Ptr() *WorkflowIDReusePolicy {
-	return &v
-}
+func (v WorkflowIDReusePolicy) Ptr() *WorkflowIDReusePolicy { _ = "STUB: not implemented"; return nil }
 
 type NullableWorkflowIDReusePolicy struct {
 	value *WorkflowIDReusePolicy
@@ -83,32 +53,30 @@ type NullableWorkflowIDReusePolicy struct {
 }
 
 func (v NullableWorkflowIDReusePolicy) Get() *WorkflowIDReusePolicy {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowIDReusePolicy) Set(val *WorkflowIDReusePolicy) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowIDReusePolicy) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowIDReusePolicy) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowIDReusePolicy) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowIDReusePolicy) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowIDReusePolicy(val *WorkflowIDReusePolicy) *NullableWorkflowIDReusePolicy {
-	return &NullableWorkflowIDReusePolicy{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowIDReusePolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowIDReusePolicy) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

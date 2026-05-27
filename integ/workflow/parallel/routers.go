@@ -1,15 +1,11 @@
 package parallel
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/indeedeng/iwf/gen/iwfidl"
-	"github.com/indeedeng/iwf/integ/workflow/common"
-	"github.com/indeedeng/iwf/service"
-	"log"
-	"net/http"
 	"sync"
 	"testing"
-	"time"
+
+	"github.com/gin-gonic/gin"
+	"github.com/indeedeng/iwf/integ/workflow/common"
 )
 
 /**
@@ -57,148 +53,44 @@ type handler struct {
 }
 
 func NewHandler() common.WorkflowHandler {
-	return &handler{
-		invokeHistory: sync.Map{},
-	}
+	_ = "STUB: not implemented"
+	return *new(common.WorkflowHandler)
 }
 
 // ApiV1WorkflowStartPost - for a workflow
 func (h *handler) ApiV1WorkflowStateStart(c *gin.Context, t *testing.T) {
-	var req iwfidl.WorkflowStateStartRequest
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
-	log.Println("received state start request, ", req)
-
-	if req.GetWorkflowType() == WorkflowType {
-		if value, ok := h.invokeHistory.Load(req.GetWorkflowStateId() + "_start"); ok {
-			h.invokeHistory.Store(req.GetWorkflowStateId()+"_start", value.(int64)+1)
-		} else {
-			h.invokeHistory.Store(req.GetWorkflowStateId()+"_start", int64(1))
-		}
-
-		// Go straight to the decide methods without any commands
-		c.JSON(http.StatusOK, iwfidl.WorkflowStateStartResponse{
-			CommandRequest: &iwfidl.CommandRequest{
-				DeciderTriggerType: iwfidl.ALL_COMMAND_COMPLETED.Ptr(),
-			},
-		})
-		return
-	}
-
-	c.JSON(http.StatusBadRequest, struct{}{})
+	_ = "STUB: not implemented"
+	return
 }
+
+// Go straight to the decide methods without any commands
 
 func (h *handler) ApiV1WorkflowStateDecide(c *gin.Context, t *testing.T) {
-	var req iwfidl.WorkflowStateDecideRequest
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
-	log.Println("received state decide request, ", req)
-
-	if req.GetWorkflowType() == WorkflowType {
-		if value, ok := h.invokeHistory.Load(req.GetWorkflowStateId() + "_decide"); ok {
-			h.invokeHistory.Store(req.GetWorkflowStateId()+"_decide", value.(int64)+1)
-		} else {
-			h.invokeHistory.Store(req.GetWorkflowStateId()+"_decide", int64(1))
-		}
-
-		var nextStates []iwfidl.StateMovement
-		switch req.GetWorkflowStateId() {
-		case State1:
-			// Cause graceful complete to wait
-			time.Sleep(time.Second * 1)
-
-			// Move to 3 states (which will all move to this decide method without commands)
-			nextStates = []iwfidl.StateMovement{
-				{
-					StateId: State11,
-				},
-				{
-					StateId: State12,
-				},
-				{
-					StateId: State13,
-				},
-			}
-		case State11:
-			// Cause graceful complete to wait
-			time.Sleep(time.Second * 2)
-
-			// Move to 2 states (which will all move to this decide method without commands)
-			nextStates = []iwfidl.StateMovement{
-				{
-					StateId: State111,
-				},
-				{
-					StateId: State112,
-				},
-			}
-		case State12:
-			// Cause graceful complete to wait
-			time.Sleep(time.Second * 2)
-
-			// Move to 2 states (which will all move to this decide method without commands)
-			nextStates = []iwfidl.StateMovement{
-				{
-					StateId: State121,
-				},
-				{
-					StateId: State122,
-				},
-			}
-		case State13:
-			// Cause graceful complete to wait
-			time.Sleep(time.Second * 1)
-
-			// Move to completion after updating the state input
-			nextStates = []iwfidl.StateMovement{
-				{
-					StateId: service.GracefulCompletingWorkflowStateId,
-					StateInput: &iwfidl.EncodedObject{
-						Encoding: iwfidl.PtrString("json"),
-						Data:     iwfidl.PtrString("from " + req.GetWorkflowStateId()),
-					},
-				},
-			}
-		case State111, State112, State121, State122:
-			// Move to completion after updating the state input
-			nextStates = []iwfidl.StateMovement{
-				{
-					StateId: service.GracefulCompletingWorkflowStateId,
-					StateInput: &iwfidl.EncodedObject{
-						Encoding: iwfidl.PtrString("json"),
-						Data:     iwfidl.PtrString("from " + req.GetWorkflowStateId()),
-					},
-				},
-			}
-		default:
-			// Fail workflow due to unknown or unexpected state
-			nextStates = []iwfidl.StateMovement{
-				{
-					StateId: service.ForceFailingWorkflowStateId,
-				},
-			}
-		}
-
-		c.JSON(http.StatusOK, iwfidl.WorkflowStateDecideResponse{
-			StateDecision: &iwfidl.StateDecision{
-				NextStates: nextStates,
-			},
-		})
-		return
-	}
-
-	c.JSON(http.StatusBadRequest, struct{}{})
+	_ = "STUB: not implemented"
+	return
 }
 
+// Cause graceful complete to wait
+
+// Move to 3 states (which will all move to this decide method without commands)
+
+// Cause graceful complete to wait
+
+// Move to 2 states (which will all move to this decide method without commands)
+
+// Cause graceful complete to wait
+
+// Move to 2 states (which will all move to this decide method without commands)
+
+// Cause graceful complete to wait
+
+// Move to completion after updating the state input
+
+// Move to completion after updating the state input
+
+// Fail workflow due to unknown or unexpected state
+
 func (h *handler) GetTestResult() (map[string]int64, map[string]interface{}) {
-	invokeHistory := make(map[string]int64)
-	h.invokeHistory.Range(func(key, value interface{}) bool {
-		invokeHistory[key.(string)] = value.(int64)
-		return true
-	})
-	return invokeHistory, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowWorkerRpcResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowWorkerRpcResponse{}
 
@@ -33,274 +29,199 @@ type WorkflowWorkerRpcResponse struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowWorkerRpcResponse() *WorkflowWorkerRpcResponse {
-	this := WorkflowWorkerRpcResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowWorkerRpcResponseWithDefaults instantiates a new WorkflowWorkerRpcResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowWorkerRpcResponseWithDefaults() *WorkflowWorkerRpcResponse {
-	this := WorkflowWorkerRpcResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOutput returns the Output field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcResponse) GetOutput() EncodedObject {
-	if o == nil || IsNil(o.Output) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.Output
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetOutputOk returns a tuple with the Output field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcResponse) GetOutputOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.Output) {
-		return nil, false
-	}
-	return o.Output, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasOutput returns a boolean if a field has been set.
-func (o *WorkflowWorkerRpcResponse) HasOutput() bool {
-	if o != nil && !IsNil(o.Output) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowWorkerRpcResponse) HasOutput() bool { _ = "STUB: not implemented"; return false }
 
 // SetOutput gets a reference to the given EncodedObject and assigns it to the Output field.
 func (o *WorkflowWorkerRpcResponse) SetOutput(v EncodedObject) {
-	o.Output = &v
+	_ = "STUB: not implemented"
+
+	// GetStateDecision returns the StateDecision field value if set, zero value otherwise.
+	return
 }
 
-// GetStateDecision returns the StateDecision field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcResponse) GetStateDecision() StateDecision {
-	if o == nil || IsNil(o.StateDecision) {
-		var ret StateDecision
-		return ret
-	}
-	return *o.StateDecision
+	_ = "STUB: not implemented"
+	return *new(StateDecision)
 }
 
 // GetStateDecisionOk returns a tuple with the StateDecision field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcResponse) GetStateDecisionOk() (*StateDecision, bool) {
-	if o == nil || IsNil(o.StateDecision) {
-		return nil, false
-	}
-	return o.StateDecision, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateDecision returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcResponse) HasStateDecision() bool {
-	if o != nil && !IsNil(o.StateDecision) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetStateDecision gets a reference to the given StateDecision and assigns it to the StateDecision field.
 func (o *WorkflowWorkerRpcResponse) SetStateDecision(v StateDecision) {
-	o.StateDecision = &v
+	_ = "STUB: not implemented"
+	return
+
+	// GetUpsertSearchAttributes returns the UpsertSearchAttributes field value if set, zero value otherwise.
 }
 
-// GetUpsertSearchAttributes returns the UpsertSearchAttributes field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcResponse) GetUpsertSearchAttributes() []SearchAttribute {
-	if o == nil || IsNil(o.UpsertSearchAttributes) {
-		var ret []SearchAttribute
-		return ret
-	}
-	return o.UpsertSearchAttributes
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetUpsertSearchAttributesOk returns a tuple with the UpsertSearchAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcResponse) GetUpsertSearchAttributesOk() ([]SearchAttribute, bool) {
-	if o == nil || IsNil(o.UpsertSearchAttributes) {
-		return nil, false
-	}
-	return o.UpsertSearchAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasUpsertSearchAttributes returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcResponse) HasUpsertSearchAttributes() bool {
-	if o != nil && !IsNil(o.UpsertSearchAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetUpsertSearchAttributes gets a reference to the given []SearchAttribute and assigns it to the UpsertSearchAttributes field.
 func (o *WorkflowWorkerRpcResponse) SetUpsertSearchAttributes(v []SearchAttribute) {
-	o.UpsertSearchAttributes = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetUpsertDataAttributes returns the UpsertDataAttributes field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcResponse) GetUpsertDataAttributes() []KeyValue {
-	if o == nil || IsNil(o.UpsertDataAttributes) {
-		var ret []KeyValue
-		return ret
-	}
-	return o.UpsertDataAttributes
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetUpsertDataAttributesOk returns a tuple with the UpsertDataAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcResponse) GetUpsertDataAttributesOk() ([]KeyValue, bool) {
-	if o == nil || IsNil(o.UpsertDataAttributes) {
-		return nil, false
-	}
-	return o.UpsertDataAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasUpsertDataAttributes returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcResponse) HasUpsertDataAttributes() bool {
-	if o != nil && !IsNil(o.UpsertDataAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetUpsertDataAttributes gets a reference to the given []KeyValue and assigns it to the UpsertDataAttributes field.
 func (o *WorkflowWorkerRpcResponse) SetUpsertDataAttributes(v []KeyValue) {
-	o.UpsertDataAttributes = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetRecordEvents returns the RecordEvents field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcResponse) GetRecordEvents() []KeyValue {
-	if o == nil || IsNil(o.RecordEvents) {
-		var ret []KeyValue
-		return ret
-	}
-	return o.RecordEvents
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetRecordEventsOk returns a tuple with the RecordEvents field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcResponse) GetRecordEventsOk() ([]KeyValue, bool) {
-	if o == nil || IsNil(o.RecordEvents) {
-		return nil, false
-	}
-	return o.RecordEvents, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasRecordEvents returns a boolean if a field has been set.
-func (o *WorkflowWorkerRpcResponse) HasRecordEvents() bool {
-	if o != nil && !IsNil(o.RecordEvents) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowWorkerRpcResponse) HasRecordEvents() bool { _ = "STUB: not implemented"; return false }
 
 // SetRecordEvents gets a reference to the given []KeyValue and assigns it to the RecordEvents field.
 func (o *WorkflowWorkerRpcResponse) SetRecordEvents(v []KeyValue) {
-	o.RecordEvents = v
+	_ = "STUB: not implemented"
+	return
+
+	// GetUpsertStateLocals returns the UpsertStateLocals field value if set, zero value otherwise.
 }
 
-// GetUpsertStateLocals returns the UpsertStateLocals field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcResponse) GetUpsertStateLocals() []KeyValue {
-	if o == nil || IsNil(o.UpsertStateLocals) {
-		var ret []KeyValue
-		return ret
-	}
-	return o.UpsertStateLocals
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetUpsertStateLocalsOk returns a tuple with the UpsertStateLocals field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcResponse) GetUpsertStateLocalsOk() ([]KeyValue, bool) {
-	if o == nil || IsNil(o.UpsertStateLocals) {
-		return nil, false
-	}
-	return o.UpsertStateLocals, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasUpsertStateLocals returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcResponse) HasUpsertStateLocals() bool {
-	if o != nil && !IsNil(o.UpsertStateLocals) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetUpsertStateLocals gets a reference to the given []KeyValue and assigns it to the UpsertStateLocals field.
 func (o *WorkflowWorkerRpcResponse) SetUpsertStateLocals(v []KeyValue) {
-	o.UpsertStateLocals = v
+	_ = "STUB: not implemented"
+	return
+
+	// GetPublishToInterStateChannel returns the PublishToInterStateChannel field value if set, zero value otherwise.
 }
 
-// GetPublishToInterStateChannel returns the PublishToInterStateChannel field value if set, zero value otherwise.
 func (o *WorkflowWorkerRpcResponse) GetPublishToInterStateChannel() []InterStateChannelPublishing {
-	if o == nil || IsNil(o.PublishToInterStateChannel) {
-		var ret []InterStateChannelPublishing
-		return ret
-	}
-	return o.PublishToInterStateChannel
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetPublishToInterStateChannelOk returns a tuple with the PublishToInterStateChannel field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWorkerRpcResponse) GetPublishToInterStateChannelOk() ([]InterStateChannelPublishing, bool) {
-	if o == nil || IsNil(o.PublishToInterStateChannel) {
-		return nil, false
-	}
-	return o.PublishToInterStateChannel, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasPublishToInterStateChannel returns a boolean if a field has been set.
 func (o *WorkflowWorkerRpcResponse) HasPublishToInterStateChannel() bool {
-	if o != nil && !IsNil(o.PublishToInterStateChannel) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetPublishToInterStateChannel gets a reference to the given []InterStateChannelPublishing and assigns it to the PublishToInterStateChannel field.
 func (o *WorkflowWorkerRpcResponse) SetPublishToInterStateChannel(v []InterStateChannelPublishing) {
-	o.PublishToInterStateChannel = v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowWorkerRpcResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowWorkerRpcResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Output) {
-		toSerialize["output"] = o.Output
-	}
-	if !IsNil(o.StateDecision) {
-		toSerialize["stateDecision"] = o.StateDecision
-	}
-	if !IsNil(o.UpsertSearchAttributes) {
-		toSerialize["upsertSearchAttributes"] = o.UpsertSearchAttributes
-	}
-	if !IsNil(o.UpsertDataAttributes) {
-		toSerialize["upsertDataAttributes"] = o.UpsertDataAttributes
-	}
-	if !IsNil(o.RecordEvents) {
-		toSerialize["recordEvents"] = o.RecordEvents
-	}
-	if !IsNil(o.UpsertStateLocals) {
-		toSerialize["upsertStateLocals"] = o.UpsertStateLocals
-	}
-	if !IsNil(o.PublishToInterStateChannel) {
-		toSerialize["publishToInterStateChannel"] = o.PublishToInterStateChannel
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowWorkerRpcResponse struct {
@@ -309,32 +230,30 @@ type NullableWorkflowWorkerRpcResponse struct {
 }
 
 func (v NullableWorkflowWorkerRpcResponse) Get() *WorkflowWorkerRpcResponse {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowWorkerRpcResponse) Set(val *WorkflowWorkerRpcResponse) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowWorkerRpcResponse) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowWorkerRpcResponse) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowWorkerRpcResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowWorkerRpcResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowWorkerRpcResponse(val *WorkflowWorkerRpcResponse) *NullableWorkflowWorkerRpcResponse {
-	return &NullableWorkflowWorkerRpcResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowWorkerRpcResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowWorkerRpcResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

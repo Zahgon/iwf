@@ -1,16 +1,12 @@
 package config
 
 import (
-	"fmt"
-	"log"
-	"os"
 	"time"
 
 	"github.com/indeedeng/iwf/gen/iwfidl"
 	"github.com/uber-go/tally/v4/prometheus"
 	temporalWorker "go.temporal.io/sdk/worker"
 	cadenceWorker "go.uber.org/cadence/worker"
-	"gopkg.in/yaml.v3"
 )
 
 const (
@@ -174,61 +170,15 @@ var DefaultWorkflowConfig = &iwfidl.WorkflowConfig{
 }
 
 // NewConfig returns a new decoded Config struct
-func NewConfig(configPath string) (*Config, error) {
-	log.Printf("Loading configFile=%v\n", configPath)
+func NewConfig(configPath string) (*Config, error) { _ = "STUB: not implemented"; return nil, nil }
 
-	config := &Config{}
+func (c Config) GetApiServiceAddressWithDefault() string { _ = "STUB: not implemented"; return "" }
 
-	file, err := os.Open(configPath)
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
+func (c Config) GetSignalWithStartOnWithDefault() string { _ = "STUB: not implemented"; return "" }
 
-	d := yaml.NewDecoder(file)
-
-	if err := d.Decode(&config); err != nil {
-		return nil, err
-	}
-
-	return config, nil
-}
-
-func (c Config) GetApiServiceAddressWithDefault() string {
-	if c.Interpreter.InterpreterActivityConfig.ApiServiceAddress != "" {
-		return c.Interpreter.InterpreterActivityConfig.ApiServiceAddress
-	}
-	return fmt.Sprintf("http://localhost:%v", c.Api.Port)
-}
-
-func (c Config) GetSignalWithStartOnWithDefault() string {
-	if c.Api.WaitForStateCompletionMigration.SignalWithStartOn != "" {
-		return c.Api.WaitForStateCompletionMigration.SignalWithStartOn
-	}
-	return "old"
-}
-
-func (c Config) GetWaitForOnWithDefault() string {
-	if c.Api.WaitForStateCompletionMigration.WaitForOn != "" {
-		return c.Api.WaitForStateCompletionMigration.WaitForOn
-	}
-	return "old"
-}
+func (c Config) GetWaitForOnWithDefault() string { _ = "STUB: not implemented"; return "" }
 
 func QueryWorkflowFailedRetryPolicyWithDefaults(retryPolicy *QueryWorkflowFailedRetryPolicy) QueryWorkflowFailedRetryPolicy {
-	var rp QueryWorkflowFailedRetryPolicy
-
-	if retryPolicy != nil && retryPolicy.InitialIntervalSeconds != 0 {
-		rp.InitialIntervalSeconds = retryPolicy.InitialIntervalSeconds
-	} else {
-		rp.InitialIntervalSeconds = 1
-	}
-
-	if retryPolicy != nil && retryPolicy.MaximumAttempts != 0 {
-		rp.MaximumAttempts = retryPolicy.MaximumAttempts
-	} else {
-		rp.MaximumAttempts = 5
-	}
-
-	return rp
+	_ = "STUB: not implemented"
+	return *new(QueryWorkflowFailedRetryPolicy)
 }

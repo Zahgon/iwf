@@ -1,15 +1,12 @@
 package cadence
 
 import (
-	"fmt"
-	"github.com/indeedeng/iwf/service/common/mapper"
-	"github.com/indeedeng/iwf/service/interpreter/interfaces"
 	"time"
+
+	"github.com/indeedeng/iwf/service/interpreter/interfaces"
 
 	"github.com/indeedeng/iwf/gen/iwfidl"
 	"github.com/indeedeng/iwf/service"
-	"github.com/indeedeng/iwf/service/common/retry"
-	"go.uber.org/cadence"
 	"go.uber.org/cadence/workflow"
 )
 
@@ -19,103 +16,77 @@ type workflowProvider struct {
 }
 
 func newCadenceWorkflowProvider() interfaces.WorkflowProvider {
-	return &workflowProvider{
-		pendingThreadNames: map[string]int{},
-	}
+	_ = "STUB: not implemented"
+	return *new(interfaces.WorkflowProvider)
 }
 
 func (w *workflowProvider) GetBackendType() service.BackendType {
-	return service.BackendTypeCadence
+	_ = "STUB: not implemented"
+	return *new(service.BackendType)
 }
 
 func (w *workflowProvider) NewApplicationError(errType string, details interface{}) error {
-	return cadence.NewCustomError(errType, details)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) IsApplicationError(err error) bool {
-	_, ok := err.(*cadence.CustomError)
-	return ok
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (w *workflowProvider) NewInterpreterContinueAsNewError(
 	ctx interfaces.UnifiedContext, input service.InterpreterWorkflowInput,
 ) error {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return workflow.NewContinueAsNewError(wfCtx, Interpreter, input)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) UpsertSearchAttributes(
 	ctx interfaces.UnifiedContext, attributes map[string]interface{},
 ) error {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return workflow.UpsertSearchAttributes(wfCtx, attributes)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) UpsertMemo(ctx interfaces.UnifiedContext, memo map[string]iwfidl.EncodedObject) error {
-	return fmt.Errorf("upsert memo is not supported in Cadence")
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) NewTimer(ctx interfaces.UnifiedContext, d time.Duration) interfaces.Future {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	f := workflow.NewTimer(wfCtx, d)
-	return &futureImpl{
-		future: f,
-	}
+	_ = "STUB: not implemented"
+	return *new(interfaces.Future)
 }
 
 func (w *workflowProvider) GetWorkflowInfo(ctx interfaces.UnifiedContext) interfaces.WorkflowInfo {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	info := workflow.GetInfo(wfCtx)
-	return interfaces.WorkflowInfo{
-		WorkflowExecution: interfaces.WorkflowExecution{
-			ID:    info.WorkflowExecution.ID,
-			RunID: info.WorkflowExecution.RunID,
-		},
-		WorkflowStartTime:        time.UnixMilli(0), // TODO need support from Cadence client: https://github.com/uber-go/cadence-client/issues/1204
-		WorkflowExecutionTimeout: time.Duration(info.ExecutionStartToCloseTimeoutSeconds) * time.Second,
-		FirstRunID:               info.WorkflowExecution.RunID, // Cadence does not provide FirstRunID TODO https://github.com/uber-go/cadence-client/issues/1371 use firstRunID when available
-		CurrentRunID:             info.WorkflowExecution.RunID,
-	}
+	_ = "STUB: not implemented"
+	return *new(interfaces.WorkflowInfo)
 }
+
+// TODO need support from Cadence client: https://github.com/uber-go/cadence-client/issues/1204
+
+// Cadence does not provide FirstRunID TODO https://github.com/uber-go/cadence-client/issues/1371 use firstRunID when available
 
 func (w *workflowProvider) GetSearchAttributes(
 	ctx interfaces.UnifiedContext, requestedSearchAttributes []iwfidl.SearchAttributeKeyAndType,
 ) (map[string]iwfidl.SearchAttribute, error) {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	sas := workflow.GetInfo(wfCtx).SearchAttributes
-
-	return mapper.MapCadenceToIwfSearchAttributes(sas, requestedSearchAttributes)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (w *workflowProvider) SetQueryHandler(
 	ctx interfaces.UnifiedContext, queryType string, handler interface{},
 ) error {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return workflow.SetQueryHandler(wfCtx, queryType, handler)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) SetRpcUpdateHandler(
 	ctx interfaces.UnifiedContext, updateType string, validator interfaces.UnifiedRpcValidator,
 	handler interfaces.UnifiedRpcHandler,
 ) error {
+	_ = "STUB: not implemented"
 	// NOTE: this feature is not available in Cadence
 	return nil
 }
@@ -123,166 +94,88 @@ func (w *workflowProvider) SetRpcUpdateHandler(
 func (w *workflowProvider) ExtendContextWithValue(
 	parent interfaces.UnifiedContext, key string, val interface{},
 ) interfaces.UnifiedContext {
-	wfCtx, ok := parent.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return interfaces.NewUnifiedContext(workflow.WithValue(wfCtx, key, val))
+	_ = "STUB: not implemented"
+	return *new(interfaces.UnifiedContext)
 }
 
 func (w *workflowProvider) GoNamed(
 	ctx interfaces.UnifiedContext, name string, f func(ctx interfaces.UnifiedContext),
 ) {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	f2 := func(ctx workflow.Context) {
-		ctx2 := interfaces.NewUnifiedContext(ctx)
-		w.pendingThreadNames[name]++
-		w.threadCount++
-		f(ctx2)
-		w.pendingThreadNames[name]--
-		if w.pendingThreadNames[name] == 0 {
-			delete(w.pendingThreadNames, name)
-		}
-		w.threadCount--
-	}
-	workflow.GoNamed(wfCtx, name, f2)
+	_ = "STUB: not implemented"
+	return
 }
 
 func (w *workflowProvider) GetPendingThreadNames() map[string]int {
-	return w.pendingThreadNames
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (w *workflowProvider) GetThreadCount() int {
-	return w.threadCount
-}
+func (w *workflowProvider) GetThreadCount() int { _ = "STUB: not implemented"; return 0 }
 
 func (w *workflowProvider) Await(ctx interfaces.UnifiedContext, condition func() bool) error {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return workflow.Await(wfCtx, condition)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) WithActivityOptions(
 	ctx interfaces.UnifiedContext, options interfaces.ActivityOptions,
 ) interfaces.UnifiedContext {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-
-	unlimited := time.Hour * 24 * 365
-	startToCloseTimeout := options.StartToCloseTimeout
-	if startToCloseTimeout == 0 {
-		// unlimited to match Temporal for default
-		startToCloseTimeout = unlimited
-	}
-
-	wfCtx2 := workflow.WithActivityOptions(wfCtx, workflow.ActivityOptions{
-		StartToCloseTimeout:    startToCloseTimeout,
-		ScheduleToStartTimeout: time.Second * 10,
-		HeartbeatTimeout:       options.HeartbeatTimeout,
-		RetryPolicy:            retry.ConvertCadenceActivityRetryPolicy(options.RetryPolicy),
-	})
-
-	// support local activity optimization
-	wfCtx3 := workflow.WithLocalActivityOptions(wfCtx2, workflow.LocalActivityOptions{
-		// set the LA timeout to 7s to make sure the workflow will not need a heartbeat
-		ScheduleToCloseTimeout: time.Second * 7,
-		RetryPolicy:            retry.ConvertCadenceActivityRetryPolicy(options.RetryPolicy),
-	})
-	return interfaces.NewUnifiedContext(wfCtx3)
+	_ = "STUB: not implemented"
+	return *new(interfaces.UnifiedContext)
 }
+
+// unlimited to match Temporal for default
+
+// support local activity optimization
+
+// set the LA timeout to 7s to make sure the workflow will not need a heartbeat
 
 type futureImpl struct {
 	future workflow.Future
 }
 
-func (t *futureImpl) IsReady() bool {
-	return t.future.IsReady()
-}
+func (t *futureImpl) IsReady() bool { _ = "STUB: not implemented"; return false }
 
 func (t *futureImpl) Get(ctx interfaces.UnifiedContext, valuePtr interface{}) error {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-
-	return t.future.Get(wfCtx, valuePtr)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) ExecuteActivity(
 	valuePtr interface{}, optimizeByLocalActivity bool,
 	ctx interfaces.UnifiedContext, activity interface{}, args ...interface{},
 ) (err error) {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	if optimizeByLocalActivity {
-		f := workflow.ExecuteLocalActivity(wfCtx, activity, args...)
-		err = f.Get(wfCtx, valuePtr)
-		if err != nil {
-			f = workflow.ExecuteActivity(wfCtx, activity, args...)
-			return f.Get(wfCtx, valuePtr)
-		}
-		return err
-	}
-
-	f := workflow.ExecuteActivity(wfCtx, activity, args...)
-	return f.Get(wfCtx, valuePtr)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) ExecuteLocalActivity(
 	valuePtr interface{}, ctx interfaces.UnifiedContext, activity interface{}, args ...interface{},
 ) (err error) {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-
-	f := workflow.ExecuteLocalActivity(wfCtx, activity, args...)
-	return f.Get(wfCtx, valuePtr)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) Now(ctx interfaces.UnifiedContext) time.Time {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return workflow.Now(wfCtx)
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 func (w *workflowProvider) IsReplaying(ctx interfaces.UnifiedContext) bool {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return workflow.IsReplaying(wfCtx)
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (w *workflowProvider) Sleep(ctx interfaces.UnifiedContext, d time.Duration) (err error) {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return workflow.Sleep(wfCtx, d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) GetVersion(
 	ctx interfaces.UnifiedContext, changeID string, minSupported, maxSupported int,
 ) int {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-
-	version := workflow.GetVersion(wfCtx, changeID, workflow.Version(minSupported), workflow.Version(maxSupported))
-	return int(version)
+	_ = "STUB: not implemented"
+	return 0
 }
 
 type cadenceReceiveChannel struct {
@@ -290,55 +183,33 @@ type cadenceReceiveChannel struct {
 }
 
 func (t *cadenceReceiveChannel) ReceiveAsync(valuePtr interface{}) (ok bool) {
-	return t.channel.ReceiveAsync(valuePtr)
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (t *cadenceReceiveChannel) ReceiveBlocking(ctx interfaces.UnifiedContext, valuePtr interface{}) (ok bool) {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-
-	return t.channel.Receive(wfCtx, valuePtr)
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (w *workflowProvider) GetSignalChannel(
 	ctx interfaces.UnifiedContext, signalName string,
 ) interfaces.ReceiveChannel {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	wfChan := workflow.GetSignalChannel(wfCtx, signalName)
-	return &cadenceReceiveChannel{
-		channel: wfChan,
-	}
+	_ = "STUB: not implemented"
+	return *new(interfaces.ReceiveChannel)
 }
 
 func (w *workflowProvider) GetContextValue(ctx interfaces.UnifiedContext, key string) interface{} {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return wfCtx.Value(key)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (w *workflowProvider) GetLogger(ctx interfaces.UnifiedContext) interfaces.UnifiedLogger {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-
-	zLogger := workflow.GetLogger(wfCtx)
-	return &loggerImpl{
-		zlogger: zLogger,
-	}
+	_ = "STUB: not implemented"
+	return *new(interfaces.UnifiedLogger)
 }
 
 func (w *workflowProvider) GetUnhandledSignalNames(ctx interfaces.UnifiedContext) []string {
-	wfCtx, ok := ctx.GetContext().(workflow.Context)
-	if !ok {
-		panic("cannot convert to cadence workflow context")
-	}
-	return workflow.GetUnhandledSignalNames(wfCtx)
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowRpcResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowRpcResponse{}
 
@@ -26,65 +22,43 @@ type WorkflowRpcResponse struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWorkflowRpcResponse() *WorkflowRpcResponse {
-	this := WorkflowRpcResponse{}
-	return &this
-}
+func NewWorkflowRpcResponse() *WorkflowRpcResponse { _ = "STUB: not implemented"; return nil }
 
 // NewWorkflowRpcResponseWithDefaults instantiates a new WorkflowRpcResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowRpcResponseWithDefaults() *WorkflowRpcResponse {
-	this := WorkflowRpcResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetOutput returns the Output field value if set, zero value otherwise.
 func (o *WorkflowRpcResponse) GetOutput() EncodedObject {
-	if o == nil || IsNil(o.Output) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.Output
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetOutputOk returns a tuple with the Output field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowRpcResponse) GetOutputOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.Output) {
-		return nil, false
-	}
-	return o.Output, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasOutput returns a boolean if a field has been set.
-func (o *WorkflowRpcResponse) HasOutput() bool {
-	if o != nil && !IsNil(o.Output) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowRpcResponse) HasOutput() bool { _ = "STUB: not implemented"; return false }
 
 // SetOutput gets a reference to the given EncodedObject and assigns it to the Output field.
-func (o *WorkflowRpcResponse) SetOutput(v EncodedObject) {
-	o.Output = &v
-}
+func (o *WorkflowRpcResponse) SetOutput(v EncodedObject) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowRpcResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowRpcResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Output) {
-		toSerialize["output"] = o.Output
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowRpcResponse struct {
@@ -93,32 +67,30 @@ type NullableWorkflowRpcResponse struct {
 }
 
 func (v NullableWorkflowRpcResponse) Get() *WorkflowRpcResponse {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowRpcResponse) Set(val *WorkflowRpcResponse) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowRpcResponse) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowRpcResponse) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowRpcResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowRpcResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowRpcResponse(val *WorkflowRpcResponse) *NullableWorkflowRpcResponse {
-	return &NullableWorkflowRpcResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowRpcResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowRpcResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

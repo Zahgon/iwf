@@ -2,8 +2,6 @@ package temporal
 
 import (
 	"github.com/indeedeng/iwf/service"
-	"github.com/indeedeng/iwf/service/interpreter"
-	"github.com/indeedeng/iwf/service/interpreter/interfaces"
 	"go.temporal.io/sdk/workflow"
 
 	// TODO(cretz): Remove when tagged
@@ -11,13 +9,16 @@ import (
 )
 
 func Interpreter(ctx workflow.Context, input service.InterpreterWorkflowInput) (*service.InterpreterWorkflowOutput, error) {
-	return interpreter.InterpreterImpl(interfaces.NewUnifiedContext(ctx), newTemporalWorkflowProvider(), input)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func WaitforStateCompletionWorkflow(ctx workflow.Context) (*service.WaitForStateCompletionWorkflowOutput, error) {
-	return interpreter.WaitForStateCompletionWorkflowImpl(interfaces.NewUnifiedContext(ctx), newTemporalWorkflowProvider())
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func BlobStoreCleanup(ctx workflow.Context, storeId string) (int, error) {
-	return interpreter.BlobStoreCleanup(interfaces.NewUnifiedContext(ctx), newTemporalWorkflowProvider(), storeId)
+	_ = "STUB: not implemented"
+	return 0, nil
 }

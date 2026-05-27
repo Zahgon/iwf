@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowGetDataObjectsRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowGetDataObjectsRequest{}
 
@@ -30,160 +26,117 @@ type WorkflowGetDataObjectsRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowGetDataObjectsRequest(workflowId string) *WorkflowGetDataObjectsRequest {
-	this := WorkflowGetDataObjectsRequest{}
-	this.WorkflowId = workflowId
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowGetDataObjectsRequestWithDefaults instantiates a new WorkflowGetDataObjectsRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowGetDataObjectsRequestWithDefaults() *WorkflowGetDataObjectsRequest {
-	this := WorkflowGetDataObjectsRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
 func (o *WorkflowGetDataObjectsRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetDataObjectsRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowGetDataObjectsRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
 func (o *WorkflowGetDataObjectsRequest) GetWorkflowRunId() string {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		var ret string
-		return ret
-	}
-	return *o.WorkflowRunId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetDataObjectsRequest) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		return nil, false
-	}
-	return o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowRunId returns a boolean if a field has been set.
 func (o *WorkflowGetDataObjectsRequest) HasWorkflowRunId() bool {
-	if o != nil && !IsNil(o.WorkflowRunId) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowRunId gets a reference to the given string and assigns it to the WorkflowRunId field.
 func (o *WorkflowGetDataObjectsRequest) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = &v
+	_ = "STUB: not implemented"
+	return
+
+	// GetKeys returns the Keys field value if set, zero value otherwise.
 }
 
-// GetKeys returns the Keys field value if set, zero value otherwise.
-func (o *WorkflowGetDataObjectsRequest) GetKeys() []string {
-	if o == nil || IsNil(o.Keys) {
-		var ret []string
-		return ret
-	}
-	return o.Keys
-}
+func (o *WorkflowGetDataObjectsRequest) GetKeys() []string { _ = "STUB: not implemented"; return nil }
 
 // GetKeysOk returns a tuple with the Keys field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetDataObjectsRequest) GetKeysOk() ([]string, bool) {
-	if o == nil || IsNil(o.Keys) {
-		return nil, false
-	}
-	return o.Keys, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasKeys returns a boolean if a field has been set.
-func (o *WorkflowGetDataObjectsRequest) HasKeys() bool {
-	if o != nil && !IsNil(o.Keys) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowGetDataObjectsRequest) HasKeys() bool { _ = "STUB: not implemented"; return false }
 
 // SetKeys gets a reference to the given []string and assigns it to the Keys field.
 func (o *WorkflowGetDataObjectsRequest) SetKeys(v []string) {
-	o.Keys = v
+	_ = "STUB: not implemented"
+
+	// GetUseMemoForDataAttributes returns the UseMemoForDataAttributes field value if set, zero value otherwise.
+	return
 }
 
-// GetUseMemoForDataAttributes returns the UseMemoForDataAttributes field value if set, zero value otherwise.
 func (o *WorkflowGetDataObjectsRequest) GetUseMemoForDataAttributes() bool {
-	if o == nil || IsNil(o.UseMemoForDataAttributes) {
-		var ret bool
-		return ret
-	}
-	return *o.UseMemoForDataAttributes
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetUseMemoForDataAttributesOk returns a tuple with the UseMemoForDataAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetDataObjectsRequest) GetUseMemoForDataAttributesOk() (*bool, bool) {
-	if o == nil || IsNil(o.UseMemoForDataAttributes) {
-		return nil, false
-	}
-	return o.UseMemoForDataAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasUseMemoForDataAttributes returns a boolean if a field has been set.
 func (o *WorkflowGetDataObjectsRequest) HasUseMemoForDataAttributes() bool {
-	if o != nil && !IsNil(o.UseMemoForDataAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetUseMemoForDataAttributes gets a reference to the given bool and assigns it to the UseMemoForDataAttributes field.
 func (o *WorkflowGetDataObjectsRequest) SetUseMemoForDataAttributes(v bool) {
-	o.UseMemoForDataAttributes = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowGetDataObjectsRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowGetDataObjectsRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	if !IsNil(o.WorkflowRunId) {
-		toSerialize["workflowRunId"] = o.WorkflowRunId
-	}
-	if !IsNil(o.Keys) {
-		toSerialize["keys"] = o.Keys
-	}
-	if !IsNil(o.UseMemoForDataAttributes) {
-		toSerialize["useMemoForDataAttributes"] = o.UseMemoForDataAttributes
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowGetDataObjectsRequest struct {
@@ -192,32 +145,33 @@ type NullableWorkflowGetDataObjectsRequest struct {
 }
 
 func (v NullableWorkflowGetDataObjectsRequest) Get() *WorkflowGetDataObjectsRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowGetDataObjectsRequest) Set(val *WorkflowGetDataObjectsRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
 func (v NullableWorkflowGetDataObjectsRequest) IsSet() bool {
-	return v.isSet
+	_ = "STUB: not implemented"
+	return false
 }
 
-func (v *NullableWorkflowGetDataObjectsRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowGetDataObjectsRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowGetDataObjectsRequest(val *WorkflowGetDataObjectsRequest) *NullableWorkflowGetDataObjectsRequest {
-	return &NullableWorkflowGetDataObjectsRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowGetDataObjectsRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowGetDataObjectsRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

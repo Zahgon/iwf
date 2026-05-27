@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowGetResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowGetResponse{}
 
@@ -31,186 +27,121 @@ type WorkflowGetResponse struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowGetResponse(workflowRunId string, workflowStatus WorkflowStatus) *WorkflowGetResponse {
-	this := WorkflowGetResponse{}
-	this.WorkflowRunId = workflowRunId
-	this.WorkflowStatus = workflowStatus
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowGetResponseWithDefaults instantiates a new WorkflowGetResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowGetResponseWithDefaults() *WorkflowGetResponse {
-	this := WorkflowGetResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowRunId returns the WorkflowRunId field value
-func (o *WorkflowGetResponse) GetWorkflowRunId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowRunId
-}
+func (o *WorkflowGetResponse) GetWorkflowRunId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetResponse) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowRunId sets field value
-func (o *WorkflowGetResponse) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = v
-}
+func (o *WorkflowGetResponse) SetWorkflowRunId(v string) { _ = "STUB: not implemented"; return }
 
 // GetWorkflowStatus returns the WorkflowStatus field value
 func (o *WorkflowGetResponse) GetWorkflowStatus() WorkflowStatus {
-	if o == nil {
-		var ret WorkflowStatus
-		return ret
-	}
-
-	return o.WorkflowStatus
+	_ = "STUB: not implemented"
+	return *new(WorkflowStatus)
 }
 
 // GetWorkflowStatusOk returns a tuple with the WorkflowStatus field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetResponse) GetWorkflowStatusOk() (*WorkflowStatus, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowStatus, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowStatus sets field value
 func (o *WorkflowGetResponse) SetWorkflowStatus(v WorkflowStatus) {
-	o.WorkflowStatus = v
+	_ = "STUB: not implemented"
+	return
+
+	// GetResults returns the Results field value if set, zero value otherwise.
 }
 
-// GetResults returns the Results field value if set, zero value otherwise.
 func (o *WorkflowGetResponse) GetResults() []StateCompletionOutput {
-	if o == nil || IsNil(o.Results) {
-		var ret []StateCompletionOutput
-		return ret
-	}
-	return o.Results
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetResultsOk returns a tuple with the Results field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetResponse) GetResultsOk() ([]StateCompletionOutput, bool) {
-	if o == nil || IsNil(o.Results) {
-		return nil, false
-	}
-	return o.Results, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasResults returns a boolean if a field has been set.
-func (o *WorkflowGetResponse) HasResults() bool {
-	if o != nil && !IsNil(o.Results) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowGetResponse) HasResults() bool { _ = "STUB: not implemented"; return false }
 
 // SetResults gets a reference to the given []StateCompletionOutput and assigns it to the Results field.
 func (o *WorkflowGetResponse) SetResults(v []StateCompletionOutput) {
-	o.Results = v
+	_ = "STUB: not implemented"
+
+	// GetErrorType returns the ErrorType field value if set, zero value otherwise.
+	return
 }
 
-// GetErrorType returns the ErrorType field value if set, zero value otherwise.
 func (o *WorkflowGetResponse) GetErrorType() WorkflowErrorType {
-	if o == nil || IsNil(o.ErrorType) {
-		var ret WorkflowErrorType
-		return ret
-	}
-	return *o.ErrorType
+	_ = "STUB: not implemented"
+	return *new(WorkflowErrorType)
 }
 
 // GetErrorTypeOk returns a tuple with the ErrorType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetResponse) GetErrorTypeOk() (*WorkflowErrorType, bool) {
-	if o == nil || IsNil(o.ErrorType) {
-		return nil, false
-	}
-	return o.ErrorType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasErrorType returns a boolean if a field has been set.
-func (o *WorkflowGetResponse) HasErrorType() bool {
-	if o != nil && !IsNil(o.ErrorType) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowGetResponse) HasErrorType() bool { _ = "STUB: not implemented"; return false }
 
 // SetErrorType gets a reference to the given WorkflowErrorType and assigns it to the ErrorType field.
 func (o *WorkflowGetResponse) SetErrorType(v WorkflowErrorType) {
-	o.ErrorType = &v
+	_ = "STUB: not implemented"
+
+	// GetErrorMessage returns the ErrorMessage field value if set, zero value otherwise.
+	return
 }
 
-// GetErrorMessage returns the ErrorMessage field value if set, zero value otherwise.
-func (o *WorkflowGetResponse) GetErrorMessage() string {
-	if o == nil || IsNil(o.ErrorMessage) {
-		var ret string
-		return ret
-	}
-	return *o.ErrorMessage
-}
+func (o *WorkflowGetResponse) GetErrorMessage() string { _ = "STUB: not implemented"; return "" }
 
 // GetErrorMessageOk returns a tuple with the ErrorMessage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetResponse) GetErrorMessageOk() (*string, bool) {
-	if o == nil || IsNil(o.ErrorMessage) {
-		return nil, false
-	}
-	return o.ErrorMessage, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasErrorMessage returns a boolean if a field has been set.
-func (o *WorkflowGetResponse) HasErrorMessage() bool {
-	if o != nil && !IsNil(o.ErrorMessage) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowGetResponse) HasErrorMessage() bool { _ = "STUB: not implemented"; return false }
 
 // SetErrorMessage gets a reference to the given string and assigns it to the ErrorMessage field.
-func (o *WorkflowGetResponse) SetErrorMessage(v string) {
-	o.ErrorMessage = &v
-}
+func (o *WorkflowGetResponse) SetErrorMessage(v string) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowGetResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowGetResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowRunId"] = o.WorkflowRunId
-	toSerialize["workflowStatus"] = o.WorkflowStatus
-	if !IsNil(o.Results) {
-		toSerialize["results"] = o.Results
-	}
-	if !IsNil(o.ErrorType) {
-		toSerialize["errorType"] = o.ErrorType
-	}
-	if !IsNil(o.ErrorMessage) {
-		toSerialize["errorMessage"] = o.ErrorMessage
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowGetResponse struct {
@@ -219,32 +150,30 @@ type NullableWorkflowGetResponse struct {
 }
 
 func (v NullableWorkflowGetResponse) Get() *WorkflowGetResponse {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowGetResponse) Set(val *WorkflowGetResponse) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowGetResponse) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowGetResponse) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowGetResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowGetResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowGetResponse(val *WorkflowGetResponse) *NullableWorkflowGetResponse {
-	return &NullableWorkflowGetResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowGetResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowGetResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

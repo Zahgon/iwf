@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowStartOptions type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowStartOptions{}
 
@@ -35,380 +31,249 @@ type WorkflowStartOptions struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWorkflowStartOptions() *WorkflowStartOptions {
-	this := WorkflowStartOptions{}
-	return &this
-}
+func NewWorkflowStartOptions() *WorkflowStartOptions { _ = "STUB: not implemented"; return nil }
 
 // NewWorkflowStartOptionsWithDefaults instantiates a new WorkflowStartOptions object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowStartOptionsWithDefaults() *WorkflowStartOptions {
-	this := WorkflowStartOptions{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowIDReusePolicy returns the WorkflowIDReusePolicy field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetWorkflowIDReusePolicy() WorkflowIDReusePolicy {
-	if o == nil || IsNil(o.WorkflowIDReusePolicy) {
-		var ret WorkflowIDReusePolicy
-		return ret
-	}
-	return *o.WorkflowIDReusePolicy
+	_ = "STUB: not implemented"
+	return *new(WorkflowIDReusePolicy)
 }
 
 // GetWorkflowIDReusePolicyOk returns a tuple with the WorkflowIDReusePolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetWorkflowIDReusePolicyOk() (*WorkflowIDReusePolicy, bool) {
-	if o == nil || IsNil(o.WorkflowIDReusePolicy) {
-		return nil, false
-	}
-	return o.WorkflowIDReusePolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowIDReusePolicy returns a boolean if a field has been set.
 func (o *WorkflowStartOptions) HasWorkflowIDReusePolicy() bool {
-	if o != nil && !IsNil(o.WorkflowIDReusePolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowIDReusePolicy gets a reference to the given WorkflowIDReusePolicy and assigns it to the WorkflowIDReusePolicy field.
 func (o *WorkflowStartOptions) SetWorkflowIDReusePolicy(v WorkflowIDReusePolicy) {
-	o.WorkflowIDReusePolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetCronSchedule returns the CronSchedule field value if set, zero value otherwise.
-func (o *WorkflowStartOptions) GetCronSchedule() string {
-	if o == nil || IsNil(o.CronSchedule) {
-		var ret string
-		return ret
-	}
-	return *o.CronSchedule
-}
+func (o *WorkflowStartOptions) GetCronSchedule() string { _ = "STUB: not implemented"; return "" }
 
 // GetCronScheduleOk returns a tuple with the CronSchedule field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetCronScheduleOk() (*string, bool) {
-	if o == nil || IsNil(o.CronSchedule) {
-		return nil, false
-	}
-	return o.CronSchedule, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasCronSchedule returns a boolean if a field has been set.
-func (o *WorkflowStartOptions) HasCronSchedule() bool {
-	if o != nil && !IsNil(o.CronSchedule) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStartOptions) HasCronSchedule() bool { _ = "STUB: not implemented"; return false }
 
 // SetCronSchedule gets a reference to the given string and assigns it to the CronSchedule field.
-func (o *WorkflowStartOptions) SetCronSchedule(v string) {
-	o.CronSchedule = &v
-}
+func (o *WorkflowStartOptions) SetCronSchedule(v string) { _ = "STUB: not implemented"; return }
 
 // GetWorkflowStartDelaySeconds returns the WorkflowStartDelaySeconds field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetWorkflowStartDelaySeconds() int32 {
-	if o == nil || IsNil(o.WorkflowStartDelaySeconds) {
-		var ret int32
-		return ret
-	}
-	return *o.WorkflowStartDelaySeconds
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetWorkflowStartDelaySecondsOk returns a tuple with the WorkflowStartDelaySeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetWorkflowStartDelaySecondsOk() (*int32, bool) {
-	if o == nil || IsNil(o.WorkflowStartDelaySeconds) {
-		return nil, false
-	}
-	return o.WorkflowStartDelaySeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowStartDelaySeconds returns a boolean if a field has been set.
 func (o *WorkflowStartOptions) HasWorkflowStartDelaySeconds() bool {
-	if o != nil && !IsNil(o.WorkflowStartDelaySeconds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowStartDelaySeconds gets a reference to the given int32 and assigns it to the WorkflowStartDelaySeconds field.
 func (o *WorkflowStartOptions) SetWorkflowStartDelaySeconds(v int32) {
-	o.WorkflowStartDelaySeconds = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetRetryPolicy returns the RetryPolicy field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetRetryPolicy() WorkflowRetryPolicy {
-	if o == nil || IsNil(o.RetryPolicy) {
-		var ret WorkflowRetryPolicy
-		return ret
-	}
-	return *o.RetryPolicy
+	_ = "STUB: not implemented"
+	return *new(WorkflowRetryPolicy)
 }
 
 // GetRetryPolicyOk returns a tuple with the RetryPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetRetryPolicyOk() (*WorkflowRetryPolicy, bool) {
-	if o == nil || IsNil(o.RetryPolicy) {
-		return nil, false
-	}
-	return o.RetryPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasRetryPolicy returns a boolean if a field has been set.
-func (o *WorkflowStartOptions) HasRetryPolicy() bool {
-	if o != nil && !IsNil(o.RetryPolicy) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStartOptions) HasRetryPolicy() bool { _ = "STUB: not implemented"; return false }
 
 // SetRetryPolicy gets a reference to the given WorkflowRetryPolicy and assigns it to the RetryPolicy field.
 func (o *WorkflowStartOptions) SetRetryPolicy(v WorkflowRetryPolicy) {
-	o.RetryPolicy = &v
+	_ = "STUB: not implemented"
+	return
+
+	// GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
 }
 
-// GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetSearchAttributes() []SearchAttribute {
-	if o == nil || IsNil(o.SearchAttributes) {
-		var ret []SearchAttribute
-		return ret
-	}
-	return o.SearchAttributes
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSearchAttributesOk returns a tuple with the SearchAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetSearchAttributesOk() ([]SearchAttribute, bool) {
-	if o == nil || IsNil(o.SearchAttributes) {
-		return nil, false
-	}
-	return o.SearchAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSearchAttributes returns a boolean if a field has been set.
-func (o *WorkflowStartOptions) HasSearchAttributes() bool {
-	if o != nil && !IsNil(o.SearchAttributes) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStartOptions) HasSearchAttributes() bool { _ = "STUB: not implemented"; return false }
 
 // SetSearchAttributes gets a reference to the given []SearchAttribute and assigns it to the SearchAttributes field.
 func (o *WorkflowStartOptions) SetSearchAttributes(v []SearchAttribute) {
-	o.SearchAttributes = v
+	_ = "STUB: not implemented"
+	return
+
+	// GetDataAttributes returns the DataAttributes field value if set, zero value otherwise.
 }
 
-// GetDataAttributes returns the DataAttributes field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetDataAttributes() []KeyValue {
-	if o == nil || IsNil(o.DataAttributes) {
-		var ret []KeyValue
-		return ret
-	}
-	return o.DataAttributes
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetDataAttributesOk returns a tuple with the DataAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetDataAttributesOk() ([]KeyValue, bool) {
-	if o == nil || IsNil(o.DataAttributes) {
-		return nil, false
-	}
-	return o.DataAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDataAttributes returns a boolean if a field has been set.
-func (o *WorkflowStartOptions) HasDataAttributes() bool {
-	if o != nil && !IsNil(o.DataAttributes) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStartOptions) HasDataAttributes() bool { _ = "STUB: not implemented"; return false }
 
 // SetDataAttributes gets a reference to the given []KeyValue and assigns it to the DataAttributes field.
-func (o *WorkflowStartOptions) SetDataAttributes(v []KeyValue) {
-	o.DataAttributes = v
-}
+func (o *WorkflowStartOptions) SetDataAttributes(v []KeyValue) { _ = "STUB: not implemented"; return }
 
 // GetWorkflowConfigOverride returns the WorkflowConfigOverride field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetWorkflowConfigOverride() WorkflowConfig {
-	if o == nil || IsNil(o.WorkflowConfigOverride) {
-		var ret WorkflowConfig
-		return ret
-	}
-	return *o.WorkflowConfigOverride
+	_ = "STUB: not implemented"
+	return *new(WorkflowConfig)
 }
 
 // GetWorkflowConfigOverrideOk returns a tuple with the WorkflowConfigOverride field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetWorkflowConfigOverrideOk() (*WorkflowConfig, bool) {
-	if o == nil || IsNil(o.WorkflowConfigOverride) {
-		return nil, false
-	}
-	return o.WorkflowConfigOverride, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowConfigOverride returns a boolean if a field has been set.
 func (o *WorkflowStartOptions) HasWorkflowConfigOverride() bool {
-	if o != nil && !IsNil(o.WorkflowConfigOverride) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowConfigOverride gets a reference to the given WorkflowConfig and assigns it to the WorkflowConfigOverride field.
 func (o *WorkflowStartOptions) SetWorkflowConfigOverride(v WorkflowConfig) {
-	o.WorkflowConfigOverride = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetIdReusePolicy returns the IdReusePolicy field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetIdReusePolicy() IDReusePolicy {
-	if o == nil || IsNil(o.IdReusePolicy) {
-		var ret IDReusePolicy
-		return ret
-	}
-	return *o.IdReusePolicy
+	_ = "STUB: not implemented"
+	return *new(IDReusePolicy)
 }
 
 // GetIdReusePolicyOk returns a tuple with the IdReusePolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetIdReusePolicyOk() (*IDReusePolicy, bool) {
-	if o == nil || IsNil(o.IdReusePolicy) {
-		return nil, false
-	}
-	return o.IdReusePolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasIdReusePolicy returns a boolean if a field has been set.
-func (o *WorkflowStartOptions) HasIdReusePolicy() bool {
-	if o != nil && !IsNil(o.IdReusePolicy) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStartOptions) HasIdReusePolicy() bool { _ = "STUB: not implemented"; return false }
 
 // SetIdReusePolicy gets a reference to the given IDReusePolicy and assigns it to the IdReusePolicy field.
-func (o *WorkflowStartOptions) SetIdReusePolicy(v IDReusePolicy) {
-	o.IdReusePolicy = &v
-}
+func (o *WorkflowStartOptions) SetIdReusePolicy(v IDReusePolicy) { _ = "STUB: not implemented"; return }
 
 // GetUseMemoForDataAttributes returns the UseMemoForDataAttributes field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetUseMemoForDataAttributes() bool {
-	if o == nil || IsNil(o.UseMemoForDataAttributes) {
-		var ret bool
-		return ret
-	}
-	return *o.UseMemoForDataAttributes
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetUseMemoForDataAttributesOk returns a tuple with the UseMemoForDataAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetUseMemoForDataAttributesOk() (*bool, bool) {
-	if o == nil || IsNil(o.UseMemoForDataAttributes) {
-		return nil, false
-	}
-	return o.UseMemoForDataAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasUseMemoForDataAttributes returns a boolean if a field has been set.
 func (o *WorkflowStartOptions) HasUseMemoForDataAttributes() bool {
-	if o != nil && !IsNil(o.UseMemoForDataAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetUseMemoForDataAttributes gets a reference to the given bool and assigns it to the UseMemoForDataAttributes field.
 func (o *WorkflowStartOptions) SetUseMemoForDataAttributes(v bool) {
-	o.UseMemoForDataAttributes = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetWorkflowAlreadyStartedOptions returns the WorkflowAlreadyStartedOptions field value if set, zero value otherwise.
 func (o *WorkflowStartOptions) GetWorkflowAlreadyStartedOptions() WorkflowAlreadyStartedOptions {
-	if o == nil || IsNil(o.WorkflowAlreadyStartedOptions) {
-		var ret WorkflowAlreadyStartedOptions
-		return ret
-	}
-	return *o.WorkflowAlreadyStartedOptions
+	_ = "STUB: not implemented"
+	return *new(WorkflowAlreadyStartedOptions)
 }
 
 // GetWorkflowAlreadyStartedOptionsOk returns a tuple with the WorkflowAlreadyStartedOptions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartOptions) GetWorkflowAlreadyStartedOptionsOk() (*WorkflowAlreadyStartedOptions, bool) {
-	if o == nil || IsNil(o.WorkflowAlreadyStartedOptions) {
-		return nil, false
-	}
-	return o.WorkflowAlreadyStartedOptions, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowAlreadyStartedOptions returns a boolean if a field has been set.
 func (o *WorkflowStartOptions) HasWorkflowAlreadyStartedOptions() bool {
-	if o != nil && !IsNil(o.WorkflowAlreadyStartedOptions) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowAlreadyStartedOptions gets a reference to the given WorkflowAlreadyStartedOptions and assigns it to the WorkflowAlreadyStartedOptions field.
 func (o *WorkflowStartOptions) SetWorkflowAlreadyStartedOptions(v WorkflowAlreadyStartedOptions) {
-	o.WorkflowAlreadyStartedOptions = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowStartOptions) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowStartOptions) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.WorkflowIDReusePolicy) {
-		toSerialize["workflowIDReusePolicy"] = o.WorkflowIDReusePolicy
-	}
-	if !IsNil(o.CronSchedule) {
-		toSerialize["cronSchedule"] = o.CronSchedule
-	}
-	if !IsNil(o.WorkflowStartDelaySeconds) {
-		toSerialize["workflowStartDelaySeconds"] = o.WorkflowStartDelaySeconds
-	}
-	if !IsNil(o.RetryPolicy) {
-		toSerialize["retryPolicy"] = o.RetryPolicy
-	}
-	if !IsNil(o.SearchAttributes) {
-		toSerialize["searchAttributes"] = o.SearchAttributes
-	}
-	if !IsNil(o.DataAttributes) {
-		toSerialize["dataAttributes"] = o.DataAttributes
-	}
-	if !IsNil(o.WorkflowConfigOverride) {
-		toSerialize["workflowConfigOverride"] = o.WorkflowConfigOverride
-	}
-	if !IsNil(o.IdReusePolicy) {
-		toSerialize["idReusePolicy"] = o.IdReusePolicy
-	}
-	if !IsNil(o.UseMemoForDataAttributes) {
-		toSerialize["useMemoForDataAttributes"] = o.UseMemoForDataAttributes
-	}
-	if !IsNil(o.WorkflowAlreadyStartedOptions) {
-		toSerialize["workflowAlreadyStartedOptions"] = o.WorkflowAlreadyStartedOptions
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowStartOptions struct {
@@ -417,32 +282,30 @@ type NullableWorkflowStartOptions struct {
 }
 
 func (v NullableWorkflowStartOptions) Get() *WorkflowStartOptions {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowStartOptions) Set(val *WorkflowStartOptions) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowStartOptions) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowStartOptions) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowStartOptions) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowStartOptions) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowStartOptions(val *WorkflowStartOptions) *NullableWorkflowStartOptions {
-	return &NullableWorkflowStartOptions{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowStartOptions) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowStartOptions) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

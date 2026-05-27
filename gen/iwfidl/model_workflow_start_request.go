@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowStartRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowStartRequest{}
 
@@ -36,343 +32,229 @@ type WorkflowStartRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowStartRequest(workflowId string, iwfWorkflowType string, workflowTimeoutSeconds int32, iwfWorkerUrl string) *WorkflowStartRequest {
-	this := WorkflowStartRequest{}
-	this.WorkflowId = workflowId
-	this.IwfWorkflowType = iwfWorkflowType
-	this.WorkflowTimeoutSeconds = workflowTimeoutSeconds
-	this.IwfWorkerUrl = iwfWorkerUrl
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowStartRequestWithDefaults instantiates a new WorkflowStartRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowStartRequestWithDefaults() *WorkflowStartRequest {
-	this := WorkflowStartRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
-func (o *WorkflowStartRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
-}
+func (o *WorkflowStartRequest) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowStartRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetIwfWorkflowType returns the IwfWorkflowType field value
+	return
 }
 
-// GetIwfWorkflowType returns the IwfWorkflowType field value
-func (o *WorkflowStartRequest) GetIwfWorkflowType() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.IwfWorkflowType
-}
+func (o *WorkflowStartRequest) GetIwfWorkflowType() string { _ = "STUB: not implemented"; return "" }
 
 // GetIwfWorkflowTypeOk returns a tuple with the IwfWorkflowType field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetIwfWorkflowTypeOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.IwfWorkflowType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetIwfWorkflowType sets field value
-func (o *WorkflowStartRequest) SetIwfWorkflowType(v string) {
-	o.IwfWorkflowType = v
-}
+func (o *WorkflowStartRequest) SetIwfWorkflowType(v string) { _ = "STUB: not implemented"; return }
 
 // GetWorkflowTimeoutSeconds returns the WorkflowTimeoutSeconds field value
 func (o *WorkflowStartRequest) GetWorkflowTimeoutSeconds() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.WorkflowTimeoutSeconds
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetWorkflowTimeoutSecondsOk returns a tuple with the WorkflowTimeoutSeconds field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetWorkflowTimeoutSecondsOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowTimeoutSeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowTimeoutSeconds sets field value
 func (o *WorkflowStartRequest) SetWorkflowTimeoutSeconds(v int32) {
-	o.WorkflowTimeoutSeconds = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetIwfWorkerUrl returns the IwfWorkerUrl field value
-func (o *WorkflowStartRequest) GetIwfWorkerUrl() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.IwfWorkerUrl
-}
+func (o *WorkflowStartRequest) GetIwfWorkerUrl() string { _ = "STUB: not implemented"; return "" }
 
 // GetIwfWorkerUrlOk returns a tuple with the IwfWorkerUrl field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetIwfWorkerUrlOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.IwfWorkerUrl, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetIwfWorkerUrl sets field value
 func (o *WorkflowStartRequest) SetIwfWorkerUrl(v string) {
-	o.IwfWorkerUrl = v
+	_ = "STUB: not implemented"
+
+	// GetStartStateId returns the StartStateId field value if set, zero value otherwise.
+	return
 }
 
-// GetStartStateId returns the StartStateId field value if set, zero value otherwise.
-func (o *WorkflowStartRequest) GetStartStateId() string {
-	if o == nil || IsNil(o.StartStateId) {
-		var ret string
-		return ret
-	}
-	return *o.StartStateId
-}
+func (o *WorkflowStartRequest) GetStartStateId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStartStateIdOk returns a tuple with the StartStateId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetStartStateIdOk() (*string, bool) {
-	if o == nil || IsNil(o.StartStateId) {
-		return nil, false
-	}
-	return o.StartStateId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStartStateId returns a boolean if a field has been set.
-func (o *WorkflowStartRequest) HasStartStateId() bool {
-	if o != nil && !IsNil(o.StartStateId) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStartRequest) HasStartStateId() bool { _ = "STUB: not implemented"; return false }
 
 // SetStartStateId gets a reference to the given string and assigns it to the StartStateId field.
-func (o *WorkflowStartRequest) SetStartStateId(v string) {
-	o.StartStateId = &v
-}
+func (o *WorkflowStartRequest) SetStartStateId(v string) { _ = "STUB: not implemented"; return }
 
 // GetWaitForCompletionStateIds returns the WaitForCompletionStateIds field value if set, zero value otherwise.
 func (o *WorkflowStartRequest) GetWaitForCompletionStateIds() []string {
-	if o == nil || IsNil(o.WaitForCompletionStateIds) {
-		var ret []string
-		return ret
-	}
-	return o.WaitForCompletionStateIds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWaitForCompletionStateIdsOk returns a tuple with the WaitForCompletionStateIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetWaitForCompletionStateIdsOk() ([]string, bool) {
-	if o == nil || IsNil(o.WaitForCompletionStateIds) {
-		return nil, false
-	}
-	return o.WaitForCompletionStateIds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitForCompletionStateIds returns a boolean if a field has been set.
 func (o *WorkflowStartRequest) HasWaitForCompletionStateIds() bool {
-	if o != nil && !IsNil(o.WaitForCompletionStateIds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitForCompletionStateIds gets a reference to the given []string and assigns it to the WaitForCompletionStateIds field.
 func (o *WorkflowStartRequest) SetWaitForCompletionStateIds(v []string) {
-	o.WaitForCompletionStateIds = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetWaitForCompletionStateExecutionIds returns the WaitForCompletionStateExecutionIds field value if set, zero value otherwise.
 func (o *WorkflowStartRequest) GetWaitForCompletionStateExecutionIds() []string {
-	if o == nil || IsNil(o.WaitForCompletionStateExecutionIds) {
-		var ret []string
-		return ret
-	}
-	return o.WaitForCompletionStateExecutionIds
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWaitForCompletionStateExecutionIdsOk returns a tuple with the WaitForCompletionStateExecutionIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetWaitForCompletionStateExecutionIdsOk() ([]string, bool) {
-	if o == nil || IsNil(o.WaitForCompletionStateExecutionIds) {
-		return nil, false
-	}
-	return o.WaitForCompletionStateExecutionIds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitForCompletionStateExecutionIds returns a boolean if a field has been set.
 func (o *WorkflowStartRequest) HasWaitForCompletionStateExecutionIds() bool {
-	if o != nil && !IsNil(o.WaitForCompletionStateExecutionIds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitForCompletionStateExecutionIds gets a reference to the given []string and assigns it to the WaitForCompletionStateExecutionIds field.
 func (o *WorkflowStartRequest) SetWaitForCompletionStateExecutionIds(v []string) {
-	o.WaitForCompletionStateExecutionIds = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStateInput returns the StateInput field value if set, zero value otherwise.
 func (o *WorkflowStartRequest) GetStateInput() EncodedObject {
-	if o == nil || IsNil(o.StateInput) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.StateInput
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetStateInputOk returns a tuple with the StateInput field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetStateInputOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.StateInput) {
-		return nil, false
-	}
-	return o.StateInput, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateInput returns a boolean if a field has been set.
-func (o *WorkflowStartRequest) HasStateInput() bool {
-	if o != nil && !IsNil(o.StateInput) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStartRequest) HasStateInput() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateInput gets a reference to the given EncodedObject and assigns it to the StateInput field.
 func (o *WorkflowStartRequest) SetStateInput(v EncodedObject) {
-	o.StateInput = &v
+	_ = "STUB: not implemented"
+
+	// GetStateOptions returns the StateOptions field value if set, zero value otherwise.
+	return
 }
 
-// GetStateOptions returns the StateOptions field value if set, zero value otherwise.
 func (o *WorkflowStartRequest) GetStateOptions() WorkflowStateOptions {
-	if o == nil || IsNil(o.StateOptions) {
-		var ret WorkflowStateOptions
-		return ret
-	}
-	return *o.StateOptions
+	_ = "STUB: not implemented"
+	return *new(WorkflowStateOptions)
 }
 
 // GetStateOptionsOk returns a tuple with the StateOptions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetStateOptionsOk() (*WorkflowStateOptions, bool) {
-	if o == nil || IsNil(o.StateOptions) {
-		return nil, false
-	}
-	return o.StateOptions, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateOptions returns a boolean if a field has been set.
-func (o *WorkflowStartRequest) HasStateOptions() bool {
-	if o != nil && !IsNil(o.StateOptions) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStartRequest) HasStateOptions() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateOptions gets a reference to the given WorkflowStateOptions and assigns it to the StateOptions field.
 func (o *WorkflowStartRequest) SetStateOptions(v WorkflowStateOptions) {
-	o.StateOptions = &v
+	_ = "STUB: not implemented"
+	return
+
+	// GetWorkflowStartOptions returns the WorkflowStartOptions field value if set, zero value otherwise.
 }
 
-// GetWorkflowStartOptions returns the WorkflowStartOptions field value if set, zero value otherwise.
 func (o *WorkflowStartRequest) GetWorkflowStartOptions() WorkflowStartOptions {
-	if o == nil || IsNil(o.WorkflowStartOptions) {
-		var ret WorkflowStartOptions
-		return ret
-	}
-	return *o.WorkflowStartOptions
+	_ = "STUB: not implemented"
+	return *new(WorkflowStartOptions)
 }
 
 // GetWorkflowStartOptionsOk returns a tuple with the WorkflowStartOptions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStartRequest) GetWorkflowStartOptionsOk() (*WorkflowStartOptions, bool) {
-	if o == nil || IsNil(o.WorkflowStartOptions) {
-		return nil, false
-	}
-	return o.WorkflowStartOptions, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowStartOptions returns a boolean if a field has been set.
 func (o *WorkflowStartRequest) HasWorkflowStartOptions() bool {
-	if o != nil && !IsNil(o.WorkflowStartOptions) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowStartOptions gets a reference to the given WorkflowStartOptions and assigns it to the WorkflowStartOptions field.
 func (o *WorkflowStartRequest) SetWorkflowStartOptions(v WorkflowStartOptions) {
-	o.WorkflowStartOptions = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowStartRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowStartRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	toSerialize["iwfWorkflowType"] = o.IwfWorkflowType
-	toSerialize["workflowTimeoutSeconds"] = o.WorkflowTimeoutSeconds
-	toSerialize["iwfWorkerUrl"] = o.IwfWorkerUrl
-	if !IsNil(o.StartStateId) {
-		toSerialize["startStateId"] = o.StartStateId
-	}
-	if !IsNil(o.WaitForCompletionStateIds) {
-		toSerialize["waitForCompletionStateIds"] = o.WaitForCompletionStateIds
-	}
-	if !IsNil(o.WaitForCompletionStateExecutionIds) {
-		toSerialize["waitForCompletionStateExecutionIds"] = o.WaitForCompletionStateExecutionIds
-	}
-	if !IsNil(o.StateInput) {
-		toSerialize["stateInput"] = o.StateInput
-	}
-	if !IsNil(o.StateOptions) {
-		toSerialize["stateOptions"] = o.StateOptions
-	}
-	if !IsNil(o.WorkflowStartOptions) {
-		toSerialize["workflowStartOptions"] = o.WorkflowStartOptions
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowStartRequest struct {
@@ -381,32 +263,30 @@ type NullableWorkflowStartRequest struct {
 }
 
 func (v NullableWorkflowStartRequest) Get() *WorkflowStartRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowStartRequest) Set(val *WorkflowStartRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowStartRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowStartRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowStartRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowStartRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowStartRequest(val *WorkflowStartRequest) *NullableWorkflowStartRequest {
-	return &NullableWorkflowStartRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowStartRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowStartRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

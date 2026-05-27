@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the SignalResult type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &SignalResult{}
 
@@ -30,142 +26,88 @@ type SignalResult struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSignalResult(commandId string, signalRequestStatus ChannelRequestStatus, signalChannelName string) *SignalResult {
-	this := SignalResult{}
-	this.CommandId = commandId
-	this.SignalRequestStatus = signalRequestStatus
-	this.SignalChannelName = signalChannelName
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewSignalResultWithDefaults instantiates a new SignalResult object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSignalResultWithDefaults() *SignalResult {
-	this := SignalResult{}
-	return &this
-}
+func NewSignalResultWithDefaults() *SignalResult { _ = "STUB: not implemented"; return nil }
 
 // GetCommandId returns the CommandId field value
-func (o *SignalResult) GetCommandId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.CommandId
-}
+func (o *SignalResult) GetCommandId() string { _ = "STUB: not implemented"; return "" }
 
 // GetCommandIdOk returns a tuple with the CommandId field value
 // and a boolean to check if the value has been set.
 func (o *SignalResult) GetCommandIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.CommandId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetCommandId sets field value
 func (o *SignalResult) SetCommandId(v string) {
-	o.CommandId = v
+	_ = "STUB: not implemented"
+
+	// GetSignalRequestStatus returns the SignalRequestStatus field value
+	return
 }
 
-// GetSignalRequestStatus returns the SignalRequestStatus field value
 func (o *SignalResult) GetSignalRequestStatus() ChannelRequestStatus {
-	if o == nil {
-		var ret ChannelRequestStatus
-		return ret
-	}
-
-	return o.SignalRequestStatus
+	_ = "STUB: not implemented"
+	return *new(ChannelRequestStatus)
 }
 
 // GetSignalRequestStatusOk returns a tuple with the SignalRequestStatus field value
 // and a boolean to check if the value has been set.
 func (o *SignalResult) GetSignalRequestStatusOk() (*ChannelRequestStatus, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.SignalRequestStatus, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetSignalRequestStatus sets field value
 func (o *SignalResult) SetSignalRequestStatus(v ChannelRequestStatus) {
-	o.SignalRequestStatus = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetSignalChannelName returns the SignalChannelName field value
-func (o *SignalResult) GetSignalChannelName() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.SignalChannelName
-}
+func (o *SignalResult) GetSignalChannelName() string { _ = "STUB: not implemented"; return "" }
 
 // GetSignalChannelNameOk returns a tuple with the SignalChannelName field value
 // and a boolean to check if the value has been set.
 func (o *SignalResult) GetSignalChannelNameOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.SignalChannelName, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetSignalChannelName sets field value
-func (o *SignalResult) SetSignalChannelName(v string) {
-	o.SignalChannelName = v
-}
+func (o *SignalResult) SetSignalChannelName(v string) { _ = "STUB: not implemented"; return }
 
 // GetSignalValue returns the SignalValue field value if set, zero value otherwise.
 func (o *SignalResult) GetSignalValue() EncodedObject {
-	if o == nil || IsNil(o.SignalValue) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.SignalValue
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetSignalValueOk returns a tuple with the SignalValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SignalResult) GetSignalValueOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.SignalValue) {
-		return nil, false
-	}
-	return o.SignalValue, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSignalValue returns a boolean if a field has been set.
-func (o *SignalResult) HasSignalValue() bool {
-	if o != nil && !IsNil(o.SignalValue) {
-		return true
-	}
-
-	return false
-}
+func (o *SignalResult) HasSignalValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetSignalValue gets a reference to the given EncodedObject and assigns it to the SignalValue field.
-func (o *SignalResult) SetSignalValue(v EncodedObject) {
-	o.SignalValue = &v
-}
+func (o *SignalResult) SetSignalValue(v EncodedObject) { _ = "STUB: not implemented"; return }
 
-func (o SignalResult) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o SignalResult) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o SignalResult) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["commandId"] = o.CommandId
-	toSerialize["signalRequestStatus"] = o.SignalRequestStatus
-	toSerialize["signalChannelName"] = o.SignalChannelName
-	if !IsNil(o.SignalValue) {
-		toSerialize["signalValue"] = o.SignalValue
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableSignalResult struct {
@@ -173,33 +115,25 @@ type NullableSignalResult struct {
 	isSet bool
 }
 
-func (v NullableSignalResult) Get() *SignalResult {
-	return v.value
-}
+func (v NullableSignalResult) Get() *SignalResult { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableSignalResult) Set(val *SignalResult) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableSignalResult) Set(val *SignalResult) { _ = "STUB: not implemented"; return }
 
-func (v NullableSignalResult) IsSet() bool {
-	return v.isSet
-}
+func (v NullableSignalResult) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableSignalResult) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableSignalResult) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableSignalResult(val *SignalResult) *NullableSignalResult {
-	return &NullableSignalResult{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableSignalResult) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableSignalResult) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

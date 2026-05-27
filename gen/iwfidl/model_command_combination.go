@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the CommandCombination type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &CommandCombination{}
 
@@ -26,65 +22,37 @@ type CommandCombination struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCommandCombination() *CommandCombination {
-	this := CommandCombination{}
-	return &this
-}
+func NewCommandCombination() *CommandCombination { _ = "STUB: not implemented"; return nil }
 
 // NewCommandCombinationWithDefaults instantiates a new CommandCombination object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewCommandCombinationWithDefaults() *CommandCombination {
-	this := CommandCombination{}
-	return &this
-}
+func NewCommandCombinationWithDefaults() *CommandCombination { _ = "STUB: not implemented"; return nil }
 
 // GetCommandIds returns the CommandIds field value if set, zero value otherwise.
-func (o *CommandCombination) GetCommandIds() []string {
-	if o == nil || IsNil(o.CommandIds) {
-		var ret []string
-		return ret
-	}
-	return o.CommandIds
-}
+func (o *CommandCombination) GetCommandIds() []string { _ = "STUB: not implemented"; return nil }
 
 // GetCommandIdsOk returns a tuple with the CommandIds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CommandCombination) GetCommandIdsOk() ([]string, bool) {
-	if o == nil || IsNil(o.CommandIds) {
-		return nil, false
-	}
-	return o.CommandIds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasCommandIds returns a boolean if a field has been set.
-func (o *CommandCombination) HasCommandIds() bool {
-	if o != nil && !IsNil(o.CommandIds) {
-		return true
-	}
-
-	return false
-}
+func (o *CommandCombination) HasCommandIds() bool { _ = "STUB: not implemented"; return false }
 
 // SetCommandIds gets a reference to the given []string and assigns it to the CommandIds field.
-func (o *CommandCombination) SetCommandIds(v []string) {
-	o.CommandIds = v
-}
+func (o *CommandCombination) SetCommandIds(v []string) { _ = "STUB: not implemented"; return }
 
 func (o CommandCombination) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o CommandCombination) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.CommandIds) {
-		toSerialize["commandIds"] = o.CommandIds
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableCommandCombination struct {
@@ -93,32 +61,30 @@ type NullableCommandCombination struct {
 }
 
 func (v NullableCommandCombination) Get() *CommandCombination {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableCommandCombination) Set(val *CommandCombination) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableCommandCombination) IsSet() bool {
-	return v.isSet
-}
+func (v NullableCommandCombination) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableCommandCombination) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableCommandCombination) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableCommandCombination(val *CommandCombination) *NullableCommandCombination {
-	return &NullableCommandCombination{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableCommandCombination) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableCommandCombination) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

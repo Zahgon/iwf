@@ -31,30 +31,25 @@ func SetSharedEnv(
 	queue string,
 	store blobstore.BlobStore,
 ) {
-	sharedConfig = config
-	temporalDataConverter = temporalMemoEncryptionDataConverter
-	temporalMemoEncryption = memoEncryption
-	unifiedClient = client
-	taskQueue = queue
-	blobStore = store
+	_ = "STUB: not implemented"
+	return
 }
 
 func GetUnifiedClient() uclient.UnifiedClient {
-	return unifiedClient
+	_ = "STUB: not implemented"
+	return *new(uclient.UnifiedClient)
 }
 
-func GetTaskQueue() string {
-	return taskQueue
-}
+func GetTaskQueue() string { _ = "STUB: not implemented"; return "" }
 
-func GetSharedConfig() config.Config {
-	return sharedConfig
-}
+func GetSharedConfig() config.Config { _ = "STUB: not implemented"; return *new(config.Config) }
 
 func CheckAndGetTemporalMemoEncryptionDataConverter() (converter.DataConverter, bool) {
-	return temporalDataConverter, temporalMemoEncryption
+	_ = "STUB: not implemented"
+	return *new(converter.DataConverter), false
 }
 
 func GetBlobStore() blobstore.BlobStore {
-	return blobStore
+	_ = "STUB: not implemented"
+	return *new(blobstore.BlobStore)
 }

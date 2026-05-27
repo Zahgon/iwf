@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the InterStateChannelResult type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &InterStateChannelResult{}
 
@@ -30,142 +26,99 @@ type InterStateChannelResult struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewInterStateChannelResult(commandId string, requestStatus ChannelRequestStatus, channelName string) *InterStateChannelResult {
-	this := InterStateChannelResult{}
-	this.CommandId = commandId
-	this.RequestStatus = requestStatus
-	this.ChannelName = channelName
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewInterStateChannelResultWithDefaults instantiates a new InterStateChannelResult object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewInterStateChannelResultWithDefaults() *InterStateChannelResult {
-	this := InterStateChannelResult{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetCommandId returns the CommandId field value
-func (o *InterStateChannelResult) GetCommandId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.CommandId
-}
+func (o *InterStateChannelResult) GetCommandId() string { _ = "STUB: not implemented"; return "" }
 
 // GetCommandIdOk returns a tuple with the CommandId field value
 // and a boolean to check if the value has been set.
 func (o *InterStateChannelResult) GetCommandIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.CommandId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetCommandId sets field value
 func (o *InterStateChannelResult) SetCommandId(v string) {
-	o.CommandId = v
+	_ = "STUB: not implemented"
+
+	// GetRequestStatus returns the RequestStatus field value
+	return
 }
 
-// GetRequestStatus returns the RequestStatus field value
 func (o *InterStateChannelResult) GetRequestStatus() ChannelRequestStatus {
-	if o == nil {
-		var ret ChannelRequestStatus
-		return ret
-	}
-
-	return o.RequestStatus
+	_ = "STUB: not implemented"
+	return *new(ChannelRequestStatus)
 }
 
 // GetRequestStatusOk returns a tuple with the RequestStatus field value
 // and a boolean to check if the value has been set.
 func (o *InterStateChannelResult) GetRequestStatusOk() (*ChannelRequestStatus, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.RequestStatus, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetRequestStatus sets field value
 func (o *InterStateChannelResult) SetRequestStatus(v ChannelRequestStatus) {
-	o.RequestStatus = v
+	_ = "STUB: not implemented"
+	return
+
+	// GetChannelName returns the ChannelName field value
 }
 
-// GetChannelName returns the ChannelName field value
-func (o *InterStateChannelResult) GetChannelName() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.ChannelName
-}
+func (o *InterStateChannelResult) GetChannelName() string { _ = "STUB: not implemented"; return "" }
 
 // GetChannelNameOk returns a tuple with the ChannelName field value
 // and a boolean to check if the value has been set.
 func (o *InterStateChannelResult) GetChannelNameOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.ChannelName, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetChannelName sets field value
 func (o *InterStateChannelResult) SetChannelName(v string) {
-	o.ChannelName = v
+	_ = "STUB: not implemented"
+
+	// GetValue returns the Value field value if set, zero value otherwise.
+	return
 }
 
-// GetValue returns the Value field value if set, zero value otherwise.
 func (o *InterStateChannelResult) GetValue() EncodedObject {
-	if o == nil || IsNil(o.Value) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.Value
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *InterStateChannelResult) GetValueOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.Value) {
-		return nil, false
-	}
-	return o.Value, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasValue returns a boolean if a field has been set.
-func (o *InterStateChannelResult) HasValue() bool {
-	if o != nil && !IsNil(o.Value) {
-		return true
-	}
-
-	return false
-}
+func (o *InterStateChannelResult) HasValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetValue gets a reference to the given EncodedObject and assigns it to the Value field.
-func (o *InterStateChannelResult) SetValue(v EncodedObject) {
-	o.Value = &v
-}
+func (o *InterStateChannelResult) SetValue(v EncodedObject) { _ = "STUB: not implemented"; return }
 
 func (o InterStateChannelResult) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o InterStateChannelResult) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["commandId"] = o.CommandId
-	toSerialize["requestStatus"] = o.RequestStatus
-	toSerialize["channelName"] = o.ChannelName
-	if !IsNil(o.Value) {
-		toSerialize["value"] = o.Value
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableInterStateChannelResult struct {
@@ -174,32 +127,30 @@ type NullableInterStateChannelResult struct {
 }
 
 func (v NullableInterStateChannelResult) Get() *InterStateChannelResult {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableInterStateChannelResult) Set(val *InterStateChannelResult) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableInterStateChannelResult) IsSet() bool {
-	return v.isSet
-}
+func (v NullableInterStateChannelResult) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableInterStateChannelResult) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableInterStateChannelResult) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableInterStateChannelResult(val *InterStateChannelResult) *NullableInterStateChannelResult {
-	return &NullableInterStateChannelResult{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableInterStateChannelResult) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableInterStateChannelResult) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

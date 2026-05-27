@@ -188,23 +188,6 @@ const (
 func ValidateTimerSkipRequest(
 	stateExeTimerInfos map[string][]*TimerInfo, stateExeId, timerId string, timerIdx int,
 ) (*TimerInfo, bool) {
-	timerInfos := stateExeTimerInfos[stateExeId]
-	if len(timerInfos) == 0 {
-		return nil, false
-	}
-	if timerId != "" {
-		for _, t := range timerInfos {
-			if t.CommandId != nil && *t.CommandId == timerId {
-				return t, true
-			}
-		}
-		return nil, false
-	}
-	if timerIdx >= 0 && timerIdx < len(timerInfos) {
-		t := timerInfos[timerIdx]
-		if t.Status == TimerPending {
-			return t, true
-		}
-	}
+	_ = "STUB: not implemented"
 	return nil, false
 }

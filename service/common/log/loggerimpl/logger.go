@@ -21,16 +21,11 @@
 package loggerimpl
 
 import (
-	"fmt"
 	"github.com/indeedeng/iwf/service/common/log"
 	"github.com/indeedeng/iwf/service/common/log/tag"
-	"path/filepath"
-	"runtime"
 
 	"github.com/stretchr/testify/suite"
 	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
-	"go.uber.org/zap/zaptest"
 )
 
 type loggerImpl struct {
@@ -45,107 +40,47 @@ const (
 )
 
 // NewNopLogger returns a no-op logger
-func NewNopLogger() log.Logger {
-	return &loggerImpl{
-		zapLogger: zap.NewNop(),
-	}
-}
+func NewNopLogger() log.Logger { _ = "STUB: not implemented"; return *new(log.Logger) }
 
 // NewLoggerForTest is a helper to create new development logger in unit test
-func NewLoggerForTest(s suite.Suite) log.Logger {
-	return NewLogger(zaptest.NewLogger(s.T()))
-}
+func NewLoggerForTest(s suite.Suite) log.Logger { _ = "STUB: not implemented"; return *new(log.Logger) }
 
 // NewDevelopment returns a logger at debug level and log into STDERR
-func NewDevelopment() (log.Logger, error) {
-	zapLogger, err := zap.NewDevelopment()
-	if err != nil {
-		return nil, err
-	}
-	return NewLogger(zapLogger), nil
-}
+func NewDevelopment() (log.Logger, error) { _ = "STUB: not implemented"; return *new(log.Logger), nil }
 
 // NewLogger returns a new logger
 func NewLogger(zapLogger *zap.Logger) log.Logger {
-	return &loggerImpl{
-		zapLogger: zapLogger,
-		skip:      skipForDefaultLogger,
-	}
+	_ = "STUB: not implemented"
+	return *new(log.Logger)
 }
 
-func caller(skip int) string {
-	_, path, lineno, ok := runtime.Caller(skip)
-	if !ok {
-		return ""
-	}
-	return fmt.Sprintf("%v:%v", filepath.Base(path), lineno)
-}
+func caller(skip int) string { _ = "STUB: not implemented"; return "" }
 
 func (lg *loggerImpl) buildFieldsWithCallat(tags []tag.Tag) []zap.Field {
-	fs := lg.buildFields(tags)
-	fs = append(fs, zap.String(tag.LoggingCallAtKey, caller(lg.skip)))
-	return fs
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (lg *loggerImpl) buildFields(tags []tag.Tag) []zap.Field {
-	fs := make([]zap.Field, 0, len(tags))
-	for _, t := range tags {
-		f := t.Field()
-		if f.Key == "" {
-			// ignore empty field(which can be constructed manually)
-			continue
-		}
-		fs = append(fs, f)
-
-		if obj, ok := f.Interface.(zapcore.ObjectMarshaler); ok && f.Type == zapcore.ErrorType {
-			fs = append(fs, zap.Object(f.Key+"-details", obj))
-		}
-	}
-	return fs
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func setDefaultMsg(msg string) string {
-	if msg == "" {
-		return defaultMsgForEmpty
-	}
-	return msg
-}
+// ignore empty field(which can be constructed manually)
 
-func (lg *loggerImpl) Debug(msg string, tags ...tag.Tag) {
-	msg = setDefaultMsg(msg)
-	fields := lg.buildFieldsWithCallat(tags)
-	lg.zapLogger.Debug(msg, fields...)
-}
+func setDefaultMsg(msg string) string { _ = "STUB: not implemented"; return "" }
 
-func (lg *loggerImpl) Info(msg string, tags ...tag.Tag) {
-	msg = setDefaultMsg(msg)
-	fields := lg.buildFieldsWithCallat(tags)
-	lg.zapLogger.Info(msg, fields...)
-}
+func (lg *loggerImpl) Debug(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
-func (lg *loggerImpl) Warn(msg string, tags ...tag.Tag) {
-	msg = setDefaultMsg(msg)
-	fields := lg.buildFieldsWithCallat(tags)
-	lg.zapLogger.Warn(msg, fields...)
-}
+func (lg *loggerImpl) Info(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
-func (lg *loggerImpl) Error(msg string, tags ...tag.Tag) {
-	msg = setDefaultMsg(msg)
-	fields := lg.buildFieldsWithCallat(tags)
-	lg.zapLogger.Error(msg, fields...)
-}
+func (lg *loggerImpl) Warn(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
-func (lg *loggerImpl) Fatal(msg string, tags ...tag.Tag) {
-	msg = setDefaultMsg(msg)
-	fields := lg.buildFieldsWithCallat(tags)
-	lg.zapLogger.Fatal(msg, fields...)
-}
+func (lg *loggerImpl) Error(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
+
+func (lg *loggerImpl) Fatal(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
 func (lg *loggerImpl) WithTags(tags ...tag.Tag) log.Logger {
-	fields := lg.buildFields(tags)
-	zapLogger := lg.zapLogger.With(fields...)
-	return &loggerImpl{
-		zapLogger: zapLogger,
-		skip:      lg.skip,
-	}
+	_ = "STUB: not implemented"
+	return *new(log.Logger)
 }

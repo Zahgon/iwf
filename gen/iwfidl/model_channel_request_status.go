@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // ChannelRequestStatus the model 'ChannelRequestStatus'
 type ChannelRequestStatus string
 
@@ -31,47 +26,22 @@ var AllowedChannelRequestStatusEnumValues = []ChannelRequestStatus{
 }
 
 func (v *ChannelRequestStatus) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := ChannelRequestStatus(value)
-	for _, existing := range AllowedChannelRequestStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid ChannelRequestStatus", value)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewChannelRequestStatusFromValue returns a pointer to a valid ChannelRequestStatus
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewChannelRequestStatusFromValue(v string) (*ChannelRequestStatus, error) {
-	ev := ChannelRequestStatus(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for ChannelRequestStatus: valid values are %v", v, AllowedChannelRequestStatusEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v ChannelRequestStatus) IsValid() bool {
-	for _, existing := range AllowedChannelRequestStatusEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v ChannelRequestStatus) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to ChannelRequestStatus value
-func (v ChannelRequestStatus) Ptr() *ChannelRequestStatus {
-	return &v
-}
+func (v ChannelRequestStatus) Ptr() *ChannelRequestStatus { _ = "STUB: not implemented"; return nil }
 
 type NullableChannelRequestStatus struct {
 	value *ChannelRequestStatus
@@ -79,32 +49,30 @@ type NullableChannelRequestStatus struct {
 }
 
 func (v NullableChannelRequestStatus) Get() *ChannelRequestStatus {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableChannelRequestStatus) Set(val *ChannelRequestStatus) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableChannelRequestStatus) IsSet() bool {
-	return v.isSet
-}
+func (v NullableChannelRequestStatus) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableChannelRequestStatus) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableChannelRequestStatus) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableChannelRequestStatus(val *ChannelRequestStatus) *NullableChannelRequestStatus {
-	return &NullableChannelRequestStatus{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableChannelRequestStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableChannelRequestStatus) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

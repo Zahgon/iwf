@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the IwfEventError type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &IwfEventError{}
 
@@ -27,100 +23,51 @@ type IwfEventError struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewIwfEventError() *IwfEventError {
-	this := IwfEventError{}
-	return &this
-}
+func NewIwfEventError() *IwfEventError { _ = "STUB: not implemented"; return nil }
 
 // NewIwfEventErrorWithDefaults instantiates a new IwfEventError object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewIwfEventErrorWithDefaults() *IwfEventError {
-	this := IwfEventError{}
-	return &this
-}
+func NewIwfEventErrorWithDefaults() *IwfEventError { _ = "STUB: not implemented"; return nil }
 
 // GetType returns the Type field value if set, zero value otherwise.
-func (o *IwfEventError) GetType() string {
-	if o == nil || IsNil(o.Type) {
-		var ret string
-		return ret
-	}
-	return *o.Type
-}
+func (o *IwfEventError) GetType() string { _ = "STUB: not implemented"; return "" }
 
 // GetTypeOk returns a tuple with the Type field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *IwfEventError) GetTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.Type) {
-		return nil, false
-	}
-	return o.Type, true
-}
+func (o *IwfEventError) GetTypeOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasType returns a boolean if a field has been set.
-func (o *IwfEventError) HasType() bool {
-	if o != nil && !IsNil(o.Type) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEventError) HasType() bool { _ = "STUB: not implemented"; return false }
 
 // SetType gets a reference to the given string and assigns it to the Type field.
 func (o *IwfEventError) SetType(v string) {
-	o.Type = &v
+	_ = "STUB: not implemented"
+
+	// GetDetails returns the Details field value if set, zero value otherwise.
+	return
 }
 
-// GetDetails returns the Details field value if set, zero value otherwise.
-func (o *IwfEventError) GetDetails() string {
-	if o == nil || IsNil(o.Details) {
-		var ret string
-		return ret
-	}
-	return *o.Details
-}
+func (o *IwfEventError) GetDetails() string { _ = "STUB: not implemented"; return "" }
 
 // GetDetailsOk returns a tuple with the Details field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IwfEventError) GetDetailsOk() (*string, bool) {
-	if o == nil || IsNil(o.Details) {
-		return nil, false
-	}
-	return o.Details, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDetails returns a boolean if a field has been set.
-func (o *IwfEventError) HasDetails() bool {
-	if o != nil && !IsNil(o.Details) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEventError) HasDetails() bool { _ = "STUB: not implemented"; return false }
 
 // SetDetails gets a reference to the given string and assigns it to the Details field.
-func (o *IwfEventError) SetDetails(v string) {
-	o.Details = &v
-}
+func (o *IwfEventError) SetDetails(v string) { _ = "STUB: not implemented"; return }
 
-func (o IwfEventError) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o IwfEventError) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o IwfEventError) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Type) {
-		toSerialize["type"] = o.Type
-	}
-	if !IsNil(o.Details) {
-		toSerialize["details"] = o.Details
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableIwfEventError struct {
@@ -128,33 +75,25 @@ type NullableIwfEventError struct {
 	isSet bool
 }
 
-func (v NullableIwfEventError) Get() *IwfEventError {
-	return v.value
-}
+func (v NullableIwfEventError) Get() *IwfEventError { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableIwfEventError) Set(val *IwfEventError) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableIwfEventError) Set(val *IwfEventError) { _ = "STUB: not implemented"; return }
 
-func (v NullableIwfEventError) IsSet() bool {
-	return v.isSet
-}
+func (v NullableIwfEventError) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableIwfEventError) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableIwfEventError) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableIwfEventError(val *IwfEventError) *NullableIwfEventError {
-	return &NullableIwfEventError{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableIwfEventError) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableIwfEventError) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

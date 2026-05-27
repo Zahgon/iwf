@@ -11,11 +11,8 @@ API version: 1.0.0
 package iwfidl
 
 import (
-	"bytes"
 	"context"
-	"io"
 	"net/http"
-	"net/url"
 )
 
 type DefaultApi interface {
@@ -299,12 +296,13 @@ type ApiApiV1WorkflowConfigUpdatePostRequest struct {
 }
 
 func (r ApiApiV1WorkflowConfigUpdatePostRequest) WorkflowConfigUpdateRequest(workflowConfigUpdateRequest WorkflowConfigUpdateRequest) ApiApiV1WorkflowConfigUpdatePostRequest {
-	r.workflowConfigUpdateRequest = &workflowConfigUpdateRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowConfigUpdatePostRequest)
 }
 
 func (r ApiApiV1WorkflowConfigUpdatePostRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ApiV1WorkflowConfigUpdatePostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 /*
@@ -314,87 +312,25 @@ ApiV1WorkflowConfigUpdatePost update the config of a workflow
 	@return ApiApiV1WorkflowConfigUpdatePostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowConfigUpdatePost(ctx context.Context) ApiApiV1WorkflowConfigUpdatePostRequest {
-	return ApiApiV1WorkflowConfigUpdatePostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowConfigUpdatePostRequest)
 }
 
 // Execute executes the request
 func (a *DefaultApiService) ApiV1WorkflowConfigUpdatePostExecute(r ApiApiV1WorkflowConfigUpdatePostRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowConfigUpdatePost")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/config/update"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowConfigUpdateRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowDataobjectsGetPostRequest struct {
 	ctx                           context.Context
@@ -403,12 +339,13 @@ type ApiApiV1WorkflowDataobjectsGetPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowDataobjectsGetPostRequest) WorkflowGetDataObjectsRequest(workflowGetDataObjectsRequest WorkflowGetDataObjectsRequest) ApiApiV1WorkflowDataobjectsGetPostRequest {
-	r.workflowGetDataObjectsRequest = &workflowGetDataObjectsRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowDataobjectsGetPostRequest)
 }
 
 func (r ApiApiV1WorkflowDataobjectsGetPostRequest) Execute() (*WorkflowGetDataObjectsResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowDataobjectsGetPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -418,99 +355,27 @@ ApiV1WorkflowDataobjectsGetPost get workflow data objects aka data attributes
 	@return ApiApiV1WorkflowDataobjectsGetPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowDataobjectsGetPost(ctx context.Context) ApiApiV1WorkflowDataobjectsGetPostRequest {
-	return ApiApiV1WorkflowDataobjectsGetPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowDataobjectsGetPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowGetDataObjectsResponse
 func (a *DefaultApiService) ApiV1WorkflowDataobjectsGetPostExecute(r ApiApiV1WorkflowDataobjectsGetPostRequest) (*WorkflowGetDataObjectsResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowGetDataObjectsResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowDataobjectsGetPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/dataobjects/get"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowGetDataObjectsRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowDataobjectsSetPostRequest struct {
 	ctx                           context.Context
@@ -519,12 +384,13 @@ type ApiApiV1WorkflowDataobjectsSetPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowDataobjectsSetPostRequest) WorkflowSetDataObjectsRequest(workflowSetDataObjectsRequest WorkflowSetDataObjectsRequest) ApiApiV1WorkflowDataobjectsSetPostRequest {
-	r.workflowSetDataObjectsRequest = &workflowSetDataObjectsRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowDataobjectsSetPostRequest)
 }
 
 func (r ApiApiV1WorkflowDataobjectsSetPostRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ApiV1WorkflowDataobjectsSetPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 /*
@@ -534,87 +400,25 @@ ApiV1WorkflowDataobjectsSetPost set workflow data objects aka data attributes
 	@return ApiApiV1WorkflowDataobjectsSetPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowDataobjectsSetPost(ctx context.Context) ApiApiV1WorkflowDataobjectsSetPostRequest {
-	return ApiApiV1WorkflowDataobjectsSetPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowDataobjectsSetPostRequest)
 }
 
 // Execute executes the request
 func (a *DefaultApiService) ApiV1WorkflowDataobjectsSetPostExecute(r ApiApiV1WorkflowDataobjectsSetPostRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowDataobjectsSetPost")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/dataobjects/set"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowSetDataObjectsRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowEncodedobjectLoadPostRequest struct {
 	ctx           context.Context
@@ -623,12 +427,13 @@ type ApiApiV1WorkflowEncodedobjectLoadPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowEncodedobjectLoadPostRequest) EncodedObject(encodedObject EncodedObject) ApiApiV1WorkflowEncodedobjectLoadPostRequest {
-	r.encodedObject = &encodedObject
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowEncodedobjectLoadPostRequest)
 }
 
 func (r ApiApiV1WorkflowEncodedobjectLoadPostRequest) Execute() (*EncodedObject, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowEncodedobjectLoadPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -638,99 +443,27 @@ ApiV1WorkflowEncodedobjectLoadPost load encoded object from storage
 	@return ApiApiV1WorkflowEncodedobjectLoadPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowEncodedobjectLoadPost(ctx context.Context) ApiApiV1WorkflowEncodedobjectLoadPostRequest {
-	return ApiApiV1WorkflowEncodedobjectLoadPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowEncodedobjectLoadPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return EncodedObject
 func (a *DefaultApiService) ApiV1WorkflowEncodedobjectLoadPostExecute(r ApiApiV1WorkflowEncodedobjectLoadPostRequest) (*EncodedObject, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *EncodedObject
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowEncodedobjectLoadPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/encodedobject/load"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.encodedObject
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowGetPostRequest struct {
 	ctx                context.Context
@@ -739,12 +472,13 @@ type ApiApiV1WorkflowGetPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowGetPostRequest) WorkflowGetRequest(workflowGetRequest WorkflowGetRequest) ApiApiV1WorkflowGetPostRequest {
-	r.workflowGetRequest = &workflowGetRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowGetPostRequest)
 }
 
 func (r ApiApiV1WorkflowGetPostRequest) Execute() (*WorkflowGetResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowGetPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -754,99 +488,27 @@ ApiV1WorkflowGetPost get a workflow's status and results(if completed & requeste
 	@return ApiApiV1WorkflowGetPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowGetPost(ctx context.Context) ApiApiV1WorkflowGetPostRequest {
-	return ApiApiV1WorkflowGetPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowGetPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowGetResponse
 func (a *DefaultApiService) ApiV1WorkflowGetPostExecute(r ApiApiV1WorkflowGetPostRequest) (*WorkflowGetResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowGetResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowGetPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/get"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowGetRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowGetWithWaitPostRequest struct {
 	ctx                context.Context
@@ -855,12 +517,13 @@ type ApiApiV1WorkflowGetWithWaitPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowGetWithWaitPostRequest) WorkflowGetRequest(workflowGetRequest WorkflowGetRequest) ApiApiV1WorkflowGetWithWaitPostRequest {
-	r.workflowGetRequest = &workflowGetRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowGetWithWaitPostRequest)
 }
 
 func (r ApiApiV1WorkflowGetWithWaitPostRequest) Execute() (*WorkflowGetResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowGetWithWaitPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -870,110 +533,27 @@ ApiV1WorkflowGetWithWaitPost get a workflow's status and results(if completed & 
 	@return ApiApiV1WorkflowGetWithWaitPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowGetWithWaitPost(ctx context.Context) ApiApiV1WorkflowGetWithWaitPostRequest {
-	return ApiApiV1WorkflowGetWithWaitPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowGetWithWaitPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowGetResponse
 func (a *DefaultApiService) ApiV1WorkflowGetWithWaitPostExecute(r ApiApiV1WorkflowGetWithWaitPostRequest) (*WorkflowGetResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowGetResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowGetWithWaitPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/getWithWait"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowGetRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 420 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowInternalDumpPostRequest struct {
 	ctx                 context.Context
@@ -982,12 +562,13 @@ type ApiApiV1WorkflowInternalDumpPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowInternalDumpPostRequest) WorkflowDumpRequest(workflowDumpRequest WorkflowDumpRequest) ApiApiV1WorkflowInternalDumpPostRequest {
-	r.workflowDumpRequest = &workflowDumpRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowInternalDumpPostRequest)
 }
 
 func (r ApiApiV1WorkflowInternalDumpPostRequest) Execute() (*WorkflowDumpResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowInternalDumpPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -997,99 +578,27 @@ ApiV1WorkflowInternalDumpPost dump internal info of a workflow
 	@return ApiApiV1WorkflowInternalDumpPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowInternalDumpPost(ctx context.Context) ApiApiV1WorkflowInternalDumpPostRequest {
-	return ApiApiV1WorkflowInternalDumpPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowInternalDumpPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowDumpResponse
 func (a *DefaultApiService) ApiV1WorkflowInternalDumpPostExecute(r ApiApiV1WorkflowInternalDumpPostRequest) (*WorkflowDumpResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowDumpResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowInternalDumpPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/internal/dump"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowDumpRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowPublishToInternalChannelPostRequest struct {
 	ctx                             context.Context
@@ -1098,12 +607,13 @@ type ApiApiV1WorkflowPublishToInternalChannelPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowPublishToInternalChannelPostRequest) PublishToInternalChannelRequest(publishToInternalChannelRequest PublishToInternalChannelRequest) ApiApiV1WorkflowPublishToInternalChannelPostRequest {
-	r.publishToInternalChannelRequest = &publishToInternalChannelRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowPublishToInternalChannelPostRequest)
 }
 
 func (r ApiApiV1WorkflowPublishToInternalChannelPostRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ApiV1WorkflowPublishToInternalChannelPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 /*
@@ -1113,87 +623,25 @@ ApiV1WorkflowPublishToInternalChannelPost signal a workflow
 	@return ApiApiV1WorkflowPublishToInternalChannelPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowPublishToInternalChannelPost(ctx context.Context) ApiApiV1WorkflowPublishToInternalChannelPostRequest {
-	return ApiApiV1WorkflowPublishToInternalChannelPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowPublishToInternalChannelPostRequest)
 }
 
 // Execute executes the request
 func (a *DefaultApiService) ApiV1WorkflowPublishToInternalChannelPostExecute(r ApiApiV1WorkflowPublishToInternalChannelPostRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowPublishToInternalChannelPost")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/publishToInternalChannel"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.publishToInternalChannelRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowResetPostRequest struct {
 	ctx                  context.Context
@@ -1202,12 +650,13 @@ type ApiApiV1WorkflowResetPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowResetPostRequest) WorkflowResetRequest(workflowResetRequest WorkflowResetRequest) ApiApiV1WorkflowResetPostRequest {
-	r.workflowResetRequest = &workflowResetRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowResetPostRequest)
 }
 
 func (r ApiApiV1WorkflowResetPostRequest) Execute() (*WorkflowResetResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowResetPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -1217,99 +666,27 @@ ApiV1WorkflowResetPost reset a workflow
 	@return ApiApiV1WorkflowResetPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowResetPost(ctx context.Context) ApiApiV1WorkflowResetPostRequest {
-	return ApiApiV1WorkflowResetPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowResetPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowResetResponse
 func (a *DefaultApiService) ApiV1WorkflowResetPostExecute(r ApiApiV1WorkflowResetPostRequest) (*WorkflowResetResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowResetResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowResetPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/reset"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowResetRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowRpcPostRequest struct {
 	ctx                context.Context
@@ -1318,12 +695,13 @@ type ApiApiV1WorkflowRpcPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowRpcPostRequest) WorkflowRpcRequest(workflowRpcRequest WorkflowRpcRequest) ApiApiV1WorkflowRpcPostRequest {
-	r.workflowRpcRequest = &workflowRpcRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowRpcPostRequest)
 }
 
 func (r ApiApiV1WorkflowRpcPostRequest) Execute() (*WorkflowRpcResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowRpcPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -1333,121 +711,27 @@ ApiV1WorkflowRpcPost execute an RPC of a workflow
 	@return ApiApiV1WorkflowRpcPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowRpcPost(ctx context.Context) ApiApiV1WorkflowRpcPostRequest {
-	return ApiApiV1WorkflowRpcPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowRpcPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowRpcResponse
 func (a *DefaultApiService) ApiV1WorkflowRpcPostExecute(r ApiApiV1WorkflowRpcPostRequest) (*WorkflowRpcResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowRpcResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowRpcPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/rpc"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowRpcRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 420 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 450 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowSearchPostRequest struct {
 	ctx                   context.Context
@@ -1456,12 +740,13 @@ type ApiApiV1WorkflowSearchPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowSearchPostRequest) WorkflowSearchRequest(workflowSearchRequest WorkflowSearchRequest) ApiApiV1WorkflowSearchPostRequest {
-	r.workflowSearchRequest = &workflowSearchRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowSearchPostRequest)
 }
 
 func (r ApiApiV1WorkflowSearchPostRequest) Execute() (*WorkflowSearchResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowSearchPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -1471,99 +756,27 @@ ApiV1WorkflowSearchPost search for workflows by a search attribute query
 	@return ApiApiV1WorkflowSearchPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowSearchPost(ctx context.Context) ApiApiV1WorkflowSearchPostRequest {
-	return ApiApiV1WorkflowSearchPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowSearchPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowSearchResponse
 func (a *DefaultApiService) ApiV1WorkflowSearchPostExecute(r ApiApiV1WorkflowSearchPostRequest) (*WorkflowSearchResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowSearchResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowSearchPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/search"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowSearchRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowSearchattributesGetPostRequest struct {
 	ctx                                context.Context
@@ -1572,12 +785,13 @@ type ApiApiV1WorkflowSearchattributesGetPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowSearchattributesGetPostRequest) WorkflowGetSearchAttributesRequest(workflowGetSearchAttributesRequest WorkflowGetSearchAttributesRequest) ApiApiV1WorkflowSearchattributesGetPostRequest {
-	r.workflowGetSearchAttributesRequest = &workflowGetSearchAttributesRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowSearchattributesGetPostRequest)
 }
 
 func (r ApiApiV1WorkflowSearchattributesGetPostRequest) Execute() (*WorkflowGetSearchAttributesResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowSearchattributesGetPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -1587,99 +801,27 @@ ApiV1WorkflowSearchattributesGetPost get workflow search attributes
 	@return ApiApiV1WorkflowSearchattributesGetPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowSearchattributesGetPost(ctx context.Context) ApiApiV1WorkflowSearchattributesGetPostRequest {
-	return ApiApiV1WorkflowSearchattributesGetPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowSearchattributesGetPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowGetSearchAttributesResponse
 func (a *DefaultApiService) ApiV1WorkflowSearchattributesGetPostExecute(r ApiApiV1WorkflowSearchattributesGetPostRequest) (*WorkflowGetSearchAttributesResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowGetSearchAttributesResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowSearchattributesGetPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/searchattributes/get"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowGetSearchAttributesRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowSearchattributesSetPostRequest struct {
 	ctx                                context.Context
@@ -1688,12 +830,13 @@ type ApiApiV1WorkflowSearchattributesSetPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowSearchattributesSetPostRequest) WorkflowSetSearchAttributesRequest(workflowSetSearchAttributesRequest WorkflowSetSearchAttributesRequest) ApiApiV1WorkflowSearchattributesSetPostRequest {
-	r.workflowSetSearchAttributesRequest = &workflowSetSearchAttributesRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowSearchattributesSetPostRequest)
 }
 
 func (r ApiApiV1WorkflowSearchattributesSetPostRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ApiV1WorkflowSearchattributesSetPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 /*
@@ -1703,87 +846,25 @@ ApiV1WorkflowSearchattributesSetPost set workflow search attributes
 	@return ApiApiV1WorkflowSearchattributesSetPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowSearchattributesSetPost(ctx context.Context) ApiApiV1WorkflowSearchattributesSetPostRequest {
-	return ApiApiV1WorkflowSearchattributesSetPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowSearchattributesSetPostRequest)
 }
 
 // Execute executes the request
 func (a *DefaultApiService) ApiV1WorkflowSearchattributesSetPostExecute(r ApiApiV1WorkflowSearchattributesSetPostRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowSearchattributesSetPost")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/searchattributes/set"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowSetSearchAttributesRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowSignalPostRequest struct {
 	ctx                   context.Context
@@ -1792,12 +873,13 @@ type ApiApiV1WorkflowSignalPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowSignalPostRequest) WorkflowSignalRequest(workflowSignalRequest WorkflowSignalRequest) ApiApiV1WorkflowSignalPostRequest {
-	r.workflowSignalRequest = &workflowSignalRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowSignalPostRequest)
 }
 
 func (r ApiApiV1WorkflowSignalPostRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ApiV1WorkflowSignalPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 /*
@@ -1807,87 +889,25 @@ ApiV1WorkflowSignalPost signal a workflow
 	@return ApiApiV1WorkflowSignalPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowSignalPost(ctx context.Context) ApiApiV1WorkflowSignalPostRequest {
-	return ApiApiV1WorkflowSignalPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowSignalPostRequest)
 }
 
 // Execute executes the request
 func (a *DefaultApiService) ApiV1WorkflowSignalPostExecute(r ApiApiV1WorkflowSignalPostRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowSignalPost")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/signal"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowSignalRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowStartPostRequest struct {
 	ctx                  context.Context
@@ -1896,12 +916,13 @@ type ApiApiV1WorkflowStartPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowStartPostRequest) WorkflowStartRequest(workflowStartRequest WorkflowStartRequest) ApiApiV1WorkflowStartPostRequest {
-	r.workflowStartRequest = &workflowStartRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowStartPostRequest)
 }
 
 func (r ApiApiV1WorkflowStartPostRequest) Execute() (*WorkflowStartResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowStartPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -1911,99 +932,27 @@ ApiV1WorkflowStartPost start a workflow
 	@return ApiApiV1WorkflowStartPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowStartPost(ctx context.Context) ApiApiV1WorkflowStartPostRequest {
-	return ApiApiV1WorkflowStartPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowStartPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowStartResponse
 func (a *DefaultApiService) ApiV1WorkflowStartPostExecute(r ApiApiV1WorkflowStartPostRequest) (*WorkflowStartResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowStartResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowStartPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/start"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowStartRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowStateDecidePostRequest struct {
 	ctx                        context.Context
@@ -2012,12 +961,13 @@ type ApiApiV1WorkflowStateDecidePostRequest struct {
 }
 
 func (r ApiApiV1WorkflowStateDecidePostRequest) WorkflowStateDecideRequest(workflowStateDecideRequest WorkflowStateDecideRequest) ApiApiV1WorkflowStateDecidePostRequest {
-	r.workflowStateDecideRequest = &workflowStateDecideRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowStateDecidePostRequest)
 }
 
 func (r ApiApiV1WorkflowStateDecidePostRequest) Execute() (*WorkflowStateDecideResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowStateDecidePostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -2027,99 +977,27 @@ ApiV1WorkflowStateDecidePost for invoking WorkflowState.decide API
 	@return ApiApiV1WorkflowStateDecidePostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowStateDecidePost(ctx context.Context) ApiApiV1WorkflowStateDecidePostRequest {
-	return ApiApiV1WorkflowStateDecidePostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowStateDecidePostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowStateDecideResponse
 func (a *DefaultApiService) ApiV1WorkflowStateDecidePostExecute(r ApiApiV1WorkflowStateDecidePostRequest) (*WorkflowStateDecideResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowStateDecideResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowStateDecidePost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflowState/decide"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowStateDecideRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v WorkerErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowStateStartPostRequest struct {
 	ctx                       context.Context
@@ -2128,12 +1006,13 @@ type ApiApiV1WorkflowStateStartPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowStateStartPostRequest) WorkflowStateStartRequest(workflowStateStartRequest WorkflowStateStartRequest) ApiApiV1WorkflowStateStartPostRequest {
-	r.workflowStateStartRequest = &workflowStateStartRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowStateStartPostRequest)
 }
 
 func (r ApiApiV1WorkflowStateStartPostRequest) Execute() (*WorkflowStateStartResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowStateStartPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -2143,99 +1022,27 @@ ApiV1WorkflowStateStartPost for invoking WorkflowState.start API
 	@return ApiApiV1WorkflowStateStartPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowStateStartPost(ctx context.Context) ApiApiV1WorkflowStateStartPostRequest {
-	return ApiApiV1WorkflowStateStartPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowStateStartPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowStateStartResponse
 func (a *DefaultApiService) ApiV1WorkflowStateStartPostExecute(r ApiApiV1WorkflowStateStartPostRequest) (*WorkflowStateStartResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowStateStartResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowStateStartPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflowState/start"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowStateStartRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v WorkerErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowStopPostRequest struct {
 	ctx                 context.Context
@@ -2244,12 +1051,13 @@ type ApiApiV1WorkflowStopPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowStopPostRequest) WorkflowStopRequest(workflowStopRequest WorkflowStopRequest) ApiApiV1WorkflowStopPostRequest {
-	r.workflowStopRequest = &workflowStopRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowStopPostRequest)
 }
 
 func (r ApiApiV1WorkflowStopPostRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ApiV1WorkflowStopPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 /*
@@ -2259,87 +1067,25 @@ ApiV1WorkflowStopPost stop a workflow
 	@return ApiApiV1WorkflowStopPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowStopPost(ctx context.Context) ApiApiV1WorkflowStopPostRequest {
-	return ApiApiV1WorkflowStopPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowStopPostRequest)
 }
 
 // Execute executes the request
 func (a *DefaultApiService) ApiV1WorkflowStopPostExecute(r ApiApiV1WorkflowStopPostRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowStopPost")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/stop"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowStopRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowTimerSkipPostRequest struct {
 	ctx                      context.Context
@@ -2348,12 +1094,13 @@ type ApiApiV1WorkflowTimerSkipPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowTimerSkipPostRequest) WorkflowSkipTimerRequest(workflowSkipTimerRequest WorkflowSkipTimerRequest) ApiApiV1WorkflowTimerSkipPostRequest {
-	r.workflowSkipTimerRequest = &workflowSkipTimerRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowTimerSkipPostRequest)
 }
 
 func (r ApiApiV1WorkflowTimerSkipPostRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ApiV1WorkflowTimerSkipPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 /*
@@ -2363,87 +1110,25 @@ ApiV1WorkflowTimerSkipPost skip the timer of a workflow
 	@return ApiApiV1WorkflowTimerSkipPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowTimerSkipPost(ctx context.Context) ApiApiV1WorkflowTimerSkipPostRequest {
-	return ApiApiV1WorkflowTimerSkipPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowTimerSkipPostRequest)
 }
 
 // Execute executes the request
 func (a *DefaultApiService) ApiV1WorkflowTimerSkipPostExecute(r ApiApiV1WorkflowTimerSkipPostRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowTimerSkipPost")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/timer/skip"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowSkipTimerRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowTriggerContinueAsNewPostRequest struct {
 	ctx                         context.Context
@@ -2452,12 +1137,13 @@ type ApiApiV1WorkflowTriggerContinueAsNewPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowTriggerContinueAsNewPostRequest) TriggerContinueAsNewRequest(triggerContinueAsNewRequest TriggerContinueAsNewRequest) ApiApiV1WorkflowTriggerContinueAsNewPostRequest {
-	r.triggerContinueAsNewRequest = &triggerContinueAsNewRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowTriggerContinueAsNewPostRequest)
 }
 
 func (r ApiApiV1WorkflowTriggerContinueAsNewPostRequest) Execute() (*http.Response, error) {
-	return r.ApiService.ApiV1WorkflowTriggerContinueAsNewPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 /*
@@ -2467,87 +1153,25 @@ ApiV1WorkflowTriggerContinueAsNewPost trigger ContinueAsNew for a workflow
 	@return ApiApiV1WorkflowTriggerContinueAsNewPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowTriggerContinueAsNewPost(ctx context.Context) ApiApiV1WorkflowTriggerContinueAsNewPostRequest {
-	return ApiApiV1WorkflowTriggerContinueAsNewPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowTriggerContinueAsNewPostRequest)
 }
 
 // Execute executes the request
 func (a *DefaultApiService) ApiV1WorkflowTriggerContinueAsNewPostExecute(r ApiApiV1WorkflowTriggerContinueAsNewPostRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowTriggerContinueAsNewPost")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/triggerContinueAsNew"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.triggerContinueAsNewRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowWaitForStateCompletionPostRequest struct {
 	ctx                                   context.Context
@@ -2556,12 +1180,13 @@ type ApiApiV1WorkflowWaitForStateCompletionPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowWaitForStateCompletionPostRequest) WorkflowWaitForStateCompletionRequest(workflowWaitForStateCompletionRequest WorkflowWaitForStateCompletionRequest) ApiApiV1WorkflowWaitForStateCompletionPostRequest {
-	r.workflowWaitForStateCompletionRequest = &workflowWaitForStateCompletionRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowWaitForStateCompletionPostRequest)
 }
 
 func (r ApiApiV1WorkflowWaitForStateCompletionPostRequest) Execute() (*WorkflowWaitForStateCompletionResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowWaitForStateCompletionPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -2571,110 +1196,27 @@ ApiV1WorkflowWaitForStateCompletionPost Method for ApiV1WorkflowWaitForStateComp
 	@return ApiApiV1WorkflowWaitForStateCompletionPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowWaitForStateCompletionPost(ctx context.Context) ApiApiV1WorkflowWaitForStateCompletionPostRequest {
-	return ApiApiV1WorkflowWaitForStateCompletionPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowWaitForStateCompletionPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowWaitForStateCompletionResponse
 func (a *DefaultApiService) ApiV1WorkflowWaitForStateCompletionPostExecute(r ApiApiV1WorkflowWaitForStateCompletionPostRequest) (*WorkflowWaitForStateCompletionResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowWaitForStateCompletionResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowWaitForStateCompletionPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflow/waitForStateCompletion"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowWaitForStateCompletionRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 420 {
-			var v ErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiApiV1WorkflowWorkerRpcPostRequest struct {
 	ctx                      context.Context
@@ -2683,12 +1225,13 @@ type ApiApiV1WorkflowWorkerRpcPostRequest struct {
 }
 
 func (r ApiApiV1WorkflowWorkerRpcPostRequest) WorkflowWorkerRpcRequest(workflowWorkerRpcRequest WorkflowWorkerRpcRequest) ApiApiV1WorkflowWorkerRpcPostRequest {
-	r.workflowWorkerRpcRequest = &workflowWorkerRpcRequest
-	return r
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowWorkerRpcPostRequest)
 }
 
 func (r ApiApiV1WorkflowWorkerRpcPostRequest) Execute() (*WorkflowWorkerRpcResponse, *http.Response, error) {
-	return r.ApiService.ApiV1WorkflowWorkerRpcPostExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -2698,99 +1241,27 @@ ApiV1WorkflowWorkerRpcPost for invoking workflow RPC API in the worker
 	@return ApiApiV1WorkflowWorkerRpcPostRequest
 */
 func (a *DefaultApiService) ApiV1WorkflowWorkerRpcPost(ctx context.Context) ApiApiV1WorkflowWorkerRpcPostRequest {
-	return ApiApiV1WorkflowWorkerRpcPostRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiApiV1WorkflowWorkerRpcPostRequest)
 }
 
 // Execute executes the request
 //
 //	@return WorkflowWorkerRpcResponse
 func (a *DefaultApiService) ApiV1WorkflowWorkerRpcPostExecute(r ApiApiV1WorkflowWorkerRpcPostRequest) (*WorkflowWorkerRpcResponse, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *WorkflowWorkerRpcResponse
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.ApiV1WorkflowWorkerRpcPost")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/v1/workflowWorker/rpc"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.workflowWorkerRpcRequest
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v WorkerErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header
+
+// body params
 
 type ApiInfoHealthcheckGetRequest struct {
 	ctx        context.Context
@@ -2798,7 +1269,8 @@ type ApiInfoHealthcheckGetRequest struct {
 }
 
 func (r ApiInfoHealthcheckGetRequest) Execute() (*HealthInfo, *http.Response, error) {
-	return r.ApiService.InfoHealthcheckGetExecute(r)
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
 
 /*
@@ -2808,84 +1280,22 @@ InfoHealthcheckGet return health info of the server
 	@return ApiInfoHealthcheckGetRequest
 */
 func (a *DefaultApiService) InfoHealthcheckGet(ctx context.Context) ApiInfoHealthcheckGetRequest {
-	return ApiInfoHealthcheckGetRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
+	_ = "STUB: not implemented"
+	return *new(ApiInfoHealthcheckGetRequest)
 }
 
 // Execute executes the request
 //
 //	@return HealthInfo
 func (a *DefaultApiService) InfoHealthcheckGetExecute(r ApiInfoHealthcheckGetRequest) (*HealthInfo, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *HealthInfo
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.InfoHealthcheckGet")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/info/healthcheck"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	_ = "STUB: not implemented"
+	return nil, nil, nil
 }
+
+// to determine the Content-Type header
+
+// set Content-Type header
+
+// to determine the Accept header
+
+// set Accept header

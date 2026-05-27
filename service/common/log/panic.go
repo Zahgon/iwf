@@ -21,12 +21,7 @@
 package log
 
 import (
-	"fmt"
-	"github.com/indeedeng/iwf/gen/iwfidl"
 	"github.com/indeedeng/iwf/service/common/errors"
-	"github.com/indeedeng/iwf/service/common/log/tag"
-	"net/http"
-	"runtime/debug"
 )
 
 // CapturePanic is used to capture panic, it will log the panic and also return the error through pointer.
@@ -37,18 +32,6 @@ import (
 // deferred function. The usual way of calling this is:
 // - defer func() { log.CapturePanic(recover(), logger, &err) }()
 func CapturePanic(errPanic interface{}, logger Logger, retError **errors.ErrorAndStatus) {
-	if errPanic != nil {
-		err, ok := errPanic.(error)
-		if !ok {
-			err = fmt.Errorf("panic object is not error: %#v", errPanic)
-		}
-
-		st := string(debug.Stack())
-
-		logger.Error("Panic is captured", tag.SysStackTrace(st), tag.Error(err))
-
-		if retError != nil {
-			*retError = errors.NewErrorAndStatus(http.StatusInternalServerError, iwfidl.UNCATEGORIZED_SUB_STATUS, err.Error())
-		}
-	}
+	_ = "STUB: not implemented"
+	return
 }

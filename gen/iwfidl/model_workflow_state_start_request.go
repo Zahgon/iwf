@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowStateStartRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowStateStartRequest{}
 
@@ -32,212 +28,147 @@ type WorkflowStateStartRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowStateStartRequest(context Context, workflowType string, workflowStateId string) *WorkflowStateStartRequest {
-	this := WorkflowStateStartRequest{}
-	this.Context = context
-	this.WorkflowType = workflowType
-	this.WorkflowStateId = workflowStateId
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowStateStartRequestWithDefaults instantiates a new WorkflowStateStartRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowStateStartRequestWithDefaults() *WorkflowStateStartRequest {
-	this := WorkflowStateStartRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetContext returns the Context field value
 func (o *WorkflowStateStartRequest) GetContext() Context {
-	if o == nil {
-		var ret Context
-		return ret
-	}
-
-	return o.Context
+	_ = "STUB: not implemented"
+	return *new(Context)
 }
 
 // GetContextOk returns a tuple with the Context field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateStartRequest) GetContextOk() (*Context, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Context, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetContext sets field value
 func (o *WorkflowStateStartRequest) SetContext(v Context) {
-	o.Context = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowType returns the WorkflowType field value
+	return
 }
 
-// GetWorkflowType returns the WorkflowType field value
-func (o *WorkflowStateStartRequest) GetWorkflowType() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowType
-}
+func (o *WorkflowStateStartRequest) GetWorkflowType() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowTypeOk returns a tuple with the WorkflowType field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateStartRequest) GetWorkflowTypeOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowType sets field value
 func (o *WorkflowStateStartRequest) SetWorkflowType(v string) {
-	o.WorkflowType = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowStateId returns the WorkflowStateId field value
+	return
 }
 
-// GetWorkflowStateId returns the WorkflowStateId field value
 func (o *WorkflowStateStartRequest) GetWorkflowStateId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowStateId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWorkflowStateIdOk returns a tuple with the WorkflowStateId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateStartRequest) GetWorkflowStateIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowStateId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowStateId sets field value
-func (o *WorkflowStateStartRequest) SetWorkflowStateId(v string) {
-	o.WorkflowStateId = v
-}
+func (o *WorkflowStateStartRequest) SetWorkflowStateId(v string) { _ = "STUB: not implemented"; return }
 
 // GetStateInput returns the StateInput field value if set, zero value otherwise.
 func (o *WorkflowStateStartRequest) GetStateInput() EncodedObject {
-	if o == nil || IsNil(o.StateInput) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.StateInput
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetStateInputOk returns a tuple with the StateInput field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateStartRequest) GetStateInputOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.StateInput) {
-		return nil, false
-	}
-	return o.StateInput, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateInput returns a boolean if a field has been set.
-func (o *WorkflowStateStartRequest) HasStateInput() bool {
-	if o != nil && !IsNil(o.StateInput) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStateStartRequest) HasStateInput() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateInput gets a reference to the given EncodedObject and assigns it to the StateInput field.
 func (o *WorkflowStateStartRequest) SetStateInput(v EncodedObject) {
-	o.StateInput = &v
+	_ = "STUB: not implemented"
+
+	// GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
+	return
 }
 
-// GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
 func (o *WorkflowStateStartRequest) GetSearchAttributes() []SearchAttribute {
-	if o == nil || IsNil(o.SearchAttributes) {
-		var ret []SearchAttribute
-		return ret
-	}
-	return o.SearchAttributes
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSearchAttributesOk returns a tuple with the SearchAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateStartRequest) GetSearchAttributesOk() ([]SearchAttribute, bool) {
-	if o == nil || IsNil(o.SearchAttributes) {
-		return nil, false
-	}
-	return o.SearchAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSearchAttributes returns a boolean if a field has been set.
 func (o *WorkflowStateStartRequest) HasSearchAttributes() bool {
-	if o != nil && !IsNil(o.SearchAttributes) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetSearchAttributes gets a reference to the given []SearchAttribute and assigns it to the SearchAttributes field.
 func (o *WorkflowStateStartRequest) SetSearchAttributes(v []SearchAttribute) {
-	o.SearchAttributes = v
+	_ = "STUB: not implemented"
+	return
+
+	// GetDataObjects returns the DataObjects field value if set, zero value otherwise.
 }
 
-// GetDataObjects returns the DataObjects field value if set, zero value otherwise.
 func (o *WorkflowStateStartRequest) GetDataObjects() []KeyValue {
-	if o == nil || IsNil(o.DataObjects) {
-		var ret []KeyValue
-		return ret
-	}
-	return o.DataObjects
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetDataObjectsOk returns a tuple with the DataObjects field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateStartRequest) GetDataObjectsOk() ([]KeyValue, bool) {
-	if o == nil || IsNil(o.DataObjects) {
-		return nil, false
-	}
-	return o.DataObjects, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDataObjects returns a boolean if a field has been set.
-func (o *WorkflowStateStartRequest) HasDataObjects() bool {
-	if o != nil && !IsNil(o.DataObjects) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStateStartRequest) HasDataObjects() bool { _ = "STUB: not implemented"; return false }
 
 // SetDataObjects gets a reference to the given []KeyValue and assigns it to the DataObjects field.
-func (o *WorkflowStateStartRequest) SetDataObjects(v []KeyValue) {
-	o.DataObjects = v
-}
+func (o *WorkflowStateStartRequest) SetDataObjects(v []KeyValue) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowStateStartRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowStateStartRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["context"] = o.Context
-	toSerialize["workflowType"] = o.WorkflowType
-	toSerialize["workflowStateId"] = o.WorkflowStateId
-	if !IsNil(o.StateInput) {
-		toSerialize["stateInput"] = o.StateInput
-	}
-	if !IsNil(o.SearchAttributes) {
-		toSerialize["searchAttributes"] = o.SearchAttributes
-	}
-	if !IsNil(o.DataObjects) {
-		toSerialize["dataObjects"] = o.DataObjects
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowStateStartRequest struct {
@@ -246,32 +177,30 @@ type NullableWorkflowStateStartRequest struct {
 }
 
 func (v NullableWorkflowStateStartRequest) Get() *WorkflowStateStartRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowStateStartRequest) Set(val *WorkflowStateStartRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowStateStartRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowStateStartRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowStateStartRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowStateStartRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowStateStartRequest(val *WorkflowStateStartRequest) *NullableWorkflowStateStartRequest {
-	return &NullableWorkflowStateStartRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowStateStartRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowStateStartRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

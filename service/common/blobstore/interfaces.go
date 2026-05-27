@@ -2,57 +2,28 @@ package blobstore
 
 import (
 	"context"
-	"fmt"
-	"strings"
-	"time"
 )
 
 var reservedCharacters = []string{"/", "$"}
 
-func ValidateWorkflowId(workflowId string) error {
-	for _, reservedCharacter := range reservedCharacters {
-		if strings.Contains(workflowId, reservedCharacter) {
-			return fmt.Errorf("workflowId contains reserved character: %s", reservedCharacter)
-		}
-	}
-	return nil
-}
+func ValidateWorkflowId(workflowId string) error { _ = "STUB: not implemented"; return nil }
 
-func MustExtractWorkflowId(workflowPath string) string {
-	workflowId, err := ExtractWorkflowId(workflowPath)
-	if err != nil {
-		panic(err)
-	}
-	return workflowId
-}
+func MustExtractWorkflowId(workflowPath string) string { _ = "STUB: not implemented"; return "" }
 
 func ExtractWorkflowId(workflowPath string) (string, error) {
-	parts := strings.Split(workflowPath, "$")
-	if len(parts) != 2 {
-		return "", fmt.Errorf("invalid workflow path: %s", workflowPath)
-	}
-	return parts[1], nil
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 func ExtractYyyymmddToUnixSeconds(workflowPath string) (int64, bool) {
+	_ = "STUB: not implemented"
 	// yyyymmdd$workflowId
-	yyyymmdd, err := ExtractYyyymmdd(workflowPath)
-	if err != nil {
-		return 0, false
-	}
-	parsedTime, err := time.Parse("20060102", yyyymmdd)
-	if err != nil {
-		panic(err)
-	}
-	return parsedTime.Unix(), true
+	return 0, false
 }
 
 func ExtractYyyymmdd(workflowPath string) (string, error) {
-	parts := strings.Split(workflowPath, "$")
-	if len(parts) != 2 {
-		return "", fmt.Errorf("invalid workflow path: %s", workflowPath)
-	}
-	return parts[0], nil
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 type BlobStore interface {

@@ -1,7 +1,6 @@
 package interpreter
 
 import (
-	"github.com/indeedeng/iwf/service"
 	"github.com/indeedeng/iwf/service/interpreter/interfaces"
 )
 
@@ -52,72 +51,73 @@ type GlobalVersioner struct {
 func NewGlobalVersioner(
 	workflowProvider interfaces.WorkflowProvider, ctx interfaces.UnifiedContext,
 ) (*GlobalVersioner, error) {
-	version := workflowProvider.GetVersion(ctx, globalChangeId, 0, MaxOfAllVersions)
-
-	return &GlobalVersioner{
-		workflowProvider: workflowProvider,
-		ctx:              ctx,
-		version:          version,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // methods checking version number
 
 func (p *GlobalVersioner) IsAfterVersionOfContinueAsNewOnNoStates() bool {
-	return p.version >= StartingVersionContinueAsNewOnNoStates
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfUsingGlobalVersioning() bool {
-	return p.version >= StartingVersionUsingGlobalVersioning
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfOptimizedUpsertSearchAttribute() bool {
-	return p.version >= StartingVersionOptimizedUpsertSearchAttribute
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfExecutingStateIdMode() bool {
-	return p.version >= StartingVersionExecutingStateIdMode
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfRenamedStateApi() bool {
-	return p.version >= StartingVersionRenamedStateApi
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfTemporal26SDK() bool {
-	return p.version >= StartingVersionTemporal26SDK
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfNoIwfGlobalVersionSearchAttribute() bool {
-	return p.version >= StartingVersionNoIwfGlobalVersionSearchAttribute
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfYieldOnConditionalComplete() bool {
-	return p.version >= StartingVersionYieldOnConditionalComplete
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfSyncUpdateRPCUseLocalActivity() bool {
-	return p.version >= SyncUpdateRPCUseLocalActivity
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) IsAfterVersionOfWaitingCommandThreads() bool {
-	return p.version >= StartingVersionWaitingCommandThreads
+	_ = "STUB: not implemented"
+	return false
 }
 
 // methods checking feature/functionality availability
 
 func (p *GlobalVersioner) IsUsingGlobalVersionSearchAttribute() bool {
-	return p.version >= StartingVersionUsingGlobalVersioning && p.version < StartingVersionNoIwfGlobalVersionSearchAttribute
+	_ = "STUB: not implemented"
+	return false
 }
 
 func (p *GlobalVersioner) UpsertGlobalVersionSearchAttribute() error {
-	if p.IsUsingGlobalVersionSearchAttribute() &&
-		p.workflowProvider.GetBackendType() != service.BackendTypeCadence {
-		// Note that there was bug in Cadence SDK may cause concurrent writes hence we never upsert for Cadence
-		// https://github.com/uber-go/cadence-client/issues/1198
-
-		return p.workflowProvider.UpsertSearchAttributes(p.ctx, map[string]interface{}{
-			service.SearchAttributeGlobalVersion: MaxOfAllVersions,
-		})
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// Note that there was bug in Cadence SDK may cause concurrent writes hence we never upsert for Cadence
+// https://github.com/uber-go/cadence-client/issues/1198

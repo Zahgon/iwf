@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // WorkflowStopType the model 'WorkflowStopType'
 type WorkflowStopType string
 
@@ -32,81 +27,45 @@ var AllowedWorkflowStopTypeEnumValues = []WorkflowStopType{
 	"FAIL",
 }
 
-func (v *WorkflowStopType) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := WorkflowStopType(value)
-	for _, existing := range AllowedWorkflowStopTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid WorkflowStopType", value)
-}
+func (v *WorkflowStopType) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }
 
 // NewWorkflowStopTypeFromValue returns a pointer to a valid WorkflowStopType
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewWorkflowStopTypeFromValue(v string) (*WorkflowStopType, error) {
-	ev := WorkflowStopType(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for WorkflowStopType: valid values are %v", v, AllowedWorkflowStopTypeEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v WorkflowStopType) IsValid() bool {
-	for _, existing := range AllowedWorkflowStopTypeEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v WorkflowStopType) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to WorkflowStopType value
-func (v WorkflowStopType) Ptr() *WorkflowStopType {
-	return &v
-}
+func (v WorkflowStopType) Ptr() *WorkflowStopType { _ = "STUB: not implemented"; return nil }
 
 type NullableWorkflowStopType struct {
 	value *WorkflowStopType
 	isSet bool
 }
 
-func (v NullableWorkflowStopType) Get() *WorkflowStopType {
-	return v.value
-}
+func (v NullableWorkflowStopType) Get() *WorkflowStopType { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableWorkflowStopType) Set(val *WorkflowStopType) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableWorkflowStopType) Set(val *WorkflowStopType) { _ = "STUB: not implemented"; return }
 
-func (v NullableWorkflowStopType) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowStopType) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowStopType) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowStopType) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowStopType(val *WorkflowStopType) *NullableWorkflowStopType {
-	return &NullableWorkflowStopType{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowStopType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowStopType) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

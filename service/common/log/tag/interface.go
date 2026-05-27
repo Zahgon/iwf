@@ -21,7 +21,6 @@
 package tag
 
 import (
-	"fmt"
 	"time"
 
 	"go.uber.org/zap"
@@ -34,73 +33,39 @@ type Tag struct {
 }
 
 // Field returns a zap field
-func (t *Tag) Field() zap.Field {
-	return t.field
-}
+func (t *Tag) Field() zap.Field { _ = "STUB: not implemented"; return *new(zap.Field) }
 
-func newStringTag(key string, value string) Tag {
-	return Tag{
-		field: zap.String(key, value),
-	}
-}
+func newStringTag(key string, value string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
-func newInt64(key string, value int64) Tag {
-	return Tag{
-		field: zap.Int64(key, value),
-	}
-}
+func newInt64(key string, value int64) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
-func newInt(key string, value int) Tag {
-	return Tag{
-		field: zap.Int(key, value),
-	}
-}
+func newInt(key string, value int) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
-func newInt32(key string, value int32) Tag {
-	return Tag{
-		field: zap.Int32(key, value),
-	}
-}
+func newInt32(key string, value int32) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
-func newBoolTag(key string, value bool) Tag {
-	return Tag{
-		field: zap.Bool(key, value),
-	}
-}
+func newBoolTag(key string, value bool) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 func newErrorTag(key string, value error) Tag {
-	//NOTE zap already chosen "error" as key
-	return Tag{
-		field: zap.Error(value),
-	}
+	_ = "STUB: not implemented"
+	// NOTE zap already chosen "error" as key
+	return *new(Tag)
 }
 
 func newDurationTag(key string, value time.Duration) Tag {
-	return Tag{
-		field: zap.Duration(key, value),
-	}
+	_ = "STUB: not implemented"
+	return *new(Tag)
 }
 
-func newTimeTag(key string, value time.Time) Tag {
-	return Tag{
-		field: zap.Time(key, value),
-	}
-}
+func newTimeTag(key string, value time.Time) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
-func newObjectTag(key string, value interface{}) Tag {
-	return Tag{
-		field: zap.String(key, fmt.Sprintf("%v", value)),
-	}
-}
+func newObjectTag(key string, value interface{}) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 func newPredefinedStringTag(key string, value string) Tag {
-	return Tag{
-		field: zap.String(key, value),
-	}
+	_ = "STUB: not implemented"
+	return *new(Tag)
 }
 
 func newPredefinedDynamicTag(key string, value interface{}) Tag {
-	return Tag{
-		field: zap.Any(key, value),
-	}
+	_ = "STUB: not implemented"
+	return *new(Tag)
 }

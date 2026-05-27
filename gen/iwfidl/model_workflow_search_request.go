@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowSearchRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowSearchRequest{}
 
@@ -29,125 +25,79 @@ type WorkflowSearchRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowSearchRequest(query string) *WorkflowSearchRequest {
-	this := WorkflowSearchRequest{}
-	this.Query = query
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowSearchRequestWithDefaults instantiates a new WorkflowSearchRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowSearchRequestWithDefaults() *WorkflowSearchRequest {
-	this := WorkflowSearchRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetQuery returns the Query field value
-func (o *WorkflowSearchRequest) GetQuery() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.Query
-}
+func (o *WorkflowSearchRequest) GetQuery() string { _ = "STUB: not implemented"; return "" }
 
 // GetQueryOk returns a tuple with the Query field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowSearchRequest) GetQueryOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Query, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetQuery sets field value
 func (o *WorkflowSearchRequest) SetQuery(v string) {
-	o.Query = v
+	_ = "STUB: not implemented"
+
+	// GetPageSize returns the PageSize field value if set, zero value otherwise.
+	return
 }
 
-// GetPageSize returns the PageSize field value if set, zero value otherwise.
-func (o *WorkflowSearchRequest) GetPageSize() int32 {
-	if o == nil || IsNil(o.PageSize) {
-		var ret int32
-		return ret
-	}
-	return *o.PageSize
-}
+func (o *WorkflowSearchRequest) GetPageSize() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetPageSizeOk returns a tuple with the PageSize field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowSearchRequest) GetPageSizeOk() (*int32, bool) {
-	if o == nil || IsNil(o.PageSize) {
-		return nil, false
-	}
-	return o.PageSize, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasPageSize returns a boolean if a field has been set.
-func (o *WorkflowSearchRequest) HasPageSize() bool {
-	if o != nil && !IsNil(o.PageSize) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowSearchRequest) HasPageSize() bool { _ = "STUB: not implemented"; return false }
 
 // SetPageSize gets a reference to the given int32 and assigns it to the PageSize field.
 func (o *WorkflowSearchRequest) SetPageSize(v int32) {
-	o.PageSize = &v
+	_ = "STUB: not implemented"
+
+	// GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
+	return
 }
 
-// GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
-func (o *WorkflowSearchRequest) GetNextPageToken() string {
-	if o == nil || IsNil(o.NextPageToken) {
-		var ret string
-		return ret
-	}
-	return *o.NextPageToken
-}
+func (o *WorkflowSearchRequest) GetNextPageToken() string { _ = "STUB: not implemented"; return "" }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowSearchRequest) GetNextPageTokenOk() (*string, bool) {
-	if o == nil || IsNil(o.NextPageToken) {
-		return nil, false
-	}
-	return o.NextPageToken, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
-func (o *WorkflowSearchRequest) HasNextPageToken() bool {
-	if o != nil && !IsNil(o.NextPageToken) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowSearchRequest) HasNextPageToken() bool { _ = "STUB: not implemented"; return false }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
-func (o *WorkflowSearchRequest) SetNextPageToken(v string) {
-	o.NextPageToken = &v
-}
+func (o *WorkflowSearchRequest) SetNextPageToken(v string) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowSearchRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowSearchRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["query"] = o.Query
-	if !IsNil(o.PageSize) {
-		toSerialize["pageSize"] = o.PageSize
-	}
-	if !IsNil(o.NextPageToken) {
-		toSerialize["nextPageToken"] = o.NextPageToken
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowSearchRequest struct {
@@ -156,32 +106,30 @@ type NullableWorkflowSearchRequest struct {
 }
 
 func (v NullableWorkflowSearchRequest) Get() *WorkflowSearchRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowSearchRequest) Set(val *WorkflowSearchRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowSearchRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowSearchRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowSearchRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowSearchRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowSearchRequest(val *WorkflowSearchRequest) *NullableWorkflowSearchRequest {
-	return &NullableWorkflowSearchRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowSearchRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowSearchRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

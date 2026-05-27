@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the StateMovement type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &StateMovement{}
 
@@ -29,161 +25,93 @@ type StateMovement struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewStateMovement(stateId string) *StateMovement {
-	this := StateMovement{}
-	this.StateId = stateId
-	return &this
-}
+func NewStateMovement(stateId string) *StateMovement { _ = "STUB: not implemented"; return nil }
 
 // NewStateMovementWithDefaults instantiates a new StateMovement object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewStateMovementWithDefaults() *StateMovement {
-	this := StateMovement{}
-	return &this
-}
+func NewStateMovementWithDefaults() *StateMovement { _ = "STUB: not implemented"; return nil }
 
 // GetStateId returns the StateId field value
-func (o *StateMovement) GetStateId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.StateId
-}
+func (o *StateMovement) GetStateId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStateIdOk returns a tuple with the StateId field value
 // and a boolean to check if the value has been set.
 func (o *StateMovement) GetStateIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.StateId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetStateId sets field value
 func (o *StateMovement) SetStateId(v string) {
-	o.StateId = v
+	_ = "STUB: not implemented"
+
+	// GetStateInput returns the StateInput field value if set, zero value otherwise.
+	return
 }
 
-// GetStateInput returns the StateInput field value if set, zero value otherwise.
 func (o *StateMovement) GetStateInput() EncodedObject {
-	if o == nil || IsNil(o.StateInput) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.StateInput
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetStateInputOk returns a tuple with the StateInput field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StateMovement) GetStateInputOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.StateInput) {
-		return nil, false
-	}
-	return o.StateInput, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateInput returns a boolean if a field has been set.
-func (o *StateMovement) HasStateInput() bool {
-	if o != nil && !IsNil(o.StateInput) {
-		return true
-	}
-
-	return false
-}
+func (o *StateMovement) HasStateInput() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateInput gets a reference to the given EncodedObject and assigns it to the StateInput field.
 func (o *StateMovement) SetStateInput(v EncodedObject) {
-	o.StateInput = &v
+	_ = "STUB: not implemented"
+
+	// GetStateOptions returns the StateOptions field value if set, zero value otherwise.
+	return
 }
 
-// GetStateOptions returns the StateOptions field value if set, zero value otherwise.
 func (o *StateMovement) GetStateOptions() WorkflowStateOptions {
-	if o == nil || IsNil(o.StateOptions) {
-		var ret WorkflowStateOptions
-		return ret
-	}
-	return *o.StateOptions
+	_ = "STUB: not implemented"
+	return *new(WorkflowStateOptions)
 }
 
 // GetStateOptionsOk returns a tuple with the StateOptions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StateMovement) GetStateOptionsOk() (*WorkflowStateOptions, bool) {
-	if o == nil || IsNil(o.StateOptions) {
-		return nil, false
-	}
-	return o.StateOptions, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateOptions returns a boolean if a field has been set.
-func (o *StateMovement) HasStateOptions() bool {
-	if o != nil && !IsNil(o.StateOptions) {
-		return true
-	}
-
-	return false
-}
+func (o *StateMovement) HasStateOptions() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateOptions gets a reference to the given WorkflowStateOptions and assigns it to the StateOptions field.
-func (o *StateMovement) SetStateOptions(v WorkflowStateOptions) {
-	o.StateOptions = &v
-}
+func (o *StateMovement) SetStateOptions(v WorkflowStateOptions) { _ = "STUB: not implemented"; return }
 
 // GetWaitForKey returns the WaitForKey field value if set, zero value otherwise.
-func (o *StateMovement) GetWaitForKey() string {
-	if o == nil || IsNil(o.WaitForKey) {
-		var ret string
-		return ret
-	}
-	return *o.WaitForKey
-}
+func (o *StateMovement) GetWaitForKey() string { _ = "STUB: not implemented"; return "" }
 
 // GetWaitForKeyOk returns a tuple with the WaitForKey field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StateMovement) GetWaitForKeyOk() (*string, bool) {
-	if o == nil || IsNil(o.WaitForKey) {
-		return nil, false
-	}
-	return o.WaitForKey, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitForKey returns a boolean if a field has been set.
-func (o *StateMovement) HasWaitForKey() bool {
-	if o != nil && !IsNil(o.WaitForKey) {
-		return true
-	}
-
-	return false
-}
+func (o *StateMovement) HasWaitForKey() bool { _ = "STUB: not implemented"; return false }
 
 // SetWaitForKey gets a reference to the given string and assigns it to the WaitForKey field.
-func (o *StateMovement) SetWaitForKey(v string) {
-	o.WaitForKey = &v
-}
+func (o *StateMovement) SetWaitForKey(v string) { _ = "STUB: not implemented"; return }
 
-func (o StateMovement) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o StateMovement) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o StateMovement) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["stateId"] = o.StateId
-	if !IsNil(o.StateInput) {
-		toSerialize["stateInput"] = o.StateInput
-	}
-	if !IsNil(o.StateOptions) {
-		toSerialize["stateOptions"] = o.StateOptions
-	}
-	if !IsNil(o.WaitForKey) {
-		toSerialize["waitForKey"] = o.WaitForKey
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableStateMovement struct {
@@ -191,33 +119,25 @@ type NullableStateMovement struct {
 	isSet bool
 }
 
-func (v NullableStateMovement) Get() *StateMovement {
-	return v.value
-}
+func (v NullableStateMovement) Get() *StateMovement { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableStateMovement) Set(val *StateMovement) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableStateMovement) Set(val *StateMovement) { _ = "STUB: not implemented"; return }
 
-func (v NullableStateMovement) IsSet() bool {
-	return v.isSet
-}
+func (v NullableStateMovement) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableStateMovement) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableStateMovement) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableStateMovement(val *StateMovement) *NullableStateMovement {
-	return &NullableStateMovement{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableStateMovement) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableStateMovement) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

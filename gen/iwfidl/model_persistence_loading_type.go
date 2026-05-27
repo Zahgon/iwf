@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // PersistenceLoadingType the model 'PersistenceLoadingType'
 type PersistenceLoadingType string
 
@@ -37,46 +32,24 @@ var AllowedPersistenceLoadingTypeEnumValues = []PersistenceLoadingType{
 }
 
 func (v *PersistenceLoadingType) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := PersistenceLoadingType(value)
-	for _, existing := range AllowedPersistenceLoadingTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid PersistenceLoadingType", value)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewPersistenceLoadingTypeFromValue returns a pointer to a valid PersistenceLoadingType
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewPersistenceLoadingTypeFromValue(v string) (*PersistenceLoadingType, error) {
-	ev := PersistenceLoadingType(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for PersistenceLoadingType: valid values are %v", v, AllowedPersistenceLoadingTypeEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v PersistenceLoadingType) IsValid() bool {
-	for _, existing := range AllowedPersistenceLoadingTypeEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v PersistenceLoadingType) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to PersistenceLoadingType value
 func (v PersistenceLoadingType) Ptr() *PersistenceLoadingType {
-	return &v
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type NullablePersistenceLoadingType struct {
@@ -85,32 +58,30 @@ type NullablePersistenceLoadingType struct {
 }
 
 func (v NullablePersistenceLoadingType) Get() *PersistenceLoadingType {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullablePersistenceLoadingType) Set(val *PersistenceLoadingType) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullablePersistenceLoadingType) IsSet() bool {
-	return v.isSet
-}
+func (v NullablePersistenceLoadingType) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullablePersistenceLoadingType) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullablePersistenceLoadingType) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullablePersistenceLoadingType(val *PersistenceLoadingType) *NullablePersistenceLoadingType {
-	return &NullablePersistenceLoadingType{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullablePersistenceLoadingType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullablePersistenceLoadingType) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

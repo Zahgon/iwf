@@ -2,7 +2,6 @@ package interpreter
 
 import (
 	"github.com/indeedeng/iwf/gen/iwfidl"
-	"github.com/indeedeng/iwf/service/common/ptr"
 )
 
 type InternalChannel struct {
@@ -10,61 +9,36 @@ type InternalChannel struct {
 	receivedData map[string][]*iwfidl.EncodedObject
 }
 
-func NewInternalChannel() *InternalChannel {
-	return &InternalChannel{
-		receivedData: map[string][]*iwfidl.EncodedObject{},
-	}
-}
+func NewInternalChannel() *InternalChannel { _ = "STUB: not implemented"; return nil }
 
 func RebuildInternalChannel(refill map[string][]*iwfidl.EncodedObject) *InternalChannel {
-	return &InternalChannel{
-		receivedData: refill,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (i *InternalChannel) GetAllReceived() map[string][]*iwfidl.EncodedObject {
-	return i.receivedData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (i *InternalChannel) GetInfos() map[string]iwfidl.ChannelInfo {
-	infos := make(map[string]iwfidl.ChannelInfo, len(i.receivedData))
-	for name, l := range i.receivedData {
-		infos[name] = iwfidl.ChannelInfo{
-			Size: ptr.Any(int32(len(l))),
-		}
-	}
-	return infos
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (i *InternalChannel) HasData(channelName string) bool {
-	l := i.receivedData[channelName]
-	return len(l) > 0
-}
+func (i *InternalChannel) HasData(channelName string) bool { _ = "STUB: not implemented"; return false }
 
 func (i *InternalChannel) ProcessPublishing(publishes []iwfidl.InterStateChannelPublishing) {
-	for _, pub := range publishes {
-		i.receive(pub.ChannelName, pub.Value)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 func (i *InternalChannel) receive(channelName string, data *iwfidl.EncodedObject) {
-	l := i.receivedData[channelName]
-	l = append(l, data)
-	i.receivedData[channelName] = l
+	_ = "STUB: not implemented"
+	return
 }
 
 func (i *InternalChannel) Retrieve(channelName string) *iwfidl.EncodedObject {
-	l := i.receivedData[channelName]
-	if len(l) <= 0 {
-		panic("critical bug, this shouldn't happen")
-	}
-	data := l[0]
-	l = l[1:]
-	if len(l) == 0 {
-		delete(i.receivedData, channelName)
-	} else {
-		i.receivedData[channelName] = l
-	}
-
-	return data
+	_ = "STUB: not implemented"
+	return nil
 }

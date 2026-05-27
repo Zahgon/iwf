@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowSearchResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowSearchResponse{}
 
@@ -27,100 +23,65 @@ type WorkflowSearchResponse struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWorkflowSearchResponse() *WorkflowSearchResponse {
-	this := WorkflowSearchResponse{}
-	return &this
-}
+func NewWorkflowSearchResponse() *WorkflowSearchResponse { _ = "STUB: not implemented"; return nil }
 
 // NewWorkflowSearchResponseWithDefaults instantiates a new WorkflowSearchResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowSearchResponseWithDefaults() *WorkflowSearchResponse {
-	this := WorkflowSearchResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowExecutions returns the WorkflowExecutions field value if set, zero value otherwise.
 func (o *WorkflowSearchResponse) GetWorkflowExecutions() []WorkflowSearchResponseEntry {
-	if o == nil || IsNil(o.WorkflowExecutions) {
-		var ret []WorkflowSearchResponseEntry
-		return ret
-	}
-	return o.WorkflowExecutions
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowExecutionsOk returns a tuple with the WorkflowExecutions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowSearchResponse) GetWorkflowExecutionsOk() ([]WorkflowSearchResponseEntry, bool) {
-	if o == nil || IsNil(o.WorkflowExecutions) {
-		return nil, false
-	}
-	return o.WorkflowExecutions, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowExecutions returns a boolean if a field has been set.
 func (o *WorkflowSearchResponse) HasWorkflowExecutions() bool {
-	if o != nil && !IsNil(o.WorkflowExecutions) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowExecutions gets a reference to the given []WorkflowSearchResponseEntry and assigns it to the WorkflowExecutions field.
 func (o *WorkflowSearchResponse) SetWorkflowExecutions(v []WorkflowSearchResponseEntry) {
-	o.WorkflowExecutions = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetNextPageToken returns the NextPageToken field value if set, zero value otherwise.
-func (o *WorkflowSearchResponse) GetNextPageToken() string {
-	if o == nil || IsNil(o.NextPageToken) {
-		var ret string
-		return ret
-	}
-	return *o.NextPageToken
-}
+func (o *WorkflowSearchResponse) GetNextPageToken() string { _ = "STUB: not implemented"; return "" }
 
 // GetNextPageTokenOk returns a tuple with the NextPageToken field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowSearchResponse) GetNextPageTokenOk() (*string, bool) {
-	if o == nil || IsNil(o.NextPageToken) {
-		return nil, false
-	}
-	return o.NextPageToken, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasNextPageToken returns a boolean if a field has been set.
-func (o *WorkflowSearchResponse) HasNextPageToken() bool {
-	if o != nil && !IsNil(o.NextPageToken) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowSearchResponse) HasNextPageToken() bool { _ = "STUB: not implemented"; return false }
 
 // SetNextPageToken gets a reference to the given string and assigns it to the NextPageToken field.
-func (o *WorkflowSearchResponse) SetNextPageToken(v string) {
-	o.NextPageToken = &v
-}
+func (o *WorkflowSearchResponse) SetNextPageToken(v string) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowSearchResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowSearchResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.WorkflowExecutions) {
-		toSerialize["workflowExecutions"] = o.WorkflowExecutions
-	}
-	if !IsNil(o.NextPageToken) {
-		toSerialize["nextPageToken"] = o.NextPageToken
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowSearchResponse struct {
@@ -129,32 +90,30 @@ type NullableWorkflowSearchResponse struct {
 }
 
 func (v NullableWorkflowSearchResponse) Get() *WorkflowSearchResponse {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowSearchResponse) Set(val *WorkflowSearchResponse) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowSearchResponse) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowSearchResponse) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowSearchResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowSearchResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowSearchResponse(val *WorkflowSearchResponse) *NullableWorkflowSearchResponse {
-	return &NullableWorkflowSearchResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowSearchResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowSearchResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

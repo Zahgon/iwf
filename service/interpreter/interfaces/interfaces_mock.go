@@ -6,7 +6,6 @@ package interfaces
 
 import (
 	context "context"
-	reflect "reflect"
 	time "time"
 
 	gomock "github.com/golang/mock/gomock"
@@ -27,73 +26,63 @@ type MockActivityProviderMockRecorder struct {
 
 // NewMockActivityProvider creates a new mock instance.
 func NewMockActivityProvider(ctrl *gomock.Controller) *MockActivityProvider {
-	mock := &MockActivityProvider{ctrl: ctrl}
-	mock.recorder = &MockActivityProviderMockRecorder{mock}
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockActivityProvider) EXPECT() *MockActivityProviderMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// GetActivityInfo mocks base method.
+	return nil
 }
 
-// GetActivityInfo mocks base method.
 func (m *MockActivityProvider) GetActivityInfo(ctx context.Context) ActivityInfo {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetActivityInfo", ctx)
-	ret0, _ := ret[0].(ActivityInfo)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(ActivityInfo)
 }
 
 // GetActivityInfo indicates an expected call of GetActivityInfo.
 func (mr *MockActivityProviderMockRecorder) GetActivityInfo(ctx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetActivityInfo", reflect.TypeOf((*MockActivityProvider)(nil).GetActivityInfo), ctx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetLogger mocks base method.
 func (m *MockActivityProvider) GetLogger(ctx context.Context) UnifiedLogger {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetLogger", ctx)
-	ret0, _ := ret[0].(UnifiedLogger)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(UnifiedLogger)
 }
 
 // GetLogger indicates an expected call of GetLogger.
 func (mr *MockActivityProviderMockRecorder) GetLogger(ctx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLogger", reflect.TypeOf((*MockActivityProvider)(nil).GetLogger), ctx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewApplicationError mocks base method.
 func (m *MockActivityProvider) NewApplicationError(errType string, details interface{}) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "NewApplicationError", errType, details)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewApplicationError indicates an expected call of NewApplicationError.
 func (mr *MockActivityProviderMockRecorder) NewApplicationError(errType, details interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "NewApplicationError", reflect.TypeOf((*MockActivityProvider)(nil).NewApplicationError), errType, details)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RecordHeartbeat mocks base method.
 func (m *MockActivityProvider) RecordHeartbeat(ctx context.Context, details ...interface{}) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx}
-	for _, a := range details {
-		varargs = append(varargs, a)
-	}
-	m.ctrl.Call(m, "RecordHeartbeat", varargs...)
+	_ = "STUB: not implemented"
+	return
 }
 
 // RecordHeartbeat indicates an expected call of RecordHeartbeat.
 func (mr *MockActivityProviderMockRecorder) RecordHeartbeat(ctx interface{}, details ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx}, details...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RecordHeartbeat", reflect.TypeOf((*MockActivityProvider)(nil).RecordHeartbeat), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MockUnifiedLogger is a mock of UnifiedLogger interface.
@@ -109,82 +98,63 @@ type MockUnifiedLoggerMockRecorder struct {
 
 // NewMockUnifiedLogger creates a new mock instance.
 func NewMockUnifiedLogger(ctrl *gomock.Controller) *MockUnifiedLogger {
-	mock := &MockUnifiedLogger{ctrl: ctrl}
-	mock.recorder = &MockUnifiedLoggerMockRecorder{mock}
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockUnifiedLogger) EXPECT() *MockUnifiedLoggerMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// Debug mocks base method.
+	return nil
 }
 
-// Debug mocks base method.
 func (m *MockUnifiedLogger) Debug(msg string, keyvals ...interface{}) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{msg}
-	for _, a := range keyvals {
-		varargs = append(varargs, a)
-	}
-	m.ctrl.Call(m, "Debug", varargs...)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Debug indicates an expected call of Debug.
 func (mr *MockUnifiedLoggerMockRecorder) Debug(msg interface{}, keyvals ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{msg}, keyvals...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Debug", reflect.TypeOf((*MockUnifiedLogger)(nil).Debug), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Error mocks base method.
 func (m *MockUnifiedLogger) Error(msg string, keyvals ...interface{}) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{msg}
-	for _, a := range keyvals {
-		varargs = append(varargs, a)
-	}
-	m.ctrl.Call(m, "Error", varargs...)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Error indicates an expected call of Error.
 func (mr *MockUnifiedLoggerMockRecorder) Error(msg interface{}, keyvals ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{msg}, keyvals...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Error", reflect.TypeOf((*MockUnifiedLogger)(nil).Error), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Info mocks base method.
 func (m *MockUnifiedLogger) Info(msg string, keyvals ...interface{}) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{msg}
-	for _, a := range keyvals {
-		varargs = append(varargs, a)
-	}
-	m.ctrl.Call(m, "Info", varargs...)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Info indicates an expected call of Info.
 func (mr *MockUnifiedLoggerMockRecorder) Info(msg interface{}, keyvals ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{msg}, keyvals...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Info", reflect.TypeOf((*MockUnifiedLogger)(nil).Info), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Warn mocks base method.
 func (m *MockUnifiedLogger) Warn(msg string, keyvals ...interface{}) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{msg}
-	for _, a := range keyvals {
-		varargs = append(varargs, a)
-	}
-	m.ctrl.Call(m, "Warn", varargs...)
+	_ = "STUB: not implemented"
+	return
 }
 
 // Warn indicates an expected call of Warn.
 func (mr *MockUnifiedLoggerMockRecorder) Warn(msg interface{}, keyvals ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{msg}, keyvals...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Warn", reflect.TypeOf((*MockUnifiedLogger)(nil).Warn), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MockUnifiedContext is a mock of UnifiedContext interface.
@@ -200,28 +170,24 @@ type MockUnifiedContextMockRecorder struct {
 
 // NewMockUnifiedContext creates a new mock instance.
 func NewMockUnifiedContext(ctrl *gomock.Controller) *MockUnifiedContext {
-	mock := &MockUnifiedContext{ctrl: ctrl}
-	mock.recorder = &MockUnifiedContextMockRecorder{mock}
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockUnifiedContext) EXPECT() *MockUnifiedContextMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// GetContext mocks base method.
+	return nil
 }
 
-// GetContext mocks base method.
-func (m *MockUnifiedContext) GetContext() interface{} {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetContext")
-	ret0, _ := ret[0].(interface{})
-	return ret0
-}
+func (m *MockUnifiedContext) GetContext() interface{} { _ = "STUB: not implemented"; return nil }
 
 // GetContext indicates an expected call of GetContext.
 func (mr *MockUnifiedContextMockRecorder) GetContext() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContext", reflect.TypeOf((*MockUnifiedContext)(nil).GetContext))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MockTimerProcessor is a mock of TimerProcessor interface.
@@ -237,122 +203,108 @@ type MockTimerProcessorMockRecorder struct {
 
 // NewMockTimerProcessor creates a new mock instance.
 func NewMockTimerProcessor(ctrl *gomock.Controller) *MockTimerProcessor {
-	mock := &MockTimerProcessor{ctrl: ctrl}
-	mock.recorder = &MockTimerProcessorMockRecorder{mock}
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockTimerProcessor) EXPECT() *MockTimerProcessorMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// AddTimers mocks base method.
+	return nil
 }
 
-// AddTimers mocks base method.
 func (m *MockTimerProcessor) AddTimers(stateExeId string, commands []iwfidl.TimerCommand, completedTimerCmds map[int]service.InternalTimerStatus) {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "AddTimers", stateExeId, commands, completedTimerCmds)
+	_ = "STUB: not implemented"
+	return
 }
 
 // AddTimers indicates an expected call of AddTimers.
 func (mr *MockTimerProcessorMockRecorder) AddTimers(stateExeId, commands, completedTimerCmds interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddTimers", reflect.TypeOf((*MockTimerProcessor)(nil).AddTimers), stateExeId, commands, completedTimerCmds)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Dump mocks base method.
 func (m *MockTimerProcessor) Dump() []service.StaleSkipTimerSignal {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Dump")
-	ret0, _ := ret[0].([]service.StaleSkipTimerSignal)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Dump indicates an expected call of Dump.
 func (mr *MockTimerProcessorMockRecorder) Dump() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Dump", reflect.TypeOf((*MockTimerProcessor)(nil).Dump))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetTimerInfos mocks base method.
 func (m *MockTimerProcessor) GetTimerInfos() map[string][]*service.TimerInfo {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetTimerInfos")
-	ret0, _ := ret[0].(map[string][]*service.TimerInfo)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetTimerInfos indicates an expected call of GetTimerInfos.
 func (mr *MockTimerProcessorMockRecorder) GetTimerInfos() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTimerInfos", reflect.TypeOf((*MockTimerProcessor)(nil).GetTimerInfos))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetTimerStartedUnixTimestamps mocks base method.
 func (m *MockTimerProcessor) GetTimerStartedUnixTimestamps() []int64 {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetTimerStartedUnixTimestamps")
-	ret0, _ := ret[0].([]int64)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetTimerStartedUnixTimestamps indicates an expected call of GetTimerStartedUnixTimestamps.
 func (mr *MockTimerProcessorMockRecorder) GetTimerStartedUnixTimestamps() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTimerStartedUnixTimestamps", reflect.TypeOf((*MockTimerProcessor)(nil).GetTimerStartedUnixTimestamps))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RemovePendingTimersOfState mocks base method.
 func (m *MockTimerProcessor) RemovePendingTimersOfState(stateExeId string) {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "RemovePendingTimersOfState", stateExeId)
+	_ = "STUB: not implemented"
+	return
 }
 
 // RemovePendingTimersOfState indicates an expected call of RemovePendingTimersOfState.
 func (mr *MockTimerProcessorMockRecorder) RemovePendingTimersOfState(stateExeId interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RemovePendingTimersOfState", reflect.TypeOf((*MockTimerProcessor)(nil).RemovePendingTimersOfState), stateExeId)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RetryStaleSkipTimer mocks base method.
-func (m *MockTimerProcessor) RetryStaleSkipTimer() bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "RetryStaleSkipTimer")
-	ret0, _ := ret[0].(bool)
-	return ret0
-}
+func (m *MockTimerProcessor) RetryStaleSkipTimer() bool { _ = "STUB: not implemented"; return false }
 
 // RetryStaleSkipTimer indicates an expected call of RetryStaleSkipTimer.
 func (mr *MockTimerProcessorMockRecorder) RetryStaleSkipTimer() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RetryStaleSkipTimer", reflect.TypeOf((*MockTimerProcessor)(nil).RetryStaleSkipTimer))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SkipTimer mocks base method.
 func (m *MockTimerProcessor) SkipTimer(stateExeId, timerId string, timerIdx int) bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SkipTimer", stateExeId, timerId, timerIdx)
-	ret0, _ := ret[0].(bool)
-	return ret0
+	_ = "STUB: not implemented"
+	return false
 }
 
 // SkipTimer indicates an expected call of SkipTimer.
 func (mr *MockTimerProcessorMockRecorder) SkipTimer(stateExeId, timerId, timerIdx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SkipTimer", reflect.TypeOf((*MockTimerProcessor)(nil).SkipTimer), stateExeId, timerId, timerIdx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // WaitForTimerFiredOrSkipped mocks base method.
 func (m *MockTimerProcessor) WaitForTimerFiredOrSkipped(ctx UnifiedContext, stateExeId string, timerIdx int, cancelWaiting *bool) service.InternalTimerStatus {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "WaitForTimerFiredOrSkipped", ctx, stateExeId, timerIdx, cancelWaiting)
-	ret0, _ := ret[0].(service.InternalTimerStatus)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(service.InternalTimerStatus)
 }
 
 // WaitForTimerFiredOrSkipped indicates an expected call of WaitForTimerFiredOrSkipped.
 func (mr *MockTimerProcessorMockRecorder) WaitForTimerFiredOrSkipped(ctx, stateExeId, timerIdx, cancelWaiting interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitForTimerFiredOrSkipped", reflect.TypeOf((*MockTimerProcessor)(nil).WaitForTimerFiredOrSkipped), ctx, stateExeId, timerIdx, cancelWaiting)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MockWorkflowProvider is a mock of WorkflowProvider interface.
@@ -368,401 +320,336 @@ type MockWorkflowProviderMockRecorder struct {
 
 // NewMockWorkflowProvider creates a new mock instance.
 func NewMockWorkflowProvider(ctrl *gomock.Controller) *MockWorkflowProvider {
-	mock := &MockWorkflowProvider{ctrl: ctrl}
-	mock.recorder = &MockWorkflowProviderMockRecorder{mock}
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockWorkflowProvider) EXPECT() *MockWorkflowProviderMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// Await mocks base method.
+	return nil
 }
 
-// Await mocks base method.
 func (m *MockWorkflowProvider) Await(ctx UnifiedContext, condition func() bool) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Await", ctx, condition)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Await indicates an expected call of Await.
 func (mr *MockWorkflowProviderMockRecorder) Await(ctx, condition interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Await", reflect.TypeOf((*MockWorkflowProvider)(nil).Await), ctx, condition)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ExecuteActivity mocks base method.
 func (m *MockWorkflowProvider) ExecuteActivity(valuePtr interface{}, optimizeByLocalActivity bool, ctx UnifiedContext, activity interface{}, args ...interface{}) error {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{valuePtr, optimizeByLocalActivity, ctx, activity}
-	for _, a := range args {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "ExecuteActivity", varargs...)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ExecuteActivity indicates an expected call of ExecuteActivity.
 func (mr *MockWorkflowProviderMockRecorder) ExecuteActivity(valuePtr, optimizeByLocalActivity, ctx, activity interface{}, args ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{valuePtr, optimizeByLocalActivity, ctx, activity}, args...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteActivity", reflect.TypeOf((*MockWorkflowProvider)(nil).ExecuteActivity), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ExecuteLocalActivity mocks base method.
 func (m *MockWorkflowProvider) ExecuteLocalActivity(valuePtr interface{}, ctx UnifiedContext, activity interface{}, args ...interface{}) error {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{valuePtr, ctx, activity}
-	for _, a := range args {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "ExecuteLocalActivity", varargs...)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ExecuteLocalActivity indicates an expected call of ExecuteLocalActivity.
 func (mr *MockWorkflowProviderMockRecorder) ExecuteLocalActivity(valuePtr, ctx, activity interface{}, args ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{valuePtr, ctx, activity}, args...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteLocalActivity", reflect.TypeOf((*MockWorkflowProvider)(nil).ExecuteLocalActivity), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ExtendContextWithValue mocks base method.
 func (m *MockWorkflowProvider) ExtendContextWithValue(parent UnifiedContext, key string, val interface{}) UnifiedContext {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ExtendContextWithValue", parent, key, val)
-	ret0, _ := ret[0].(UnifiedContext)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(UnifiedContext)
 }
 
 // ExtendContextWithValue indicates an expected call of ExtendContextWithValue.
 func (mr *MockWorkflowProviderMockRecorder) ExtendContextWithValue(parent, key, val interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExtendContextWithValue", reflect.TypeOf((*MockWorkflowProvider)(nil).ExtendContextWithValue), parent, key, val)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetBackendType mocks base method.
 func (m *MockWorkflowProvider) GetBackendType() service.BackendType {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetBackendType")
-	ret0, _ := ret[0].(service.BackendType)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(service.BackendType)
 }
 
 // GetBackendType indicates an expected call of GetBackendType.
 func (mr *MockWorkflowProviderMockRecorder) GetBackendType() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBackendType", reflect.TypeOf((*MockWorkflowProvider)(nil).GetBackendType))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetContextValue mocks base method.
 func (m *MockWorkflowProvider) GetContextValue(ctx UnifiedContext, key string) interface{} {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetContextValue", ctx, key)
-	ret0, _ := ret[0].(interface{})
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetContextValue indicates an expected call of GetContextValue.
 func (mr *MockWorkflowProviderMockRecorder) GetContextValue(ctx, key interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContextValue", reflect.TypeOf((*MockWorkflowProvider)(nil).GetContextValue), ctx, key)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetLogger mocks base method.
 func (m *MockWorkflowProvider) GetLogger(ctx UnifiedContext) UnifiedLogger {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetLogger", ctx)
-	ret0, _ := ret[0].(UnifiedLogger)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(UnifiedLogger)
 }
 
 // GetLogger indicates an expected call of GetLogger.
 func (mr *MockWorkflowProviderMockRecorder) GetLogger(ctx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLogger", reflect.TypeOf((*MockWorkflowProvider)(nil).GetLogger), ctx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetPendingThreadNames mocks base method.
 func (m *MockWorkflowProvider) GetPendingThreadNames() map[string]int {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetPendingThreadNames")
-	ret0, _ := ret[0].(map[string]int)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetPendingThreadNames indicates an expected call of GetPendingThreadNames.
 func (mr *MockWorkflowProviderMockRecorder) GetPendingThreadNames() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPendingThreadNames", reflect.TypeOf((*MockWorkflowProvider)(nil).GetPendingThreadNames))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSearchAttributes mocks base method.
 func (m *MockWorkflowProvider) GetSearchAttributes(ctx UnifiedContext, requestedSearchAttributes []iwfidl.SearchAttributeKeyAndType) (map[string]iwfidl.SearchAttribute, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetSearchAttributes", ctx, requestedSearchAttributes)
-	ret0, _ := ret[0].(map[string]iwfidl.SearchAttribute)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetSearchAttributes indicates an expected call of GetSearchAttributes.
 func (mr *MockWorkflowProviderMockRecorder) GetSearchAttributes(ctx, requestedSearchAttributes interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSearchAttributes", reflect.TypeOf((*MockWorkflowProvider)(nil).GetSearchAttributes), ctx, requestedSearchAttributes)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSignalChannel mocks base method.
 func (m *MockWorkflowProvider) GetSignalChannel(ctx UnifiedContext, signalName string) ReceiveChannel {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetSignalChannel", ctx, signalName)
-	ret0, _ := ret[0].(ReceiveChannel)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(ReceiveChannel)
 }
 
 // GetSignalChannel indicates an expected call of GetSignalChannel.
 func (mr *MockWorkflowProviderMockRecorder) GetSignalChannel(ctx, signalName interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSignalChannel", reflect.TypeOf((*MockWorkflowProvider)(nil).GetSignalChannel), ctx, signalName)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetThreadCount mocks base method.
-func (m *MockWorkflowProvider) GetThreadCount() int {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetThreadCount")
-	ret0, _ := ret[0].(int)
-	return ret0
-}
+func (m *MockWorkflowProvider) GetThreadCount() int { _ = "STUB: not implemented"; return 0 }
 
 // GetThreadCount indicates an expected call of GetThreadCount.
 func (mr *MockWorkflowProviderMockRecorder) GetThreadCount() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetThreadCount", reflect.TypeOf((*MockWorkflowProvider)(nil).GetThreadCount))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetUnhandledSignalNames mocks base method.
 func (m *MockWorkflowProvider) GetUnhandledSignalNames(ctx UnifiedContext) []string {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetUnhandledSignalNames", ctx)
-	ret0, _ := ret[0].([]string)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetUnhandledSignalNames indicates an expected call of GetUnhandledSignalNames.
 func (mr *MockWorkflowProviderMockRecorder) GetUnhandledSignalNames(ctx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUnhandledSignalNames", reflect.TypeOf((*MockWorkflowProvider)(nil).GetUnhandledSignalNames), ctx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetVersion mocks base method.
 func (m *MockWorkflowProvider) GetVersion(ctx UnifiedContext, changeID string, minSupported, maxSupported int) int {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetVersion", ctx, changeID, minSupported, maxSupported)
-	ret0, _ := ret[0].(int)
-	return ret0
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetVersion indicates an expected call of GetVersion.
 func (mr *MockWorkflowProviderMockRecorder) GetVersion(ctx, changeID, minSupported, maxSupported interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetVersion", reflect.TypeOf((*MockWorkflowProvider)(nil).GetVersion), ctx, changeID, minSupported, maxSupported)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowInfo mocks base method.
 func (m *MockWorkflowProvider) GetWorkflowInfo(ctx UnifiedContext) WorkflowInfo {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetWorkflowInfo", ctx)
-	ret0, _ := ret[0].(WorkflowInfo)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(WorkflowInfo)
 }
 
 // GetWorkflowInfo indicates an expected call of GetWorkflowInfo.
 func (mr *MockWorkflowProviderMockRecorder) GetWorkflowInfo(ctx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflowInfo", reflect.TypeOf((*MockWorkflowProvider)(nil).GetWorkflowInfo), ctx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GoNamed mocks base method.
 func (m *MockWorkflowProvider) GoNamed(ctx UnifiedContext, name string, f func(UnifiedContext)) {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "GoNamed", ctx, name, f)
+	_ = "STUB: not implemented"
+	return
 }
 
 // GoNamed indicates an expected call of GoNamed.
 func (mr *MockWorkflowProviderMockRecorder) GoNamed(ctx, name, f interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GoNamed", reflect.TypeOf((*MockWorkflowProvider)(nil).GoNamed), ctx, name, f)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // IsApplicationError mocks base method.
 func (m *MockWorkflowProvider) IsApplicationError(err error) bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "IsApplicationError", err)
-	ret0, _ := ret[0].(bool)
-	return ret0
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsApplicationError indicates an expected call of IsApplicationError.
 func (mr *MockWorkflowProviderMockRecorder) IsApplicationError(err interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsApplicationError", reflect.TypeOf((*MockWorkflowProvider)(nil).IsApplicationError), err)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // IsReplaying mocks base method.
 func (m *MockWorkflowProvider) IsReplaying(ctx UnifiedContext) bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "IsReplaying", ctx)
-	ret0, _ := ret[0].(bool)
-	return ret0
+	_ = "STUB: not implemented"
+	return false
 }
 
 // IsReplaying indicates an expected call of IsReplaying.
 func (mr *MockWorkflowProviderMockRecorder) IsReplaying(ctx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsReplaying", reflect.TypeOf((*MockWorkflowProvider)(nil).IsReplaying), ctx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewApplicationError mocks base method.
 func (m *MockWorkflowProvider) NewApplicationError(errType string, details interface{}) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "NewApplicationError", errType, details)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewApplicationError indicates an expected call of NewApplicationError.
 func (mr *MockWorkflowProviderMockRecorder) NewApplicationError(errType, details interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "NewApplicationError", reflect.TypeOf((*MockWorkflowProvider)(nil).NewApplicationError), errType, details)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewInterpreterContinueAsNewError mocks base method.
 func (m *MockWorkflowProvider) NewInterpreterContinueAsNewError(ctx UnifiedContext, input service.InterpreterWorkflowInput) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "NewInterpreterContinueAsNewError", ctx, input)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewInterpreterContinueAsNewError indicates an expected call of NewInterpreterContinueAsNewError.
 func (mr *MockWorkflowProviderMockRecorder) NewInterpreterContinueAsNewError(ctx, input interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "NewInterpreterContinueAsNewError", reflect.TypeOf((*MockWorkflowProvider)(nil).NewInterpreterContinueAsNewError), ctx, input)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewTimer mocks base method.
 func (m *MockWorkflowProvider) NewTimer(ctx UnifiedContext, d time.Duration) Future {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "NewTimer", ctx, d)
-	ret0, _ := ret[0].(Future)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(Future)
 }
 
 // NewTimer indicates an expected call of NewTimer.
 func (mr *MockWorkflowProviderMockRecorder) NewTimer(ctx, d interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "NewTimer", reflect.TypeOf((*MockWorkflowProvider)(nil).NewTimer), ctx, d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Now mocks base method.
 func (m *MockWorkflowProvider) Now(ctx UnifiedContext) time.Time {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Now", ctx)
-	ret0, _ := ret[0].(time.Time)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 // Now indicates an expected call of Now.
 func (mr *MockWorkflowProviderMockRecorder) Now(ctx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Now", reflect.TypeOf((*MockWorkflowProvider)(nil).Now), ctx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SetQueryHandler mocks base method.
 func (m *MockWorkflowProvider) SetQueryHandler(ctx UnifiedContext, queryType string, handler interface{}) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SetQueryHandler", ctx, queryType, handler)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SetQueryHandler indicates an expected call of SetQueryHandler.
 func (mr *MockWorkflowProviderMockRecorder) SetQueryHandler(ctx, queryType, handler interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetQueryHandler", reflect.TypeOf((*MockWorkflowProvider)(nil).SetQueryHandler), ctx, queryType, handler)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SetRpcUpdateHandler mocks base method.
 func (m *MockWorkflowProvider) SetRpcUpdateHandler(ctx UnifiedContext, updateType string, validator UnifiedRpcValidator, handler UnifiedRpcHandler) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SetRpcUpdateHandler", ctx, updateType, validator, handler)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SetRpcUpdateHandler indicates an expected call of SetRpcUpdateHandler.
 func (mr *MockWorkflowProviderMockRecorder) SetRpcUpdateHandler(ctx, updateType, validator, handler interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetRpcUpdateHandler", reflect.TypeOf((*MockWorkflowProvider)(nil).SetRpcUpdateHandler), ctx, updateType, validator, handler)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Sleep mocks base method.
 func (m *MockWorkflowProvider) Sleep(ctx UnifiedContext, d time.Duration) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Sleep", ctx, d)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Sleep indicates an expected call of Sleep.
 func (mr *MockWorkflowProviderMockRecorder) Sleep(ctx, d interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Sleep", reflect.TypeOf((*MockWorkflowProvider)(nil).Sleep), ctx, d)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UpsertMemo mocks base method.
 func (m *MockWorkflowProvider) UpsertMemo(ctx UnifiedContext, memo map[string]iwfidl.EncodedObject) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "UpsertMemo", ctx, memo)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UpsertMemo indicates an expected call of UpsertMemo.
 func (mr *MockWorkflowProviderMockRecorder) UpsertMemo(ctx, memo interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpsertMemo", reflect.TypeOf((*MockWorkflowProvider)(nil).UpsertMemo), ctx, memo)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UpsertSearchAttributes mocks base method.
 func (m *MockWorkflowProvider) UpsertSearchAttributes(ctx UnifiedContext, attributes map[string]interface{}) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "UpsertSearchAttributes", ctx, attributes)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UpsertSearchAttributes indicates an expected call of UpsertSearchAttributes.
 func (mr *MockWorkflowProviderMockRecorder) UpsertSearchAttributes(ctx, attributes interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpsertSearchAttributes", reflect.TypeOf((*MockWorkflowProvider)(nil).UpsertSearchAttributes), ctx, attributes)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // WithActivityOptions mocks base method.
 func (m *MockWorkflowProvider) WithActivityOptions(ctx UnifiedContext, options ActivityOptions) UnifiedContext {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "WithActivityOptions", ctx, options)
-	ret0, _ := ret[0].(UnifiedContext)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(UnifiedContext)
 }
 
 // WithActivityOptions indicates an expected call of WithActivityOptions.
 func (mr *MockWorkflowProviderMockRecorder) WithActivityOptions(ctx, options interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WithActivityOptions", reflect.TypeOf((*MockWorkflowProvider)(nil).WithActivityOptions), ctx, options)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MockReceiveChannel is a mock of ReceiveChannel interface.
@@ -778,42 +665,39 @@ type MockReceiveChannelMockRecorder struct {
 
 // NewMockReceiveChannel creates a new mock instance.
 func NewMockReceiveChannel(ctrl *gomock.Controller) *MockReceiveChannel {
-	mock := &MockReceiveChannel{ctrl: ctrl}
-	mock.recorder = &MockReceiveChannelMockRecorder{mock}
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockReceiveChannel) EXPECT() *MockReceiveChannelMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// ReceiveAsync mocks base method.
+	return nil
 }
 
-// ReceiveAsync mocks base method.
 func (m *MockReceiveChannel) ReceiveAsync(valuePtr interface{}) bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ReceiveAsync", valuePtr)
-	ret0, _ := ret[0].(bool)
-	return ret0
+	_ = "STUB: not implemented"
+	return false
 }
 
 // ReceiveAsync indicates an expected call of ReceiveAsync.
 func (mr *MockReceiveChannelMockRecorder) ReceiveAsync(valuePtr interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReceiveAsync", reflect.TypeOf((*MockReceiveChannel)(nil).ReceiveAsync), valuePtr)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ReceiveBlocking mocks base method.
 func (m *MockReceiveChannel) ReceiveBlocking(ctx UnifiedContext, valuePtr interface{}) bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ReceiveBlocking", ctx, valuePtr)
-	ret0, _ := ret[0].(bool)
-	return ret0
+	_ = "STUB: not implemented"
+	return false
 }
 
 // ReceiveBlocking indicates an expected call of ReceiveBlocking.
 func (mr *MockReceiveChannelMockRecorder) ReceiveBlocking(ctx, valuePtr interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ReceiveBlocking", reflect.TypeOf((*MockReceiveChannel)(nil).ReceiveBlocking), ctx, valuePtr)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MockFuture is a mock of Future interface.
@@ -828,41 +712,29 @@ type MockFutureMockRecorder struct {
 }
 
 // NewMockFuture creates a new mock instance.
-func NewMockFuture(ctrl *gomock.Controller) *MockFuture {
-	mock := &MockFuture{ctrl: ctrl}
-	mock.recorder = &MockFutureMockRecorder{mock}
-	return mock
-}
+func NewMockFuture(ctrl *gomock.Controller) *MockFuture { _ = "STUB: not implemented"; return nil }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockFuture) EXPECT() *MockFutureMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// Get mocks base method.
+	return nil
 }
 
-// Get mocks base method.
 func (m *MockFuture) Get(ctx UnifiedContext, valuePtr interface{}) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Get", ctx, valuePtr)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Get indicates an expected call of Get.
 func (mr *MockFutureMockRecorder) Get(ctx, valuePtr interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Get", reflect.TypeOf((*MockFuture)(nil).Get), ctx, valuePtr)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // IsReady mocks base method.
-func (m *MockFuture) IsReady() bool {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "IsReady")
-	ret0, _ := ret[0].(bool)
-	return ret0
-}
+func (m *MockFuture) IsReady() bool { _ = "STUB: not implemented"; return false }
 
 // IsReady indicates an expected call of IsReady.
-func (mr *MockFutureMockRecorder) IsReady() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsReady", reflect.TypeOf((*MockFuture)(nil).IsReady))
-}
+func (mr *MockFutureMockRecorder) IsReady() *gomock.Call { _ = "STUB: not implemented"; return nil }

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the HealthInfo type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HealthInfo{}
 
@@ -28,135 +24,65 @@ type HealthInfo struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewHealthInfo() *HealthInfo {
-	this := HealthInfo{}
-	return &this
-}
+func NewHealthInfo() *HealthInfo { _ = "STUB: not implemented"; return nil }
 
 // NewHealthInfoWithDefaults instantiates a new HealthInfo object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewHealthInfoWithDefaults() *HealthInfo {
-	this := HealthInfo{}
-	return &this
-}
+func NewHealthInfoWithDefaults() *HealthInfo { _ = "STUB: not implemented"; return nil }
 
 // GetCondition returns the Condition field value if set, zero value otherwise.
-func (o *HealthInfo) GetCondition() string {
-	if o == nil || IsNil(o.Condition) {
-		var ret string
-		return ret
-	}
-	return *o.Condition
-}
+func (o *HealthInfo) GetCondition() string { _ = "STUB: not implemented"; return "" }
 
 // GetConditionOk returns a tuple with the Condition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *HealthInfo) GetConditionOk() (*string, bool) {
-	if o == nil || IsNil(o.Condition) {
-		return nil, false
-	}
-	return o.Condition, true
-}
+func (o *HealthInfo) GetConditionOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasCondition returns a boolean if a field has been set.
-func (o *HealthInfo) HasCondition() bool {
-	if o != nil && !IsNil(o.Condition) {
-		return true
-	}
-
-	return false
-}
+func (o *HealthInfo) HasCondition() bool { _ = "STUB: not implemented"; return false }
 
 // SetCondition gets a reference to the given string and assigns it to the Condition field.
 func (o *HealthInfo) SetCondition(v string) {
-	o.Condition = &v
+	_ = "STUB: not implemented"
+
+	// GetHostname returns the Hostname field value if set, zero value otherwise.
+	return
 }
 
-// GetHostname returns the Hostname field value if set, zero value otherwise.
-func (o *HealthInfo) GetHostname() string {
-	if o == nil || IsNil(o.Hostname) {
-		var ret string
-		return ret
-	}
-	return *o.Hostname
-}
+func (o *HealthInfo) GetHostname() string { _ = "STUB: not implemented"; return "" }
 
 // GetHostnameOk returns a tuple with the Hostname field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *HealthInfo) GetHostnameOk() (*string, bool) {
-	if o == nil || IsNil(o.Hostname) {
-		return nil, false
-	}
-	return o.Hostname, true
-}
+func (o *HealthInfo) GetHostnameOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasHostname returns a boolean if a field has been set.
-func (o *HealthInfo) HasHostname() bool {
-	if o != nil && !IsNil(o.Hostname) {
-		return true
-	}
-
-	return false
-}
+func (o *HealthInfo) HasHostname() bool { _ = "STUB: not implemented"; return false }
 
 // SetHostname gets a reference to the given string and assigns it to the Hostname field.
 func (o *HealthInfo) SetHostname(v string) {
-	o.Hostname = &v
+	_ = "STUB: not implemented"
+
+	// GetDuration returns the Duration field value if set, zero value otherwise.
+	return
 }
 
-// GetDuration returns the Duration field value if set, zero value otherwise.
-func (o *HealthInfo) GetDuration() int32 {
-	if o == nil || IsNil(o.Duration) {
-		var ret int32
-		return ret
-	}
-	return *o.Duration
-}
+func (o *HealthInfo) GetDuration() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetDurationOk returns a tuple with the Duration field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *HealthInfo) GetDurationOk() (*int32, bool) {
-	if o == nil || IsNil(o.Duration) {
-		return nil, false
-	}
-	return o.Duration, true
-}
+func (o *HealthInfo) GetDurationOk() (*int32, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasDuration returns a boolean if a field has been set.
-func (o *HealthInfo) HasDuration() bool {
-	if o != nil && !IsNil(o.Duration) {
-		return true
-	}
-
-	return false
-}
+func (o *HealthInfo) HasDuration() bool { _ = "STUB: not implemented"; return false }
 
 // SetDuration gets a reference to the given int32 and assigns it to the Duration field.
-func (o *HealthInfo) SetDuration(v int32) {
-	o.Duration = &v
-}
+func (o *HealthInfo) SetDuration(v int32) { _ = "STUB: not implemented"; return }
 
-func (o HealthInfo) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o HealthInfo) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o HealthInfo) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Condition) {
-		toSerialize["condition"] = o.Condition
-	}
-	if !IsNil(o.Hostname) {
-		toSerialize["hostname"] = o.Hostname
-	}
-	if !IsNil(o.Duration) {
-		toSerialize["duration"] = o.Duration
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableHealthInfo struct {
@@ -164,33 +90,22 @@ type NullableHealthInfo struct {
 	isSet bool
 }
 
-func (v NullableHealthInfo) Get() *HealthInfo {
-	return v.value
-}
+func (v NullableHealthInfo) Get() *HealthInfo { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableHealthInfo) Set(val *HealthInfo) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableHealthInfo) Set(val *HealthInfo) { _ = "STUB: not implemented"; return }
 
-func (v NullableHealthInfo) IsSet() bool {
-	return v.isSet
-}
+func (v NullableHealthInfo) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableHealthInfo) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableHealthInfo) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableHealthInfo(val *HealthInfo) *NullableHealthInfo {
-	return &NullableHealthInfo{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableHealthInfo) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (v *NullableHealthInfo) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
-}
+func (v *NullableHealthInfo) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }

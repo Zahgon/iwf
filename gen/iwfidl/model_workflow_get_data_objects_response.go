@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowGetDataObjectsResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowGetDataObjectsResponse{}
 
@@ -27,64 +23,48 @@ type WorkflowGetDataObjectsResponse struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowGetDataObjectsResponse() *WorkflowGetDataObjectsResponse {
-	this := WorkflowGetDataObjectsResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowGetDataObjectsResponseWithDefaults instantiates a new WorkflowGetDataObjectsResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowGetDataObjectsResponseWithDefaults() *WorkflowGetDataObjectsResponse {
-	this := WorkflowGetDataObjectsResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetObjects returns the Objects field value if set, zero value otherwise.
 func (o *WorkflowGetDataObjectsResponse) GetObjects() []KeyValue {
-	if o == nil || IsNil(o.Objects) {
-		var ret []KeyValue
-		return ret
-	}
-	return o.Objects
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetObjectsOk returns a tuple with the Objects field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowGetDataObjectsResponse) GetObjectsOk() ([]KeyValue, bool) {
-	if o == nil || IsNil(o.Objects) {
-		return nil, false
-	}
-	return o.Objects, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasObjects returns a boolean if a field has been set.
-func (o *WorkflowGetDataObjectsResponse) HasObjects() bool {
-	if o != nil && !IsNil(o.Objects) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowGetDataObjectsResponse) HasObjects() bool { _ = "STUB: not implemented"; return false }
 
 // SetObjects gets a reference to the given []KeyValue and assigns it to the Objects field.
 func (o *WorkflowGetDataObjectsResponse) SetObjects(v []KeyValue) {
-	o.Objects = v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowGetDataObjectsResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowGetDataObjectsResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Objects) {
-		toSerialize["objects"] = o.Objects
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowGetDataObjectsResponse struct {
@@ -93,32 +73,33 @@ type NullableWorkflowGetDataObjectsResponse struct {
 }
 
 func (v NullableWorkflowGetDataObjectsResponse) Get() *WorkflowGetDataObjectsResponse {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowGetDataObjectsResponse) Set(val *WorkflowGetDataObjectsResponse) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
 func (v NullableWorkflowGetDataObjectsResponse) IsSet() bool {
-	return v.isSet
+	_ = "STUB: not implemented"
+	return false
 }
 
-func (v *NullableWorkflowGetDataObjectsResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowGetDataObjectsResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowGetDataObjectsResponse(val *WorkflowGetDataObjectsResponse) *NullableWorkflowGetDataObjectsResponse {
-	return &NullableWorkflowGetDataObjectsResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowGetDataObjectsResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowGetDataObjectsResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

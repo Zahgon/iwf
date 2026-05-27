@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowResetRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowResetRequest{}
 
@@ -36,361 +32,199 @@ type WorkflowResetRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowResetRequest(workflowId string, resetType WorkflowResetType) *WorkflowResetRequest {
-	this := WorkflowResetRequest{}
-	this.WorkflowId = workflowId
-	this.ResetType = resetType
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowResetRequestWithDefaults instantiates a new WorkflowResetRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowResetRequestWithDefaults() *WorkflowResetRequest {
-	this := WorkflowResetRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
-func (o *WorkflowResetRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
-}
+func (o *WorkflowResetRequest) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowResetRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
-func (o *WorkflowResetRequest) GetWorkflowRunId() string {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		var ret string
-		return ret
-	}
-	return *o.WorkflowRunId
-}
+func (o *WorkflowResetRequest) GetWorkflowRunId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		return nil, false
-	}
-	return o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowRunId returns a boolean if a field has been set.
-func (o *WorkflowResetRequest) HasWorkflowRunId() bool {
-	if o != nil && !IsNil(o.WorkflowRunId) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowResetRequest) HasWorkflowRunId() bool { _ = "STUB: not implemented"; return false }
 
 // SetWorkflowRunId gets a reference to the given string and assigns it to the WorkflowRunId field.
-func (o *WorkflowResetRequest) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = &v
-}
+func (o *WorkflowResetRequest) SetWorkflowRunId(v string) { _ = "STUB: not implemented"; return }
 
 // GetResetType returns the ResetType field value
 func (o *WorkflowResetRequest) GetResetType() WorkflowResetType {
-	if o == nil {
-		var ret WorkflowResetType
-		return ret
-	}
-
-	return o.ResetType
+	_ = "STUB: not implemented"
+	return *new(WorkflowResetType)
 }
 
 // GetResetTypeOk returns a tuple with the ResetType field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetResetTypeOk() (*WorkflowResetType, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.ResetType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetResetType sets field value
 func (o *WorkflowResetRequest) SetResetType(v WorkflowResetType) {
-	o.ResetType = v
+	_ = "STUB: not implemented"
+
+	// GetHistoryEventId returns the HistoryEventId field value if set, zero value otherwise.
+	return
 }
 
-// GetHistoryEventId returns the HistoryEventId field value if set, zero value otherwise.
-func (o *WorkflowResetRequest) GetHistoryEventId() int32 {
-	if o == nil || IsNil(o.HistoryEventId) {
-		var ret int32
-		return ret
-	}
-	return *o.HistoryEventId
-}
+func (o *WorkflowResetRequest) GetHistoryEventId() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetHistoryEventIdOk returns a tuple with the HistoryEventId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetHistoryEventIdOk() (*int32, bool) {
-	if o == nil || IsNil(o.HistoryEventId) {
-		return nil, false
-	}
-	return o.HistoryEventId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasHistoryEventId returns a boolean if a field has been set.
-func (o *WorkflowResetRequest) HasHistoryEventId() bool {
-	if o != nil && !IsNil(o.HistoryEventId) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowResetRequest) HasHistoryEventId() bool { _ = "STUB: not implemented"; return false }
 
 // SetHistoryEventId gets a reference to the given int32 and assigns it to the HistoryEventId field.
-func (o *WorkflowResetRequest) SetHistoryEventId(v int32) {
-	o.HistoryEventId = &v
-}
+func (o *WorkflowResetRequest) SetHistoryEventId(v int32) { _ = "STUB: not implemented"; return }
 
 // GetReason returns the Reason field value if set, zero value otherwise.
-func (o *WorkflowResetRequest) GetReason() string {
-	if o == nil || IsNil(o.Reason) {
-		var ret string
-		return ret
-	}
-	return *o.Reason
-}
+func (o *WorkflowResetRequest) GetReason() string { _ = "STUB: not implemented"; return "" }
 
 // GetReasonOk returns a tuple with the Reason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.Reason) {
-		return nil, false
-	}
-	return o.Reason, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasReason returns a boolean if a field has been set.
-func (o *WorkflowResetRequest) HasReason() bool {
-	if o != nil && !IsNil(o.Reason) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowResetRequest) HasReason() bool { _ = "STUB: not implemented"; return false }
 
 // SetReason gets a reference to the given string and assigns it to the Reason field.
 func (o *WorkflowResetRequest) SetReason(v string) {
-	o.Reason = &v
+	_ = "STUB: not implemented"
+
+	// GetHistoryEventTime returns the HistoryEventTime field value if set, zero value otherwise.
+	return
 }
 
-// GetHistoryEventTime returns the HistoryEventTime field value if set, zero value otherwise.
-func (o *WorkflowResetRequest) GetHistoryEventTime() string {
-	if o == nil || IsNil(o.HistoryEventTime) {
-		var ret string
-		return ret
-	}
-	return *o.HistoryEventTime
-}
+func (o *WorkflowResetRequest) GetHistoryEventTime() string { _ = "STUB: not implemented"; return "" }
 
 // GetHistoryEventTimeOk returns a tuple with the HistoryEventTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetHistoryEventTimeOk() (*string, bool) {
-	if o == nil || IsNil(o.HistoryEventTime) {
-		return nil, false
-	}
-	return o.HistoryEventTime, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasHistoryEventTime returns a boolean if a field has been set.
-func (o *WorkflowResetRequest) HasHistoryEventTime() bool {
-	if o != nil && !IsNil(o.HistoryEventTime) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowResetRequest) HasHistoryEventTime() bool { _ = "STUB: not implemented"; return false }
 
 // SetHistoryEventTime gets a reference to the given string and assigns it to the HistoryEventTime field.
-func (o *WorkflowResetRequest) SetHistoryEventTime(v string) {
-	o.HistoryEventTime = &v
-}
+func (o *WorkflowResetRequest) SetHistoryEventTime(v string) { _ = "STUB: not implemented"; return }
 
 // GetStateId returns the StateId field value if set, zero value otherwise.
-func (o *WorkflowResetRequest) GetStateId() string {
-	if o == nil || IsNil(o.StateId) {
-		var ret string
-		return ret
-	}
-	return *o.StateId
-}
+func (o *WorkflowResetRequest) GetStateId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStateIdOk returns a tuple with the StateId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetStateIdOk() (*string, bool) {
-	if o == nil || IsNil(o.StateId) {
-		return nil, false
-	}
-	return o.StateId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateId returns a boolean if a field has been set.
-func (o *WorkflowResetRequest) HasStateId() bool {
-	if o != nil && !IsNil(o.StateId) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowResetRequest) HasStateId() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateId gets a reference to the given string and assigns it to the StateId field.
 func (o *WorkflowResetRequest) SetStateId(v string) {
-	o.StateId = &v
+	_ = "STUB: not implemented"
+
+	// GetStateExecutionId returns the StateExecutionId field value if set, zero value otherwise.
+	return
 }
 
-// GetStateExecutionId returns the StateExecutionId field value if set, zero value otherwise.
-func (o *WorkflowResetRequest) GetStateExecutionId() string {
-	if o == nil || IsNil(o.StateExecutionId) {
-		var ret string
-		return ret
-	}
-	return *o.StateExecutionId
-}
+func (o *WorkflowResetRequest) GetStateExecutionId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStateExecutionIdOk returns a tuple with the StateExecutionId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetStateExecutionIdOk() (*string, bool) {
-	if o == nil || IsNil(o.StateExecutionId) {
-		return nil, false
-	}
-	return o.StateExecutionId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateExecutionId returns a boolean if a field has been set.
-func (o *WorkflowResetRequest) HasStateExecutionId() bool {
-	if o != nil && !IsNil(o.StateExecutionId) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowResetRequest) HasStateExecutionId() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateExecutionId gets a reference to the given string and assigns it to the StateExecutionId field.
-func (o *WorkflowResetRequest) SetStateExecutionId(v string) {
-	o.StateExecutionId = &v
-}
+func (o *WorkflowResetRequest) SetStateExecutionId(v string) { _ = "STUB: not implemented"; return }
 
 // GetSkipSignalReapply returns the SkipSignalReapply field value if set, zero value otherwise.
-func (o *WorkflowResetRequest) GetSkipSignalReapply() bool {
-	if o == nil || IsNil(o.SkipSignalReapply) {
-		var ret bool
-		return ret
-	}
-	return *o.SkipSignalReapply
-}
+func (o *WorkflowResetRequest) GetSkipSignalReapply() bool { _ = "STUB: not implemented"; return false }
 
 // GetSkipSignalReapplyOk returns a tuple with the SkipSignalReapply field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetSkipSignalReapplyOk() (*bool, bool) {
-	if o == nil || IsNil(o.SkipSignalReapply) {
-		return nil, false
-	}
-	return o.SkipSignalReapply, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSkipSignalReapply returns a boolean if a field has been set.
-func (o *WorkflowResetRequest) HasSkipSignalReapply() bool {
-	if o != nil && !IsNil(o.SkipSignalReapply) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowResetRequest) HasSkipSignalReapply() bool { _ = "STUB: not implemented"; return false }
 
 // SetSkipSignalReapply gets a reference to the given bool and assigns it to the SkipSignalReapply field.
-func (o *WorkflowResetRequest) SetSkipSignalReapply(v bool) {
-	o.SkipSignalReapply = &v
-}
+func (o *WorkflowResetRequest) SetSkipSignalReapply(v bool) { _ = "STUB: not implemented"; return }
 
 // GetSkipUpdateReapply returns the SkipUpdateReapply field value if set, zero value otherwise.
-func (o *WorkflowResetRequest) GetSkipUpdateReapply() bool {
-	if o == nil || IsNil(o.SkipUpdateReapply) {
-		var ret bool
-		return ret
-	}
-	return *o.SkipUpdateReapply
-}
+func (o *WorkflowResetRequest) GetSkipUpdateReapply() bool { _ = "STUB: not implemented"; return false }
 
 // GetSkipUpdateReapplyOk returns a tuple with the SkipUpdateReapply field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowResetRequest) GetSkipUpdateReapplyOk() (*bool, bool) {
-	if o == nil || IsNil(o.SkipUpdateReapply) {
-		return nil, false
-	}
-	return o.SkipUpdateReapply, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSkipUpdateReapply returns a boolean if a field has been set.
-func (o *WorkflowResetRequest) HasSkipUpdateReapply() bool {
-	if o != nil && !IsNil(o.SkipUpdateReapply) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowResetRequest) HasSkipUpdateReapply() bool { _ = "STUB: not implemented"; return false }
 
 // SetSkipUpdateReapply gets a reference to the given bool and assigns it to the SkipUpdateReapply field.
-func (o *WorkflowResetRequest) SetSkipUpdateReapply(v bool) {
-	o.SkipUpdateReapply = &v
-}
+func (o *WorkflowResetRequest) SetSkipUpdateReapply(v bool) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowResetRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowResetRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	if !IsNil(o.WorkflowRunId) {
-		toSerialize["workflowRunId"] = o.WorkflowRunId
-	}
-	toSerialize["resetType"] = o.ResetType
-	if !IsNil(o.HistoryEventId) {
-		toSerialize["historyEventId"] = o.HistoryEventId
-	}
-	if !IsNil(o.Reason) {
-		toSerialize["reason"] = o.Reason
-	}
-	if !IsNil(o.HistoryEventTime) {
-		toSerialize["historyEventTime"] = o.HistoryEventTime
-	}
-	if !IsNil(o.StateId) {
-		toSerialize["stateId"] = o.StateId
-	}
-	if !IsNil(o.StateExecutionId) {
-		toSerialize["stateExecutionId"] = o.StateExecutionId
-	}
-	if !IsNil(o.SkipSignalReapply) {
-		toSerialize["skipSignalReapply"] = o.SkipSignalReapply
-	}
-	if !IsNil(o.SkipUpdateReapply) {
-		toSerialize["skipUpdateReapply"] = o.SkipUpdateReapply
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowResetRequest struct {
@@ -399,32 +233,30 @@ type NullableWorkflowResetRequest struct {
 }
 
 func (v NullableWorkflowResetRequest) Get() *WorkflowResetRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowResetRequest) Set(val *WorkflowResetRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowResetRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowResetRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowResetRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowResetRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowResetRequest(val *WorkflowResetRequest) *NullableWorkflowResetRequest {
-	return &NullableWorkflowResetRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowResetRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowResetRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the StateCompletionOutput type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &StateCompletionOutput{}
 
@@ -29,116 +25,83 @@ type StateCompletionOutput struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewStateCompletionOutput(completedStateId string, completedStateExecutionId string) *StateCompletionOutput {
-	this := StateCompletionOutput{}
-	this.CompletedStateId = completedStateId
-	this.CompletedStateExecutionId = completedStateExecutionId
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewStateCompletionOutputWithDefaults instantiates a new StateCompletionOutput object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewStateCompletionOutputWithDefaults() *StateCompletionOutput {
-	this := StateCompletionOutput{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetCompletedStateId returns the CompletedStateId field value
-func (o *StateCompletionOutput) GetCompletedStateId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.CompletedStateId
-}
+func (o *StateCompletionOutput) GetCompletedStateId() string { _ = "STUB: not implemented"; return "" }
 
 // GetCompletedStateIdOk returns a tuple with the CompletedStateId field value
 // and a boolean to check if the value has been set.
 func (o *StateCompletionOutput) GetCompletedStateIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.CompletedStateId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetCompletedStateId sets field value
-func (o *StateCompletionOutput) SetCompletedStateId(v string) {
-	o.CompletedStateId = v
-}
+func (o *StateCompletionOutput) SetCompletedStateId(v string) { _ = "STUB: not implemented"; return }
 
 // GetCompletedStateExecutionId returns the CompletedStateExecutionId field value
 func (o *StateCompletionOutput) GetCompletedStateExecutionId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.CompletedStateExecutionId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetCompletedStateExecutionIdOk returns a tuple with the CompletedStateExecutionId field value
 // and a boolean to check if the value has been set.
 func (o *StateCompletionOutput) GetCompletedStateExecutionIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.CompletedStateExecutionId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetCompletedStateExecutionId sets field value
 func (o *StateCompletionOutput) SetCompletedStateExecutionId(v string) {
-	o.CompletedStateExecutionId = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetCompletedStateOutput returns the CompletedStateOutput field value if set, zero value otherwise.
 func (o *StateCompletionOutput) GetCompletedStateOutput() EncodedObject {
-	if o == nil || IsNil(o.CompletedStateOutput) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.CompletedStateOutput
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetCompletedStateOutputOk returns a tuple with the CompletedStateOutput field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StateCompletionOutput) GetCompletedStateOutputOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.CompletedStateOutput) {
-		return nil, false
-	}
-	return o.CompletedStateOutput, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasCompletedStateOutput returns a boolean if a field has been set.
 func (o *StateCompletionOutput) HasCompletedStateOutput() bool {
-	if o != nil && !IsNil(o.CompletedStateOutput) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetCompletedStateOutput gets a reference to the given EncodedObject and assigns it to the CompletedStateOutput field.
 func (o *StateCompletionOutput) SetCompletedStateOutput(v EncodedObject) {
-	o.CompletedStateOutput = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o StateCompletionOutput) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o StateCompletionOutput) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["completedStateId"] = o.CompletedStateId
-	toSerialize["completedStateExecutionId"] = o.CompletedStateExecutionId
-	if !IsNil(o.CompletedStateOutput) {
-		toSerialize["completedStateOutput"] = o.CompletedStateOutput
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableStateCompletionOutput struct {
@@ -147,32 +110,30 @@ type NullableStateCompletionOutput struct {
 }
 
 func (v NullableStateCompletionOutput) Get() *StateCompletionOutput {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableStateCompletionOutput) Set(val *StateCompletionOutput) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableStateCompletionOutput) IsSet() bool {
-	return v.isSet
-}
+func (v NullableStateCompletionOutput) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableStateCompletionOutput) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableStateCompletionOutput) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableStateCompletionOutput(val *StateCompletionOutput) *NullableStateCompletionOutput {
-	return &NullableStateCompletionOutput{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableStateCompletionOutput) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableStateCompletionOutput) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

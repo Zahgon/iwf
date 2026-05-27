@@ -1,5 +1,3 @@
 package ptr
 
-func Any[T any](obj T) *T {
-	return &obj
-}
+func Any[T any](obj T) *T { _ = "STUB: not implemented"; return nil }

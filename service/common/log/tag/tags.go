@@ -21,7 +21,6 @@
 package tag
 
 import (
-	"fmt"
 	"time"
 )
 
@@ -38,162 +37,105 @@ const LoggingCallAtKey = "logging-call-at"
 ///////////////////  Common tags defined here ///////////////////
 
 // Error returns tag for Error
-func Error(err error) Tag {
-	return newErrorTag("error", err)
-}
+func Error(err error) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Timestamp returns tag for Timestamp
-func Timestamp(timestamp time.Time) Tag {
-	return newTimeTag("timestamp", timestamp)
-}
+func Timestamp(timestamp time.Time) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 ///////////////////  Workflow tags defined here: ( wf is short for workflow) ///////////////////
 
 // WorkflowAction returns tag for WorkflowAction
-func workflowAction(action string) Tag {
-	return newPredefinedStringTag("wf-action", action)
-}
+func workflowAction(action string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // general
 
 // Service returns tag for Service
-func Service(sv string) Tag {
-	return newStringTag("service", sv)
-}
+func Service(sv string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowError returns tag for WorkflowError
-func WorkflowError(error error) Tag {
-	return newErrorTag("wf-error", error)
-}
+func WorkflowError(error error) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowTimeoutType returns tag for WorkflowTimeoutType
-func WorkflowTimeoutType(timeoutType int64) Tag {
-	return newInt64("wf-timeout-type", timeoutType)
-}
+func WorkflowTimeoutType(timeoutType int64) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowID returns tag for WorkflowID
-func WorkflowID(workflowID string) Tag {
-	return newStringTag("wf-id", workflowID)
-}
+func WorkflowID(workflowID string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // StatusCode returns tag for StatusCode
-func StatusCode(code int) Tag {
-	return newInt("statusCode", code)
-}
+func StatusCode(code int) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // SubStatus returns tag for SubStatus
-func SubStatus(status string) Tag {
-	return newStringTag("subStatus", status)
-}
+func SubStatus(status string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowType returns tag for WorkflowType
-func WorkflowType(wfType string) Tag {
-	return newStringTag("wf-type", wfType)
-}
+func WorkflowType(wfType string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowState returns tag for WorkflowState
-func WorkflowState(s int) Tag {
-	return newInt("wf-state", s)
-}
+func WorkflowState(s int) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowRunID returns tag for WorkflowRunID
-func WorkflowRunID(runID string) Tag {
-	return newStringTag("wf-run-id", runID)
-}
+func WorkflowRunID(runID string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowResetBaseRunID returns tag for WorkflowResetBaseRunID
-func WorkflowResetBaseRunID(runID string) Tag {
-	return newStringTag("wf-reset-base-run-id", runID)
-}
+func WorkflowResetBaseRunID(runID string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowResetNewRunID returns tag for WorkflowResetNewRunID
-func WorkflowResetNewRunID(runID string) Tag {
-	return newStringTag("wf-reset-new-run-id", runID)
-}
+func WorkflowResetNewRunID(runID string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowBinaryChecksum returns tag for WorkflowBinaryChecksum
-func WorkflowBinaryChecksum(cs string) Tag {
-	return newStringTag("wf-binary-checksum", cs)
-}
+func WorkflowBinaryChecksum(cs string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // WorkflowActivityID returns tag for WorkflowActivityID
-func WorkflowActivityID(id string) Tag {
-	return newStringTag("wf-activity-id", id)
-}
+func WorkflowActivityID(id string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // OperationName returns tag for OperationName
-func OperationName(operationName string) Tag {
-	return newStringTag("operation-name", operationName)
-}
+func OperationName(operationName string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // history event ID related
 
 // WorkflowEventID returns tag for WorkflowEventID
-func WorkflowEventID(eventID int64) Tag {
-	return newInt64("wf-history-event-id", eventID)
-}
+func WorkflowEventID(eventID int64) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Address return tag for Address
-func Address(ad string) Tag {
-	return newStringTag("address", ad)
-}
+func Address(ad string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Env return tag for runtime environment
-func Env(env string) Tag {
-	return newStringTag("env", env)
-}
+func Env(env string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Key returns tag for Key
-func Key(k string) Tag {
-	return newStringTag("key", k)
-}
+func Key(k string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Name returns tag for Name
-func Name(k string) Tag {
-	return newStringTag("name", k)
-}
+func Name(k string) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Value returns tag for Value
-func Value(v interface{}) Tag {
-	return newObjectTag("value", v)
-}
+func Value(v interface{}) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // ValueType returns tag for ValueType
-func ValueType(v interface{}) Tag {
-	return newStringTag("value-type", fmt.Sprintf("%T", v))
-}
+func ValueType(v interface{}) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // DefaultValue returns tag for DefaultValue
-func DefaultValue(v interface{}) Tag {
-	return newObjectTag("default-value", v)
-}
+func DefaultValue(v interface{}) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Port returns tag for Port
 func Port(p int) Tag {
-	return newInt("port", p)
+	_ = "STUB: not implemented"
+	return *
+
+	// Counter returns tag for Counter
+	new(Tag)
 }
 
-// Counter returns tag for Counter
-func Counter(c int) Tag {
-	return newInt("counter", c)
-}
+func Counter(c int) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Number returns tag for Number
-func Number(n int64) Tag {
-	return newInt64("number", n)
-}
+func Number(n int64) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // NextNumber returns tag for NextNumber
-func NextNumber(n int64) Tag {
-	return newInt64("next-number", n)
-}
+func NextNumber(n int64) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // Bool returns tag for Bool
-func Bool(b bool) Tag {
-	return newBoolTag("bool", b)
-}
+func Bool(b bool) Tag { _ = "STUB: not implemented"; return *new(Tag) }
 
 // SysStackTrace returns tag for SysStackTrace
-func SysStackTrace(stackTrace string) Tag {
-	return newStringTag("sys-stack-trace", stackTrace)
-}
+func SysStackTrace(stackTrace string) Tag { _ = "STUB: not implemented"; return *new(Tag) }

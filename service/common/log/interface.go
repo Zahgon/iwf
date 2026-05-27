@@ -52,15 +52,11 @@ type Logger interface {
 type noop struct{}
 
 // NewNoop return a noop logger
-func NewNoop() Logger {
-	return &noop{}
-}
+func NewNoop() Logger { _ = "STUB: not implemented"; return *new(Logger) }
 
-func (n *noop) Debug(msg string, tags ...tag.Tag) {}
-func (n *noop) Info(msg string, tags ...tag.Tag)  {}
-func (n *noop) Warn(msg string, tags ...tag.Tag)  {}
-func (n *noop) Error(msg string, tags ...tag.Tag) {}
-func (n *noop) Fatal(msg string, tags ...tag.Tag) {}
-func (n *noop) WithTags(tags ...tag.Tag) Logger {
-	return n
-}
+func (n *noop) Debug(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
+func (n *noop) Info(msg string, tags ...tag.Tag)  { _ = "STUB: not implemented"; return }
+func (n *noop) Warn(msg string, tags ...tag.Tag)  { _ = "STUB: not implemented"; return }
+func (n *noop) Error(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
+func (n *noop) Fatal(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
+func (n *noop) WithTags(tags ...tag.Tag) Logger   { _ = "STUB: not implemented"; return *new(Logger) }

@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // WorkflowStatus the model 'WorkflowStatus'
 type WorkflowStatus string
 
@@ -40,81 +35,45 @@ var AllowedWorkflowStatusEnumValues = []WorkflowStatus{
 	"CONTINUED_AS_NEW",
 }
 
-func (v *WorkflowStatus) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := WorkflowStatus(value)
-	for _, existing := range AllowedWorkflowStatusEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid WorkflowStatus", value)
-}
+func (v *WorkflowStatus) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }
 
 // NewWorkflowStatusFromValue returns a pointer to a valid WorkflowStatus
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewWorkflowStatusFromValue(v string) (*WorkflowStatus, error) {
-	ev := WorkflowStatus(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for WorkflowStatus: valid values are %v", v, AllowedWorkflowStatusEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v WorkflowStatus) IsValid() bool {
-	for _, existing := range AllowedWorkflowStatusEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v WorkflowStatus) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to WorkflowStatus value
-func (v WorkflowStatus) Ptr() *WorkflowStatus {
-	return &v
-}
+func (v WorkflowStatus) Ptr() *WorkflowStatus { _ = "STUB: not implemented"; return nil }
 
 type NullableWorkflowStatus struct {
 	value *WorkflowStatus
 	isSet bool
 }
 
-func (v NullableWorkflowStatus) Get() *WorkflowStatus {
-	return v.value
-}
+func (v NullableWorkflowStatus) Get() *WorkflowStatus { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableWorkflowStatus) Set(val *WorkflowStatus) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableWorkflowStatus) Set(val *WorkflowStatus) { _ = "STUB: not implemented"; return }
 
-func (v NullableWorkflowStatus) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowStatus) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowStatus) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowStatus) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowStatus(val *WorkflowStatus) *NullableWorkflowStatus {
-	return &NullableWorkflowStatus{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowStatus) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowStatus) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

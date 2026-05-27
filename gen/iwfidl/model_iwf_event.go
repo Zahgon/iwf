@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the IwfEvent type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &IwfEvent{}
 
@@ -37,378 +33,199 @@ type IwfEvent struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewIwfEvent(eventType EventType, workflowType string, workflowId string, workflowRunId string) *IwfEvent {
-	this := IwfEvent{}
-	this.EventType = eventType
-	this.WorkflowType = workflowType
-	this.WorkflowId = workflowId
-	this.WorkflowRunId = workflowRunId
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewIwfEventWithDefaults instantiates a new IwfEvent object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewIwfEventWithDefaults() *IwfEvent {
-	this := IwfEvent{}
-	return &this
-}
+func NewIwfEventWithDefaults() *IwfEvent { _ = "STUB: not implemented"; return nil }
 
 // GetEventType returns the EventType field value
-func (o *IwfEvent) GetEventType() EventType {
-	if o == nil {
-		var ret EventType
-		return ret
-	}
-
-	return o.EventType
-}
+func (o *IwfEvent) GetEventType() EventType { _ = "STUB: not implemented"; return *new(EventType) }
 
 // GetEventTypeOk returns a tuple with the EventType field value
 // and a boolean to check if the value has been set.
 func (o *IwfEvent) GetEventTypeOk() (*EventType, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.EventType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetEventType sets field value
 func (o *IwfEvent) SetEventType(v EventType) {
-	o.EventType = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowType returns the WorkflowType field value
+	return
 }
 
-// GetWorkflowType returns the WorkflowType field value
-func (o *IwfEvent) GetWorkflowType() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowType
-}
+func (o *IwfEvent) GetWorkflowType() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowTypeOk returns a tuple with the WorkflowType field value
 // and a boolean to check if the value has been set.
 func (o *IwfEvent) GetWorkflowTypeOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowType sets field value
 func (o *IwfEvent) SetWorkflowType(v string) {
-	o.WorkflowType = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowId returns the WorkflowId field value
+	return
 }
 
-// GetWorkflowId returns the WorkflowId field value
-func (o *IwfEvent) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
-}
+func (o *IwfEvent) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
-func (o *IwfEvent) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
-}
+func (o *IwfEvent) GetWorkflowIdOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // SetWorkflowId sets field value
 func (o *IwfEvent) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value
-func (o *IwfEvent) GetWorkflowRunId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowRunId
-}
+func (o *IwfEvent) GetWorkflowRunId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value
 // and a boolean to check if the value has been set.
 func (o *IwfEvent) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowRunId sets field value
-func (o *IwfEvent) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = v
-}
+func (o *IwfEvent) SetWorkflowRunId(v string) { _ = "STUB: not implemented"; return }
 
 // GetStateId returns the StateId field value if set, zero value otherwise.
-func (o *IwfEvent) GetStateId() string {
-	if o == nil || IsNil(o.StateId) {
-		var ret string
-		return ret
-	}
-	return *o.StateId
-}
+func (o *IwfEvent) GetStateId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStateIdOk returns a tuple with the StateId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *IwfEvent) GetStateIdOk() (*string, bool) {
-	if o == nil || IsNil(o.StateId) {
-		return nil, false
-	}
-	return o.StateId, true
-}
+func (o *IwfEvent) GetStateIdOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasStateId returns a boolean if a field has been set.
-func (o *IwfEvent) HasStateId() bool {
-	if o != nil && !IsNil(o.StateId) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEvent) HasStateId() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateId gets a reference to the given string and assigns it to the StateId field.
 func (o *IwfEvent) SetStateId(v string) {
-	o.StateId = &v
+	_ = "STUB: not implemented"
+
+	// GetStateExecutionId returns the StateExecutionId field value if set, zero value otherwise.
+	return
 }
 
-// GetStateExecutionId returns the StateExecutionId field value if set, zero value otherwise.
-func (o *IwfEvent) GetStateExecutionId() string {
-	if o == nil || IsNil(o.StateExecutionId) {
-		var ret string
-		return ret
-	}
-	return *o.StateExecutionId
-}
+func (o *IwfEvent) GetStateExecutionId() string { _ = "STUB: not implemented"; return "" }
 
 // GetStateExecutionIdOk returns a tuple with the StateExecutionId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IwfEvent) GetStateExecutionIdOk() (*string, bool) {
-	if o == nil || IsNil(o.StateExecutionId) {
-		return nil, false
-	}
-	return o.StateExecutionId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateExecutionId returns a boolean if a field has been set.
-func (o *IwfEvent) HasStateExecutionId() bool {
-	if o != nil && !IsNil(o.StateExecutionId) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEvent) HasStateExecutionId() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateExecutionId gets a reference to the given string and assigns it to the StateExecutionId field.
-func (o *IwfEvent) SetStateExecutionId(v string) {
-	o.StateExecutionId = &v
-}
+func (o *IwfEvent) SetStateExecutionId(v string) { _ = "STUB: not implemented"; return }
 
 // GetRpcName returns the RpcName field value if set, zero value otherwise.
-func (o *IwfEvent) GetRpcName() string {
-	if o == nil || IsNil(o.RpcName) {
-		var ret string
-		return ret
-	}
-	return *o.RpcName
-}
+func (o *IwfEvent) GetRpcName() string { _ = "STUB: not implemented"; return "" }
 
 // GetRpcNameOk returns a tuple with the RpcName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *IwfEvent) GetRpcNameOk() (*string, bool) {
-	if o == nil || IsNil(o.RpcName) {
-		return nil, false
-	}
-	return o.RpcName, true
-}
+func (o *IwfEvent) GetRpcNameOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasRpcName returns a boolean if a field has been set.
-func (o *IwfEvent) HasRpcName() bool {
-	if o != nil && !IsNil(o.RpcName) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEvent) HasRpcName() bool { _ = "STUB: not implemented"; return false }
 
 // SetRpcName gets a reference to the given string and assigns it to the RpcName field.
 func (o *IwfEvent) SetRpcName(v string) {
-	o.RpcName = &v
+	_ = "STUB: not implemented"
+
+	// GetStartTimestampInMs returns the StartTimestampInMs field value if set, zero value otherwise.
+	return
 }
 
-// GetStartTimestampInMs returns the StartTimestampInMs field value if set, zero value otherwise.
-func (o *IwfEvent) GetStartTimestampInMs() int64 {
-	if o == nil || IsNil(o.StartTimestampInMs) {
-		var ret int64
-		return ret
-	}
-	return *o.StartTimestampInMs
-}
+func (o *IwfEvent) GetStartTimestampInMs() int64 { _ = "STUB: not implemented"; return 0 }
 
 // GetStartTimestampInMsOk returns a tuple with the StartTimestampInMs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IwfEvent) GetStartTimestampInMsOk() (*int64, bool) {
-	if o == nil || IsNil(o.StartTimestampInMs) {
-		return nil, false
-	}
-	return o.StartTimestampInMs, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStartTimestampInMs returns a boolean if a field has been set.
-func (o *IwfEvent) HasStartTimestampInMs() bool {
-	if o != nil && !IsNil(o.StartTimestampInMs) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEvent) HasStartTimestampInMs() bool { _ = "STUB: not implemented"; return false }
 
 // SetStartTimestampInMs gets a reference to the given int64 and assigns it to the StartTimestampInMs field.
-func (o *IwfEvent) SetStartTimestampInMs(v int64) {
-	o.StartTimestampInMs = &v
-}
+func (o *IwfEvent) SetStartTimestampInMs(v int64) { _ = "STUB: not implemented"; return }
 
 // GetEndTimestampInMs returns the EndTimestampInMs field value if set, zero value otherwise.
-func (o *IwfEvent) GetEndTimestampInMs() int64 {
-	if o == nil || IsNil(o.EndTimestampInMs) {
-		var ret int64
-		return ret
-	}
-	return *o.EndTimestampInMs
-}
+func (o *IwfEvent) GetEndTimestampInMs() int64 { _ = "STUB: not implemented"; return 0 }
 
 // GetEndTimestampInMsOk returns a tuple with the EndTimestampInMs field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IwfEvent) GetEndTimestampInMsOk() (*int64, bool) {
-	if o == nil || IsNil(o.EndTimestampInMs) {
-		return nil, false
-	}
-	return o.EndTimestampInMs, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasEndTimestampInMs returns a boolean if a field has been set.
-func (o *IwfEvent) HasEndTimestampInMs() bool {
-	if o != nil && !IsNil(o.EndTimestampInMs) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEvent) HasEndTimestampInMs() bool { _ = "STUB: not implemented"; return false }
 
 // SetEndTimestampInMs gets a reference to the given int64 and assigns it to the EndTimestampInMs field.
-func (o *IwfEvent) SetEndTimestampInMs(v int64) {
-	o.EndTimestampInMs = &v
-}
+func (o *IwfEvent) SetEndTimestampInMs(v int64) { _ = "STUB: not implemented"; return }
 
 // GetError returns the Error field value if set, zero value otherwise.
-func (o *IwfEvent) GetError() IwfEventError {
-	if o == nil || IsNil(o.Error) {
-		var ret IwfEventError
-		return ret
-	}
-	return *o.Error
-}
+func (o *IwfEvent) GetError() IwfEventError { _ = "STUB: not implemented"; return *new(IwfEventError) }
 
 // GetErrorOk returns a tuple with the Error field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IwfEvent) GetErrorOk() (*IwfEventError, bool) {
-	if o == nil || IsNil(o.Error) {
-		return nil, false
-	}
-	return o.Error, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasError returns a boolean if a field has been set.
-func (o *IwfEvent) HasError() bool {
-	if o != nil && !IsNil(o.Error) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEvent) HasError() bool { _ = "STUB: not implemented"; return false }
 
 // SetError gets a reference to the given IwfEventError and assigns it to the Error field.
 func (o *IwfEvent) SetError(v IwfEventError) {
-	o.Error = &v
+	_ = "STUB: not implemented"
+
+	// GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
+	return
 }
 
-// GetSearchAttributes returns the SearchAttributes field value if set, zero value otherwise.
-func (o *IwfEvent) GetSearchAttributes() []SearchAttribute {
-	if o == nil || IsNil(o.SearchAttributes) {
-		var ret []SearchAttribute
-		return ret
-	}
-	return o.SearchAttributes
-}
+func (o *IwfEvent) GetSearchAttributes() []SearchAttribute { _ = "STUB: not implemented"; return nil }
 
 // GetSearchAttributesOk returns a tuple with the SearchAttributes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *IwfEvent) GetSearchAttributesOk() ([]SearchAttribute, bool) {
-	if o == nil || IsNil(o.SearchAttributes) {
-		return nil, false
-	}
-	return o.SearchAttributes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSearchAttributes returns a boolean if a field has been set.
-func (o *IwfEvent) HasSearchAttributes() bool {
-	if o != nil && !IsNil(o.SearchAttributes) {
-		return true
-	}
-
-	return false
-}
+func (o *IwfEvent) HasSearchAttributes() bool { _ = "STUB: not implemented"; return false }
 
 // SetSearchAttributes gets a reference to the given []SearchAttribute and assigns it to the SearchAttributes field.
-func (o *IwfEvent) SetSearchAttributes(v []SearchAttribute) {
-	o.SearchAttributes = v
-}
+func (o *IwfEvent) SetSearchAttributes(v []SearchAttribute) { _ = "STUB: not implemented"; return }
 
-func (o IwfEvent) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o IwfEvent) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o IwfEvent) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["eventType"] = o.EventType
-	toSerialize["workflowType"] = o.WorkflowType
-	toSerialize["workflowId"] = o.WorkflowId
-	toSerialize["workflowRunId"] = o.WorkflowRunId
-	if !IsNil(o.StateId) {
-		toSerialize["stateId"] = o.StateId
-	}
-	if !IsNil(o.StateExecutionId) {
-		toSerialize["stateExecutionId"] = o.StateExecutionId
-	}
-	if !IsNil(o.RpcName) {
-		toSerialize["rpcName"] = o.RpcName
-	}
-	if !IsNil(o.StartTimestampInMs) {
-		toSerialize["startTimestampInMs"] = o.StartTimestampInMs
-	}
-	if !IsNil(o.EndTimestampInMs) {
-		toSerialize["endTimestampInMs"] = o.EndTimestampInMs
-	}
-	if !IsNil(o.Error) {
-		toSerialize["error"] = o.Error
-	}
-	if !IsNil(o.SearchAttributes) {
-		toSerialize["searchAttributes"] = o.SearchAttributes
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableIwfEvent struct {
@@ -416,33 +233,16 @@ type NullableIwfEvent struct {
 	isSet bool
 }
 
-func (v NullableIwfEvent) Get() *IwfEvent {
-	return v.value
-}
+func (v NullableIwfEvent) Get() *IwfEvent { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableIwfEvent) Set(val *IwfEvent) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableIwfEvent) Set(val *IwfEvent) { _ = "STUB: not implemented"; return }
 
-func (v NullableIwfEvent) IsSet() bool {
-	return v.isSet
-}
+func (v NullableIwfEvent) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableIwfEvent) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableIwfEvent) Unset() { _ = "STUB: not implemented"; return }
 
-func NewNullableIwfEvent(val *IwfEvent) *NullableIwfEvent {
-	return &NullableIwfEvent{value: val, isSet: true}
-}
+func NewNullableIwfEvent(val *IwfEvent) *NullableIwfEvent { _ = "STUB: not implemented"; return nil }
 
-func (v NullableIwfEvent) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
-}
+func (v NullableIwfEvent) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func (v *NullableIwfEvent) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
-}
+func (v *NullableIwfEvent) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }

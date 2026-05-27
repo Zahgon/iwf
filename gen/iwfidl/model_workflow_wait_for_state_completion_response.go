@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowWaitForStateCompletionResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowWaitForStateCompletionResponse{}
 
@@ -27,64 +23,51 @@ type WorkflowWaitForStateCompletionResponse struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowWaitForStateCompletionResponse() *WorkflowWaitForStateCompletionResponse {
-	this := WorkflowWaitForStateCompletionResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowWaitForStateCompletionResponseWithDefaults instantiates a new WorkflowWaitForStateCompletionResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowWaitForStateCompletionResponseWithDefaults() *WorkflowWaitForStateCompletionResponse {
-	this := WorkflowWaitForStateCompletionResponse{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetStateCompletionOutput returns the StateCompletionOutput field value if set, zero value otherwise.
 func (o *WorkflowWaitForStateCompletionResponse) GetStateCompletionOutput() StateCompletionOutput {
-	if o == nil || IsNil(o.StateCompletionOutput) {
-		var ret StateCompletionOutput
-		return ret
-	}
-	return *o.StateCompletionOutput
+	_ = "STUB: not implemented"
+	return *new(StateCompletionOutput)
 }
 
 // GetStateCompletionOutputOk returns a tuple with the StateCompletionOutput field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowWaitForStateCompletionResponse) GetStateCompletionOutputOk() (*StateCompletionOutput, bool) {
-	if o == nil || IsNil(o.StateCompletionOutput) {
-		return nil, false
-	}
-	return o.StateCompletionOutput, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateCompletionOutput returns a boolean if a field has been set.
 func (o *WorkflowWaitForStateCompletionResponse) HasStateCompletionOutput() bool {
-	if o != nil && !IsNil(o.StateCompletionOutput) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetStateCompletionOutput gets a reference to the given StateCompletionOutput and assigns it to the StateCompletionOutput field.
 func (o *WorkflowWaitForStateCompletionResponse) SetStateCompletionOutput(v StateCompletionOutput) {
-	o.StateCompletionOutput = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowWaitForStateCompletionResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowWaitForStateCompletionResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.StateCompletionOutput) {
-		toSerialize["stateCompletionOutput"] = o.StateCompletionOutput
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowWaitForStateCompletionResponse struct {
@@ -93,32 +76,33 @@ type NullableWorkflowWaitForStateCompletionResponse struct {
 }
 
 func (v NullableWorkflowWaitForStateCompletionResponse) Get() *WorkflowWaitForStateCompletionResponse {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowWaitForStateCompletionResponse) Set(val *WorkflowWaitForStateCompletionResponse) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
 func (v NullableWorkflowWaitForStateCompletionResponse) IsSet() bool {
-	return v.isSet
+	_ = "STUB: not implemented"
+	return false
 }
 
-func (v *NullableWorkflowWaitForStateCompletionResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowWaitForStateCompletionResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowWaitForStateCompletionResponse(val *WorkflowWaitForStateCompletionResponse) *NullableWorkflowWaitForStateCompletionResponse {
-	return &NullableWorkflowWaitForStateCompletionResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowWaitForStateCompletionResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowWaitForStateCompletionResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the SearchAttribute type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &SearchAttribute{}
 
@@ -32,275 +28,149 @@ type SearchAttribute struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewSearchAttribute() *SearchAttribute {
-	this := SearchAttribute{}
-	return &this
-}
+func NewSearchAttribute() *SearchAttribute { _ = "STUB: not implemented"; return nil }
 
 // NewSearchAttributeWithDefaults instantiates a new SearchAttribute object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewSearchAttributeWithDefaults() *SearchAttribute {
-	this := SearchAttribute{}
-	return &this
-}
+func NewSearchAttributeWithDefaults() *SearchAttribute { _ = "STUB: not implemented"; return nil }
 
 // GetKey returns the Key field value if set, zero value otherwise.
-func (o *SearchAttribute) GetKey() string {
-	if o == nil || IsNil(o.Key) {
-		var ret string
-		return ret
-	}
-	return *o.Key
-}
+func (o *SearchAttribute) GetKey() string { _ = "STUB: not implemented"; return "" }
 
 // GetKeyOk returns a tuple with the Key field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SearchAttribute) GetKeyOk() (*string, bool) {
-	if o == nil || IsNil(o.Key) {
-		return nil, false
-	}
-	return o.Key, true
-}
+func (o *SearchAttribute) GetKeyOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasKey returns a boolean if a field has been set.
-func (o *SearchAttribute) HasKey() bool {
-	if o != nil && !IsNil(o.Key) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttribute) HasKey() bool { _ = "STUB: not implemented"; return false }
 
 // SetKey gets a reference to the given string and assigns it to the Key field.
 func (o *SearchAttribute) SetKey(v string) {
-	o.Key = &v
+	_ = "STUB: not implemented"
+
+	// GetStringValue returns the StringValue field value if set, zero value otherwise.
+	return
 }
 
-// GetStringValue returns the StringValue field value if set, zero value otherwise.
-func (o *SearchAttribute) GetStringValue() string {
-	if o == nil || IsNil(o.StringValue) {
-		var ret string
-		return ret
-	}
-	return *o.StringValue
-}
+func (o *SearchAttribute) GetStringValue() string { _ = "STUB: not implemented"; return "" }
 
 // GetStringValueOk returns a tuple with the StringValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SearchAttribute) GetStringValueOk() (*string, bool) {
-	if o == nil || IsNil(o.StringValue) {
-		return nil, false
-	}
-	return o.StringValue, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStringValue returns a boolean if a field has been set.
-func (o *SearchAttribute) HasStringValue() bool {
-	if o != nil && !IsNil(o.StringValue) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttribute) HasStringValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetStringValue gets a reference to the given string and assigns it to the StringValue field.
 func (o *SearchAttribute) SetStringValue(v string) {
-	o.StringValue = &v
+	_ = "STUB: not implemented"
+
+	// GetIntegerValue returns the IntegerValue field value if set, zero value otherwise.
+	return
 }
 
-// GetIntegerValue returns the IntegerValue field value if set, zero value otherwise.
-func (o *SearchAttribute) GetIntegerValue() int64 {
-	if o == nil || IsNil(o.IntegerValue) {
-		var ret int64
-		return ret
-	}
-	return *o.IntegerValue
-}
+func (o *SearchAttribute) GetIntegerValue() int64 { _ = "STUB: not implemented"; return 0 }
 
 // GetIntegerValueOk returns a tuple with the IntegerValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SearchAttribute) GetIntegerValueOk() (*int64, bool) {
-	if o == nil || IsNil(o.IntegerValue) {
-		return nil, false
-	}
-	return o.IntegerValue, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasIntegerValue returns a boolean if a field has been set.
-func (o *SearchAttribute) HasIntegerValue() bool {
-	if o != nil && !IsNil(o.IntegerValue) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttribute) HasIntegerValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetIntegerValue gets a reference to the given int64 and assigns it to the IntegerValue field.
-func (o *SearchAttribute) SetIntegerValue(v int64) {
-	o.IntegerValue = &v
-}
+func (o *SearchAttribute) SetIntegerValue(v int64) { _ = "STUB: not implemented"; return }
 
 // GetDoubleValue returns the DoubleValue field value if set, zero value otherwise.
-func (o *SearchAttribute) GetDoubleValue() float64 {
-	if o == nil || IsNil(o.DoubleValue) {
-		var ret float64
-		return ret
-	}
-	return *o.DoubleValue
-}
+func (o *SearchAttribute) GetDoubleValue() float64 { _ = "STUB: not implemented"; return 0 }
 
 // GetDoubleValueOk returns a tuple with the DoubleValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SearchAttribute) GetDoubleValueOk() (*float64, bool) {
-	if o == nil || IsNil(o.DoubleValue) {
-		return nil, false
-	}
-	return o.DoubleValue, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDoubleValue returns a boolean if a field has been set.
-func (o *SearchAttribute) HasDoubleValue() bool {
-	if o != nil && !IsNil(o.DoubleValue) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttribute) HasDoubleValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetDoubleValue gets a reference to the given float64 and assigns it to the DoubleValue field.
 func (o *SearchAttribute) SetDoubleValue(v float64) {
-	o.DoubleValue = &v
+	_ = "STUB: not implemented"
+
+	// GetBoolValue returns the BoolValue field value if set, zero value otherwise.
+	return
 }
 
-// GetBoolValue returns the BoolValue field value if set, zero value otherwise.
-func (o *SearchAttribute) GetBoolValue() bool {
-	if o == nil || IsNil(o.BoolValue) {
-		var ret bool
-		return ret
-	}
-	return *o.BoolValue
-}
+func (o *SearchAttribute) GetBoolValue() bool { _ = "STUB: not implemented"; return false }
 
 // GetBoolValueOk returns a tuple with the BoolValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SearchAttribute) GetBoolValueOk() (*bool, bool) {
-	if o == nil || IsNil(o.BoolValue) {
-		return nil, false
-	}
-	return o.BoolValue, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasBoolValue returns a boolean if a field has been set.
-func (o *SearchAttribute) HasBoolValue() bool {
-	if o != nil && !IsNil(o.BoolValue) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttribute) HasBoolValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetBoolValue gets a reference to the given bool and assigns it to the BoolValue field.
 func (o *SearchAttribute) SetBoolValue(v bool) {
-	o.BoolValue = &v
+	_ = "STUB: not implemented"
+
+	// GetStringArrayValue returns the StringArrayValue field value if set, zero value otherwise.
+	return
 }
 
-// GetStringArrayValue returns the StringArrayValue field value if set, zero value otherwise.
-func (o *SearchAttribute) GetStringArrayValue() []string {
-	if o == nil || IsNil(o.StringArrayValue) {
-		var ret []string
-		return ret
-	}
-	return o.StringArrayValue
-}
+func (o *SearchAttribute) GetStringArrayValue() []string { _ = "STUB: not implemented"; return nil }
 
 // GetStringArrayValueOk returns a tuple with the StringArrayValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SearchAttribute) GetStringArrayValueOk() ([]string, bool) {
-	if o == nil || IsNil(o.StringArrayValue) {
-		return nil, false
-	}
-	return o.StringArrayValue, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStringArrayValue returns a boolean if a field has been set.
-func (o *SearchAttribute) HasStringArrayValue() bool {
-	if o != nil && !IsNil(o.StringArrayValue) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttribute) HasStringArrayValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetStringArrayValue gets a reference to the given []string and assigns it to the StringArrayValue field.
-func (o *SearchAttribute) SetStringArrayValue(v []string) {
-	o.StringArrayValue = v
-}
+func (o *SearchAttribute) SetStringArrayValue(v []string) { _ = "STUB: not implemented"; return }
 
 // GetValueType returns the ValueType field value if set, zero value otherwise.
 func (o *SearchAttribute) GetValueType() SearchAttributeValueType {
-	if o == nil || IsNil(o.ValueType) {
-		var ret SearchAttributeValueType
-		return ret
-	}
-	return *o.ValueType
+	_ = "STUB: not implemented"
+	return *new(SearchAttributeValueType)
 }
 
 // GetValueTypeOk returns a tuple with the ValueType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SearchAttribute) GetValueTypeOk() (*SearchAttributeValueType, bool) {
-	if o == nil || IsNil(o.ValueType) {
-		return nil, false
-	}
-	return o.ValueType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasValueType returns a boolean if a field has been set.
-func (o *SearchAttribute) HasValueType() bool {
-	if o != nil && !IsNil(o.ValueType) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttribute) HasValueType() bool { _ = "STUB: not implemented"; return false }
 
 // SetValueType gets a reference to the given SearchAttributeValueType and assigns it to the ValueType field.
 func (o *SearchAttribute) SetValueType(v SearchAttributeValueType) {
-	o.ValueType = &v
+	_ = "STUB: not implemented"
+	return
 }
 
-func (o SearchAttribute) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o SearchAttribute) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o SearchAttribute) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Key) {
-		toSerialize["key"] = o.Key
-	}
-	if !IsNil(o.StringValue) {
-		toSerialize["stringValue"] = o.StringValue
-	}
-	if !IsNil(o.IntegerValue) {
-		toSerialize["integerValue"] = o.IntegerValue
-	}
-	if !IsNil(o.DoubleValue) {
-		toSerialize["doubleValue"] = o.DoubleValue
-	}
-	if !IsNil(o.BoolValue) {
-		toSerialize["boolValue"] = o.BoolValue
-	}
-	if !IsNil(o.StringArrayValue) {
-		toSerialize["stringArrayValue"] = o.StringArrayValue
-	}
-	if !IsNil(o.ValueType) {
-		toSerialize["valueType"] = o.ValueType
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableSearchAttribute struct {
@@ -308,33 +178,25 @@ type NullableSearchAttribute struct {
 	isSet bool
 }
 
-func (v NullableSearchAttribute) Get() *SearchAttribute {
-	return v.value
-}
+func (v NullableSearchAttribute) Get() *SearchAttribute { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableSearchAttribute) Set(val *SearchAttribute) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableSearchAttribute) Set(val *SearchAttribute) { _ = "STUB: not implemented"; return }
 
-func (v NullableSearchAttribute) IsSet() bool {
-	return v.isSet
-}
+func (v NullableSearchAttribute) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableSearchAttribute) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableSearchAttribute) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableSearchAttribute(val *SearchAttribute) *NullableSearchAttribute {
-	return &NullableSearchAttribute{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableSearchAttribute) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableSearchAttribute) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

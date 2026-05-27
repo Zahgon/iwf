@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowDumpRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowDumpRequest{}
 
@@ -30,133 +26,82 @@ type WorkflowDumpRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowDumpRequest(workflowId string, workflowRunId string, pageSizeInBytes int32, pageNum int32) *WorkflowDumpRequest {
-	this := WorkflowDumpRequest{}
-	this.WorkflowId = workflowId
-	this.WorkflowRunId = workflowRunId
-	this.PageSizeInBytes = pageSizeInBytes
-	this.PageNum = pageNum
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowDumpRequestWithDefaults instantiates a new WorkflowDumpRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowDumpRequestWithDefaults() *WorkflowDumpRequest {
-	this := WorkflowDumpRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
-func (o *WorkflowDumpRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
-}
+func (o *WorkflowDumpRequest) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowDumpRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowDumpRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value
-func (o *WorkflowDumpRequest) GetWorkflowRunId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowRunId
-}
+func (o *WorkflowDumpRequest) GetWorkflowRunId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowDumpRequest) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowRunId sets field value
-func (o *WorkflowDumpRequest) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = v
-}
+func (o *WorkflowDumpRequest) SetWorkflowRunId(v string) { _ = "STUB: not implemented"; return }
 
 // GetPageSizeInBytes returns the PageSizeInBytes field value
-func (o *WorkflowDumpRequest) GetPageSizeInBytes() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.PageSizeInBytes
-}
+func (o *WorkflowDumpRequest) GetPageSizeInBytes() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetPageSizeInBytesOk returns a tuple with the PageSizeInBytes field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowDumpRequest) GetPageSizeInBytesOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.PageSizeInBytes, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetPageSizeInBytes sets field value
-func (o *WorkflowDumpRequest) SetPageSizeInBytes(v int32) {
-	o.PageSizeInBytes = v
-}
+func (o *WorkflowDumpRequest) SetPageSizeInBytes(v int32) { _ = "STUB: not implemented"; return }
 
 // GetPageNum returns the PageNum field value
-func (o *WorkflowDumpRequest) GetPageNum() int32 {
-	if o == nil {
-		var ret int32
-		return ret
-	}
-
-	return o.PageNum
-}
+func (o *WorkflowDumpRequest) GetPageNum() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetPageNumOk returns a tuple with the PageNum field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowDumpRequest) GetPageNumOk() (*int32, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.PageNum, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetPageNum sets field value
-func (o *WorkflowDumpRequest) SetPageNum(v int32) {
-	o.PageNum = v
-}
+func (o *WorkflowDumpRequest) SetPageNum(v int32) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowDumpRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowDumpRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	toSerialize["workflowRunId"] = o.WorkflowRunId
-	toSerialize["pageSizeInBytes"] = o.PageSizeInBytes
-	toSerialize["pageNum"] = o.PageNum
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowDumpRequest struct {
@@ -165,32 +110,30 @@ type NullableWorkflowDumpRequest struct {
 }
 
 func (v NullableWorkflowDumpRequest) Get() *WorkflowDumpRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowDumpRequest) Set(val *WorkflowDumpRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowDumpRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowDumpRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowDumpRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowDumpRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowDumpRequest(val *WorkflowDumpRequest) *NullableWorkflowDumpRequest {
-	return &NullableWorkflowDumpRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowDumpRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowDumpRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

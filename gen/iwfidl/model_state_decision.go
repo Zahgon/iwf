@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the StateDecision type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &StateDecision{}
 
@@ -27,100 +23,60 @@ type StateDecision struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewStateDecision() *StateDecision {
-	this := StateDecision{}
-	return &this
-}
+func NewStateDecision() *StateDecision { _ = "STUB: not implemented"; return nil }
 
 // NewStateDecisionWithDefaults instantiates a new StateDecision object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewStateDecisionWithDefaults() *StateDecision {
-	this := StateDecision{}
-	return &this
-}
+func NewStateDecisionWithDefaults() *StateDecision { _ = "STUB: not implemented"; return nil }
 
 // GetNextStates returns the NextStates field value if set, zero value otherwise.
-func (o *StateDecision) GetNextStates() []StateMovement {
-	if o == nil || IsNil(o.NextStates) {
-		var ret []StateMovement
-		return ret
-	}
-	return o.NextStates
-}
+func (o *StateDecision) GetNextStates() []StateMovement { _ = "STUB: not implemented"; return nil }
 
 // GetNextStatesOk returns a tuple with the NextStates field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StateDecision) GetNextStatesOk() ([]StateMovement, bool) {
-	if o == nil || IsNil(o.NextStates) {
-		return nil, false
-	}
-	return o.NextStates, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasNextStates returns a boolean if a field has been set.
-func (o *StateDecision) HasNextStates() bool {
-	if o != nil && !IsNil(o.NextStates) {
-		return true
-	}
-
-	return false
-}
+func (o *StateDecision) HasNextStates() bool { _ = "STUB: not implemented"; return false }
 
 // SetNextStates gets a reference to the given []StateMovement and assigns it to the NextStates field.
 func (o *StateDecision) SetNextStates(v []StateMovement) {
-	o.NextStates = v
+	_ = "STUB: not implemented"
+
+	// GetConditionalClose returns the ConditionalClose field value if set, zero value otherwise.
+	return
 }
 
-// GetConditionalClose returns the ConditionalClose field value if set, zero value otherwise.
 func (o *StateDecision) GetConditionalClose() WorkflowConditionalClose {
-	if o == nil || IsNil(o.ConditionalClose) {
-		var ret WorkflowConditionalClose
-		return ret
-	}
-	return *o.ConditionalClose
+	_ = "STUB: not implemented"
+	return *new(WorkflowConditionalClose)
 }
 
 // GetConditionalCloseOk returns a tuple with the ConditionalClose field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *StateDecision) GetConditionalCloseOk() (*WorkflowConditionalClose, bool) {
-	if o == nil || IsNil(o.ConditionalClose) {
-		return nil, false
-	}
-	return o.ConditionalClose, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasConditionalClose returns a boolean if a field has been set.
-func (o *StateDecision) HasConditionalClose() bool {
-	if o != nil && !IsNil(o.ConditionalClose) {
-		return true
-	}
-
-	return false
-}
+func (o *StateDecision) HasConditionalClose() bool { _ = "STUB: not implemented"; return false }
 
 // SetConditionalClose gets a reference to the given WorkflowConditionalClose and assigns it to the ConditionalClose field.
 func (o *StateDecision) SetConditionalClose(v WorkflowConditionalClose) {
-	o.ConditionalClose = &v
+	_ = "STUB: not implemented"
+	return
 }
 
-func (o StateDecision) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o StateDecision) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o StateDecision) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.NextStates) {
-		toSerialize["nextStates"] = o.NextStates
-	}
-	if !IsNil(o.ConditionalClose) {
-		toSerialize["conditionalClose"] = o.ConditionalClose
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableStateDecision struct {
@@ -128,33 +84,25 @@ type NullableStateDecision struct {
 	isSet bool
 }
 
-func (v NullableStateDecision) Get() *StateDecision {
-	return v.value
-}
+func (v NullableStateDecision) Get() *StateDecision { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableStateDecision) Set(val *StateDecision) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableStateDecision) Set(val *StateDecision) { _ = "STUB: not implemented"; return }
 
-func (v NullableStateDecision) IsSet() bool {
-	return v.isSet
-}
+func (v NullableStateDecision) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableStateDecision) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableStateDecision) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableStateDecision(val *StateDecision) *NullableStateDecision {
-	return &NullableStateDecision{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableStateDecision) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableStateDecision) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // WorkflowErrorType the model 'WorkflowErrorType'
 type WorkflowErrorType string
 
@@ -38,81 +33,45 @@ var AllowedWorkflowErrorTypeEnumValues = []WorkflowErrorType{
 	"SERVER_INTERNAL_ERROR_TYPE",
 }
 
-func (v *WorkflowErrorType) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := WorkflowErrorType(value)
-	for _, existing := range AllowedWorkflowErrorTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid WorkflowErrorType", value)
-}
+func (v *WorkflowErrorType) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }
 
 // NewWorkflowErrorTypeFromValue returns a pointer to a valid WorkflowErrorType
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewWorkflowErrorTypeFromValue(v string) (*WorkflowErrorType, error) {
-	ev := WorkflowErrorType(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for WorkflowErrorType: valid values are %v", v, AllowedWorkflowErrorTypeEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v WorkflowErrorType) IsValid() bool {
-	for _, existing := range AllowedWorkflowErrorTypeEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v WorkflowErrorType) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to WorkflowErrorType value
-func (v WorkflowErrorType) Ptr() *WorkflowErrorType {
-	return &v
-}
+func (v WorkflowErrorType) Ptr() *WorkflowErrorType { _ = "STUB: not implemented"; return nil }
 
 type NullableWorkflowErrorType struct {
 	value *WorkflowErrorType
 	isSet bool
 }
 
-func (v NullableWorkflowErrorType) Get() *WorkflowErrorType {
-	return v.value
-}
+func (v NullableWorkflowErrorType) Get() *WorkflowErrorType { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableWorkflowErrorType) Set(val *WorkflowErrorType) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableWorkflowErrorType) Set(val *WorkflowErrorType) { _ = "STUB: not implemented"; return }
 
-func (v NullableWorkflowErrorType) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowErrorType) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowErrorType) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowErrorType) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowErrorType(val *WorkflowErrorType) *NullableWorkflowErrorType {
-	return &NullableWorkflowErrorType{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowErrorType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowErrorType) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

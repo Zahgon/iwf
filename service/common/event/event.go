@@ -7,10 +7,10 @@ type HandleEventFunc func(event iwfidl.IwfEvent)
 
 var Handle HandleEventFunc = DefaultHandleEventFunc
 
-func SetHandleEventFunc(handler HandleEventFunc) {
-	Handle = handler
-}
+func SetHandleEventFunc(handler HandleEventFunc) { _ = "STUB: not implemented"; return }
 
 func DefaultHandleEventFunc(event iwfidl.IwfEvent) {
+	_ = "STUB: not implemented"
 	// Noop by default
+	return
 }

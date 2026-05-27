@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowConditionalClose type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowConditionalClose{}
 
@@ -28,135 +24,91 @@ type WorkflowConditionalClose struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWorkflowConditionalClose() *WorkflowConditionalClose {
-	this := WorkflowConditionalClose{}
-	return &this
-}
+func NewWorkflowConditionalClose() *WorkflowConditionalClose { _ = "STUB: not implemented"; return nil }
 
 // NewWorkflowConditionalCloseWithDefaults instantiates a new WorkflowConditionalClose object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowConditionalCloseWithDefaults() *WorkflowConditionalClose {
-	this := WorkflowConditionalClose{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetConditionalCloseType returns the ConditionalCloseType field value if set, zero value otherwise.
 func (o *WorkflowConditionalClose) GetConditionalCloseType() WorkflowConditionalCloseType {
-	if o == nil || IsNil(o.ConditionalCloseType) {
-		var ret WorkflowConditionalCloseType
-		return ret
-	}
-	return *o.ConditionalCloseType
+	_ = "STUB: not implemented"
+	return *new(WorkflowConditionalCloseType)
 }
 
 // GetConditionalCloseTypeOk returns a tuple with the ConditionalCloseType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowConditionalClose) GetConditionalCloseTypeOk() (*WorkflowConditionalCloseType, bool) {
-	if o == nil || IsNil(o.ConditionalCloseType) {
-		return nil, false
-	}
-	return o.ConditionalCloseType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasConditionalCloseType returns a boolean if a field has been set.
 func (o *WorkflowConditionalClose) HasConditionalCloseType() bool {
-	if o != nil && !IsNil(o.ConditionalCloseType) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetConditionalCloseType gets a reference to the given WorkflowConditionalCloseType and assigns it to the ConditionalCloseType field.
 func (o *WorkflowConditionalClose) SetConditionalCloseType(v WorkflowConditionalCloseType) {
-	o.ConditionalCloseType = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetChannelName returns the ChannelName field value if set, zero value otherwise.
-func (o *WorkflowConditionalClose) GetChannelName() string {
-	if o == nil || IsNil(o.ChannelName) {
-		var ret string
-		return ret
-	}
-	return *o.ChannelName
-}
+func (o *WorkflowConditionalClose) GetChannelName() string { _ = "STUB: not implemented"; return "" }
 
 // GetChannelNameOk returns a tuple with the ChannelName field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowConditionalClose) GetChannelNameOk() (*string, bool) {
-	if o == nil || IsNil(o.ChannelName) {
-		return nil, false
-	}
-	return o.ChannelName, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasChannelName returns a boolean if a field has been set.
-func (o *WorkflowConditionalClose) HasChannelName() bool {
-	if o != nil && !IsNil(o.ChannelName) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowConditionalClose) HasChannelName() bool { _ = "STUB: not implemented"; return false }
 
 // SetChannelName gets a reference to the given string and assigns it to the ChannelName field.
 func (o *WorkflowConditionalClose) SetChannelName(v string) {
-	o.ChannelName = &v
+	_ = "STUB: not implemented"
+
+	// GetCloseInput returns the CloseInput field value if set, zero value otherwise.
+	return
 }
 
-// GetCloseInput returns the CloseInput field value if set, zero value otherwise.
 func (o *WorkflowConditionalClose) GetCloseInput() EncodedObject {
-	if o == nil || IsNil(o.CloseInput) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.CloseInput
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetCloseInputOk returns a tuple with the CloseInput field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowConditionalClose) GetCloseInputOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.CloseInput) {
-		return nil, false
-	}
-	return o.CloseInput, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasCloseInput returns a boolean if a field has been set.
-func (o *WorkflowConditionalClose) HasCloseInput() bool {
-	if o != nil && !IsNil(o.CloseInput) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowConditionalClose) HasCloseInput() bool { _ = "STUB: not implemented"; return false }
 
 // SetCloseInput gets a reference to the given EncodedObject and assigns it to the CloseInput field.
 func (o *WorkflowConditionalClose) SetCloseInput(v EncodedObject) {
-	o.CloseInput = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowConditionalClose) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowConditionalClose) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ConditionalCloseType) {
-		toSerialize["conditionalCloseType"] = o.ConditionalCloseType
-	}
-	if !IsNil(o.ChannelName) {
-		toSerialize["channelName"] = o.ChannelName
-	}
-	if !IsNil(o.CloseInput) {
-		toSerialize["closeInput"] = o.CloseInput
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowConditionalClose struct {
@@ -165,32 +117,30 @@ type NullableWorkflowConditionalClose struct {
 }
 
 func (v NullableWorkflowConditionalClose) Get() *WorkflowConditionalClose {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowConditionalClose) Set(val *WorkflowConditionalClose) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowConditionalClose) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowConditionalClose) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowConditionalClose) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowConditionalClose) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowConditionalClose(val *WorkflowConditionalClose) *NullableWorkflowConditionalClose {
-	return &NullableWorkflowConditionalClose{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowConditionalClose) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowConditionalClose) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

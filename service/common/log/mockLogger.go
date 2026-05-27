@@ -31,40 +31,22 @@ type MockLogger struct {
 }
 
 // Debug provides a mock function with given fields: msg, tags
-func (_m *MockLogger) Debug(msg string, tags ...tag.Tag) {
-	_m.Called(msg, tags)
-}
+func (_m *MockLogger) Debug(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
 // Info provides a mock function with given fields: msg, tags
-func (_m *MockLogger) Info(msg string, tags ...tag.Tag) {
-	_m.Called(msg, tags)
-}
+func (_m *MockLogger) Info(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
 // Warn provides a mock function with given fields: msg, tags
-func (_m *MockLogger) Warn(msg string, tags ...tag.Tag) {
-	_m.Called(msg, tags)
-}
+func (_m *MockLogger) Warn(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
 // Error provides a mock function with given fields: msg, tags
-func (_m *MockLogger) Error(msg string, tags ...tag.Tag) {
-	_m.Called(msg, tags)
-}
+func (_m *MockLogger) Error(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
 // Fatal provides a mock function with given fields: msg, tags
-func (_m *MockLogger) Fatal(msg string, tags ...tag.Tag) {
-	_m.Called(msg, tags)
-}
+func (_m *MockLogger) Fatal(msg string, tags ...tag.Tag) { _ = "STUB: not implemented"; return }
 
 // WithTags provides a mock function with given fields: tags
 func (_m *MockLogger) WithTags(tags ...tag.Tag) Logger {
-	ret := _m.Called(tags)
-
-	var r0 Logger
-	if rf, ok := ret.Get(0).(func(...tag.Tag) Logger); ok {
-		r0 = rf(tags...)
-	} else {
-		r0 = ret.Get(0).(Logger)
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return *new(Logger)
 }

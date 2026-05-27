@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the ChannelInfo type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ChannelInfo{}
 
@@ -26,65 +22,31 @@ type ChannelInfo struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewChannelInfo() *ChannelInfo {
-	this := ChannelInfo{}
-	return &this
-}
+func NewChannelInfo() *ChannelInfo { _ = "STUB: not implemented"; return nil }
 
 // NewChannelInfoWithDefaults instantiates a new ChannelInfo object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewChannelInfoWithDefaults() *ChannelInfo {
-	this := ChannelInfo{}
-	return &this
-}
+func NewChannelInfoWithDefaults() *ChannelInfo { _ = "STUB: not implemented"; return nil }
 
 // GetSize returns the Size field value if set, zero value otherwise.
-func (o *ChannelInfo) GetSize() int32 {
-	if o == nil || IsNil(o.Size) {
-		var ret int32
-		return ret
-	}
-	return *o.Size
-}
+func (o *ChannelInfo) GetSize() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetSizeOk returns a tuple with the Size field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ChannelInfo) GetSizeOk() (*int32, bool) {
-	if o == nil || IsNil(o.Size) {
-		return nil, false
-	}
-	return o.Size, true
-}
+func (o *ChannelInfo) GetSizeOk() (*int32, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasSize returns a boolean if a field has been set.
-func (o *ChannelInfo) HasSize() bool {
-	if o != nil && !IsNil(o.Size) {
-		return true
-	}
-
-	return false
-}
+func (o *ChannelInfo) HasSize() bool { _ = "STUB: not implemented"; return false }
 
 // SetSize gets a reference to the given int32 and assigns it to the Size field.
-func (o *ChannelInfo) SetSize(v int32) {
-	o.Size = &v
-}
+func (o *ChannelInfo) SetSize(v int32) { _ = "STUB: not implemented"; return }
 
-func (o ChannelInfo) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o ChannelInfo) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o ChannelInfo) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Size) {
-		toSerialize["size"] = o.Size
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableChannelInfo struct {
@@ -92,33 +54,25 @@ type NullableChannelInfo struct {
 	isSet bool
 }
 
-func (v NullableChannelInfo) Get() *ChannelInfo {
-	return v.value
-}
+func (v NullableChannelInfo) Get() *ChannelInfo { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableChannelInfo) Set(val *ChannelInfo) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableChannelInfo) Set(val *ChannelInfo) { _ = "STUB: not implemented"; return }
 
-func (v NullableChannelInfo) IsSet() bool {
-	return v.isSet
-}
+func (v NullableChannelInfo) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableChannelInfo) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableChannelInfo) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableChannelInfo(val *ChannelInfo) *NullableChannelInfo {
-	return &NullableChannelInfo{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableChannelInfo) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableChannelInfo) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -1,14 +1,11 @@
 package s3GetSetDataAttributes
 
 import (
-	"log"
-	"net/http"
 	"sync"
 	"testing"
 
 	"github.com/gin-gonic/gin"
 	"github.com/indeedeng/iwf/gen/iwfidl"
-	"github.com/indeedeng/iwf/service"
 )
 
 /**
@@ -74,95 +71,35 @@ type handler struct {
 }
 
 func NewHandler() *handler {
-	return &handler{}
+	_ = "STUB: not implemented"
+
+	// GetTestResult returns the test result
+	return nil
 }
 
-// GetTestResult returns the test result
 func (h *handler) GetTestResult() (map[string]int64, map[string]interface{}) {
-	outInvokehistory := make(map[string]interface{})
-	h.invokeHistory.Range(func(key, value interface{}) bool {
-		outInvokehistory[key.(string)] = value
-		return true
-	})
-	return nil, outInvokehistory
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ApiV1WorkflowStartPost - Define workflow states
 func (h *handler) ApiV1WorkflowStartPost(c *gin.Context, t *testing.T) {
-	var req iwfidl.WorkflowStartRequest
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
-
-	if req.GetIwfWorkflowType() != WorkflowType {
-		c.JSON(http.StatusBadRequest, struct{}{})
-		return
-	}
-
-	c.JSON(http.StatusOK, iwfidl.WorkflowStartResponse{
-		WorkflowRunId: iwfidl.PtrString("test-run-id"),
-	})
+	_ = "STUB: not implemented"
+	return
 }
 
 // ApiV1WorkflowStateStart - Handle state start (waitUntil)
 func (h *handler) ApiV1WorkflowStateStart(c *gin.Context, t *testing.T) {
-	var req iwfidl.WorkflowStateStartRequest
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
-	log.Println("received state start request, ", req)
-
-	if req.GetWorkflowType() != WorkflowType {
-		c.JSON(http.StatusBadRequest, struct{}{})
-		return
-	}
-
-	if req.GetWorkflowStateId() == State1 {
-		h.invokeHistory.Store("S1_start", int64(1))
-
-		// Simple waitUntil - no commands, just proceed
-		c.JSON(http.StatusOK, iwfidl.WorkflowStateStartResponse{
-			CommandRequest: &iwfidl.CommandRequest{
-				DeciderTriggerType: iwfidl.ANY_COMMAND_COMPLETED.Ptr(),
-			},
-		})
-		return
-	}
-
-	c.JSON(http.StatusBadRequest, struct{}{})
+	_ = "STUB: not implemented"
+	return
 }
+
+// Simple waitUntil - no commands, just proceed
 
 // ApiV1WorkflowStateDecide - Handle state execution (execute)
 func (h *handler) ApiV1WorkflowStateDecide(c *gin.Context, t *testing.T) {
-	var req iwfidl.WorkflowStateDecideRequest
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
-	log.Println("received state decide request, ", req)
-
-	if req.GetWorkflowType() != WorkflowType {
-		c.JSON(http.StatusBadRequest, struct{}{})
-		return
-	}
-
-	if req.GetWorkflowStateId() == State1 {
-		h.invokeHistory.Store("S1_decide", int64(1))
-
-		// Complete the workflow
-		c.JSON(http.StatusOK, iwfidl.WorkflowStateDecideResponse{
-			StateDecision: &iwfidl.StateDecision{
-				NextStates: []iwfidl.StateMovement{
-					{
-						StateId: service.GracefulCompletingWorkflowStateId,
-					},
-				},
-			},
-		})
-		return
-	}
-
-	c.JSON(http.StatusBadRequest, struct{}{})
+	_ = "STUB: not implemented"
+	return
 }
+
+// Complete the workflow

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the ErrorResponse type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &ErrorResponse{}
 
@@ -30,205 +26,112 @@ type ErrorResponse struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewErrorResponse() *ErrorResponse {
-	this := ErrorResponse{}
-	return &this
-}
+func NewErrorResponse() *ErrorResponse { _ = "STUB: not implemented"; return nil }
 
 // NewErrorResponseWithDefaults instantiates a new ErrorResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewErrorResponseWithDefaults() *ErrorResponse {
-	this := ErrorResponse{}
-	return &this
-}
+func NewErrorResponseWithDefaults() *ErrorResponse { _ = "STUB: not implemented"; return nil }
 
 // GetDetail returns the Detail field value if set, zero value otherwise.
-func (o *ErrorResponse) GetDetail() string {
-	if o == nil || IsNil(o.Detail) {
-		var ret string
-		return ret
-	}
-	return *o.Detail
-}
+func (o *ErrorResponse) GetDetail() string { _ = "STUB: not implemented"; return "" }
 
 // GetDetailOk returns a tuple with the Detail field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ErrorResponse) GetDetailOk() (*string, bool) {
-	if o == nil || IsNil(o.Detail) {
-		return nil, false
-	}
-	return o.Detail, true
-}
+func (o *ErrorResponse) GetDetailOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasDetail returns a boolean if a field has been set.
-func (o *ErrorResponse) HasDetail() bool {
-	if o != nil && !IsNil(o.Detail) {
-		return true
-	}
-
-	return false
-}
+func (o *ErrorResponse) HasDetail() bool { _ = "STUB: not implemented"; return false }
 
 // SetDetail gets a reference to the given string and assigns it to the Detail field.
 func (o *ErrorResponse) SetDetail(v string) {
-	o.Detail = &v
+	_ = "STUB: not implemented"
+
+	// GetSubStatus returns the SubStatus field value if set, zero value otherwise.
+	return
 }
 
-// GetSubStatus returns the SubStatus field value if set, zero value otherwise.
 func (o *ErrorResponse) GetSubStatus() ErrorSubStatus {
-	if o == nil || IsNil(o.SubStatus) {
-		var ret ErrorSubStatus
-		return ret
-	}
-	return *o.SubStatus
+	_ = "STUB: not implemented"
+	return *new(ErrorSubStatus)
 }
 
 // GetSubStatusOk returns a tuple with the SubStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ErrorResponse) GetSubStatusOk() (*ErrorSubStatus, bool) {
-	if o == nil || IsNil(o.SubStatus) {
-		return nil, false
-	}
-	return o.SubStatus, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSubStatus returns a boolean if a field has been set.
-func (o *ErrorResponse) HasSubStatus() bool {
-	if o != nil && !IsNil(o.SubStatus) {
-		return true
-	}
-
-	return false
-}
+func (o *ErrorResponse) HasSubStatus() bool { _ = "STUB: not implemented"; return false }
 
 // SetSubStatus gets a reference to the given ErrorSubStatus and assigns it to the SubStatus field.
 func (o *ErrorResponse) SetSubStatus(v ErrorSubStatus) {
-	o.SubStatus = &v
+	_ = "STUB: not implemented"
+
+	// GetOriginalWorkerErrorDetail returns the OriginalWorkerErrorDetail field value if set, zero value otherwise.
+	return
 }
 
-// GetOriginalWorkerErrorDetail returns the OriginalWorkerErrorDetail field value if set, zero value otherwise.
-func (o *ErrorResponse) GetOriginalWorkerErrorDetail() string {
-	if o == nil || IsNil(o.OriginalWorkerErrorDetail) {
-		var ret string
-		return ret
-	}
-	return *o.OriginalWorkerErrorDetail
-}
+func (o *ErrorResponse) GetOriginalWorkerErrorDetail() string { _ = "STUB: not implemented"; return "" }
 
 // GetOriginalWorkerErrorDetailOk returns a tuple with the OriginalWorkerErrorDetail field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ErrorResponse) GetOriginalWorkerErrorDetailOk() (*string, bool) {
-	if o == nil || IsNil(o.OriginalWorkerErrorDetail) {
-		return nil, false
-	}
-	return o.OriginalWorkerErrorDetail, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasOriginalWorkerErrorDetail returns a boolean if a field has been set.
 func (o *ErrorResponse) HasOriginalWorkerErrorDetail() bool {
-	if o != nil && !IsNil(o.OriginalWorkerErrorDetail) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetOriginalWorkerErrorDetail gets a reference to the given string and assigns it to the OriginalWorkerErrorDetail field.
-func (o *ErrorResponse) SetOriginalWorkerErrorDetail(v string) {
-	o.OriginalWorkerErrorDetail = &v
-}
+func (o *ErrorResponse) SetOriginalWorkerErrorDetail(v string) { _ = "STUB: not implemented"; return }
 
 // GetOriginalWorkerErrorType returns the OriginalWorkerErrorType field value if set, zero value otherwise.
-func (o *ErrorResponse) GetOriginalWorkerErrorType() string {
-	if o == nil || IsNil(o.OriginalWorkerErrorType) {
-		var ret string
-		return ret
-	}
-	return *o.OriginalWorkerErrorType
-}
+func (o *ErrorResponse) GetOriginalWorkerErrorType() string { _ = "STUB: not implemented"; return "" }
 
 // GetOriginalWorkerErrorTypeOk returns a tuple with the OriginalWorkerErrorType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ErrorResponse) GetOriginalWorkerErrorTypeOk() (*string, bool) {
-	if o == nil || IsNil(o.OriginalWorkerErrorType) {
-		return nil, false
-	}
-	return o.OriginalWorkerErrorType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasOriginalWorkerErrorType returns a boolean if a field has been set.
-func (o *ErrorResponse) HasOriginalWorkerErrorType() bool {
-	if o != nil && !IsNil(o.OriginalWorkerErrorType) {
-		return true
-	}
-
-	return false
-}
+func (o *ErrorResponse) HasOriginalWorkerErrorType() bool { _ = "STUB: not implemented"; return false }
 
 // SetOriginalWorkerErrorType gets a reference to the given string and assigns it to the OriginalWorkerErrorType field.
-func (o *ErrorResponse) SetOriginalWorkerErrorType(v string) {
-	o.OriginalWorkerErrorType = &v
-}
+func (o *ErrorResponse) SetOriginalWorkerErrorType(v string) { _ = "STUB: not implemented"; return }
 
 // GetOriginalWorkerErrorStatus returns the OriginalWorkerErrorStatus field value if set, zero value otherwise.
-func (o *ErrorResponse) GetOriginalWorkerErrorStatus() int32 {
-	if o == nil || IsNil(o.OriginalWorkerErrorStatus) {
-		var ret int32
-		return ret
-	}
-	return *o.OriginalWorkerErrorStatus
-}
+func (o *ErrorResponse) GetOriginalWorkerErrorStatus() int32 { _ = "STUB: not implemented"; return 0 }
 
 // GetOriginalWorkerErrorStatusOk returns a tuple with the OriginalWorkerErrorStatus field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *ErrorResponse) GetOriginalWorkerErrorStatusOk() (*int32, bool) {
-	if o == nil || IsNil(o.OriginalWorkerErrorStatus) {
-		return nil, false
-	}
-	return o.OriginalWorkerErrorStatus, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasOriginalWorkerErrorStatus returns a boolean if a field has been set.
 func (o *ErrorResponse) HasOriginalWorkerErrorStatus() bool {
-	if o != nil && !IsNil(o.OriginalWorkerErrorStatus) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetOriginalWorkerErrorStatus gets a reference to the given int32 and assigns it to the OriginalWorkerErrorStatus field.
-func (o *ErrorResponse) SetOriginalWorkerErrorStatus(v int32) {
-	o.OriginalWorkerErrorStatus = &v
-}
+func (o *ErrorResponse) SetOriginalWorkerErrorStatus(v int32) { _ = "STUB: not implemented"; return }
 
-func (o ErrorResponse) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o ErrorResponse) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o ErrorResponse) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Detail) {
-		toSerialize["detail"] = o.Detail
-	}
-	if !IsNil(o.SubStatus) {
-		toSerialize["subStatus"] = o.SubStatus
-	}
-	if !IsNil(o.OriginalWorkerErrorDetail) {
-		toSerialize["originalWorkerErrorDetail"] = o.OriginalWorkerErrorDetail
-	}
-	if !IsNil(o.OriginalWorkerErrorType) {
-		toSerialize["originalWorkerErrorType"] = o.OriginalWorkerErrorType
-	}
-	if !IsNil(o.OriginalWorkerErrorStatus) {
-		toSerialize["originalWorkerErrorStatus"] = o.OriginalWorkerErrorStatus
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableErrorResponse struct {
@@ -236,33 +139,25 @@ type NullableErrorResponse struct {
 	isSet bool
 }
 
-func (v NullableErrorResponse) Get() *ErrorResponse {
-	return v.value
-}
+func (v NullableErrorResponse) Get() *ErrorResponse { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableErrorResponse) Set(val *ErrorResponse) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableErrorResponse) Set(val *ErrorResponse) { _ = "STUB: not implemented"; return }
 
-func (v NullableErrorResponse) IsSet() bool {
-	return v.isSet
-}
+func (v NullableErrorResponse) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableErrorResponse) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableErrorResponse) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableErrorResponse(val *ErrorResponse) *NullableErrorResponse {
-	return &NullableErrorResponse{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableErrorResponse) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableErrorResponse) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

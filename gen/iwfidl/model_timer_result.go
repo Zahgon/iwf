@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the TimerResult type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &TimerResult{}
 
@@ -28,81 +24,53 @@ type TimerResult struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewTimerResult(commandId string, timerStatus TimerStatus) *TimerResult {
-	this := TimerResult{}
-	this.CommandId = commandId
-	this.TimerStatus = timerStatus
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewTimerResultWithDefaults instantiates a new TimerResult object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewTimerResultWithDefaults() *TimerResult {
-	this := TimerResult{}
-	return &this
-}
+func NewTimerResultWithDefaults() *TimerResult { _ = "STUB: not implemented"; return nil }
 
 // GetCommandId returns the CommandId field value
-func (o *TimerResult) GetCommandId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.CommandId
-}
+func (o *TimerResult) GetCommandId() string { _ = "STUB: not implemented"; return "" }
 
 // GetCommandIdOk returns a tuple with the CommandId field value
 // and a boolean to check if the value has been set.
 func (o *TimerResult) GetCommandIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.CommandId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetCommandId sets field value
 func (o *TimerResult) SetCommandId(v string) {
-	o.CommandId = v
+	_ = "STUB: not implemented"
+
+	// GetTimerStatus returns the TimerStatus field value
+	return
 }
 
-// GetTimerStatus returns the TimerStatus field value
 func (o *TimerResult) GetTimerStatus() TimerStatus {
-	if o == nil {
-		var ret TimerStatus
-		return ret
-	}
-
-	return o.TimerStatus
+	_ = "STUB: not implemented"
+	return *new(TimerStatus)
 }
 
 // GetTimerStatusOk returns a tuple with the TimerStatus field value
 // and a boolean to check if the value has been set.
 func (o *TimerResult) GetTimerStatusOk() (*TimerStatus, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.TimerStatus, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetTimerStatus sets field value
-func (o *TimerResult) SetTimerStatus(v TimerStatus) {
-	o.TimerStatus = v
-}
+func (o *TimerResult) SetTimerStatus(v TimerStatus) { _ = "STUB: not implemented"; return }
 
-func (o TimerResult) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o TimerResult) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o TimerResult) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["commandId"] = o.CommandId
-	toSerialize["timerStatus"] = o.TimerStatus
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableTimerResult struct {
@@ -110,33 +78,25 @@ type NullableTimerResult struct {
 	isSet bool
 }
 
-func (v NullableTimerResult) Get() *TimerResult {
-	return v.value
-}
+func (v NullableTimerResult) Get() *TimerResult { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableTimerResult) Set(val *TimerResult) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableTimerResult) Set(val *TimerResult) { _ = "STUB: not implemented"; return }
 
-func (v NullableTimerResult) IsSet() bool {
-	return v.isSet
-}
+func (v NullableTimerResult) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableTimerResult) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableTimerResult) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableTimerResult(val *TimerResult) *NullableTimerResult {
-	return &NullableTimerResult{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableTimerResult) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableTimerResult) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

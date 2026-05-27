@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowSignalRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowSignalRequest{}
 
@@ -30,151 +26,91 @@ type WorkflowSignalRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowSignalRequest(workflowId string, signalChannelName string) *WorkflowSignalRequest {
-	this := WorkflowSignalRequest{}
-	this.WorkflowId = workflowId
-	this.SignalChannelName = signalChannelName
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowSignalRequestWithDefaults instantiates a new WorkflowSignalRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowSignalRequestWithDefaults() *WorkflowSignalRequest {
-	this := WorkflowSignalRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
-func (o *WorkflowSignalRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
-}
+func (o *WorkflowSignalRequest) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowSignalRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowSignalRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
-func (o *WorkflowSignalRequest) GetWorkflowRunId() string {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		var ret string
-		return ret
-	}
-	return *o.WorkflowRunId
-}
+func (o *WorkflowSignalRequest) GetWorkflowRunId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowSignalRequest) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		return nil, false
-	}
-	return o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowRunId returns a boolean if a field has been set.
-func (o *WorkflowSignalRequest) HasWorkflowRunId() bool {
-	if o != nil && !IsNil(o.WorkflowRunId) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowSignalRequest) HasWorkflowRunId() bool { _ = "STUB: not implemented"; return false }
 
 // SetWorkflowRunId gets a reference to the given string and assigns it to the WorkflowRunId field.
-func (o *WorkflowSignalRequest) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = &v
-}
+func (o *WorkflowSignalRequest) SetWorkflowRunId(v string) { _ = "STUB: not implemented"; return }
 
 // GetSignalChannelName returns the SignalChannelName field value
-func (o *WorkflowSignalRequest) GetSignalChannelName() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.SignalChannelName
-}
+func (o *WorkflowSignalRequest) GetSignalChannelName() string { _ = "STUB: not implemented"; return "" }
 
 // GetSignalChannelNameOk returns a tuple with the SignalChannelName field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowSignalRequest) GetSignalChannelNameOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.SignalChannelName, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetSignalChannelName sets field value
-func (o *WorkflowSignalRequest) SetSignalChannelName(v string) {
-	o.SignalChannelName = v
-}
+func (o *WorkflowSignalRequest) SetSignalChannelName(v string) { _ = "STUB: not implemented"; return }
 
 // GetSignalValue returns the SignalValue field value if set, zero value otherwise.
 func (o *WorkflowSignalRequest) GetSignalValue() EncodedObject {
-	if o == nil || IsNil(o.SignalValue) {
-		var ret EncodedObject
-		return ret
-	}
-	return *o.SignalValue
+	_ = "STUB: not implemented"
+	return *new(EncodedObject)
 }
 
 // GetSignalValueOk returns a tuple with the SignalValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowSignalRequest) GetSignalValueOk() (*EncodedObject, bool) {
-	if o == nil || IsNil(o.SignalValue) {
-		return nil, false
-	}
-	return o.SignalValue, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSignalValue returns a boolean if a field has been set.
-func (o *WorkflowSignalRequest) HasSignalValue() bool {
-	if o != nil && !IsNil(o.SignalValue) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowSignalRequest) HasSignalValue() bool { _ = "STUB: not implemented"; return false }
 
 // SetSignalValue gets a reference to the given EncodedObject and assigns it to the SignalValue field.
-func (o *WorkflowSignalRequest) SetSignalValue(v EncodedObject) {
-	o.SignalValue = &v
-}
+func (o *WorkflowSignalRequest) SetSignalValue(v EncodedObject) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowSignalRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowSignalRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	if !IsNil(o.WorkflowRunId) {
-		toSerialize["workflowRunId"] = o.WorkflowRunId
-	}
-	toSerialize["signalChannelName"] = o.SignalChannelName
-	if !IsNil(o.SignalValue) {
-		toSerialize["signalValue"] = o.SignalValue
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowSignalRequest struct {
@@ -183,32 +119,30 @@ type NullableWorkflowSignalRequest struct {
 }
 
 func (v NullableWorkflowSignalRequest) Get() *WorkflowSignalRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowSignalRequest) Set(val *WorkflowSignalRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowSignalRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowSignalRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowSignalRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowSignalRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowSignalRequest(val *WorkflowSignalRequest) *NullableWorkflowSignalRequest {
-	return &NullableWorkflowSignalRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowSignalRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowSignalRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

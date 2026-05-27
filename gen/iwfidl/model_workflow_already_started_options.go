@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowAlreadyStartedOptions type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowAlreadyStartedOptions{}
 
@@ -28,90 +24,64 @@ type WorkflowAlreadyStartedOptions struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowAlreadyStartedOptions(ignoreAlreadyStartedError bool) *WorkflowAlreadyStartedOptions {
-	this := WorkflowAlreadyStartedOptions{}
-	this.IgnoreAlreadyStartedError = ignoreAlreadyStartedError
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowAlreadyStartedOptionsWithDefaults instantiates a new WorkflowAlreadyStartedOptions object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowAlreadyStartedOptionsWithDefaults() *WorkflowAlreadyStartedOptions {
-	this := WorkflowAlreadyStartedOptions{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetIgnoreAlreadyStartedError returns the IgnoreAlreadyStartedError field value
 func (o *WorkflowAlreadyStartedOptions) GetIgnoreAlreadyStartedError() bool {
-	if o == nil {
-		var ret bool
-		return ret
-	}
-
-	return o.IgnoreAlreadyStartedError
+	_ = "STUB: not implemented"
+	return false
 }
 
 // GetIgnoreAlreadyStartedErrorOk returns a tuple with the IgnoreAlreadyStartedError field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowAlreadyStartedOptions) GetIgnoreAlreadyStartedErrorOk() (*bool, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.IgnoreAlreadyStartedError, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetIgnoreAlreadyStartedError sets field value
 func (o *WorkflowAlreadyStartedOptions) SetIgnoreAlreadyStartedError(v bool) {
-	o.IgnoreAlreadyStartedError = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetRequestId returns the RequestId field value if set, zero value otherwise.
-func (o *WorkflowAlreadyStartedOptions) GetRequestId() string {
-	if o == nil || IsNil(o.RequestId) {
-		var ret string
-		return ret
-	}
-	return *o.RequestId
-}
+func (o *WorkflowAlreadyStartedOptions) GetRequestId() string { _ = "STUB: not implemented"; return "" }
 
 // GetRequestIdOk returns a tuple with the RequestId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowAlreadyStartedOptions) GetRequestIdOk() (*string, bool) {
-	if o == nil || IsNil(o.RequestId) {
-		return nil, false
-	}
-	return o.RequestId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasRequestId returns a boolean if a field has been set.
 func (o *WorkflowAlreadyStartedOptions) HasRequestId() bool {
-	if o != nil && !IsNil(o.RequestId) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetRequestId gets a reference to the given string and assigns it to the RequestId field.
-func (o *WorkflowAlreadyStartedOptions) SetRequestId(v string) {
-	o.RequestId = &v
-}
+func (o *WorkflowAlreadyStartedOptions) SetRequestId(v string) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowAlreadyStartedOptions) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowAlreadyStartedOptions) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["ignoreAlreadyStartedError"] = o.IgnoreAlreadyStartedError
-	if !IsNil(o.RequestId) {
-		toSerialize["requestId"] = o.RequestId
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowAlreadyStartedOptions struct {
@@ -120,32 +90,33 @@ type NullableWorkflowAlreadyStartedOptions struct {
 }
 
 func (v NullableWorkflowAlreadyStartedOptions) Get() *WorkflowAlreadyStartedOptions {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowAlreadyStartedOptions) Set(val *WorkflowAlreadyStartedOptions) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
 func (v NullableWorkflowAlreadyStartedOptions) IsSet() bool {
-	return v.isSet
+	_ = "STUB: not implemented"
+	return false
 }
 
-func (v *NullableWorkflowAlreadyStartedOptions) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowAlreadyStartedOptions) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowAlreadyStartedOptions(val *WorkflowAlreadyStartedOptions) *NullableWorkflowAlreadyStartedOptions {
-	return &NullableWorkflowAlreadyStartedOptions{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowAlreadyStartedOptions) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowAlreadyStartedOptions) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

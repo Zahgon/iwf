@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowStopRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowStopRequest{}
 
@@ -30,160 +26,98 @@ type WorkflowStopRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewWorkflowStopRequest(workflowId string) *WorkflowStopRequest {
-	this := WorkflowStopRequest{}
-	this.WorkflowId = workflowId
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowStopRequestWithDefaults instantiates a new WorkflowStopRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowStopRequestWithDefaults() *WorkflowStopRequest {
-	this := WorkflowStopRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
-func (o *WorkflowStopRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
-}
+func (o *WorkflowStopRequest) GetWorkflowId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *WorkflowStopRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *WorkflowStopRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
-func (o *WorkflowStopRequest) GetWorkflowRunId() string {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		var ret string
-		return ret
-	}
-	return *o.WorkflowRunId
-}
+func (o *WorkflowStopRequest) GetWorkflowRunId() string { _ = "STUB: not implemented"; return "" }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStopRequest) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		return nil, false
-	}
-	return o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowRunId returns a boolean if a field has been set.
-func (o *WorkflowStopRequest) HasWorkflowRunId() bool {
-	if o != nil && !IsNil(o.WorkflowRunId) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStopRequest) HasWorkflowRunId() bool { _ = "STUB: not implemented"; return false }
 
 // SetWorkflowRunId gets a reference to the given string and assigns it to the WorkflowRunId field.
-func (o *WorkflowStopRequest) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = &v
-}
+func (o *WorkflowStopRequest) SetWorkflowRunId(v string) { _ = "STUB: not implemented"; return }
 
 // GetReason returns the Reason field value if set, zero value otherwise.
-func (o *WorkflowStopRequest) GetReason() string {
-	if o == nil || IsNil(o.Reason) {
-		var ret string
-		return ret
-	}
-	return *o.Reason
-}
+func (o *WorkflowStopRequest) GetReason() string { _ = "STUB: not implemented"; return "" }
 
 // GetReasonOk returns a tuple with the Reason field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStopRequest) GetReasonOk() (*string, bool) {
-	if o == nil || IsNil(o.Reason) {
-		return nil, false
-	}
-	return o.Reason, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasReason returns a boolean if a field has been set.
-func (o *WorkflowStopRequest) HasReason() bool {
-	if o != nil && !IsNil(o.Reason) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStopRequest) HasReason() bool { _ = "STUB: not implemented"; return false }
 
 // SetReason gets a reference to the given string and assigns it to the Reason field.
 func (o *WorkflowStopRequest) SetReason(v string) {
-	o.Reason = &v
+	_ = "STUB: not implemented"
+
+	// GetStopType returns the StopType field value if set, zero value otherwise.
+	return
 }
 
-// GetStopType returns the StopType field value if set, zero value otherwise.
 func (o *WorkflowStopRequest) GetStopType() WorkflowStopType {
-	if o == nil || IsNil(o.StopType) {
-		var ret WorkflowStopType
-		return ret
-	}
-	return *o.StopType
+	_ = "STUB: not implemented"
+	return *new(WorkflowStopType)
 }
 
 // GetStopTypeOk returns a tuple with the StopType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStopRequest) GetStopTypeOk() (*WorkflowStopType, bool) {
-	if o == nil || IsNil(o.StopType) {
-		return nil, false
-	}
-	return o.StopType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStopType returns a boolean if a field has been set.
-func (o *WorkflowStopRequest) HasStopType() bool {
-	if o != nil && !IsNil(o.StopType) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStopRequest) HasStopType() bool { _ = "STUB: not implemented"; return false }
 
 // SetStopType gets a reference to the given WorkflowStopType and assigns it to the StopType field.
-func (o *WorkflowStopRequest) SetStopType(v WorkflowStopType) {
-	o.StopType = &v
-}
+func (o *WorkflowStopRequest) SetStopType(v WorkflowStopType) { _ = "STUB: not implemented"; return }
 
 func (o WorkflowStopRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowStopRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	if !IsNil(o.WorkflowRunId) {
-		toSerialize["workflowRunId"] = o.WorkflowRunId
-	}
-	if !IsNil(o.Reason) {
-		toSerialize["reason"] = o.Reason
-	}
-	if !IsNil(o.StopType) {
-		toSerialize["stopType"] = o.StopType
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowStopRequest struct {
@@ -192,32 +126,30 @@ type NullableWorkflowStopRequest struct {
 }
 
 func (v NullableWorkflowStopRequest) Get() *WorkflowStopRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowStopRequest) Set(val *WorkflowStopRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowStopRequest) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowStopRequest) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowStopRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowStopRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowStopRequest(val *WorkflowStopRequest) *NullableWorkflowStopRequest {
-	return &NullableWorkflowStopRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowStopRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowStopRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

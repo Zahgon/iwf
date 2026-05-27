@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the PublishToInternalChannelRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &PublishToInternalChannelRequest{}
 
@@ -29,125 +25,97 @@ type PublishToInternalChannelRequest struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewPublishToInternalChannelRequest(workflowId string) *PublishToInternalChannelRequest {
-	this := PublishToInternalChannelRequest{}
-	this.WorkflowId = workflowId
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewPublishToInternalChannelRequestWithDefaults instantiates a new PublishToInternalChannelRequest object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewPublishToInternalChannelRequestWithDefaults() *PublishToInternalChannelRequest {
-	this := PublishToInternalChannelRequest{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowId returns the WorkflowId field value
 func (o *PublishToInternalChannelRequest) GetWorkflowId() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.WorkflowId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWorkflowIdOk returns a tuple with the WorkflowId field value
 // and a boolean to check if the value has been set.
 func (o *PublishToInternalChannelRequest) GetWorkflowIdOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.WorkflowId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // SetWorkflowId sets field value
 func (o *PublishToInternalChannelRequest) SetWorkflowId(v string) {
-	o.WorkflowId = v
+	_ = "STUB: not implemented"
+
+	// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
+	return
 }
 
-// GetWorkflowRunId returns the WorkflowRunId field value if set, zero value otherwise.
 func (o *PublishToInternalChannelRequest) GetWorkflowRunId() string {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		var ret string
-		return ret
-	}
-	return *o.WorkflowRunId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetWorkflowRunIdOk returns a tuple with the WorkflowRunId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PublishToInternalChannelRequest) GetWorkflowRunIdOk() (*string, bool) {
-	if o == nil || IsNil(o.WorkflowRunId) {
-		return nil, false
-	}
-	return o.WorkflowRunId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWorkflowRunId returns a boolean if a field has been set.
 func (o *PublishToInternalChannelRequest) HasWorkflowRunId() bool {
-	if o != nil && !IsNil(o.WorkflowRunId) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWorkflowRunId gets a reference to the given string and assigns it to the WorkflowRunId field.
 func (o *PublishToInternalChannelRequest) SetWorkflowRunId(v string) {
-	o.WorkflowRunId = &v
+	_ = "STUB: not implemented"
+	return
+
+	// GetMessages returns the Messages field value if set, zero value otherwise.
 }
 
-// GetMessages returns the Messages field value if set, zero value otherwise.
 func (o *PublishToInternalChannelRequest) GetMessages() []InterStateChannelPublishing {
-	if o == nil || IsNil(o.Messages) {
-		var ret []InterStateChannelPublishing
-		return ret
-	}
-	return o.Messages
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetMessagesOk returns a tuple with the Messages field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *PublishToInternalChannelRequest) GetMessagesOk() ([]InterStateChannelPublishing, bool) {
-	if o == nil || IsNil(o.Messages) {
-		return nil, false
-	}
-	return o.Messages, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasMessages returns a boolean if a field has been set.
 func (o *PublishToInternalChannelRequest) HasMessages() bool {
-	if o != nil && !IsNil(o.Messages) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetMessages gets a reference to the given []InterStateChannelPublishing and assigns it to the Messages field.
 func (o *PublishToInternalChannelRequest) SetMessages(v []InterStateChannelPublishing) {
-	o.Messages = v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o PublishToInternalChannelRequest) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o PublishToInternalChannelRequest) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	toSerialize["workflowId"] = o.WorkflowId
-	if !IsNil(o.WorkflowRunId) {
-		toSerialize["workflowRunId"] = o.WorkflowRunId
-	}
-	if !IsNil(o.Messages) {
-		toSerialize["messages"] = o.Messages
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullablePublishToInternalChannelRequest struct {
@@ -156,32 +124,33 @@ type NullablePublishToInternalChannelRequest struct {
 }
 
 func (v NullablePublishToInternalChannelRequest) Get() *PublishToInternalChannelRequest {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullablePublishToInternalChannelRequest) Set(val *PublishToInternalChannelRequest) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
 func (v NullablePublishToInternalChannelRequest) IsSet() bool {
-	return v.isSet
+	_ = "STUB: not implemented"
+	return false
 }
 
-func (v *NullablePublishToInternalChannelRequest) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullablePublishToInternalChannelRequest) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullablePublishToInternalChannelRequest(val *PublishToInternalChannelRequest) *NullablePublishToInternalChannelRequest {
-	return &NullablePublishToInternalChannelRequest{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullablePublishToInternalChannelRequest) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullablePublishToInternalChannelRequest) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

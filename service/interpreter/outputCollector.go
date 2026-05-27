@@ -7,20 +7,16 @@ type OutputCollector struct {
 }
 
 func NewOutputCollector(initOutputs []iwfidl.StateCompletionOutput) *OutputCollector {
-	if initOutputs == nil {
-		initOutputs = []iwfidl.StateCompletionOutput{}
-	}
-	return &OutputCollector{
-		outputs: initOutputs,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (o *OutputCollector) Add(output iwfidl.StateCompletionOutput) {
-	if output.CompletedStateOutput != nil {
-		o.outputs = append(o.outputs, output)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o *OutputCollector) GetAll() []iwfidl.StateCompletionOutput {
-	return o.outputs
+	_ = "STUB: not implemented"
+	return nil
 }

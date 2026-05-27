@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // ExecutingStateIdMode the model 'ExecutingStateIdMode'
 type ExecutingStateIdMode string
 
@@ -33,47 +28,22 @@ var AllowedExecutingStateIdModeEnumValues = []ExecutingStateIdMode{
 }
 
 func (v *ExecutingStateIdMode) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := ExecutingStateIdMode(value)
-	for _, existing := range AllowedExecutingStateIdModeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid ExecutingStateIdMode", value)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewExecutingStateIdModeFromValue returns a pointer to a valid ExecutingStateIdMode
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewExecutingStateIdModeFromValue(v string) (*ExecutingStateIdMode, error) {
-	ev := ExecutingStateIdMode(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for ExecutingStateIdMode: valid values are %v", v, AllowedExecutingStateIdModeEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v ExecutingStateIdMode) IsValid() bool {
-	for _, existing := range AllowedExecutingStateIdModeEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v ExecutingStateIdMode) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to ExecutingStateIdMode value
-func (v ExecutingStateIdMode) Ptr() *ExecutingStateIdMode {
-	return &v
-}
+func (v ExecutingStateIdMode) Ptr() *ExecutingStateIdMode { _ = "STUB: not implemented"; return nil }
 
 type NullableExecutingStateIdMode struct {
 	value *ExecutingStateIdMode
@@ -81,32 +51,30 @@ type NullableExecutingStateIdMode struct {
 }
 
 func (v NullableExecutingStateIdMode) Get() *ExecutingStateIdMode {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableExecutingStateIdMode) Set(val *ExecutingStateIdMode) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableExecutingStateIdMode) IsSet() bool {
-	return v.isSet
-}
+func (v NullableExecutingStateIdMode) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableExecutingStateIdMode) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableExecutingStateIdMode) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableExecutingStateIdMode(val *ExecutingStateIdMode) *NullableExecutingStateIdMode {
-	return &NullableExecutingStateIdMode{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableExecutingStateIdMode) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableExecutingStateIdMode) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

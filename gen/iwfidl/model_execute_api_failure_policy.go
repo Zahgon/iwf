@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // ExecuteApiFailurePolicy the model 'ExecuteApiFailurePolicy'
 type ExecuteApiFailurePolicy string
 
@@ -31,46 +26,24 @@ var AllowedExecuteApiFailurePolicyEnumValues = []ExecuteApiFailurePolicy{
 }
 
 func (v *ExecuteApiFailurePolicy) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := ExecuteApiFailurePolicy(value)
-	for _, existing := range AllowedExecuteApiFailurePolicyEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid ExecuteApiFailurePolicy", value)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewExecuteApiFailurePolicyFromValue returns a pointer to a valid ExecuteApiFailurePolicy
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewExecuteApiFailurePolicyFromValue(v string) (*ExecuteApiFailurePolicy, error) {
-	ev := ExecuteApiFailurePolicy(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for ExecuteApiFailurePolicy: valid values are %v", v, AllowedExecuteApiFailurePolicyEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v ExecuteApiFailurePolicy) IsValid() bool {
-	for _, existing := range AllowedExecuteApiFailurePolicyEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v ExecuteApiFailurePolicy) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to ExecuteApiFailurePolicy value
 func (v ExecuteApiFailurePolicy) Ptr() *ExecuteApiFailurePolicy {
-	return &v
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type NullableExecuteApiFailurePolicy struct {
@@ -79,32 +52,30 @@ type NullableExecuteApiFailurePolicy struct {
 }
 
 func (v NullableExecuteApiFailurePolicy) Get() *ExecuteApiFailurePolicy {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableExecuteApiFailurePolicy) Set(val *ExecuteApiFailurePolicy) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableExecuteApiFailurePolicy) IsSet() bool {
-	return v.isSet
-}
+func (v NullableExecuteApiFailurePolicy) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableExecuteApiFailurePolicy) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableExecuteApiFailurePolicy) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableExecuteApiFailurePolicy(val *ExecuteApiFailurePolicy) *NullableExecuteApiFailurePolicy {
-	return &NullableExecuteApiFailurePolicy{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableExecuteApiFailurePolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableExecuteApiFailurePolicy) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

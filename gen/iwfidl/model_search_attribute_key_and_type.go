@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the SearchAttributeKeyAndType type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &SearchAttributeKeyAndType{}
 
@@ -28,99 +24,68 @@ type SearchAttributeKeyAndType struct {
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
 func NewSearchAttributeKeyAndType() *SearchAttributeKeyAndType {
-	this := SearchAttributeKeyAndType{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewSearchAttributeKeyAndTypeWithDefaults instantiates a new SearchAttributeKeyAndType object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewSearchAttributeKeyAndTypeWithDefaults() *SearchAttributeKeyAndType {
-	this := SearchAttributeKeyAndType{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetKey returns the Key field value if set, zero value otherwise.
-func (o *SearchAttributeKeyAndType) GetKey() string {
-	if o == nil || IsNil(o.Key) {
-		var ret string
-		return ret
-	}
-	return *o.Key
-}
+func (o *SearchAttributeKeyAndType) GetKey() string { _ = "STUB: not implemented"; return "" }
 
 // GetKeyOk returns a tuple with the Key field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SearchAttributeKeyAndType) GetKeyOk() (*string, bool) {
-	if o == nil || IsNil(o.Key) {
-		return nil, false
-	}
-	return o.Key, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasKey returns a boolean if a field has been set.
-func (o *SearchAttributeKeyAndType) HasKey() bool {
-	if o != nil && !IsNil(o.Key) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttributeKeyAndType) HasKey() bool { _ = "STUB: not implemented"; return false }
 
 // SetKey gets a reference to the given string and assigns it to the Key field.
 func (o *SearchAttributeKeyAndType) SetKey(v string) {
-	o.Key = &v
+	_ = "STUB: not implemented"
+
+	// GetValueType returns the ValueType field value if set, zero value otherwise.
+	return
 }
 
-// GetValueType returns the ValueType field value if set, zero value otherwise.
 func (o *SearchAttributeKeyAndType) GetValueType() SearchAttributeValueType {
-	if o == nil || IsNil(o.ValueType) {
-		var ret SearchAttributeValueType
-		return ret
-	}
-	return *o.ValueType
+	_ = "STUB: not implemented"
+	return *new(SearchAttributeValueType)
 }
 
 // GetValueTypeOk returns a tuple with the ValueType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *SearchAttributeKeyAndType) GetValueTypeOk() (*SearchAttributeValueType, bool) {
-	if o == nil || IsNil(o.ValueType) {
-		return nil, false
-	}
-	return o.ValueType, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasValueType returns a boolean if a field has been set.
-func (o *SearchAttributeKeyAndType) HasValueType() bool {
-	if o != nil && !IsNil(o.ValueType) {
-		return true
-	}
-
-	return false
-}
+func (o *SearchAttributeKeyAndType) HasValueType() bool { _ = "STUB: not implemented"; return false }
 
 // SetValueType gets a reference to the given SearchAttributeValueType and assigns it to the ValueType field.
 func (o *SearchAttributeKeyAndType) SetValueType(v SearchAttributeValueType) {
-	o.ValueType = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o SearchAttributeKeyAndType) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o SearchAttributeKeyAndType) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Key) {
-		toSerialize["key"] = o.Key
-	}
-	if !IsNil(o.ValueType) {
-		toSerialize["valueType"] = o.ValueType
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableSearchAttributeKeyAndType struct {
@@ -129,32 +94,30 @@ type NullableSearchAttributeKeyAndType struct {
 }
 
 func (v NullableSearchAttributeKeyAndType) Get() *SearchAttributeKeyAndType {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableSearchAttributeKeyAndType) Set(val *SearchAttributeKeyAndType) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableSearchAttributeKeyAndType) IsSet() bool {
-	return v.isSet
-}
+func (v NullableSearchAttributeKeyAndType) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableSearchAttributeKeyAndType) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableSearchAttributeKeyAndType) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableSearchAttributeKeyAndType(val *SearchAttributeKeyAndType) *NullableSearchAttributeKeyAndType {
-	return &NullableSearchAttributeKeyAndType{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableSearchAttributeKeyAndType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableSearchAttributeKeyAndType) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -6,7 +6,6 @@ package temporal
 
 import (
 	context "context"
-	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
 	cloudservice "go.temporal.io/api/cloud/cloudservice/v1"
@@ -29,568 +28,439 @@ type MockClientMockRecorder struct {
 }
 
 // NewMockClient creates a new mock instance.
-func NewMockClient(ctrl *gomock.Controller) *MockClient {
-	mock := &MockClient{ctrl: ctrl}
-	mock.recorder = &MockClientMockRecorder{mock}
-	return mock
-}
+func NewMockClient(ctrl *gomock.Controller) *MockClient { _ = "STUB: not implemented"; return nil }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockClient) EXPECT() *MockClientMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// CancelWorkflow mocks base method.
+	return nil
 }
 
-// CancelWorkflow mocks base method.
 func (m *MockClient) CancelWorkflow(ctx context.Context, workflowID, runID string) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CancelWorkflow", ctx, workflowID, runID)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // CancelWorkflow indicates an expected call of CancelWorkflow.
 func (mr *MockClientMockRecorder) CancelWorkflow(ctx, workflowID, runID interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CancelWorkflow", reflect.TypeOf((*MockClient)(nil).CancelWorkflow), ctx, workflowID, runID)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // CheckHealth mocks base method.
 func (m *MockClient) CheckHealth(ctx context.Context, request *client.CheckHealthRequest) (*client.CheckHealthResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CheckHealth", ctx, request)
-	ret0, _ := ret[0].(*client.CheckHealthResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // CheckHealth indicates an expected call of CheckHealth.
 func (mr *MockClientMockRecorder) CheckHealth(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CheckHealth", reflect.TypeOf((*MockClient)(nil).CheckHealth), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Close mocks base method.
-func (m *MockClient) Close() {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "Close")
-}
+func (m *MockClient) Close() { _ = "STUB: not implemented"; return }
 
 // Close indicates an expected call of Close.
-func (mr *MockClientMockRecorder) Close() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Close", reflect.TypeOf((*MockClient)(nil).Close))
-}
+func (mr *MockClientMockRecorder) Close() *gomock.Call { _ = "STUB: not implemented"; return nil }
 
 // CompleteActivity mocks base method.
 func (m *MockClient) CompleteActivity(ctx context.Context, taskToken []byte, result interface{}, err error) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CompleteActivity", ctx, taskToken, result, err)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // CompleteActivity indicates an expected call of CompleteActivity.
 func (mr *MockClientMockRecorder) CompleteActivity(ctx, taskToken, result, err interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CompleteActivity", reflect.TypeOf((*MockClient)(nil).CompleteActivity), ctx, taskToken, result, err)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // CompleteActivityByID mocks base method.
 func (m *MockClient) CompleteActivityByID(ctx context.Context, namespace, workflowID, runID, activityID string, result interface{}, err error) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CompleteActivityByID", ctx, namespace, workflowID, runID, activityID, result, err)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // CompleteActivityByID indicates an expected call of CompleteActivityByID.
 func (mr *MockClientMockRecorder) CompleteActivityByID(ctx, namespace, workflowID, runID, activityID, result, err interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CompleteActivityByID", reflect.TypeOf((*MockClient)(nil).CompleteActivityByID), ctx, namespace, workflowID, runID, activityID, result, err)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // CountWorkflow mocks base method.
 func (m *MockClient) CountWorkflow(ctx context.Context, request *workflowservice.CountWorkflowExecutionsRequest) (*workflowservice.CountWorkflowExecutionsResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CountWorkflow", ctx, request)
-	ret0, _ := ret[0].(*workflowservice.CountWorkflowExecutionsResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // CountWorkflow indicates an expected call of CountWorkflow.
 func (mr *MockClientMockRecorder) CountWorkflow(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CountWorkflow", reflect.TypeOf((*MockClient)(nil).CountWorkflow), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // DescribeTaskQueue mocks base method.
 func (m *MockClient) DescribeTaskQueue(ctx context.Context, taskqueue string, taskqueueType enums.TaskQueueType) (*workflowservice.DescribeTaskQueueResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "DescribeTaskQueue", ctx, taskqueue, taskqueueType)
-	ret0, _ := ret[0].(*workflowservice.DescribeTaskQueueResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DescribeTaskQueue indicates an expected call of DescribeTaskQueue.
 func (mr *MockClientMockRecorder) DescribeTaskQueue(ctx, taskqueue, taskqueueType interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTaskQueue", reflect.TypeOf((*MockClient)(nil).DescribeTaskQueue), ctx, taskqueue, taskqueueType)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // DescribeTaskQueueEnhanced mocks base method.
 func (m *MockClient) DescribeTaskQueueEnhanced(ctx context.Context, options client.DescribeTaskQueueEnhancedOptions) (client.TaskQueueDescription, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "DescribeTaskQueueEnhanced", ctx, options)
-	ret0, _ := ret[0].(client.TaskQueueDescription)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return *new(client.TaskQueueDescription), nil
 }
 
 // DescribeTaskQueueEnhanced indicates an expected call of DescribeTaskQueueEnhanced.
 func (mr *MockClientMockRecorder) DescribeTaskQueueEnhanced(ctx, options interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeTaskQueueEnhanced", reflect.TypeOf((*MockClient)(nil).DescribeTaskQueueEnhanced), ctx, options)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // DescribeWorkflowExecution mocks base method.
 func (m *MockClient) DescribeWorkflowExecution(ctx context.Context, workflowID, runID string) (*workflowservice.DescribeWorkflowExecutionResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "DescribeWorkflowExecution", ctx, workflowID, runID)
-	ret0, _ := ret[0].(*workflowservice.DescribeWorkflowExecutionResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // DescribeWorkflowExecution indicates an expected call of DescribeWorkflowExecution.
 func (mr *MockClientMockRecorder) DescribeWorkflowExecution(ctx, workflowID, runID interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DescribeWorkflowExecution", reflect.TypeOf((*MockClient)(nil).DescribeWorkflowExecution), ctx, workflowID, runID)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ExecuteWorkflow mocks base method.
 func (m *MockClient) ExecuteWorkflow(ctx context.Context, options client.StartWorkflowOptions, workflow interface{}, args ...interface{}) (client.WorkflowRun, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, options, workflow}
-	for _, a := range args {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "ExecuteWorkflow", varargs...)
-	ret0, _ := ret[0].(client.WorkflowRun)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return *new(client.WorkflowRun), nil
 }
 
 // ExecuteWorkflow indicates an expected call of ExecuteWorkflow.
 func (mr *MockClientMockRecorder) ExecuteWorkflow(ctx, options, workflow interface{}, args ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, options, workflow}, args...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecuteWorkflow", reflect.TypeOf((*MockClient)(nil).ExecuteWorkflow), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSearchAttributes mocks base method.
 func (m *MockClient) GetSearchAttributes(ctx context.Context) (*workflowservice.GetSearchAttributesResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetSearchAttributes", ctx)
-	ret0, _ := ret[0].(*workflowservice.GetSearchAttributesResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetSearchAttributes indicates an expected call of GetSearchAttributes.
 func (mr *MockClientMockRecorder) GetSearchAttributes(ctx interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSearchAttributes", reflect.TypeOf((*MockClient)(nil).GetSearchAttributes), ctx)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkerBuildIdCompatibility mocks base method.
 func (m *MockClient) GetWorkerBuildIdCompatibility(ctx context.Context, options *client.GetWorkerBuildIdCompatibilityOptions) (*client.WorkerBuildIDVersionSets, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetWorkerBuildIdCompatibility", ctx, options)
-	ret0, _ := ret[0].(*client.WorkerBuildIDVersionSets)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetWorkerBuildIdCompatibility indicates an expected call of GetWorkerBuildIdCompatibility.
 func (mr *MockClientMockRecorder) GetWorkerBuildIdCompatibility(ctx, options interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkerBuildIdCompatibility", reflect.TypeOf((*MockClient)(nil).GetWorkerBuildIdCompatibility), ctx, options)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkerTaskReachability mocks base method.
 func (m *MockClient) GetWorkerTaskReachability(ctx context.Context, options *client.GetWorkerTaskReachabilityOptions) (*client.WorkerTaskReachability, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetWorkerTaskReachability", ctx, options)
-	ret0, _ := ret[0].(*client.WorkerTaskReachability)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetWorkerTaskReachability indicates an expected call of GetWorkerTaskReachability.
 func (mr *MockClientMockRecorder) GetWorkerTaskReachability(ctx, options interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkerTaskReachability", reflect.TypeOf((*MockClient)(nil).GetWorkerTaskReachability), ctx, options)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkerVersioningRules mocks base method.
 func (m *MockClient) GetWorkerVersioningRules(ctx context.Context, options client.GetWorkerVersioningOptions) (*client.WorkerVersioningRules, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetWorkerVersioningRules", ctx, options)
-	ret0, _ := ret[0].(*client.WorkerVersioningRules)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // GetWorkerVersioningRules indicates an expected call of GetWorkerVersioningRules.
 func (mr *MockClientMockRecorder) GetWorkerVersioningRules(ctx, options interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkerVersioningRules", reflect.TypeOf((*MockClient)(nil).GetWorkerVersioningRules), ctx, options)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflow mocks base method.
 func (m *MockClient) GetWorkflow(ctx context.Context, workflowID, runID string) client.WorkflowRun {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetWorkflow", ctx, workflowID, runID)
-	ret0, _ := ret[0].(client.WorkflowRun)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(client.WorkflowRun)
 }
 
 // GetWorkflow indicates an expected call of GetWorkflow.
 func (mr *MockClientMockRecorder) GetWorkflow(ctx, workflowID, runID interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflow", reflect.TypeOf((*MockClient)(nil).GetWorkflow), ctx, workflowID, runID)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowHistory mocks base method.
 func (m *MockClient) GetWorkflowHistory(ctx context.Context, workflowID, runID string, isLongPoll bool, filterType enums.HistoryEventFilterType) client.HistoryEventIterator {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetWorkflowHistory", ctx, workflowID, runID, isLongPoll, filterType)
-	ret0, _ := ret[0].(client.HistoryEventIterator)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(client.HistoryEventIterator)
 }
 
 // GetWorkflowHistory indicates an expected call of GetWorkflowHistory.
 func (mr *MockClientMockRecorder) GetWorkflowHistory(ctx, workflowID, runID, isLongPoll, filterType interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflowHistory", reflect.TypeOf((*MockClient)(nil).GetWorkflowHistory), ctx, workflowID, runID, isLongPoll, filterType)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetWorkflowUpdateHandle mocks base method.
 func (m *MockClient) GetWorkflowUpdateHandle(ref client.GetWorkflowUpdateHandleOptions) client.WorkflowUpdateHandle {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GetWorkflowUpdateHandle", ref)
-	ret0, _ := ret[0].(client.WorkflowUpdateHandle)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(client.WorkflowUpdateHandle)
 }
 
 // GetWorkflowUpdateHandle indicates an expected call of GetWorkflowUpdateHandle.
 func (mr *MockClientMockRecorder) GetWorkflowUpdateHandle(ref interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkflowUpdateHandle", reflect.TypeOf((*MockClient)(nil).GetWorkflowUpdateHandle), ref)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ListArchivedWorkflow mocks base method.
 func (m *MockClient) ListArchivedWorkflow(ctx context.Context, request *workflowservice.ListArchivedWorkflowExecutionsRequest) (*workflowservice.ListArchivedWorkflowExecutionsResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ListArchivedWorkflow", ctx, request)
-	ret0, _ := ret[0].(*workflowservice.ListArchivedWorkflowExecutionsResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ListArchivedWorkflow indicates an expected call of ListArchivedWorkflow.
 func (mr *MockClientMockRecorder) ListArchivedWorkflow(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListArchivedWorkflow", reflect.TypeOf((*MockClient)(nil).ListArchivedWorkflow), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ListClosedWorkflow mocks base method.
 func (m *MockClient) ListClosedWorkflow(ctx context.Context, request *workflowservice.ListClosedWorkflowExecutionsRequest) (*workflowservice.ListClosedWorkflowExecutionsResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ListClosedWorkflow", ctx, request)
-	ret0, _ := ret[0].(*workflowservice.ListClosedWorkflowExecutionsResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ListClosedWorkflow indicates an expected call of ListClosedWorkflow.
 func (mr *MockClientMockRecorder) ListClosedWorkflow(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListClosedWorkflow", reflect.TypeOf((*MockClient)(nil).ListClosedWorkflow), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ListOpenWorkflow mocks base method.
 func (m *MockClient) ListOpenWorkflow(ctx context.Context, request *workflowservice.ListOpenWorkflowExecutionsRequest) (*workflowservice.ListOpenWorkflowExecutionsResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ListOpenWorkflow", ctx, request)
-	ret0, _ := ret[0].(*workflowservice.ListOpenWorkflowExecutionsResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ListOpenWorkflow indicates an expected call of ListOpenWorkflow.
 func (mr *MockClientMockRecorder) ListOpenWorkflow(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListOpenWorkflow", reflect.TypeOf((*MockClient)(nil).ListOpenWorkflow), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ListWorkflow mocks base method.
 func (m *MockClient) ListWorkflow(ctx context.Context, request *workflowservice.ListWorkflowExecutionsRequest) (*workflowservice.ListWorkflowExecutionsResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ListWorkflow", ctx, request)
-	ret0, _ := ret[0].(*workflowservice.ListWorkflowExecutionsResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ListWorkflow indicates an expected call of ListWorkflow.
 func (mr *MockClientMockRecorder) ListWorkflow(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListWorkflow", reflect.TypeOf((*MockClient)(nil).ListWorkflow), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // OperatorService mocks base method.
 func (m *MockClient) OperatorService() operatorservice.OperatorServiceClient {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "OperatorService")
-	ret0, _ := ret[0].(operatorservice.OperatorServiceClient)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(operatorservice.OperatorServiceClient)
 }
 
 // OperatorService indicates an expected call of OperatorService.
 func (mr *MockClientMockRecorder) OperatorService() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OperatorService", reflect.TypeOf((*MockClient)(nil).OperatorService))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // QueryWorkflow mocks base method.
 func (m *MockClient) QueryWorkflow(ctx context.Context, workflowID, runID, queryType string, args ...interface{}) (converter.EncodedValue, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, workflowID, runID, queryType}
-	for _, a := range args {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "QueryWorkflow", varargs...)
-	ret0, _ := ret[0].(converter.EncodedValue)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return *new(converter.EncodedValue), nil
 }
 
 // QueryWorkflow indicates an expected call of QueryWorkflow.
 func (mr *MockClientMockRecorder) QueryWorkflow(ctx, workflowID, runID, queryType interface{}, args ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, workflowID, runID, queryType}, args...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryWorkflow", reflect.TypeOf((*MockClient)(nil).QueryWorkflow), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // QueryWorkflowWithOptions mocks base method.
 func (m *MockClient) QueryWorkflowWithOptions(ctx context.Context, request *client.QueryWorkflowWithOptionsRequest) (*client.QueryWorkflowWithOptionsResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "QueryWorkflowWithOptions", ctx, request)
-	ret0, _ := ret[0].(*client.QueryWorkflowWithOptionsResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // QueryWorkflowWithOptions indicates an expected call of QueryWorkflowWithOptions.
 func (mr *MockClientMockRecorder) QueryWorkflowWithOptions(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "QueryWorkflowWithOptions", reflect.TypeOf((*MockClient)(nil).QueryWorkflowWithOptions), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RecordActivityHeartbeat mocks base method.
 func (m *MockClient) RecordActivityHeartbeat(ctx context.Context, taskToken []byte, details ...interface{}) error {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, taskToken}
-	for _, a := range details {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "RecordActivityHeartbeat", varargs...)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RecordActivityHeartbeat indicates an expected call of RecordActivityHeartbeat.
 func (mr *MockClientMockRecorder) RecordActivityHeartbeat(ctx, taskToken interface{}, details ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, taskToken}, details...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RecordActivityHeartbeat", reflect.TypeOf((*MockClient)(nil).RecordActivityHeartbeat), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RecordActivityHeartbeatByID mocks base method.
 func (m *MockClient) RecordActivityHeartbeatByID(ctx context.Context, namespace, workflowID, runID, activityID string, details ...interface{}) error {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, namespace, workflowID, runID, activityID}
-	for _, a := range details {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "RecordActivityHeartbeatByID", varargs...)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // RecordActivityHeartbeatByID indicates an expected call of RecordActivityHeartbeatByID.
 func (mr *MockClientMockRecorder) RecordActivityHeartbeatByID(ctx, namespace, workflowID, runID, activityID interface{}, details ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, namespace, workflowID, runID, activityID}, details...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RecordActivityHeartbeatByID", reflect.TypeOf((*MockClient)(nil).RecordActivityHeartbeatByID), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ResetWorkflowExecution mocks base method.
 func (m *MockClient) ResetWorkflowExecution(ctx context.Context, request *workflowservice.ResetWorkflowExecutionRequest) (*workflowservice.ResetWorkflowExecutionResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ResetWorkflowExecution", ctx, request)
-	ret0, _ := ret[0].(*workflowservice.ResetWorkflowExecutionResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ResetWorkflowExecution indicates an expected call of ResetWorkflowExecution.
 func (mr *MockClientMockRecorder) ResetWorkflowExecution(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ResetWorkflowExecution", reflect.TypeOf((*MockClient)(nil).ResetWorkflowExecution), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ScanWorkflow mocks base method.
 func (m *MockClient) ScanWorkflow(ctx context.Context, request *workflowservice.ScanWorkflowExecutionsRequest) (*workflowservice.ScanWorkflowExecutionsResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ScanWorkflow", ctx, request)
-	ret0, _ := ret[0].(*workflowservice.ScanWorkflowExecutionsResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ScanWorkflow indicates an expected call of ScanWorkflow.
 func (mr *MockClientMockRecorder) ScanWorkflow(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ScanWorkflow", reflect.TypeOf((*MockClient)(nil).ScanWorkflow), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // ScheduleClient mocks base method.
 func (m *MockClient) ScheduleClient() client.ScheduleClient {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "ScheduleClient")
-	ret0, _ := ret[0].(client.ScheduleClient)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(client.ScheduleClient)
 }
 
 // ScheduleClient indicates an expected call of ScheduleClient.
 func (mr *MockClientMockRecorder) ScheduleClient() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ScheduleClient", reflect.TypeOf((*MockClient)(nil).ScheduleClient))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SignalWithStartWorkflow mocks base method.
 func (m *MockClient) SignalWithStartWorkflow(ctx context.Context, workflowID, signalName string, signalArg interface{}, options client.StartWorkflowOptions, workflow interface{}, workflowArgs ...interface{}) (client.WorkflowRun, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, workflowID, signalName, signalArg, options, workflow}
-	for _, a := range workflowArgs {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "SignalWithStartWorkflow", varargs...)
-	ret0, _ := ret[0].(client.WorkflowRun)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return *new(client.WorkflowRun), nil
 }
 
 // SignalWithStartWorkflow indicates an expected call of SignalWithStartWorkflow.
 func (mr *MockClientMockRecorder) SignalWithStartWorkflow(ctx, workflowID, signalName, signalArg, options, workflow interface{}, workflowArgs ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, workflowID, signalName, signalArg, options, workflow}, workflowArgs...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SignalWithStartWorkflow", reflect.TypeOf((*MockClient)(nil).SignalWithStartWorkflow), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SignalWorkflow mocks base method.
 func (m *MockClient) SignalWorkflow(ctx context.Context, workflowID, runID, signalName string, arg interface{}) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "SignalWorkflow", ctx, workflowID, runID, signalName, arg)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // SignalWorkflow indicates an expected call of SignalWorkflow.
 func (mr *MockClientMockRecorder) SignalWorkflow(ctx, workflowID, runID, signalName, arg interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SignalWorkflow", reflect.TypeOf((*MockClient)(nil).SignalWorkflow), ctx, workflowID, runID, signalName, arg)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TerminateWorkflow mocks base method.
 func (m *MockClient) TerminateWorkflow(ctx context.Context, workflowID, runID, reason string, details ...interface{}) error {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, workflowID, runID, reason}
-	for _, a := range details {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "TerminateWorkflow", varargs...)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // TerminateWorkflow indicates an expected call of TerminateWorkflow.
 func (mr *MockClientMockRecorder) TerminateWorkflow(ctx, workflowID, runID, reason interface{}, details ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, workflowID, runID, reason}, details...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TerminateWorkflow", reflect.TypeOf((*MockClient)(nil).TerminateWorkflow), varargs...)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UpdateWorkerBuildIdCompatibility mocks base method.
 func (m *MockClient) UpdateWorkerBuildIdCompatibility(ctx context.Context, options *client.UpdateWorkerBuildIdCompatibilityOptions) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "UpdateWorkerBuildIdCompatibility", ctx, options)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UpdateWorkerBuildIdCompatibility indicates an expected call of UpdateWorkerBuildIdCompatibility.
 func (mr *MockClientMockRecorder) UpdateWorkerBuildIdCompatibility(ctx, options interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkerBuildIdCompatibility", reflect.TypeOf((*MockClient)(nil).UpdateWorkerBuildIdCompatibility), ctx, options)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UpdateWorkerVersioningRules mocks base method.
 func (m *MockClient) UpdateWorkerVersioningRules(ctx context.Context, options client.UpdateWorkerVersioningRulesOptions) (*client.WorkerVersioningRules, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "UpdateWorkerVersioningRules", ctx, options)
-	ret0, _ := ret[0].(*client.WorkerVersioningRules)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // UpdateWorkerVersioningRules indicates an expected call of UpdateWorkerVersioningRules.
 func (mr *MockClientMockRecorder) UpdateWorkerVersioningRules(ctx, options interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkerVersioningRules", reflect.TypeOf((*MockClient)(nil).UpdateWorkerVersioningRules), ctx, options)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // UpdateWorkflow mocks base method.
 func (m *MockClient) UpdateWorkflow(ctx context.Context, options client.UpdateWorkflowOptions) (client.WorkflowUpdateHandle, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "UpdateWorkflow", ctx, options)
-	ret0, _ := ret[0].(client.WorkflowUpdateHandle)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return *new(client.WorkflowUpdateHandle), nil
 }
 
 // UpdateWorkflow indicates an expected call of UpdateWorkflow.
 func (mr *MockClientMockRecorder) UpdateWorkflow(ctx, options interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkflow", reflect.TypeOf((*MockClient)(nil).UpdateWorkflow), ctx, options)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // WorkflowService mocks base method.
 func (m *MockClient) WorkflowService() workflowservice.WorkflowServiceClient {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "WorkflowService")
-	ret0, _ := ret[0].(workflowservice.WorkflowServiceClient)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(workflowservice.WorkflowServiceClient)
 }
 
 // WorkflowService indicates an expected call of WorkflowService.
 func (mr *MockClientMockRecorder) WorkflowService() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WorkflowService", reflect.TypeOf((*MockClient)(nil).WorkflowService))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MockCloudOperationsClient is a mock of CloudOperationsClient interface.
@@ -606,40 +476,36 @@ type MockCloudOperationsClientMockRecorder struct {
 
 // NewMockCloudOperationsClient creates a new mock instance.
 func NewMockCloudOperationsClient(ctrl *gomock.Controller) *MockCloudOperationsClient {
-	mock := &MockCloudOperationsClient{ctrl: ctrl}
-	mock.recorder = &MockCloudOperationsClientMockRecorder{mock}
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockCloudOperationsClient) EXPECT() *MockCloudOperationsClientMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// Close mocks base method.
+	return nil
 }
 
-// Close mocks base method.
-func (m *MockCloudOperationsClient) Close() {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "Close")
-}
+func (m *MockCloudOperationsClient) Close() { _ = "STUB: not implemented"; return }
 
 // Close indicates an expected call of Close.
 func (mr *MockCloudOperationsClientMockRecorder) Close() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Close", reflect.TypeOf((*MockCloudOperationsClient)(nil).Close))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // CloudService mocks base method.
 func (m *MockCloudOperationsClient) CloudService() cloudservice.CloudServiceClient {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "CloudService")
-	ret0, _ := ret[0].(cloudservice.CloudServiceClient)
-	return ret0
+	_ = "STUB: not implemented"
+	return *new(cloudservice.CloudServiceClient)
 }
 
 // CloudService indicates an expected call of CloudService.
 func (mr *MockCloudOperationsClientMockRecorder) CloudService() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloudService", reflect.TypeOf((*MockCloudOperationsClient)(nil).CloudService))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // MockNamespaceClient is a mock of NamespaceClient interface.
@@ -655,67 +521,58 @@ type MockNamespaceClientMockRecorder struct {
 
 // NewMockNamespaceClient creates a new mock instance.
 func NewMockNamespaceClient(ctrl *gomock.Controller) *MockNamespaceClient {
-	mock := &MockNamespaceClient{ctrl: ctrl}
-	mock.recorder = &MockNamespaceClientMockRecorder{mock}
-	return mock
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockNamespaceClient) EXPECT() *MockNamespaceClientMockRecorder {
-	return m.recorder
+	_ = "STUB: not implemented"
+
+	// Close mocks base method.
+	return nil
 }
 
-// Close mocks base method.
-func (m *MockNamespaceClient) Close() {
-	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "Close")
-}
+func (m *MockNamespaceClient) Close() { _ = "STUB: not implemented"; return }
 
 // Close indicates an expected call of Close.
 func (mr *MockNamespaceClientMockRecorder) Close() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Close", reflect.TypeOf((*MockNamespaceClient)(nil).Close))
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Describe mocks base method.
 func (m *MockNamespaceClient) Describe(ctx context.Context, name string) (*workflowservice.DescribeNamespaceResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Describe", ctx, name)
-	ret0, _ := ret[0].(*workflowservice.DescribeNamespaceResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // Describe indicates an expected call of Describe.
 func (mr *MockNamespaceClientMockRecorder) Describe(ctx, name interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Describe", reflect.TypeOf((*MockNamespaceClient)(nil).Describe), ctx, name)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Register mocks base method.
 func (m *MockNamespaceClient) Register(ctx context.Context, request *workflowservice.RegisterNamespaceRequest) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Register", ctx, request)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Register indicates an expected call of Register.
 func (mr *MockNamespaceClientMockRecorder) Register(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Register", reflect.TypeOf((*MockNamespaceClient)(nil).Register), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Update mocks base method.
 func (m *MockNamespaceClient) Update(ctx context.Context, request *workflowservice.UpdateNamespaceRequest) error {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Update", ctx, request)
-	ret0, _ := ret[0].(error)
-	return ret0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Update indicates an expected call of Update.
 func (mr *MockNamespaceClientMockRecorder) Update(ctx, request interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Update", reflect.TypeOf((*MockNamespaceClient)(nil).Update), ctx, request)
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the TimerCommand type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &TimerCommand{}
 
@@ -28,135 +24,73 @@ type TimerCommand struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTimerCommand() *TimerCommand {
-	this := TimerCommand{}
-	return &this
-}
+func NewTimerCommand() *TimerCommand { _ = "STUB: not implemented"; return nil }
 
 // NewTimerCommandWithDefaults instantiates a new TimerCommand object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewTimerCommandWithDefaults() *TimerCommand {
-	this := TimerCommand{}
-	return &this
-}
+func NewTimerCommandWithDefaults() *TimerCommand { _ = "STUB: not implemented"; return nil }
 
 // GetCommandId returns the CommandId field value if set, zero value otherwise.
-func (o *TimerCommand) GetCommandId() string {
-	if o == nil || IsNil(o.CommandId) {
-		var ret string
-		return ret
-	}
-	return *o.CommandId
-}
+func (o *TimerCommand) GetCommandId() string { _ = "STUB: not implemented"; return "" }
 
 // GetCommandIdOk returns a tuple with the CommandId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TimerCommand) GetCommandIdOk() (*string, bool) {
-	if o == nil || IsNil(o.CommandId) {
-		return nil, false
-	}
-	return o.CommandId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasCommandId returns a boolean if a field has been set.
-func (o *TimerCommand) HasCommandId() bool {
-	if o != nil && !IsNil(o.CommandId) {
-		return true
-	}
-
-	return false
-}
+func (o *TimerCommand) HasCommandId() bool { _ = "STUB: not implemented"; return false }
 
 // SetCommandId gets a reference to the given string and assigns it to the CommandId field.
 func (o *TimerCommand) SetCommandId(v string) {
-	o.CommandId = &v
+	_ = "STUB: not implemented"
+
+	// GetFiringUnixTimestampSeconds returns the FiringUnixTimestampSeconds field value if set, zero value otherwise.
+	return
 }
 
-// GetFiringUnixTimestampSeconds returns the FiringUnixTimestampSeconds field value if set, zero value otherwise.
-func (o *TimerCommand) GetFiringUnixTimestampSeconds() int64 {
-	if o == nil || IsNil(o.FiringUnixTimestampSeconds) {
-		var ret int64
-		return ret
-	}
-	return *o.FiringUnixTimestampSeconds
-}
+func (o *TimerCommand) GetFiringUnixTimestampSeconds() int64 { _ = "STUB: not implemented"; return 0 }
 
 // GetFiringUnixTimestampSecondsOk returns a tuple with the FiringUnixTimestampSeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TimerCommand) GetFiringUnixTimestampSecondsOk() (*int64, bool) {
-	if o == nil || IsNil(o.FiringUnixTimestampSeconds) {
-		return nil, false
-	}
-	return o.FiringUnixTimestampSeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasFiringUnixTimestampSeconds returns a boolean if a field has been set.
 func (o *TimerCommand) HasFiringUnixTimestampSeconds() bool {
-	if o != nil && !IsNil(o.FiringUnixTimestampSeconds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetFiringUnixTimestampSeconds gets a reference to the given int64 and assigns it to the FiringUnixTimestampSeconds field.
-func (o *TimerCommand) SetFiringUnixTimestampSeconds(v int64) {
-	o.FiringUnixTimestampSeconds = &v
-}
+func (o *TimerCommand) SetFiringUnixTimestampSeconds(v int64) { _ = "STUB: not implemented"; return }
 
 // GetDurationSeconds returns the DurationSeconds field value if set, zero value otherwise.
-func (o *TimerCommand) GetDurationSeconds() int64 {
-	if o == nil || IsNil(o.DurationSeconds) {
-		var ret int64
-		return ret
-	}
-	return *o.DurationSeconds
-}
+func (o *TimerCommand) GetDurationSeconds() int64 { _ = "STUB: not implemented"; return 0 }
 
 // GetDurationSecondsOk returns a tuple with the DurationSeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *TimerCommand) GetDurationSecondsOk() (*int64, bool) {
-	if o == nil || IsNil(o.DurationSeconds) {
-		return nil, false
-	}
-	return o.DurationSeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDurationSeconds returns a boolean if a field has been set.
-func (o *TimerCommand) HasDurationSeconds() bool {
-	if o != nil && !IsNil(o.DurationSeconds) {
-		return true
-	}
-
-	return false
-}
+func (o *TimerCommand) HasDurationSeconds() bool { _ = "STUB: not implemented"; return false }
 
 // SetDurationSeconds gets a reference to the given int64 and assigns it to the DurationSeconds field.
-func (o *TimerCommand) SetDurationSeconds(v int64) {
-	o.DurationSeconds = &v
-}
+func (o *TimerCommand) SetDurationSeconds(v int64) { _ = "STUB: not implemented"; return }
 
-func (o TimerCommand) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o TimerCommand) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o TimerCommand) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.CommandId) {
-		toSerialize["commandId"] = o.CommandId
-	}
-	if !IsNil(o.FiringUnixTimestampSeconds) {
-		toSerialize["firingUnixTimestampSeconds"] = o.FiringUnixTimestampSeconds
-	}
-	if !IsNil(o.DurationSeconds) {
-		toSerialize["durationSeconds"] = o.DurationSeconds
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableTimerCommand struct {
@@ -164,33 +98,25 @@ type NullableTimerCommand struct {
 	isSet bool
 }
 
-func (v NullableTimerCommand) Get() *TimerCommand {
-	return v.value
-}
+func (v NullableTimerCommand) Get() *TimerCommand { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableTimerCommand) Set(val *TimerCommand) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableTimerCommand) Set(val *TimerCommand) { _ = "STUB: not implemented"; return }
 
-func (v NullableTimerCommand) IsSet() bool {
-	return v.isSet
-}
+func (v NullableTimerCommand) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableTimerCommand) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableTimerCommand) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableTimerCommand(val *TimerCommand) *NullableTimerCommand {
-	return &NullableTimerCommand{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableTimerCommand) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableTimerCommand) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

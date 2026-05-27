@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the CommandResults type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &CommandResults{}
 
@@ -30,205 +26,111 @@ type CommandResults struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCommandResults() *CommandResults {
-	this := CommandResults{}
-	return &this
-}
+func NewCommandResults() *CommandResults { _ = "STUB: not implemented"; return nil }
 
 // NewCommandResultsWithDefaults instantiates a new CommandResults object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewCommandResultsWithDefaults() *CommandResults {
-	this := CommandResults{}
-	return &this
-}
+func NewCommandResultsWithDefaults() *CommandResults { _ = "STUB: not implemented"; return nil }
 
 // GetSignalResults returns the SignalResults field value if set, zero value otherwise.
-func (o *CommandResults) GetSignalResults() []SignalResult {
-	if o == nil || IsNil(o.SignalResults) {
-		var ret []SignalResult
-		return ret
-	}
-	return o.SignalResults
-}
+func (o *CommandResults) GetSignalResults() []SignalResult { _ = "STUB: not implemented"; return nil }
 
 // GetSignalResultsOk returns a tuple with the SignalResults field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CommandResults) GetSignalResultsOk() ([]SignalResult, bool) {
-	if o == nil || IsNil(o.SignalResults) {
-		return nil, false
-	}
-	return o.SignalResults, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSignalResults returns a boolean if a field has been set.
-func (o *CommandResults) HasSignalResults() bool {
-	if o != nil && !IsNil(o.SignalResults) {
-		return true
-	}
-
-	return false
-}
+func (o *CommandResults) HasSignalResults() bool { _ = "STUB: not implemented"; return false }
 
 // SetSignalResults gets a reference to the given []SignalResult and assigns it to the SignalResults field.
-func (o *CommandResults) SetSignalResults(v []SignalResult) {
-	o.SignalResults = v
-}
+func (o *CommandResults) SetSignalResults(v []SignalResult) { _ = "STUB: not implemented"; return }
 
 // GetInterStateChannelResults returns the InterStateChannelResults field value if set, zero value otherwise.
 func (o *CommandResults) GetInterStateChannelResults() []InterStateChannelResult {
-	if o == nil || IsNil(o.InterStateChannelResults) {
-		var ret []InterStateChannelResult
-		return ret
-	}
-	return o.InterStateChannelResults
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetInterStateChannelResultsOk returns a tuple with the InterStateChannelResults field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CommandResults) GetInterStateChannelResultsOk() ([]InterStateChannelResult, bool) {
-	if o == nil || IsNil(o.InterStateChannelResults) {
-		return nil, false
-	}
-	return o.InterStateChannelResults, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasInterStateChannelResults returns a boolean if a field has been set.
 func (o *CommandResults) HasInterStateChannelResults() bool {
-	if o != nil && !IsNil(o.InterStateChannelResults) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetInterStateChannelResults gets a reference to the given []InterStateChannelResult and assigns it to the InterStateChannelResults field.
 func (o *CommandResults) SetInterStateChannelResults(v []InterStateChannelResult) {
-	o.InterStateChannelResults = v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetTimerResults returns the TimerResults field value if set, zero value otherwise.
-func (o *CommandResults) GetTimerResults() []TimerResult {
-	if o == nil || IsNil(o.TimerResults) {
-		var ret []TimerResult
-		return ret
-	}
-	return o.TimerResults
-}
+func (o *CommandResults) GetTimerResults() []TimerResult { _ = "STUB: not implemented"; return nil }
 
 // GetTimerResultsOk returns a tuple with the TimerResults field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CommandResults) GetTimerResultsOk() ([]TimerResult, bool) {
-	if o == nil || IsNil(o.TimerResults) {
-		return nil, false
-	}
-	return o.TimerResults, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasTimerResults returns a boolean if a field has been set.
-func (o *CommandResults) HasTimerResults() bool {
-	if o != nil && !IsNil(o.TimerResults) {
-		return true
-	}
-
-	return false
-}
+func (o *CommandResults) HasTimerResults() bool { _ = "STUB: not implemented"; return false }
 
 // SetTimerResults gets a reference to the given []TimerResult and assigns it to the TimerResults field.
 func (o *CommandResults) SetTimerResults(v []TimerResult) {
-	o.TimerResults = v
+	_ = "STUB: not implemented"
+
+	// GetStateStartApiSucceeded returns the StateStartApiSucceeded field value if set, zero value otherwise.
+	return
 }
 
-// GetStateStartApiSucceeded returns the StateStartApiSucceeded field value if set, zero value otherwise.
-func (o *CommandResults) GetStateStartApiSucceeded() bool {
-	if o == nil || IsNil(o.StateStartApiSucceeded) {
-		var ret bool
-		return ret
-	}
-	return *o.StateStartApiSucceeded
-}
+func (o *CommandResults) GetStateStartApiSucceeded() bool { _ = "STUB: not implemented"; return false }
 
 // GetStateStartApiSucceededOk returns a tuple with the StateStartApiSucceeded field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CommandResults) GetStateStartApiSucceededOk() (*bool, bool) {
-	if o == nil || IsNil(o.StateStartApiSucceeded) {
-		return nil, false
-	}
-	return o.StateStartApiSucceeded, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateStartApiSucceeded returns a boolean if a field has been set.
-func (o *CommandResults) HasStateStartApiSucceeded() bool {
-	if o != nil && !IsNil(o.StateStartApiSucceeded) {
-		return true
-	}
-
-	return false
-}
+func (o *CommandResults) HasStateStartApiSucceeded() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateStartApiSucceeded gets a reference to the given bool and assigns it to the StateStartApiSucceeded field.
-func (o *CommandResults) SetStateStartApiSucceeded(v bool) {
-	o.StateStartApiSucceeded = &v
-}
+func (o *CommandResults) SetStateStartApiSucceeded(v bool) { _ = "STUB: not implemented"; return }
 
 // GetStateWaitUntilFailed returns the StateWaitUntilFailed field value if set, zero value otherwise.
-func (o *CommandResults) GetStateWaitUntilFailed() bool {
-	if o == nil || IsNil(o.StateWaitUntilFailed) {
-		var ret bool
-		return ret
-	}
-	return *o.StateWaitUntilFailed
-}
+func (o *CommandResults) GetStateWaitUntilFailed() bool { _ = "STUB: not implemented"; return false }
 
 // GetStateWaitUntilFailedOk returns a tuple with the StateWaitUntilFailed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *CommandResults) GetStateWaitUntilFailedOk() (*bool, bool) {
-	if o == nil || IsNil(o.StateWaitUntilFailed) {
-		return nil, false
-	}
-	return o.StateWaitUntilFailed, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStateWaitUntilFailed returns a boolean if a field has been set.
-func (o *CommandResults) HasStateWaitUntilFailed() bool {
-	if o != nil && !IsNil(o.StateWaitUntilFailed) {
-		return true
-	}
-
-	return false
-}
+func (o *CommandResults) HasStateWaitUntilFailed() bool { _ = "STUB: not implemented"; return false }
 
 // SetStateWaitUntilFailed gets a reference to the given bool and assigns it to the StateWaitUntilFailed field.
-func (o *CommandResults) SetStateWaitUntilFailed(v bool) {
-	o.StateWaitUntilFailed = &v
-}
+func (o *CommandResults) SetStateWaitUntilFailed(v bool) { _ = "STUB: not implemented"; return }
 
-func (o CommandResults) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o CommandResults) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o CommandResults) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.SignalResults) {
-		toSerialize["signalResults"] = o.SignalResults
-	}
-	if !IsNil(o.InterStateChannelResults) {
-		toSerialize["interStateChannelResults"] = o.InterStateChannelResults
-	}
-	if !IsNil(o.TimerResults) {
-		toSerialize["timerResults"] = o.TimerResults
-	}
-	if !IsNil(o.StateStartApiSucceeded) {
-		toSerialize["stateStartApiSucceeded"] = o.StateStartApiSucceeded
-	}
-	if !IsNil(o.StateWaitUntilFailed) {
-		toSerialize["stateWaitUntilFailed"] = o.StateWaitUntilFailed
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableCommandResults struct {
@@ -236,33 +138,25 @@ type NullableCommandResults struct {
 	isSet bool
 }
 
-func (v NullableCommandResults) Get() *CommandResults {
-	return v.value
-}
+func (v NullableCommandResults) Get() *CommandResults { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableCommandResults) Set(val *CommandResults) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableCommandResults) Set(val *CommandResults) { _ = "STUB: not implemented"; return }
 
-func (v NullableCommandResults) IsSet() bool {
-	return v.isSet
-}
+func (v NullableCommandResults) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableCommandResults) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableCommandResults) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableCommandResults(val *CommandResults) *NullableCommandResults {
-	return &NullableCommandResults{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableCommandResults) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableCommandResults) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

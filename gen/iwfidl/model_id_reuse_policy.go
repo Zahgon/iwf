@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // IDReusePolicy the model 'IDReusePolicy'
 type IDReusePolicy string
 
@@ -36,81 +31,45 @@ var AllowedIDReusePolicyEnumValues = []IDReusePolicy{
 	"ALLOW_TERMINATE_IF_RUNNING",
 }
 
-func (v *IDReusePolicy) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := IDReusePolicy(value)
-	for _, existing := range AllowedIDReusePolicyEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid IDReusePolicy", value)
-}
+func (v *IDReusePolicy) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }
 
 // NewIDReusePolicyFromValue returns a pointer to a valid IDReusePolicy
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewIDReusePolicyFromValue(v string) (*IDReusePolicy, error) {
-	ev := IDReusePolicy(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for IDReusePolicy: valid values are %v", v, AllowedIDReusePolicyEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v IDReusePolicy) IsValid() bool {
-	for _, existing := range AllowedIDReusePolicyEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v IDReusePolicy) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to IDReusePolicy value
-func (v IDReusePolicy) Ptr() *IDReusePolicy {
-	return &v
-}
+func (v IDReusePolicy) Ptr() *IDReusePolicy { _ = "STUB: not implemented"; return nil }
 
 type NullableIDReusePolicy struct {
 	value *IDReusePolicy
 	isSet bool
 }
 
-func (v NullableIDReusePolicy) Get() *IDReusePolicy {
-	return v.value
-}
+func (v NullableIDReusePolicy) Get() *IDReusePolicy { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableIDReusePolicy) Set(val *IDReusePolicy) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableIDReusePolicy) Set(val *IDReusePolicy) { _ = "STUB: not implemented"; return }
 
-func (v NullableIDReusePolicy) IsSet() bool {
-	return v.isSet
-}
+func (v NullableIDReusePolicy) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableIDReusePolicy) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableIDReusePolicy) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableIDReusePolicy(val *IDReusePolicy) *NullableIDReusePolicy {
-	return &NullableIDReusePolicy{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableIDReusePolicy) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableIDReusePolicy) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

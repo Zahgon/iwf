@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // SearchAttributeValueType the model 'SearchAttributeValueType'
 type SearchAttributeValueType string
 
@@ -41,46 +36,24 @@ var AllowedSearchAttributeValueTypeEnumValues = []SearchAttributeValueType{
 }
 
 func (v *SearchAttributeValueType) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := SearchAttributeValueType(value)
-	for _, existing := range AllowedSearchAttributeValueTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid SearchAttributeValueType", value)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewSearchAttributeValueTypeFromValue returns a pointer to a valid SearchAttributeValueType
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewSearchAttributeValueTypeFromValue(v string) (*SearchAttributeValueType, error) {
-	ev := SearchAttributeValueType(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for SearchAttributeValueType: valid values are %v", v, AllowedSearchAttributeValueTypeEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v SearchAttributeValueType) IsValid() bool {
-	for _, existing := range AllowedSearchAttributeValueTypeEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v SearchAttributeValueType) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to SearchAttributeValueType value
 func (v SearchAttributeValueType) Ptr() *SearchAttributeValueType {
-	return &v
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type NullableSearchAttributeValueType struct {
@@ -89,32 +62,30 @@ type NullableSearchAttributeValueType struct {
 }
 
 func (v NullableSearchAttributeValueType) Get() *SearchAttributeValueType {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableSearchAttributeValueType) Set(val *SearchAttributeValueType) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableSearchAttributeValueType) IsSet() bool {
-	return v.isSet
-}
+func (v NullableSearchAttributeValueType) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableSearchAttributeValueType) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableSearchAttributeValueType) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableSearchAttributeValueType(val *SearchAttributeValueType) *NullableSearchAttributeValueType {
-	return &NullableSearchAttributeValueType{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableSearchAttributeValueType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableSearchAttributeValueType) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

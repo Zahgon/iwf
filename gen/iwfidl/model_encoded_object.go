@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the EncodedObject type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &EncodedObject{}
 
@@ -29,170 +25,91 @@ type EncodedObject struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewEncodedObject() *EncodedObject {
-	this := EncodedObject{}
-	return &this
-}
+func NewEncodedObject() *EncodedObject { _ = "STUB: not implemented"; return nil }
 
 // NewEncodedObjectWithDefaults instantiates a new EncodedObject object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewEncodedObjectWithDefaults() *EncodedObject {
-	this := EncodedObject{}
-	return &this
-}
+func NewEncodedObjectWithDefaults() *EncodedObject { _ = "STUB: not implemented"; return nil }
 
 // GetExtStoreId returns the ExtStoreId field value if set, zero value otherwise.
-func (o *EncodedObject) GetExtStoreId() string {
-	if o == nil || IsNil(o.ExtStoreId) {
-		var ret string
-		return ret
-	}
-	return *o.ExtStoreId
-}
+func (o *EncodedObject) GetExtStoreId() string { _ = "STUB: not implemented"; return "" }
 
 // GetExtStoreIdOk returns a tuple with the ExtStoreId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EncodedObject) GetExtStoreIdOk() (*string, bool) {
-	if o == nil || IsNil(o.ExtStoreId) {
-		return nil, false
-	}
-	return o.ExtStoreId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExtStoreId returns a boolean if a field has been set.
-func (o *EncodedObject) HasExtStoreId() bool {
-	if o != nil && !IsNil(o.ExtStoreId) {
-		return true
-	}
-
-	return false
-}
+func (o *EncodedObject) HasExtStoreId() bool { _ = "STUB: not implemented"; return false }
 
 // SetExtStoreId gets a reference to the given string and assigns it to the ExtStoreId field.
 func (o *EncodedObject) SetExtStoreId(v string) {
-	o.ExtStoreId = &v
+	_ = "STUB: not implemented"
+
+	// GetExtPath returns the ExtPath field value if set, zero value otherwise.
+	return
 }
 
-// GetExtPath returns the ExtPath field value if set, zero value otherwise.
-func (o *EncodedObject) GetExtPath() string {
-	if o == nil || IsNil(o.ExtPath) {
-		var ret string
-		return ret
-	}
-	return *o.ExtPath
-}
+func (o *EncodedObject) GetExtPath() string { _ = "STUB: not implemented"; return "" }
 
 // GetExtPathOk returns a tuple with the ExtPath field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EncodedObject) GetExtPathOk() (*string, bool) {
-	if o == nil || IsNil(o.ExtPath) {
-		return nil, false
-	}
-	return o.ExtPath, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExtPath returns a boolean if a field has been set.
-func (o *EncodedObject) HasExtPath() bool {
-	if o != nil && !IsNil(o.ExtPath) {
-		return true
-	}
-
-	return false
-}
+func (o *EncodedObject) HasExtPath() bool { _ = "STUB: not implemented"; return false }
 
 // SetExtPath gets a reference to the given string and assigns it to the ExtPath field.
 func (o *EncodedObject) SetExtPath(v string) {
-	o.ExtPath = &v
+	_ = "STUB: not implemented"
+
+	// GetEncoding returns the Encoding field value if set, zero value otherwise.
+	return
 }
 
-// GetEncoding returns the Encoding field value if set, zero value otherwise.
-func (o *EncodedObject) GetEncoding() string {
-	if o == nil || IsNil(o.Encoding) {
-		var ret string
-		return ret
-	}
-	return *o.Encoding
-}
+func (o *EncodedObject) GetEncoding() string { _ = "STUB: not implemented"; return "" }
 
 // GetEncodingOk returns a tuple with the Encoding field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *EncodedObject) GetEncodingOk() (*string, bool) {
-	if o == nil || IsNil(o.Encoding) {
-		return nil, false
-	}
-	return o.Encoding, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasEncoding returns a boolean if a field has been set.
-func (o *EncodedObject) HasEncoding() bool {
-	if o != nil && !IsNil(o.Encoding) {
-		return true
-	}
-
-	return false
-}
+func (o *EncodedObject) HasEncoding() bool { _ = "STUB: not implemented"; return false }
 
 // SetEncoding gets a reference to the given string and assigns it to the Encoding field.
 func (o *EncodedObject) SetEncoding(v string) {
-	o.Encoding = &v
+	_ = "STUB: not implemented"
+
+	// GetData returns the Data field value if set, zero value otherwise.
+	return
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *EncodedObject) GetData() string {
-	if o == nil || IsNil(o.Data) {
-		var ret string
-		return ret
-	}
-	return *o.Data
-}
+func (o *EncodedObject) GetData() string { _ = "STUB: not implemented"; return "" }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *EncodedObject) GetDataOk() (*string, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
+func (o *EncodedObject) GetDataOk() (*string, bool) { _ = "STUB: not implemented"; return nil, false }
 
 // HasData returns a boolean if a field has been set.
-func (o *EncodedObject) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
+func (o *EncodedObject) HasData() bool { _ = "STUB: not implemented"; return false }
 
 // SetData gets a reference to the given string and assigns it to the Data field.
-func (o *EncodedObject) SetData(v string) {
-	o.Data = &v
-}
+func (o *EncodedObject) SetData(v string) { _ = "STUB: not implemented"; return }
 
-func (o EncodedObject) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
-}
+func (o EncodedObject) MarshalJSON() ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
 func (o EncodedObject) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.ExtStoreId) {
-		toSerialize["extStoreId"] = o.ExtStoreId
-	}
-	if !IsNil(o.ExtPath) {
-		toSerialize["extPath"] = o.ExtPath
-	}
-	if !IsNil(o.Encoding) {
-		toSerialize["encoding"] = o.Encoding
-	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableEncodedObject struct {
@@ -200,33 +117,25 @@ type NullableEncodedObject struct {
 	isSet bool
 }
 
-func (v NullableEncodedObject) Get() *EncodedObject {
-	return v.value
-}
+func (v NullableEncodedObject) Get() *EncodedObject { _ = "STUB: not implemented"; return nil }
 
-func (v *NullableEncodedObject) Set(val *EncodedObject) {
-	v.value = val
-	v.isSet = true
-}
+func (v *NullableEncodedObject) Set(val *EncodedObject) { _ = "STUB: not implemented"; return }
 
-func (v NullableEncodedObject) IsSet() bool {
-	return v.isSet
-}
+func (v NullableEncodedObject) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableEncodedObject) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableEncodedObject) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableEncodedObject(val *EncodedObject) *NullableEncodedObject {
-	return &NullableEncodedObject{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableEncodedObject) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableEncodedObject) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

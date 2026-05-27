@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // CommandWaitingType the model 'CommandWaitingType'
 type CommandWaitingType string
 
@@ -32,48 +27,20 @@ var AllowedCommandWaitingTypeEnumValues = []CommandWaitingType{
 	"ANY_COMBINATION_COMPLETED",
 }
 
-func (v *CommandWaitingType) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := CommandWaitingType(value)
-	for _, existing := range AllowedCommandWaitingTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid CommandWaitingType", value)
-}
+func (v *CommandWaitingType) UnmarshalJSON(src []byte) error { _ = "STUB: not implemented"; return nil }
 
 // NewCommandWaitingTypeFromValue returns a pointer to a valid CommandWaitingType
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewCommandWaitingTypeFromValue(v string) (*CommandWaitingType, error) {
-	ev := CommandWaitingType(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for CommandWaitingType: valid values are %v", v, AllowedCommandWaitingTypeEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v CommandWaitingType) IsValid() bool {
-	for _, existing := range AllowedCommandWaitingTypeEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v CommandWaitingType) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to CommandWaitingType value
-func (v CommandWaitingType) Ptr() *CommandWaitingType {
-	return &v
-}
+func (v CommandWaitingType) Ptr() *CommandWaitingType { _ = "STUB: not implemented"; return nil }
 
 type NullableCommandWaitingType struct {
 	value *CommandWaitingType
@@ -81,32 +48,30 @@ type NullableCommandWaitingType struct {
 }
 
 func (v NullableCommandWaitingType) Get() *CommandWaitingType {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableCommandWaitingType) Set(val *CommandWaitingType) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableCommandWaitingType) IsSet() bool {
-	return v.isSet
-}
+func (v NullableCommandWaitingType) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableCommandWaitingType) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableCommandWaitingType) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableCommandWaitingType(val *CommandWaitingType) *NullableCommandWaitingType {
-	return &NullableCommandWaitingType{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableCommandWaitingType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableCommandWaitingType) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

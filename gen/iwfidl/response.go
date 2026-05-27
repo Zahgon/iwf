@@ -33,15 +33,10 @@ type APIResponse struct {
 }
 
 // NewAPIResponse returns a new APIResponse object.
-func NewAPIResponse(r *http.Response) *APIResponse {
-
-	response := &APIResponse{Response: r}
-	return response
-}
+func NewAPIResponse(r *http.Response) *APIResponse { _ = "STUB: not implemented"; return nil }
 
 // NewAPIResponseWithError returns a new APIResponse object with the provided error message.
 func NewAPIResponseWithError(errorMessage string) *APIResponse {
-
-	response := &APIResponse{Message: errorMessage}
-	return response
+	_ = "STUB: not implemented"
+	return nil
 }

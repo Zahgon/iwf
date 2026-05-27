@@ -10,11 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // WorkflowConditionalCloseType the model 'WorkflowConditionalCloseType'
 type WorkflowConditionalCloseType string
 
@@ -33,46 +28,24 @@ var AllowedWorkflowConditionalCloseTypeEnumValues = []WorkflowConditionalCloseTy
 }
 
 func (v *WorkflowConditionalCloseType) UnmarshalJSON(src []byte) error {
-	var value string
-	err := json.Unmarshal(src, &value)
-	if err != nil {
-		return err
-	}
-	enumTypeValue := WorkflowConditionalCloseType(value)
-	for _, existing := range AllowedWorkflowConditionalCloseTypeEnumValues {
-		if existing == enumTypeValue {
-			*v = enumTypeValue
-			return nil
-		}
-	}
-
-	return fmt.Errorf("%+v is not a valid WorkflowConditionalCloseType", value)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // NewWorkflowConditionalCloseTypeFromValue returns a pointer to a valid WorkflowConditionalCloseType
 // for the value passed as argument, or an error if the value passed is not allowed by the enum
 func NewWorkflowConditionalCloseTypeFromValue(v string) (*WorkflowConditionalCloseType, error) {
-	ev := WorkflowConditionalCloseType(v)
-	if ev.IsValid() {
-		return &ev, nil
-	} else {
-		return nil, fmt.Errorf("invalid value '%v' for WorkflowConditionalCloseType: valid values are %v", v, AllowedWorkflowConditionalCloseTypeEnumValues)
-	}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // IsValid return true if the value is valid for the enum, false otherwise
-func (v WorkflowConditionalCloseType) IsValid() bool {
-	for _, existing := range AllowedWorkflowConditionalCloseTypeEnumValues {
-		if existing == v {
-			return true
-		}
-	}
-	return false
-}
+func (v WorkflowConditionalCloseType) IsValid() bool { _ = "STUB: not implemented"; return false }
 
 // Ptr returns reference to WorkflowConditionalCloseType value
 func (v WorkflowConditionalCloseType) Ptr() *WorkflowConditionalCloseType {
-	return &v
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type NullableWorkflowConditionalCloseType struct {
@@ -81,32 +54,30 @@ type NullableWorkflowConditionalCloseType struct {
 }
 
 func (v NullableWorkflowConditionalCloseType) Get() *WorkflowConditionalCloseType {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowConditionalCloseType) Set(val *WorkflowConditionalCloseType) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowConditionalCloseType) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowConditionalCloseType) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowConditionalCloseType) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowConditionalCloseType) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowConditionalCloseType(val *WorkflowConditionalCloseType) *NullableWorkflowConditionalCloseType {
-	return &NullableWorkflowConditionalCloseType{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowConditionalCloseType) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowConditionalCloseType) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }

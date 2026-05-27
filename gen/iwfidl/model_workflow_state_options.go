@@ -10,10 +10,6 @@ API version: 1.0.0
 
 package iwfidl
 
-import (
-	"encoding/json"
-)
-
 // checks if the WorkflowStateOptions type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &WorkflowStateOptions{}
 
@@ -47,800 +43,556 @@ type WorkflowStateOptions struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewWorkflowStateOptions() *WorkflowStateOptions {
-	this := WorkflowStateOptions{}
-	return &this
-}
+func NewWorkflowStateOptions() *WorkflowStateOptions { _ = "STUB: not implemented"; return nil }
 
 // NewWorkflowStateOptionsWithDefaults instantiates a new WorkflowStateOptions object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
 func NewWorkflowStateOptionsWithDefaults() *WorkflowStateOptions {
-	this := WorkflowStateOptions{}
-	return &this
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // GetSearchAttributesLoadingPolicy returns the SearchAttributesLoadingPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetSearchAttributesLoadingPolicy() PersistenceLoadingPolicy {
-	if o == nil || IsNil(o.SearchAttributesLoadingPolicy) {
-		var ret PersistenceLoadingPolicy
-		return ret
-	}
-	return *o.SearchAttributesLoadingPolicy
+	_ = "STUB: not implemented"
+	return *new(PersistenceLoadingPolicy)
 }
 
 // GetSearchAttributesLoadingPolicyOk returns a tuple with the SearchAttributesLoadingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetSearchAttributesLoadingPolicyOk() (*PersistenceLoadingPolicy, bool) {
-	if o == nil || IsNil(o.SearchAttributesLoadingPolicy) {
-		return nil, false
-	}
-	return o.SearchAttributesLoadingPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSearchAttributesLoadingPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasSearchAttributesLoadingPolicy() bool {
-	if o != nil && !IsNil(o.SearchAttributesLoadingPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetSearchAttributesLoadingPolicy gets a reference to the given PersistenceLoadingPolicy and assigns it to the SearchAttributesLoadingPolicy field.
 func (o *WorkflowStateOptions) SetSearchAttributesLoadingPolicy(v PersistenceLoadingPolicy) {
-	o.SearchAttributesLoadingPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetWaitUntilApiSearchAttributesLoadingPolicy returns the WaitUntilApiSearchAttributesLoadingPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetWaitUntilApiSearchAttributesLoadingPolicy() PersistenceLoadingPolicy {
-	if o == nil || IsNil(o.WaitUntilApiSearchAttributesLoadingPolicy) {
-		var ret PersistenceLoadingPolicy
-		return ret
-	}
-	return *o.WaitUntilApiSearchAttributesLoadingPolicy
+	_ = "STUB: not implemented"
+	return *new(PersistenceLoadingPolicy)
 }
 
 // GetWaitUntilApiSearchAttributesLoadingPolicyOk returns a tuple with the WaitUntilApiSearchAttributesLoadingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetWaitUntilApiSearchAttributesLoadingPolicyOk() (*PersistenceLoadingPolicy, bool) {
-	if o == nil || IsNil(o.WaitUntilApiSearchAttributesLoadingPolicy) {
-		return nil, false
-	}
-	return o.WaitUntilApiSearchAttributesLoadingPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitUntilApiSearchAttributesLoadingPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasWaitUntilApiSearchAttributesLoadingPolicy() bool {
-	if o != nil && !IsNil(o.WaitUntilApiSearchAttributesLoadingPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitUntilApiSearchAttributesLoadingPolicy gets a reference to the given PersistenceLoadingPolicy and assigns it to the WaitUntilApiSearchAttributesLoadingPolicy field.
 func (o *WorkflowStateOptions) SetWaitUntilApiSearchAttributesLoadingPolicy(v PersistenceLoadingPolicy) {
-	o.WaitUntilApiSearchAttributesLoadingPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetExecuteApiSearchAttributesLoadingPolicy returns the ExecuteApiSearchAttributesLoadingPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetExecuteApiSearchAttributesLoadingPolicy() PersistenceLoadingPolicy {
-	if o == nil || IsNil(o.ExecuteApiSearchAttributesLoadingPolicy) {
-		var ret PersistenceLoadingPolicy
-		return ret
-	}
-	return *o.ExecuteApiSearchAttributesLoadingPolicy
+	_ = "STUB: not implemented"
+	return *new(PersistenceLoadingPolicy)
 }
 
 // GetExecuteApiSearchAttributesLoadingPolicyOk returns a tuple with the ExecuteApiSearchAttributesLoadingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetExecuteApiSearchAttributesLoadingPolicyOk() (*PersistenceLoadingPolicy, bool) {
-	if o == nil || IsNil(o.ExecuteApiSearchAttributesLoadingPolicy) {
-		return nil, false
-	}
-	return o.ExecuteApiSearchAttributesLoadingPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExecuteApiSearchAttributesLoadingPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasExecuteApiSearchAttributesLoadingPolicy() bool {
-	if o != nil && !IsNil(o.ExecuteApiSearchAttributesLoadingPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetExecuteApiSearchAttributesLoadingPolicy gets a reference to the given PersistenceLoadingPolicy and assigns it to the ExecuteApiSearchAttributesLoadingPolicy field.
 func (o *WorkflowStateOptions) SetExecuteApiSearchAttributesLoadingPolicy(v PersistenceLoadingPolicy) {
-	o.ExecuteApiSearchAttributesLoadingPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetDataObjectsLoadingPolicy returns the DataObjectsLoadingPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetDataObjectsLoadingPolicy() PersistenceLoadingPolicy {
-	if o == nil || IsNil(o.DataObjectsLoadingPolicy) {
-		var ret PersistenceLoadingPolicy
-		return ret
-	}
-	return *o.DataObjectsLoadingPolicy
+	_ = "STUB: not implemented"
+	return *new(PersistenceLoadingPolicy)
 }
 
 // GetDataObjectsLoadingPolicyOk returns a tuple with the DataObjectsLoadingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetDataObjectsLoadingPolicyOk() (*PersistenceLoadingPolicy, bool) {
-	if o == nil || IsNil(o.DataObjectsLoadingPolicy) {
-		return nil, false
-	}
-	return o.DataObjectsLoadingPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDataObjectsLoadingPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasDataObjectsLoadingPolicy() bool {
-	if o != nil && !IsNil(o.DataObjectsLoadingPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetDataObjectsLoadingPolicy gets a reference to the given PersistenceLoadingPolicy and assigns it to the DataObjectsLoadingPolicy field.
 func (o *WorkflowStateOptions) SetDataObjectsLoadingPolicy(v PersistenceLoadingPolicy) {
-	o.DataObjectsLoadingPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStartApiTimeoutSeconds returns the StartApiTimeoutSeconds field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetStartApiTimeoutSeconds() int32 {
-	if o == nil || IsNil(o.StartApiTimeoutSeconds) {
-		var ret int32
-		return ret
-	}
-	return *o.StartApiTimeoutSeconds
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetStartApiTimeoutSecondsOk returns a tuple with the StartApiTimeoutSeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetStartApiTimeoutSecondsOk() (*int32, bool) {
-	if o == nil || IsNil(o.StartApiTimeoutSeconds) {
-		return nil, false
-	}
-	return o.StartApiTimeoutSeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStartApiTimeoutSeconds returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasStartApiTimeoutSeconds() bool {
-	if o != nil && !IsNil(o.StartApiTimeoutSeconds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetStartApiTimeoutSeconds gets a reference to the given int32 and assigns it to the StartApiTimeoutSeconds field.
 func (o *WorkflowStateOptions) SetStartApiTimeoutSeconds(v int32) {
-	o.StartApiTimeoutSeconds = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetDecideApiTimeoutSeconds returns the DecideApiTimeoutSeconds field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetDecideApiTimeoutSeconds() int32 {
-	if o == nil || IsNil(o.DecideApiTimeoutSeconds) {
-		var ret int32
-		return ret
-	}
-	return *o.DecideApiTimeoutSeconds
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetDecideApiTimeoutSecondsOk returns a tuple with the DecideApiTimeoutSeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetDecideApiTimeoutSecondsOk() (*int32, bool) {
-	if o == nil || IsNil(o.DecideApiTimeoutSeconds) {
-		return nil, false
-	}
-	return o.DecideApiTimeoutSeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDecideApiTimeoutSeconds returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasDecideApiTimeoutSeconds() bool {
-	if o != nil && !IsNil(o.DecideApiTimeoutSeconds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetDecideApiTimeoutSeconds gets a reference to the given int32 and assigns it to the DecideApiTimeoutSeconds field.
 func (o *WorkflowStateOptions) SetDecideApiTimeoutSeconds(v int32) {
-	o.DecideApiTimeoutSeconds = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStartApiRetryPolicy returns the StartApiRetryPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetStartApiRetryPolicy() RetryPolicy {
-	if o == nil || IsNil(o.StartApiRetryPolicy) {
-		var ret RetryPolicy
-		return ret
-	}
-	return *o.StartApiRetryPolicy
+	_ = "STUB: not implemented"
+	return *new(RetryPolicy)
 }
 
 // GetStartApiRetryPolicyOk returns a tuple with the StartApiRetryPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetStartApiRetryPolicyOk() (*RetryPolicy, bool) {
-	if o == nil || IsNil(o.StartApiRetryPolicy) {
-		return nil, false
-	}
-	return o.StartApiRetryPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStartApiRetryPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasStartApiRetryPolicy() bool {
-	if o != nil && !IsNil(o.StartApiRetryPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetStartApiRetryPolicy gets a reference to the given RetryPolicy and assigns it to the StartApiRetryPolicy field.
 func (o *WorkflowStateOptions) SetStartApiRetryPolicy(v RetryPolicy) {
-	o.StartApiRetryPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetDecideApiRetryPolicy returns the DecideApiRetryPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetDecideApiRetryPolicy() RetryPolicy {
-	if o == nil || IsNil(o.DecideApiRetryPolicy) {
-		var ret RetryPolicy
-		return ret
-	}
-	return *o.DecideApiRetryPolicy
+	_ = "STUB: not implemented"
+	return *new(RetryPolicy)
 }
 
 // GetDecideApiRetryPolicyOk returns a tuple with the DecideApiRetryPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetDecideApiRetryPolicyOk() (*RetryPolicy, bool) {
-	if o == nil || IsNil(o.DecideApiRetryPolicy) {
-		return nil, false
-	}
-	return o.DecideApiRetryPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDecideApiRetryPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasDecideApiRetryPolicy() bool {
-	if o != nil && !IsNil(o.DecideApiRetryPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetDecideApiRetryPolicy gets a reference to the given RetryPolicy and assigns it to the DecideApiRetryPolicy field.
 func (o *WorkflowStateOptions) SetDecideApiRetryPolicy(v RetryPolicy) {
-	o.DecideApiRetryPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetStartApiFailurePolicy returns the StartApiFailurePolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetStartApiFailurePolicy() StartApiFailurePolicy {
-	if o == nil || IsNil(o.StartApiFailurePolicy) {
-		var ret StartApiFailurePolicy
-		return ret
-	}
-	return *o.StartApiFailurePolicy
+	_ = "STUB: not implemented"
+	return *new(StartApiFailurePolicy)
 }
 
 // GetStartApiFailurePolicyOk returns a tuple with the StartApiFailurePolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetStartApiFailurePolicyOk() (*StartApiFailurePolicy, bool) {
-	if o == nil || IsNil(o.StartApiFailurePolicy) {
-		return nil, false
-	}
-	return o.StartApiFailurePolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasStartApiFailurePolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasStartApiFailurePolicy() bool {
-	if o != nil && !IsNil(o.StartApiFailurePolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetStartApiFailurePolicy gets a reference to the given StartApiFailurePolicy and assigns it to the StartApiFailurePolicy field.
 func (o *WorkflowStateOptions) SetStartApiFailurePolicy(v StartApiFailurePolicy) {
-	o.StartApiFailurePolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetExecuteApiFailurePolicy returns the ExecuteApiFailurePolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetExecuteApiFailurePolicy() ExecuteApiFailurePolicy {
-	if o == nil || IsNil(o.ExecuteApiFailurePolicy) {
-		var ret ExecuteApiFailurePolicy
-		return ret
-	}
-	return *o.ExecuteApiFailurePolicy
+	_ = "STUB: not implemented"
+	return *new(ExecuteApiFailurePolicy)
 }
 
 // GetExecuteApiFailurePolicyOk returns a tuple with the ExecuteApiFailurePolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetExecuteApiFailurePolicyOk() (*ExecuteApiFailurePolicy, bool) {
-	if o == nil || IsNil(o.ExecuteApiFailurePolicy) {
-		return nil, false
-	}
-	return o.ExecuteApiFailurePolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExecuteApiFailurePolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasExecuteApiFailurePolicy() bool {
-	if o != nil && !IsNil(o.ExecuteApiFailurePolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetExecuteApiFailurePolicy gets a reference to the given ExecuteApiFailurePolicy and assigns it to the ExecuteApiFailurePolicy field.
 func (o *WorkflowStateOptions) SetExecuteApiFailurePolicy(v ExecuteApiFailurePolicy) {
-	o.ExecuteApiFailurePolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetExecuteApiFailureProceedStateId returns the ExecuteApiFailureProceedStateId field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetExecuteApiFailureProceedStateId() string {
-	if o == nil || IsNil(o.ExecuteApiFailureProceedStateId) {
-		var ret string
-		return ret
-	}
-	return *o.ExecuteApiFailureProceedStateId
+	_ = "STUB: not implemented"
+	return ""
 }
 
 // GetExecuteApiFailureProceedStateIdOk returns a tuple with the ExecuteApiFailureProceedStateId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetExecuteApiFailureProceedStateIdOk() (*string, bool) {
-	if o == nil || IsNil(o.ExecuteApiFailureProceedStateId) {
-		return nil, false
-	}
-	return o.ExecuteApiFailureProceedStateId, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExecuteApiFailureProceedStateId returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasExecuteApiFailureProceedStateId() bool {
-	if o != nil && !IsNil(o.ExecuteApiFailureProceedStateId) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetExecuteApiFailureProceedStateId gets a reference to the given string and assigns it to the ExecuteApiFailureProceedStateId field.
 func (o *WorkflowStateOptions) SetExecuteApiFailureProceedStateId(v string) {
-	o.ExecuteApiFailureProceedStateId = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetExecuteApiFailureProceedStateOptions returns the ExecuteApiFailureProceedStateOptions field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetExecuteApiFailureProceedStateOptions() WorkflowStateOptions {
-	if o == nil || IsNil(o.ExecuteApiFailureProceedStateOptions) {
-		var ret WorkflowStateOptions
-		return ret
-	}
-	return *o.ExecuteApiFailureProceedStateOptions
+	_ = "STUB: not implemented"
+	return *new(WorkflowStateOptions)
 }
 
 // GetExecuteApiFailureProceedStateOptionsOk returns a tuple with the ExecuteApiFailureProceedStateOptions field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetExecuteApiFailureProceedStateOptionsOk() (*WorkflowStateOptions, bool) {
-	if o == nil || IsNil(o.ExecuteApiFailureProceedStateOptions) {
-		return nil, false
-	}
-	return o.ExecuteApiFailureProceedStateOptions, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExecuteApiFailureProceedStateOptions returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasExecuteApiFailureProceedStateOptions() bool {
-	if o != nil && !IsNil(o.ExecuteApiFailureProceedStateOptions) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetExecuteApiFailureProceedStateOptions gets a reference to the given WorkflowStateOptions and assigns it to the ExecuteApiFailureProceedStateOptions field.
 func (o *WorkflowStateOptions) SetExecuteApiFailureProceedStateOptions(v WorkflowStateOptions) {
-	o.ExecuteApiFailureProceedStateOptions = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetSkipStartApi returns the SkipStartApi field value if set, zero value otherwise.
-func (o *WorkflowStateOptions) GetSkipStartApi() bool {
-	if o == nil || IsNil(o.SkipStartApi) {
-		var ret bool
-		return ret
-	}
-	return *o.SkipStartApi
-}
+func (o *WorkflowStateOptions) GetSkipStartApi() bool { _ = "STUB: not implemented"; return false }
 
 // GetSkipStartApiOk returns a tuple with the SkipStartApi field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetSkipStartApiOk() (*bool, bool) {
-	if o == nil || IsNil(o.SkipStartApi) {
-		return nil, false
-	}
-	return o.SkipStartApi, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSkipStartApi returns a boolean if a field has been set.
-func (o *WorkflowStateOptions) HasSkipStartApi() bool {
-	if o != nil && !IsNil(o.SkipStartApi) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStateOptions) HasSkipStartApi() bool { _ = "STUB: not implemented"; return false }
 
 // SetSkipStartApi gets a reference to the given bool and assigns it to the SkipStartApi field.
-func (o *WorkflowStateOptions) SetSkipStartApi(v bool) {
-	o.SkipStartApi = &v
-}
+func (o *WorkflowStateOptions) SetSkipStartApi(v bool) { _ = "STUB: not implemented"; return }
 
 // GetWaitUntilApiTimeoutSeconds returns the WaitUntilApiTimeoutSeconds field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetWaitUntilApiTimeoutSeconds() int32 {
-	if o == nil || IsNil(o.WaitUntilApiTimeoutSeconds) {
-		var ret int32
-		return ret
-	}
-	return *o.WaitUntilApiTimeoutSeconds
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetWaitUntilApiTimeoutSecondsOk returns a tuple with the WaitUntilApiTimeoutSeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetWaitUntilApiTimeoutSecondsOk() (*int32, bool) {
-	if o == nil || IsNil(o.WaitUntilApiTimeoutSeconds) {
-		return nil, false
-	}
-	return o.WaitUntilApiTimeoutSeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitUntilApiTimeoutSeconds returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasWaitUntilApiTimeoutSeconds() bool {
-	if o != nil && !IsNil(o.WaitUntilApiTimeoutSeconds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitUntilApiTimeoutSeconds gets a reference to the given int32 and assigns it to the WaitUntilApiTimeoutSeconds field.
 func (o *WorkflowStateOptions) SetWaitUntilApiTimeoutSeconds(v int32) {
-	o.WaitUntilApiTimeoutSeconds = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetExecuteApiTimeoutSeconds returns the ExecuteApiTimeoutSeconds field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetExecuteApiTimeoutSeconds() int32 {
-	if o == nil || IsNil(o.ExecuteApiTimeoutSeconds) {
-		var ret int32
-		return ret
-	}
-	return *o.ExecuteApiTimeoutSeconds
+	_ = "STUB: not implemented"
+	return 0
 }
 
 // GetExecuteApiTimeoutSecondsOk returns a tuple with the ExecuteApiTimeoutSeconds field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetExecuteApiTimeoutSecondsOk() (*int32, bool) {
-	if o == nil || IsNil(o.ExecuteApiTimeoutSeconds) {
-		return nil, false
-	}
-	return o.ExecuteApiTimeoutSeconds, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExecuteApiTimeoutSeconds returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasExecuteApiTimeoutSeconds() bool {
-	if o != nil && !IsNil(o.ExecuteApiTimeoutSeconds) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetExecuteApiTimeoutSeconds gets a reference to the given int32 and assigns it to the ExecuteApiTimeoutSeconds field.
 func (o *WorkflowStateOptions) SetExecuteApiTimeoutSeconds(v int32) {
-	o.ExecuteApiTimeoutSeconds = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetWaitUntilApiRetryPolicy returns the WaitUntilApiRetryPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetWaitUntilApiRetryPolicy() RetryPolicy {
-	if o == nil || IsNil(o.WaitUntilApiRetryPolicy) {
-		var ret RetryPolicy
-		return ret
-	}
-	return *o.WaitUntilApiRetryPolicy
+	_ = "STUB: not implemented"
+	return *new(RetryPolicy)
 }
 
 // GetWaitUntilApiRetryPolicyOk returns a tuple with the WaitUntilApiRetryPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetWaitUntilApiRetryPolicyOk() (*RetryPolicy, bool) {
-	if o == nil || IsNil(o.WaitUntilApiRetryPolicy) {
-		return nil, false
-	}
-	return o.WaitUntilApiRetryPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitUntilApiRetryPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasWaitUntilApiRetryPolicy() bool {
-	if o != nil && !IsNil(o.WaitUntilApiRetryPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitUntilApiRetryPolicy gets a reference to the given RetryPolicy and assigns it to the WaitUntilApiRetryPolicy field.
 func (o *WorkflowStateOptions) SetWaitUntilApiRetryPolicy(v RetryPolicy) {
-	o.WaitUntilApiRetryPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetExecuteApiRetryPolicy returns the ExecuteApiRetryPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetExecuteApiRetryPolicy() RetryPolicy {
-	if o == nil || IsNil(o.ExecuteApiRetryPolicy) {
-		var ret RetryPolicy
-		return ret
-	}
-	return *o.ExecuteApiRetryPolicy
+	_ = "STUB: not implemented"
+	return *new(RetryPolicy)
 }
 
 // GetExecuteApiRetryPolicyOk returns a tuple with the ExecuteApiRetryPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetExecuteApiRetryPolicyOk() (*RetryPolicy, bool) {
-	if o == nil || IsNil(o.ExecuteApiRetryPolicy) {
-		return nil, false
-	}
-	return o.ExecuteApiRetryPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExecuteApiRetryPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasExecuteApiRetryPolicy() bool {
-	if o != nil && !IsNil(o.ExecuteApiRetryPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetExecuteApiRetryPolicy gets a reference to the given RetryPolicy and assigns it to the ExecuteApiRetryPolicy field.
 func (o *WorkflowStateOptions) SetExecuteApiRetryPolicy(v RetryPolicy) {
-	o.ExecuteApiRetryPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetWaitUntilApiFailurePolicy returns the WaitUntilApiFailurePolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetWaitUntilApiFailurePolicy() WaitUntilApiFailurePolicy {
-	if o == nil || IsNil(o.WaitUntilApiFailurePolicy) {
-		var ret WaitUntilApiFailurePolicy
-		return ret
-	}
-	return *o.WaitUntilApiFailurePolicy
+	_ = "STUB: not implemented"
+	return *new(WaitUntilApiFailurePolicy)
 }
 
 // GetWaitUntilApiFailurePolicyOk returns a tuple with the WaitUntilApiFailurePolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetWaitUntilApiFailurePolicyOk() (*WaitUntilApiFailurePolicy, bool) {
-	if o == nil || IsNil(o.WaitUntilApiFailurePolicy) {
-		return nil, false
-	}
-	return o.WaitUntilApiFailurePolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitUntilApiFailurePolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasWaitUntilApiFailurePolicy() bool {
-	if o != nil && !IsNil(o.WaitUntilApiFailurePolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitUntilApiFailurePolicy gets a reference to the given WaitUntilApiFailurePolicy and assigns it to the WaitUntilApiFailurePolicy field.
 func (o *WorkflowStateOptions) SetWaitUntilApiFailurePolicy(v WaitUntilApiFailurePolicy) {
-	o.WaitUntilApiFailurePolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetSkipWaitUntil returns the SkipWaitUntil field value if set, zero value otherwise.
-func (o *WorkflowStateOptions) GetSkipWaitUntil() bool {
-	if o == nil || IsNil(o.SkipWaitUntil) {
-		var ret bool
-		return ret
-	}
-	return *o.SkipWaitUntil
-}
+func (o *WorkflowStateOptions) GetSkipWaitUntil() bool { _ = "STUB: not implemented"; return false }
 
 // GetSkipWaitUntilOk returns a tuple with the SkipWaitUntil field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetSkipWaitUntilOk() (*bool, bool) {
-	if o == nil || IsNil(o.SkipWaitUntil) {
-		return nil, false
-	}
-	return o.SkipWaitUntil, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasSkipWaitUntil returns a boolean if a field has been set.
-func (o *WorkflowStateOptions) HasSkipWaitUntil() bool {
-	if o != nil && !IsNil(o.SkipWaitUntil) {
-		return true
-	}
-
-	return false
-}
+func (o *WorkflowStateOptions) HasSkipWaitUntil() bool { _ = "STUB: not implemented"; return false }
 
 // SetSkipWaitUntil gets a reference to the given bool and assigns it to the SkipWaitUntil field.
-func (o *WorkflowStateOptions) SetSkipWaitUntil(v bool) {
-	o.SkipWaitUntil = &v
-}
+func (o *WorkflowStateOptions) SetSkipWaitUntil(v bool) { _ = "STUB: not implemented"; return }
 
 // GetDataAttributesLoadingPolicy returns the DataAttributesLoadingPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetDataAttributesLoadingPolicy() PersistenceLoadingPolicy {
-	if o == nil || IsNil(o.DataAttributesLoadingPolicy) {
-		var ret PersistenceLoadingPolicy
-		return ret
-	}
-	return *o.DataAttributesLoadingPolicy
+	_ = "STUB: not implemented"
+	return *new(PersistenceLoadingPolicy)
 }
 
 // GetDataAttributesLoadingPolicyOk returns a tuple with the DataAttributesLoadingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetDataAttributesLoadingPolicyOk() (*PersistenceLoadingPolicy, bool) {
-	if o == nil || IsNil(o.DataAttributesLoadingPolicy) {
-		return nil, false
-	}
-	return o.DataAttributesLoadingPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasDataAttributesLoadingPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasDataAttributesLoadingPolicy() bool {
-	if o != nil && !IsNil(o.DataAttributesLoadingPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetDataAttributesLoadingPolicy gets a reference to the given PersistenceLoadingPolicy and assigns it to the DataAttributesLoadingPolicy field.
 func (o *WorkflowStateOptions) SetDataAttributesLoadingPolicy(v PersistenceLoadingPolicy) {
-	o.DataAttributesLoadingPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetWaitUntilApiDataAttributesLoadingPolicy returns the WaitUntilApiDataAttributesLoadingPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetWaitUntilApiDataAttributesLoadingPolicy() PersistenceLoadingPolicy {
-	if o == nil || IsNil(o.WaitUntilApiDataAttributesLoadingPolicy) {
-		var ret PersistenceLoadingPolicy
-		return ret
-	}
-	return *o.WaitUntilApiDataAttributesLoadingPolicy
+	_ = "STUB: not implemented"
+	return *new(PersistenceLoadingPolicy)
 }
 
 // GetWaitUntilApiDataAttributesLoadingPolicyOk returns a tuple with the WaitUntilApiDataAttributesLoadingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetWaitUntilApiDataAttributesLoadingPolicyOk() (*PersistenceLoadingPolicy, bool) {
-	if o == nil || IsNil(o.WaitUntilApiDataAttributesLoadingPolicy) {
-		return nil, false
-	}
-	return o.WaitUntilApiDataAttributesLoadingPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasWaitUntilApiDataAttributesLoadingPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasWaitUntilApiDataAttributesLoadingPolicy() bool {
-	if o != nil && !IsNil(o.WaitUntilApiDataAttributesLoadingPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetWaitUntilApiDataAttributesLoadingPolicy gets a reference to the given PersistenceLoadingPolicy and assigns it to the WaitUntilApiDataAttributesLoadingPolicy field.
 func (o *WorkflowStateOptions) SetWaitUntilApiDataAttributesLoadingPolicy(v PersistenceLoadingPolicy) {
-	o.WaitUntilApiDataAttributesLoadingPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 // GetExecuteApiDataAttributesLoadingPolicy returns the ExecuteApiDataAttributesLoadingPolicy field value if set, zero value otherwise.
 func (o *WorkflowStateOptions) GetExecuteApiDataAttributesLoadingPolicy() PersistenceLoadingPolicy {
-	if o == nil || IsNil(o.ExecuteApiDataAttributesLoadingPolicy) {
-		var ret PersistenceLoadingPolicy
-		return ret
-	}
-	return *o.ExecuteApiDataAttributesLoadingPolicy
+	_ = "STUB: not implemented"
+	return *new(PersistenceLoadingPolicy)
 }
 
 // GetExecuteApiDataAttributesLoadingPolicyOk returns a tuple with the ExecuteApiDataAttributesLoadingPolicy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *WorkflowStateOptions) GetExecuteApiDataAttributesLoadingPolicyOk() (*PersistenceLoadingPolicy, bool) {
-	if o == nil || IsNil(o.ExecuteApiDataAttributesLoadingPolicy) {
-		return nil, false
-	}
-	return o.ExecuteApiDataAttributesLoadingPolicy, true
+	_ = "STUB: not implemented"
+	return nil, false
 }
 
 // HasExecuteApiDataAttributesLoadingPolicy returns a boolean if a field has been set.
 func (o *WorkflowStateOptions) HasExecuteApiDataAttributesLoadingPolicy() bool {
-	if o != nil && !IsNil(o.ExecuteApiDataAttributesLoadingPolicy) {
-		return true
-	}
-
+	_ = "STUB: not implemented"
 	return false
 }
 
 // SetExecuteApiDataAttributesLoadingPolicy gets a reference to the given PersistenceLoadingPolicy and assigns it to the ExecuteApiDataAttributesLoadingPolicy field.
 func (o *WorkflowStateOptions) SetExecuteApiDataAttributesLoadingPolicy(v PersistenceLoadingPolicy) {
-	o.ExecuteApiDataAttributesLoadingPolicy = &v
+	_ = "STUB: not implemented"
+	return
 }
 
 func (o WorkflowStateOptions) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
-	if err != nil {
-		return []byte{}, err
-	}
-	return json.Marshal(toSerialize)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (o WorkflowStateOptions) ToMap() (map[string]interface{}, error) {
-	toSerialize := map[string]interface{}{}
-	if !IsNil(o.SearchAttributesLoadingPolicy) {
-		toSerialize["searchAttributesLoadingPolicy"] = o.SearchAttributesLoadingPolicy
-	}
-	if !IsNil(o.WaitUntilApiSearchAttributesLoadingPolicy) {
-		toSerialize["waitUntilApiSearchAttributesLoadingPolicy"] = o.WaitUntilApiSearchAttributesLoadingPolicy
-	}
-	if !IsNil(o.ExecuteApiSearchAttributesLoadingPolicy) {
-		toSerialize["executeApiSearchAttributesLoadingPolicy"] = o.ExecuteApiSearchAttributesLoadingPolicy
-	}
-	if !IsNil(o.DataObjectsLoadingPolicy) {
-		toSerialize["dataObjectsLoadingPolicy"] = o.DataObjectsLoadingPolicy
-	}
-	if !IsNil(o.StartApiTimeoutSeconds) {
-		toSerialize["startApiTimeoutSeconds"] = o.StartApiTimeoutSeconds
-	}
-	if !IsNil(o.DecideApiTimeoutSeconds) {
-		toSerialize["decideApiTimeoutSeconds"] = o.DecideApiTimeoutSeconds
-	}
-	if !IsNil(o.StartApiRetryPolicy) {
-		toSerialize["startApiRetryPolicy"] = o.StartApiRetryPolicy
-	}
-	if !IsNil(o.DecideApiRetryPolicy) {
-		toSerialize["decideApiRetryPolicy"] = o.DecideApiRetryPolicy
-	}
-	if !IsNil(o.StartApiFailurePolicy) {
-		toSerialize["startApiFailurePolicy"] = o.StartApiFailurePolicy
-	}
-	if !IsNil(o.ExecuteApiFailurePolicy) {
-		toSerialize["executeApiFailurePolicy"] = o.ExecuteApiFailurePolicy
-	}
-	if !IsNil(o.ExecuteApiFailureProceedStateId) {
-		toSerialize["executeApiFailureProceedStateId"] = o.ExecuteApiFailureProceedStateId
-	}
-	if !IsNil(o.ExecuteApiFailureProceedStateOptions) {
-		toSerialize["executeApiFailureProceedStateOptions"] = o.ExecuteApiFailureProceedStateOptions
-	}
-	if !IsNil(o.SkipStartApi) {
-		toSerialize["skipStartApi"] = o.SkipStartApi
-	}
-	if !IsNil(o.WaitUntilApiTimeoutSeconds) {
-		toSerialize["waitUntilApiTimeoutSeconds"] = o.WaitUntilApiTimeoutSeconds
-	}
-	if !IsNil(o.ExecuteApiTimeoutSeconds) {
-		toSerialize["executeApiTimeoutSeconds"] = o.ExecuteApiTimeoutSeconds
-	}
-	if !IsNil(o.WaitUntilApiRetryPolicy) {
-		toSerialize["waitUntilApiRetryPolicy"] = o.WaitUntilApiRetryPolicy
-	}
-	if !IsNil(o.ExecuteApiRetryPolicy) {
-		toSerialize["executeApiRetryPolicy"] = o.ExecuteApiRetryPolicy
-	}
-	if !IsNil(o.WaitUntilApiFailurePolicy) {
-		toSerialize["waitUntilApiFailurePolicy"] = o.WaitUntilApiFailurePolicy
-	}
-	if !IsNil(o.SkipWaitUntil) {
-		toSerialize["skipWaitUntil"] = o.SkipWaitUntil
-	}
-	if !IsNil(o.DataAttributesLoadingPolicy) {
-		toSerialize["dataAttributesLoadingPolicy"] = o.DataAttributesLoadingPolicy
-	}
-	if !IsNil(o.WaitUntilApiDataAttributesLoadingPolicy) {
-		toSerialize["waitUntilApiDataAttributesLoadingPolicy"] = o.WaitUntilApiDataAttributesLoadingPolicy
-	}
-	if !IsNil(o.ExecuteApiDataAttributesLoadingPolicy) {
-		toSerialize["executeApiDataAttributesLoadingPolicy"] = o.ExecuteApiDataAttributesLoadingPolicy
-	}
-	return toSerialize, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type NullableWorkflowStateOptions struct {
@@ -849,32 +601,30 @@ type NullableWorkflowStateOptions struct {
 }
 
 func (v NullableWorkflowStateOptions) Get() *WorkflowStateOptions {
-	return v.value
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v *NullableWorkflowStateOptions) Set(val *WorkflowStateOptions) {
-	v.value = val
-	v.isSet = true
+	_ = "STUB: not implemented"
+	return
 }
 
-func (v NullableWorkflowStateOptions) IsSet() bool {
-	return v.isSet
-}
+func (v NullableWorkflowStateOptions) IsSet() bool { _ = "STUB: not implemented"; return false }
 
-func (v *NullableWorkflowStateOptions) Unset() {
-	v.value = nil
-	v.isSet = false
-}
+func (v *NullableWorkflowStateOptions) Unset() { _ = "STUB: not implemented"; return }
 
 func NewNullableWorkflowStateOptions(val *WorkflowStateOptions) *NullableWorkflowStateOptions {
-	return &NullableWorkflowStateOptions{value: val, isSet: true}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (v NullableWorkflowStateOptions) MarshalJSON() ([]byte, error) {
-	return json.Marshal(v.value)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (v *NullableWorkflowStateOptions) UnmarshalJSON(src []byte) error {
-	v.isSet = true
-	return json.Unmarshal(src, &v.value)
+	_ = "STUB: not implemented"
+	return nil
 }
